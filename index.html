@@ -297,13 +297,13 @@
                     <input 
                         type="text" 
                         id="search" 
-                        placeholder="🔍 Rechercher un département ou préfet..." 
+                        placeholder="Rechercher un département ou préfet..." 
                         aria-label="Rechercher"
                     >
                 </div>
 
 				<div class="legend">
-					<h3>📊 Légende - Ancienneté en poste</h3>
+					<h3>Ancienneté en poste</h3>
 					<div class="legend-item">
 						<div class="legend-color" style="background-color: #4ade80;"></div>
 						<div class="legend-text">Moins de 6 mois</div>
@@ -466,7 +466,7 @@
                     <h3>${prefet.nom_prefet}</h3>
                     <p><strong>Département :</strong> ${prefet.departement} - ${prefet.territoire}</p>
                     <p><strong>Sexe :</strong> ${prefet.sexe === 'F' ? 'Femme' : 'Homme'}</p>
-                    <p><strong>Titre(s) :</strong><br>${titres}</p>
+                    <p><strong>Fonction(s) :</strong><br>${titres}</p>
                     <p><strong>En poste depuis :</strong> ${prefet.date_prise_fonction}</p>
                     <p><strong>Ancienneté :</strong> ${prefet.anciennete_jours} jours</p>
                 `;
