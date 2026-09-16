@@ -1,585 +1,586 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carte des Préfets de France</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
+<title>Carte des préfets de France</title>
 
-        .container {
-            max-width: 1600px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
+<script src="https://d3js.org/d3.v7.min.js"></script>
 
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
+body{
+    font-family:Segoe UI, sans-serif;
+    background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+    min-height:100vh;
+    padding:20px;
+}
 
-        .subtitle {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
+.container{
+    max-width:1600px;
+    margin:auto;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,0.25);
+}
 
-        .content {
-            display: grid;
-            grid-template-columns: 1fr 400px;
-            gap: 0;
-        }
+header{
+    padding:40px;
+    color:white;
+    text-align:center;
+    background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+}
 
-        .map-section {
-            padding: 30px;
-            background: #f8f9fa;
-        }
+h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
 
-        .sidebar {
-            background: white;
-            padding: 30px;
-            border-left: 1px solid #e0e0e0;
-            overflow-y: auto;
-            max-height: calc(100vh - 200px);
-        }
+.subtitle{
+    opacity:.9;
+}
 
-        .legend {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+.content{
+    display:grid;
+    grid-template-columns:1fr 380px;
+}
 
-        .legend h3 {
-            margin-bottom: 15px;
-            color: #333;
-            font-size: 1.1em;
-        }
+.map-section{
+    padding:20px;
+    background:#f8fafc;
+}
 
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            padding: 8px;
-            border-radius: 5px;
-            transition: 0.2s;
-        }
+.sidebar{
+    padding:25px;
+    border-left:1px solid #e5e7eb;
+    overflow-y:auto;
+}
 
-        .legend-item:hover {
-            background: #f5f5f5;
-        }
+#map{
+    width:100%;
+    height:750px;
+    background:white;
+    border-radius:14px;
+}
 
-        .legend-color {
-            width: 40px;
-            height: 25px;
-            border-radius: 5px;
-            border: 2px solid #333;
-            flex-shrink: 0;
-        }
+.search-box{
+    margin-bottom:20px;
+}
 
-        .legend-text {
-            font-size: 0.9em;
-            color: #555;
-        }
+.search-box input{
+    width:100%;
+    padding:12px 14px;
+    border-radius:10px;
+    border:2px solid #d1d5db;
+    font-size:15px;
+}
 
-        #map {
-            width: 100%;
-            height: 700px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+.search-box input:focus{
+    outline:none;
+    border-color:#667eea;
+}
 
-        .department {
-            stroke: white;
-            stroke-width: 1.5;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
+.legend{
+    background:#f8fafc;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:20px;
+}
 
-        .department:hover {
-            stroke: #000;
-            stroke-width: 2.5;
-            filter: brightness(1.1);
-        }
+.legend h3{
+    margin-bottom:15px;
+}
 
-        .department:focus {
-            outline: none;
-            stroke: #0066cc;
-            stroke-width: 3;
-        }
+.legend-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
 
-        .dept-label {
-            font-size: 11px;
-            font-weight: bold;
-            fill: #333;
-            pointer-events: none;
-            text-anchor: middle;
-            text-shadow: 1px 1px 2px white, -1px -1px 2px white;
-        }
+.legend-color{
+    width:35px;
+    height:20px;
+    border-radius:5px;
+    border:1px solid #333;
+}
 
-        .tooltip {
-            position: fixed;
-            background: rgba(0, 0, 0, 0.95);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            pointer-events: none;
-            z-index: 1000;
-            max-width: 400px;
-            display: none;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 2px solid #fff;
-        }
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-bottom:20px;
+}
 
-        .tooltip.visible {
-            display: block;
-        }
+.stat-card{
+    background:#f8fafc;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+}
 
-        .tooltip h3 {
-            margin-bottom: 12px;
-            font-size: 1.2em;
-            border-bottom: 2px solid #fff;
-            padding-bottom: 8px;
-        }
+.stat-number{
+    font-size:2rem;
+    font-weight:bold;
+    color:#667eea;
+}
 
-        .tooltip p {
-            margin: 8px 0;
-            font-size: 0.95em;
-            line-height: 1.5;
-        }
+.stat-label{
+    font-size:.85rem;
+    color:#666;
+}
 
-        .tooltip strong {
-            color: #4ade80;
-        }
+.info-panel{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:12px;
+}
 
-        .info-panel {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+.department{
+    stroke:white;
+    stroke-width:1.2;
+    cursor:pointer;
+    transition:.2s;
+}
 
-        .info-panel h3 {
-            margin-bottom: 15px;
-            color: #333;
-            font-size: 1.1em;
-        }
+.department:hover{
+    stroke:#111827;
+    stroke-width:2.5;
+    filter:brightness(1.05);
+}
 
-        .info-content {
-            font-size: 0.9em;
-            color: #666;
-            line-height: 1.6;
-        }
+.region{
+    pointer-events:none;
+}
 
-        .info-content p {
-            margin-bottom: 10px;
-        }
+.dept-label{
+    font-size:10px;
+    font-weight:bold;
+    fill:#1f2937;
+    text-anchor:middle;
+    pointer-events:none;
+}
 
-        .search-box {
-            margin-bottom: 20px;
-        }
+.tooltip{
+    position:fixed;
+    z-index:9999;
+    background:rgba(17,24,39,.96);
+    color:white;
+    padding:16px;
+    border-radius:12px;
+    max-width:350px;
+    pointer-events:none;
+    opacity:0;
+    transition:.2s;
+    line-height:1.5;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
 
-        .search-box input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1em;
-            transition: 0.2s;
-        }
+.tooltip.visible{
+    opacity:1;
+}
 
-        .search-box input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
+.tooltip h3{
+    margin-bottom:10px;
+    border-bottom:1px solid rgba(255,255,255,.2);
+    padding-bottom:8px;
+}
 
-        .stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
+@media(max-width:1100px){
 
-        .stat-card {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+    .content{
+        grid-template-columns:1fr;
+    }
 
-        .stat-number {
-            font-size: 2em;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 5px;
-        }
+    .sidebar{
+        border-left:none;
+        border-top:1px solid #e5e7eb;
+    }
 
-        .stat-label {
-            font-size: 0.85em;
-            color: #666;
-        }
+}
 
-        .loading {
-            text-align: center;
-            padding: 100px;
-            font-size: 1.2em;
-            color: #666;
-        }
-
-        @media (max-width: 1200px) {
-            .content {
-                grid-template-columns: 1fr;
-            }
-
-            .sidebar {
-                border-left: none;
-                border-top: 1px solid #e0e0e0;
-                max-height: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8em;
-            }
-
-            #map {
-                height: 500px;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>🗺️ Carte des Préfets de France</h1>
-            <p class="subtitle">Répartition géographique et ancienneté - Mise à jour : 16 septembre 2026</p>
-        </header>
 
-        <div class="content">
-            <div class="map-section">
-                <div id="map" role="img" aria-label="Carte interactive des départements français"></div>
-            </div>
+<div class="container">
 
-            <aside class="sidebar">
-                <div class="search-box">
-                    <input 
-                        type="text" 
-                        id="search" 
-                        placeholder="Rechercher un département ou préfet..." 
-                        aria-label="Rechercher"
-                    >
-                </div>
+<header>
+    <h1>🗺️ Carte des préfets de France</h1>
+    <div class="subtitle">
+        Répartition géographique et ancienneté
+    </div>
+</header>
 
-				<div class="legend">
-					<h3>Ancienneté en poste</h3>
-					<div class="legend-item">
-						<div class="legend-color" style="background-color: #4ade80;"></div>
-						<div class="legend-text">Moins de 6 mois</div>
-					</div>
-					<div class="legend-item">
-						<div class="legend-color" style="background-color: #facc15;"></div>
-						<div class="legend-text">6 mois à 1 an</div>
-					</div>
-					<div class="legend-item">
-						<div class="legend-color" style="background-color: #fb923c;"></div>
-						<div class="legend-text">1 an à 2 ans</div>
-					</div>
-					<div class="legend-item">
-						<div class="legend-color" style="background-color: #ef4444;"></div>
-						<div class="legend-text">Plus de 2 ans</div>
-					</div>
-				</div>
+<div class="content">
 
-                <div class="stats">
-                    <div class="stat-card">
-                        <div class="stat-number" id="total-prefets">-</div>
-                        <div class="stat-label">Préfets</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="total-femmes">-</div>
-                        <div class="stat-label">Femmes</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="total-hommes">-</div>
-                        <div class="stat-label">Hommes</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="anciennete-moyenne">-</div>
-                        <div class="stat-label">Ancienneté moy.</div>
-                    </div>
-                </div>
-
-                <div class="info-panel" id="info-panel">
-                    <h3>ℹ️ Information</h3>
-                    <div class="info-content">
-                        <p>Survolez ou cliquez sur un département pour afficher les informations du préfet.</p>
-                        <p>Navigation au clavier : utilisez Tab pour parcourir les départements.</p>
-                    </div>
-                </div>
-            </aside>
-        </div>
+    <div class="map-section">
+        <div id="map"></div>
     </div>
 
-    <div class="tooltip" id="tooltip" role="tooltip"></div>
+    <aside class="sidebar">
 
-    <script>
-        // Couleurs
-        const colorMap = {
-            green: '#4ade80',
-            yellow: '#facc15',
-            orange: '#fb923c',
-            red: '#ef4444'
-        };
+        <div class="search-box">
+            <input
+                type="text"
+                id="search"
+                placeholder="Rechercher un département ou un préfet..."
+            >
+        </div>
 
-        // Chargement des données
-		Promise.all([
-			d3.json('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson'),
-			d3.json('data/regions.geojson'),
-			d3.dsv(';', 'data/prefets_departements.csv')
-		]).then(([geoData, regionsData, prefetsData]) => {
-            
-            // Créer une map des préfets par code département
-            const prefetsMap = {};
-            prefetsData.forEach(p => {
-                prefetsMap[p.departement] = p;
-            });
+        <div class="legend">
+            <h3>Ancienneté en poste</h3>
 
-            // Dimensions
-            const container = document.getElementById('map');
-            const width = container.clientWidth;
-            const height = container.clientHeight;
+            <div class="legend-item">
+                <div class="legend-color" style="background:#4ade80"></div>
+                <div>Moins de 6 mois</div>
+            </div>
 
-            // Créer le SVG
-            const svg = d3.select('#map')
-                .append('svg')
-                .attr('width', width)
-                .attr('height', height)
-                .attr('viewBox', `0 0 ${width} ${height}`);
+            <div class="legend-item">
+                <div class="legend-color" style="background:#facc15"></div>
+                <div>6 mois à 1 an</div>
+            </div>
 
-            // Projection
-            const projection = d3.geoMercator()
-                .center([2.5, 46.8])
-                .scale(2800)
-                .translate([width / 2, height / 2]);
+            <div class="legend-item">
+                <div class="legend-color" style="background:#fb923c"></div>
+                <div>1 an à 2 ans</div>
+            </div>
 
-            const path = d3.geoPath().projection(projection);
-			
-			// ======================
-			// Couche régions
-			// ======================
+            <div class="legend-item">
+                <div class="legend-color" style="background:#ef4444"></div>
+                <div>Plus de 2 ans</div>
+            </div>
+        </div>
 
-			svg.append("g")
-				.attr("class", "regions")
-				.selectAll("path")
-				.data(regionsData.features)
-				.enter()
-				.append("path")
-				.attr("class", "region")
-				.attr("d", path)
-				.attr("fill", d => {
-					if (d.properties.nom === "Centre-Val de Loire") {
-						return "#2563eb22";
-					}
-					return "none";
-				})
-				.attr("stroke", d => {
-					if (d.properties.nom === "Centre-Val de Loire") {
-						return "#2563eb";
-					}
-					return "#1f2937";
-				})
-				
-				.attr("stroke-width", 2)
-				.attr("opacity", d => {
-					if (d.properties.nom === "Centre-Val de Loire") {
-						return 1;
-					}
-					return 0.2;
-				});
+        <div class="stats">
 
-            // Dessiner les départements
-            const departments = svg.selectAll('path')
-                .data(geoData.features)
-                .enter()
-                .append('path')
-                .attr('class', 'department')
-                .attr('d', path)
-                .attr('fill', d => {
-                    const code = d.properties.code;
-                    const prefet = prefetsMap[code];
-                    return prefet ? colorMap[prefet.couleur_carte] : '#cccccc';
-                })
-                .attr('tabindex', '0')
-                .attr('role', 'button')
-                .attr('aria-label', d => {
-                    const code = d.properties.code;
-                    const prefet = prefetsMap[code];
-                    if (prefet) {
-                        return `Département ${prefet.territoire}, ${prefet.nom_prefet}, en poste depuis ${prefet.anciennete_jours} jours`;
-                    }
-                    return `Département ${d.properties.nom}`;
-                })
-                .on('mouseenter', function(event, d) {
-                    showTooltip(event, d, prefetsMap);
-                })
-                .on('mousemove', function(event) {
-                    moveTooltip(event);
-                })
-                .on('mouseleave', function() {
-                    hideTooltip();
-                })
-                .on('focus', function(event, d) {
-                    showTooltip(event, d, prefetsMap);
-                })
-                .on('blur', function() {
-                    hideTooltip();
-                })
-                .on('click', function(event, d) {
-                    const code = d.properties.code;
-                    const prefet = prefetsMap[code];
-                    if (prefet) {
-                        updateInfoPanel(prefet);
-                    }
-                });
+            <div class="stat-card">
+                <div class="stat-number" id="total-prefets">-</div>
+                <div class="stat-label">Préfets</div>
+            </div>
 
-            // Ajouter les numéros de département
-            svg.selectAll('text')
-                .data(geoData.features)
-                .enter()
-                .append('text')
-                .attr('class', 'dept-label')
-                .attr('transform', d => {
-                    const centroid = path.centroid(d);
-                    return `translate(${centroid[0]}, ${centroid[1]})`;
-                })
-                .text(d => d.properties.code);
+            <div class="stat-card">
+                <div class="stat-number" id="total-femmes">-</div>
+                <div class="stat-label">Femmes</div>
+            </div>
 
-            // Fonction tooltip
-            function showTooltip(event, d, prefetsMap) {
-                const code = d.properties.code;
-                const prefet = prefetsMap[code];
-                
-                if (!prefet) return;
+            <div class="stat-card">
+                <div class="stat-number" id="total-hommes">-</div>
+                <div class="stat-label">Hommes</div>
+            </div>
 
-                const tooltip = document.getElementById('tooltip');
-                const titres = prefet.titre_global.split('|').map(t => `• ${t.trim()}`).join('<br>');
-                
-                tooltip.innerHTML = `
+            <div class="stat-card">
+                <div class="stat-number" id="anciennete-moyenne">-</div>
+                <div class="stat-label">Ancienneté moyenne</div>
+            </div>
+
+        </div>
+
+        <div class="info-panel" id="info-panel">
+            <h3>Information</h3>
+
+            <p>
+                Survolez ou cliquez sur un département
+                pour afficher les informations détaillées.
+            </p>
+        </div>
+
+    </aside>
+
+</div>
+
+</div>
+
+<div id="tooltip" class="tooltip"></div>
+
+<script>
+
+const colors = {
+    green:"#4ade80",
+    yellow:"#facc15",
+    orange:"#fb923c",
+    red:"#ef4444"
+};
+
+Promise.all([
+    d3.json("data/departements.geojson"),
+    d3.json("data/regions.geojson"),
+    d3.dsv(";", "data/prefets_departements.csv")
+])
+
+.then(([geoData, regionsData, prefetsData]) => {
+
+    const prefetsMap = {};
+
+    prefetsData.forEach(p => {
+        prefetsMap[p.departement] = p;
+    });
+
+    const container = document.getElementById("map");
+
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    const svg = d3.select("#map")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", `0 0 ${width} ${height}`);
+
+    const projection = d3.geoMercator()
+        .fitSize([width, height], geoData);
+
+    const path = d3.geoPath().projection(projection);
+
+    // =========================
+    // Départements
+    // =========================
+
+    const departments = svg.append("g")
+        .selectAll("path")
+        .data(geoData.features)
+        .enter()
+        .append("path")
+        .attr("class", "department")
+        .attr("d", path)
+
+        .attr("fill", d => {
+
+            const code = d.properties.code;
+            const prefet = prefetsMap[code];
+
+            if(!prefet){
+                return "#f3f4f6";
+            }
+
+            return colors[prefet.couleur_carte];
+        })
+
+        .on("mousemove", (event, d) => {
+
+            const code = d.properties.code;
+            const prefet = prefetsMap[code];
+
+            if(!prefet){
+                return;
+            }
+
+            const titres = prefet.titre_global
+                .split("|")
+                .map(t => `• ${t.trim()}`)
+                .join("<br>");
+
+            d3.select("#tooltip")
+                .classed("visible", true)
+                .html(`
                     <h3>${prefet.nom_prefet}</h3>
-                    <p><strong>Département :</strong> ${prefet.departement} - ${prefet.territoire}</p>
-                    <p><strong>Sexe :</strong> ${prefet.sexe === 'F' ? 'Femme' : 'Homme'}</p>
-                    <p><strong>Fonction(s) :</strong><br>${titres}</p>
-                    <p><strong>En poste depuis :</strong> ${prefet.date_prise_fonction}</p>
-                    <p><strong>Ancienneté :</strong> ${prefet.anciennete_jours} jours</p>
-                `;
-                tooltip.classList.add('visible');
-                moveTooltip(event);
-            }
 
-            function moveTooltip(event) {
-                const tooltip = document.getElementById('tooltip');
-                const x = event.clientX + 15;
-                const y = event.clientY + 15;
-                
-                tooltip.style.left = x + 'px';
-                tooltip.style.top = y + 'px';
-            }
-
-            function hideTooltip() {
-                document.getElementById('tooltip').classList.remove('visible');
-            }
-
-            function updateInfoPanel(prefet) {
-                const panel = document.getElementById('info-panel');
-                const titres = prefet.titre_global.split('|').map(t => `<li>${t.trim()}</li>`).join('');
-                
-                panel.innerHTML = `
-                    <h3>${prefet.nom_prefet}</h3>
-                    <div class="info-content">
-                        <p><strong>Département :</strong> ${prefet.departement} - ${prefet.territoire}</p>
-                        <p><strong>Titre(s) :</strong></p>
-                        <ul style="margin-left: 20px; margin-top: 5px;">${titres}</ul>
-                        <p><strong>En poste depuis :</strong> ${prefet.date_prise_fonction}</p>
-                        <p><strong>Ancienneté :</strong> ${prefet.anciennete_jours} jours</p>
+                    <div>
+                        <strong>${prefet.territoire}</strong>
                     </div>
-                `;
+
+                    <br>
+
+                    <div>${titres}</div>
+
+                    <br>
+
+                    <div>
+                        En poste depuis :
+                        ${prefet.date_prise_fonction}
+                    </div>
+
+                    <div>
+                        Ancienneté :
+                        ${prefet.anciennete_jours} jours
+                    </div>
+                `)
+
+                .style("left", (event.pageX + 20) + "px")
+                .style("top", (event.pageY + 20) + "px");
+        })
+
+        .on("mouseleave", () => {
+
+            d3.select("#tooltip")
+                .classed("visible", false);
+        })
+
+        .on("click", (event, d) => {
+
+            const code = d.properties.code;
+            const prefet = prefetsMap[code];
+
+            if(!prefet){
+                return;
             }
 
-            // Recherche
-            document.getElementById('search').addEventListener('input', (e) => {
-                const search = e.target.value.toLowerCase();
-                
-                departments.style('opacity', d => {
-                    if (!search) return 1;
-                    
-                    const code = d.properties.code;
-                    const prefet = prefetsMap[code];
-                    
-                    if (!prefet) return 0.3;
-                    
-                    const match = 
-                        prefet.nom_prefet.toLowerCase().includes(search) ||
-                        prefet.territoire.toLowerCase().includes(search) ||
-                        prefet.departement.includes(search);
-                    
-                    return match ? 1 : 0.3;
-                });
-            });
+            document.getElementById("info-panel").innerHTML = `
+                <h3>${prefet.nom_prefet}</h3>
 
-            // Statistiques
-            const totalPrefets = prefetsData.length;
-            const totalFemmes = prefetsData.filter(p => p.sexe === 'F').length;
-            const totalHommes = prefetsData.filter(p => p.sexe === 'M').length;
-            const avgAnciennete = Math.round(
-                prefetsData.reduce((sum, p) => sum + parseInt(p.anciennete_jours), 0) / totalPrefets
-            );
+                <p>
+                    <strong>${prefet.territoire}</strong>
+                </p>
 
-            document.getElementById('total-prefets').textContent = totalPrefets;
-            document.getElementById('total-femmes').textContent = totalFemmes;
-            document.getElementById('total-hommes').textContent = totalHommes;
-            document.getElementById('anciennete-moyenne').textContent = avgAnciennete;
+                <br>
 
-        }).catch(error => {
-            console.error('Erreur de chargement:', error);
-            document.getElementById('map').innerHTML = `
-                <div class="loading" style="color: red;">
-                    ❌ Erreur de chargement des données.<br>
-                    Vérifiez que le fichier data/prefets_departements.csv existe.
-                </div>
+                <p>
+                    ${prefet.titre_global}
+                </p>
+
+                <br>
+
+                <p>
+                    En poste depuis :
+                    ${prefet.date_prise_fonction}
+                </p>
+
+                <p>
+                    Ancienneté :
+                    ${prefet.anciennete_jours} jours
+                </p>
             `;
         });
-    </script>
+
+    // =========================
+    // Régions
+    // =========================
+
+    svg.append("g")
+        .selectAll("path")
+        .data(regionsData.features)
+        .enter()
+        .append("path")
+        .attr("class", "region")
+        .attr("d", path)
+
+        .attr("fill", "none")
+
+        .attr("stroke", d => {
+
+            if(d.properties.nom === "Centre-Val de Loire"){
+                return "#2563eb";
+            }
+
+            return "#374151";
+        })
+
+        .attr("stroke-width", d => {
+
+            if(d.properties.nom === "Centre-Val de Loire"){
+                return 4;
+            }
+
+            return 1.2;
+        })
+
+        .attr("opacity", d => {
+
+            if(d.properties.nom === "Centre-Val de Loire"){
+                return 1;
+            }
+
+            return 0.3;
+        });
+
+    // =========================
+    // Labels départements
+    // =========================
+
+    svg.append("g")
+        .selectAll("text")
+        .data(geoData.features)
+        .enter()
+        .append("text")
+        .attr("class", "dept-label")
+
+        .attr("transform", d => {
+
+            const centroid = path.centroid(d);
+
+            return `translate(${centroid[0]}, ${centroid[1]})`;
+        })
+
+        .text(d => d.properties.code);
+
+    // =========================
+    // Recherche
+    // =========================
+
+    document.getElementById("search")
+        .addEventListener("input", e => {
+
+            const search = e.target.value.toLowerCase();
+
+            departments.style("opacity", d => {
+
+                if(!search){
+                    return 1;
+                }
+
+                const code = d.properties.code;
+                const prefet = prefetsMap[code];
+
+                if(!prefet){
+                    return 0.2;
+                }
+
+                const match =
+                    prefet.nom_prefet.toLowerCase().includes(search)
+                    ||
+                    prefet.territoire.toLowerCase().includes(search)
+                    ||
+                    prefet.departement.includes(search);
+
+                return match ? 1 : 0.15;
+            });
+
+        });
+
+    // =========================
+    // Stats
+    // =========================
+
+    document.getElementById("total-prefets")
+        .textContent = prefetsData.length;
+
+    document.getElementById("total-femmes")
+        .textContent = prefetsData.filter(p => p.sexe === "F").length;
+
+    document.getElementById("total-hommes")
+        .textContent = prefetsData.filter(p => p.sexe === "M").length;
+
+    const moyenne = Math.round(
+        prefetsData.reduce((sum, p) => {
+            return sum + parseInt(p.anciennete_jours);
+        }, 0) / prefetsData.length
+    );
+
+    document.getElementById("anciennete-moyenne")
+        .textContent = moyenne;
+
+})
+
+.catch(error => {
+
+    console.error(error);
+
+    document.getElementById("map").innerHTML = `
+        <div style="padding:40px;color:red">
+            Erreur de chargement des données.
+        </div>
+    `;
+});
+
+</script>
+
 </body>
 </html>
