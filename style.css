@@ -21,6 +21,11 @@ h1 {
   cursor: pointer;
 }
 
+.region {
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
 .department:hover {
   stroke: black;
   stroke-width: 2;
