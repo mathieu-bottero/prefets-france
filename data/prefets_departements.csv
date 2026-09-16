@@ -1,0 +1,96 @@
+﻿departement;territoire;nom_prefet;sexe;titre_global;date_prise_fonction;anciennete_jours;couleur_carte
+01;Ain;Louis-Xavier THIRODE;M;Préfet de l'Ain;03/12/2025;287;yellow
+02;Aisne;Isabelle EPAILLARD;F;Préfète de l'Aisne;31/08/2026;16;green
+03;Allier;Christophe NOEL DU PAYRAT;M;Préfet de l'Allier;09/01/2025;615;orange
+04;Alpes-de-Haute-Provence;Isabelle TOMATIS;F;Préfète des Alpes-de-Haute-Provence;22/09/2025;359;yellow
+05;Hautes-Alpes;Philippe BAILBE;M;Préfet des Hautes-Alpes;25/08/2025;387;orange
+06;Alpes-Maritimes;Jean-Marie GIRIER;M;Préfet des Alpes-Maritimes;10/07/2026;68;green
+07;Ardèche;Benoît TREVISANI;M;Préfet de l'Ardèche;25/08/2025;387;orange
+08;Ardennes;Christian CHASSAING;M;Préfet des Ardennes;25/08/2025;387;orange
+09;Ariège;Hervé BRABANT;M;Préfet de l'Ariège;23/10/2025;328;yellow
+10;Aube;Pascal GAUCI;M;Préfet de l'Aube;28/05/2026;111;green
+11;Aude;Alain BUCQUET;M;Préfet de l'Aude;25/08/2025;387;orange
+12;Aveyron;Claire CHAUFFOUR-ROUILLARD;F;Préfète de l'Aveyron;07/11/2024;678;orange
+13;Bouches-du-Rhône;Jacques WITKOWSKI;M;Préfet des Bouches-du-Rhône | Préfet de la région Provence-Alpes-Côte d'Azur | Préfet de la zone de défense et de sécurité Sud | Préfet coordonnateur de bassin Rhône-Méditerranée;20/11/2025;300;yellow
+14;Calvados;David CLAVIERE;M;Préfet du Calvados;18/05/2026;121;green
+15;Cantal;Philippe LOOS;M;Préfet du Cantal;24/10/2024;692;orange
+16;Charente;Jérôme HARNOIS;M;Préfet de la Charente;19/08/2024;758;red
+17;Charente-Maritime;Michel PROSIC;M;Préfet de la Charente-Maritime;28/05/2026;111;green
+18;Cher;Philippe LE MOING SURZUR;M;Préfet du Cher;24/11/2025;296;yellow
+19;Corrèze;Vincent BERTON;M;Préfet de la Corrèze;16/01/2025;608;orange
+21;Côte-d'Or;Violaine DEMARET;F;Préfète de la Côte-d'Or | Préfète de la région Bourgogne-Franche-Comté;09/04/2026;160;green
+22;Côtes-d'Armor;François GUILLOTOU de KERÉVER;M;Préfet des Côtes-d'Armor;24/10/2024;692;orange
+23;Creuse;Jean-Philippe LEGUEULT;M;Préfet de la Creuse;18/12/2025;272;yellow
+24;Dordogne;Marie AUBERT;F;Préfète de la Dordogne;07/11/2024;678;orange
+25;Doubs;Rémi BASTILLE;M;Préfet du Doubs;13/01/2024;977;red
+26;Drôme;Marie-Aimée GASPARI;F;Préfète de la Drôme;31/07/2025;412;orange
+27;Eure;Xavier DELARUE;M;Préfet de l'Eure;06/05/2026;133;green
+28;Eure-et-Loir;Xavier PELLETIER;M;Préfet de l'Eure-et-Loir;31/08/2026;16;green
+29;Finistère;Louis LE FRANC;M;Préfet du Finistère;29/04/2025;505;orange
+2A;Corse-du-Sud;Eric JALON;M;Préfet de la Corse-du-Sud;25/08/2025;387;orange
+2B;Haute-Corse;Véronique DEPREZ-BOUDIER;F;Préfète de l'Haute-Corse;28/05/2026;111;green
+30;Gard;Fabienne DECOTTIGNIES;F;Préfète du Gard;17/08/2026;30;green
+31;Haute-Garonne;Fabrice RIGOULET-ROZE;M;Préfet de l'Haute-Garonne | Préfet de la région Occitanie | Préfet coordonnateur de bassin Adour-Garonne;29/06/2026;79;green
+32;Gers;Alain CASTANIER;M;Préfet du Gers;28/11/2024;657;orange
+33;Gironde;Sophie BROCAS;F;Préfète de la Gironde | Préfète de la région Nouvelle-Aquitaine | Préfète de la zone de défense et de sécurité Sud-Ouest | Préfète coordonnatrice de bassin Adour-Garonne;18/05/2026;121;green
+34;Hérault;Chantal MAUCHET;F;Préfète de l'Hérault;03/12/2025;287;yellow
+35;Ille-et-Vilaine;Emmanuelle DUBEE;F;Préfète de l'Ille-et-Vilaine | Préfète de la région Bretagne | Préfète de la zone de défense et de sécurité Ouest;25/06/2026;83;green
+36;Indre;Maryvonne LE BRIGNONEN;F;Préfète de l'Indre;09/04/2026;160;green
+37;Indre-et-Loire;Thomas CAMPEAUX;M;Préfet de l'Indre-et-Loire;07/11/2024;678;orange
+38;Isère;Catherine SEGUIN;F;Préfète de l'Isère;07/11/2024;678;orange
+39;Jura;Pierre-Edouard COLLIEX;M;Préfet du Jura;13/03/2025;552;orange
+40;Landes;Gilles CLAVREUL;M;Préfet des Landes;27/03/2025;538;orange
+41;Loir-et-Cher;Joseph ZIMET;M;Préfet de la Loir-et-Cher;25/08/2025;387;orange
+42;Loire;François-Xavier BIEUVILLE;M;Préfet de la Loire;18/05/2026;121;green
+44;Loire-Atlantique;Laurent HOTTIAUX;M;Préfet de la Loire-Atlantique | Préfet de la région Pays de la Loire;25/06/2026;83;green
+45;Loiret;Hugues MOUTOUH;M;Préfet du Loiret | Préfet de la région Centre-Val de Loire | Préfet coordonnateur de bassin Loire-Bretagne;18/05/2026;121;green
+46;Lot;Marilyne POULAIN;F;Préfète du Lot;20/01/2026;239;yellow
+47;Lot-et-Garonne;Bruno ANDRÉ;M;Préfet de la Lot-et-Garonne;18/12/2025;272;yellow
+48;Lozère;Gilles QUÉNÉHERVÉ;M;Préfet de la Lozère;07/11/2024;678;orange
+49;Maine-et-Loire;François PESNEAU;M;Préfet de la Maine-et-Loire;03/12/2025;287;yellow
+50;Manche;Marc CHAPPUIS;M;Préfet de la Manche;22/09/2025;359;yellow
+51;Marne;Romain ROYET;M;Préfet de la Marne;24/07/2025;419;orange
+53;Mayenne;Nadège BAPTISTA;F;Préfète de la Mayenne;31/07/2025;412;orange
+54;Meurthe-et-Moselle;Yves SEGUY;M;Préfet de la Meurthe-et-Moselle;25/08/2025;387;orange
+55;Meuse;Anne-Florence CANTON;F;Préfète de la Meuse;06/05/2026;133;green
+56;Morbihan;Michaël GALY;M;Préfet du Morbihan;08/05/2025;496;orange
+57;Moselle;Pascal BOLOT;M;Préfet de la Moselle;29/04/2025;505;orange
+58;Nièvre;Victor DEVOUGE;M;Préfet de la Nièvre;24/08/2026;23;green
+59;Nord;Bertrand GAUME;M;Préfet du Nord | Préfet de la région Hauts-de-France | Préfet de la zone de défense et de sécurité Nord | Préfet coordonnateur de bassin Artois-Picardie;18/01/2024;972;red
+60;Oise;Jean-Marie CAILLAUD;M;Préfet de l'Oise;07/11/2024;678;orange
+61;Orne;Hervé TOURMENTE;M;Préfet de l'Orne;25/08/2025;387;orange
+62;Pas-de-Calais;François-Xavier LAUCH;M;Préfet du Pas-de-Calais;03/12/2025;287;yellow
+63;Puy-de-Dôme;Anne FRACKOWIAK-JACOBS;F;Préfète de la Puy-de-Dôme;18/12/2025;272;yellow
+64;Pyrénées-Atlantiques;Simon FETET;M;Préfet des Pyrénées-Atlantiques;24/08/2026;23;green
+65;Hautes-Pyrénées;Sibylle SAMOYAULT;F;Préfète des Hautes-Pyrénées;24/08/2026;23;green
+66;Pyrénées-Orientales;Pierre REGNAULT DE LA MOTHE;M;Préfet des Pyrénées-Orientales;25/08/2025;387;orange
+67;Bas-Rhin;Amaury de SAINT-QUENTIN;M;Préfet du Bas-Rhin | Préfet de la région Grand Est | Préfet de la zone de défense et de sécurité Est | Préfet coordonnateur de bassin Rhin-Meuse;20/11/2025;300;yellow
+68;Haut-Rhin;Emmanuel AUBRY;M;Préfet de l'Haut-Rhin;13/06/2025;460;orange
+69;Rhône;Etienne GUYOT;M;Préfet du Rhône | Préfet de la région Auvergne-Rhône-Alpes | Préfet de la zone de défense et de sécurité Sud-Est | Préfet coordonnateur de bassin Rhône-Méditerranée;18/05/2026;121;green
+70;Haute-Saône;Serge JACOB;M;Préfet de l'Haute-Saône;24/07/2025;419;orange
+71;Saône-et-Loire;Dominique DUFOUR;M;Préfet de la Saône-et-Loire;25/08/2025;387;orange
+72;Sarthe;Sébastien JALLET;M;Préfet de la Sarthe;13/06/2025;460;orange
+73;Savoie;Vanina NICOLI;F;Préfète de la Savoie;27/03/2025;538;orange
+74;Haute-Savoie;Jérôme BONET;M;Préfet de l'Haute-Savoie;17/08/2026;30;green
+75;Paris;Marie BAVILLE;F;Préfète de Paris | Préfète de la région Île-de-France | Préfète de la zone de défense et de sécurité Paris;05/06/2026;103;green
+78;Yvelines;Brice BLONDEL;M;Préfet des Yvelines;28/05/2026;111;green
+79;Deux-Sèvres;Valérie MICHEL-MOREAUX;F;Préfète des Deux-Sèvres;24/08/2026;23;green
+81;Tarn;Simon BERTOUX;M;Préfet du Tarn;23/10/2025;328;yellow
+82;Tarn-et-Garonne;Sébastien CAUWEL;M;Préfet de la Tarn-et-Garonne;28/05/2026;111;green
+83;Var;Simon BABRE;M;Préfet du Var;16/05/2025;488;orange
+84;Vaucluse;Thierry SUQUET;M;Préfet de la Vaucluse;04/03/2024;926;red
+85;Vendée;Éric FREYSSELINARD;M;Préfet de la Vendée;03/12/2025;287;yellow
+86;Vienne;Charles GIUSTI;M;Préfet de la Vienne;06/05/2026;133;green
+87;Haute-Vienne;Maurice BARATE;M;Préfet de l'Haute-Vienne;03/12/2025;287;yellow
+88;Vosges;Blaise GOURTAY;M;Préfet des Vosges;24/11/2025;296;yellow
+89;Yonne;Jean SALOMON;M;Préfet de l'Yonne;24/08/2026;23;green
+90;Territoire de Belfort;Alain CHARRIER;M;Préfet du Territoire de Belfort;07/11/2024;678;orange
+91;Essonne;Fabienne BALUSSOU;F;Préfète de l'Essonne;22/09/2025;359;yellow
+92;Hauts-de-Seine;Alexandre BRUGERE;M;Préfet des Hauts-de-Seine;01/11/2024;684;orange
+93;Seine-Saint-Denis;Julien CHARLES;M;Préfet de la Seine-Saint-Denis;07/11/2024;678;orange
+94;Val-de-Marne;Stanislas BOURRON;M;Préfet de la Val-de-Marne;18/05/2026;121;green
+971;Guadeloupe;Thierry DEVIMEUX;M;Préfet de la Guadeloupe | Préfet de la région Guadeloupe;31/07/2025;412;orange
+972;Martinique;Etienne DESPLANQUES;M;Préfet de la Martinique | Préfet de la région Martinique;16/01/2025;608;orange
+974;Réunion;Patrice LATRON;M;Préfet de la Réunion | Préfet de la région Réunion;01/11/2024;684;orange
+975;collectivité territoriale de Saint-Pierre-et-Miquelon;Marc DIDIO;M;Préfet de la collectivité territoriale de Saint-Pierre-et-Miquelon;18/12/2025;272;yellow
+976;Mayotte;Frédéric POISOT;M;Préfet de la Mayotte;18/05/2026;121;green
