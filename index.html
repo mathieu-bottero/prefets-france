@@ -549,6 +549,21 @@ let bassinsById = {};
 let svg, g, zoomLayer, projection, path, zoomBehavior;
 let width, height;
 
+// turf.intersect's signature changed between major versions (two features
+// in v6, a single FeatureCollection in v7). Try both so this keeps working
+// regardless of which turf.js build the CDN actually serves.
+function safeIntersect(a, b){
+  try{
+    const r = turf.intersect(a, b);
+    if(r) return r;
+  }catch(e){}
+  try{
+    return turf.intersect(turf.featureCollection([a, b]));
+  }catch(e){
+    return null;
+  }
+}
+
 Promise.all([
   d3.json("data/departements.geojson"),
   d3.json("data/regions.geojson"),
@@ -584,8 +599,7 @@ Promise.all([
       const bBbox = turf.bbox(b);
       if(dBbox[2] < bBbox[0] || dBbox[0] > bBbox[2] || dBbox[3] < bBbox[1] || dBbox[1] > bBbox[3]) return;
 
-      let inter;
-      try{ inter = turf.intersect(turf.featureCollection([d, b])); }catch(e){ return; }
+      const inter = safeIntersect(d, b);
       if(!inter) return;
       if(turf.area(inter) < 1e6) return; // discard slivers under ~1 km²
 
@@ -594,6 +608,10 @@ Promise.all([
       deptBassinIds[code].add(b.properties.CdBH);
     });
   });
+
+  if(bassinPieces.length === 0){
+    console.error('Aucun découpage département/bassin obtenu — vérifier la version de turf.js chargée.');
+  }
 
   buildMap();
   buildOverseasList();
