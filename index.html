@@ -365,11 +365,12 @@
     opacity:.55;
   }
 
-  .boundary.selected{
-    stroke:var(--gold);
-    stroke-width:2.6;
-    opacity:1;
-  }
+.boundary.selected{
+  stroke:var(--gold);
+  stroke-width:2.6;
+  opacity:1;
+  filter: drop-shadow(0 0 4px rgba(169, 128, 63, 0.5)); /* ✅ Effet glow */
+}
 
   .dept-label{
     font-family:var(--font-mono);
@@ -681,22 +682,24 @@ function buildMap(){
 
   zoomLayer = svg.append('g').attr('class', 'zoom-layer');
 
-  zoomLayer.append('g').attr('class', 'dept-layer');
-  zoomLayer.append('g').attr('class', 'boundary-layer');
-  zoomLayer.append('g').attr('class', 'label-layer');
+zoomLayer.append('g').attr('class', 'dept-layer');
+zoomLayer.append('g').attr('class', 'boundary-layer');
+zoomLayer.append('g').attr('class', 'selected-boundary-layer'); // ✅ NOUVEAU calque au-dessus
+zoomLayer.append('g').attr('class', 'label-layer');
 
-  zoomBehavior = d3.zoom()
-    .scaleExtent([1, 10])
-    .on('zoom', (event) => {
-      zoomLayer.attr('transform', event.transform);
-      const k = event.transform.k;
-      zoomLayer.selectAll('.department').attr('stroke-width', 1 / k);
-      zoomLayer.selectAll('.boundary').attr('stroke-width', d => (boundaryIsSelected(d) ? 2.6 : 1.4) / k);
-      zoomLayer.selectAll('.dept-label').attr('transform', d => {
-        const c = centroidsCache[d.properties.code] || [0, 0];
-        return `translate(${c[0]},${c[1]}) scale(${1 / k})`;
-      });
+zoomBehavior = d3.zoom()
+  .scaleExtent([1, 10])
+  .on('zoom', (event) => {
+    zoomLayer.attr('transform', event.transform);
+    const k = event.transform.k;
+    zoomLayer.selectAll('.department').attr('stroke-width', 1 / k);
+    zoomLayer.selectAll('.boundary').attr('stroke-width', d => (boundaryIsSelected(d) ? 2.6 : 1.4) / k);
+    zoomLayer.select('.selected-boundary-layer').selectAll('path').attr('stroke-width', 2.6 / k); // ✅ AJOUTÉ
+    zoomLayer.selectAll('.dept-label').attr('transform', d => {
+      const c = centroidsCache[d.properties.code] || [0, 0];
+      return `translate(${c[0]},${c[1]}) scale(${1 / k})`;
     });
+  });
 
   svg.call(zoomBehavior);
 
@@ -786,15 +789,25 @@ function boundaryIsSelected(d){
 function renderBoundaries(){
   const data = state.mode === 'regions' ? geoRegions.features : geoBassins.features;
 
+  // ✅ Bordures normales (non sélectionnées)
   const sel = zoomLayer.select('.boundary-layer').selectAll('path').data(data);
-
   sel.exit().remove();
-
   sel.enter()
     .append('path')
     .merge(sel)
     .attr('class', 'boundary')
-    .classed('selected', d => boundaryIsSelected(d))
+    .classed('selected', false) // ✅ Jamais sélectionné dans ce calque
+    .attr('d', path)
+    .style('display', d => boundaryIsSelected(d) ? 'none' : null); // ✅ Cache si sélectionné
+
+  // ✅ Bordure sélectionnée (dans le calque au-dessus)
+  const selectedData = data.filter(d => boundaryIsSelected(d));
+  const selBoundary = zoomLayer.select('.selected-boundary-layer').selectAll('path').data(selectedData);
+  selBoundary.exit().remove();
+  selBoundary.enter()
+    .append('path')
+    .merge(selBoundary)
+    .attr('class', 'boundary selected')
     .attr('d', path);
 }
 
