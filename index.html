@@ -596,8 +596,10 @@ Promise.all([
   d3.json("data/departements.geojson"),
   d3.json("data/regions.geojson"),
   d3.json("data/bassins.geojson"),
-  d3.dsv(";", "data/prefets_departements.csv")
-]).then(([depts, regions, bassins, rows]) => {
+  d3.dsv(";", "data/prefets_departements.csv"),
+  d3.json("data/bassin_departements.json"),
+  d3.json("data/region_departements.json")
+]).then(([depts, regions, bassins, rows, bassinDeptsData, regionDeptsData]) => {
 
   geoDepts = depts;
   geoRegions = regions;
@@ -608,43 +610,36 @@ Promise.all([
   regions.features.forEach(f => regionsById[f.properties.code] = f);
   bassins.features.forEach(f => bassinsById[f.properties.CdBH] = f);
   
-  // Pré-calcule quels départements touchent quels bassins
-  bassins.features.forEach(bassin => {
-    const bassinId = bassin.properties.CdBH;
-    bassinTouches[bassinId] = new Set();
-
-    geoDepts.features.forEach(dept => {
-      try{
-        if(turf.booleanIntersects(dept, bassin)){
-          bassinTouches[bassinId].add(dept.properties.code);
-        }
-      }catch(e){}
-    });
+  // ✅ INSTANTANÉ - Charge les correspondances bassins
+  Object.entries(bassinDeptsData).forEach(([bassinId, deptCodes]) => {
+    bassinTouches[bassinId] = new Set(deptCodes);
   });
 
-  geoDepts.features.forEach(d => {
-    const pt = turf.pointOnFeature(d);
-    const region = regions.features.find(r => turf.booleanPointInPolygon(pt, r));
-    if(region) regionOf[d.properties.code] = region;
+  // ✅ INSTANTANÉ - Charge les correspondances régions
+  Object.entries(regionDeptsData).forEach(([regionCode, deptCodes]) => {
+    const region = regionsById[regionCode];
+    if (region) {
+      deptCodes.forEach(deptCode => {
+        regionOf[deptCode] = region;
+      });
+    }
   });
 
+  // ✅ Association département -> bassin (simplifié)
   geoDepts.features.forEach(d => {
-    const pt = turf.pointOnFeature(d);
-    const bassin = bassins.features.find(b =>
-      turf.booleanPointInPolygon(pt, b)
-    );
-    if(bassin){
-      bassinOf[d.properties.code] = bassin;
+    const deptCode = d.properties.code;
+    // Trouve le bassin qui contient ce département
+    for (let [bassinId, deptCodes] of Object.entries(bassinDeptsData)) {
+      if (deptCodes.includes(deptCode)) {
+        bassinOf[deptCode] = bassinsById[bassinId];
+        break;
+      }
     }
   });
 
   buildMap();
-  
-  // ========== AJOUT : Construction des caches ==========
   buildCentroidsCache();
   buildColorCache();
-  // ========== FIN AJOUT ==========
-  
   buildOverseasList();
   render();
 
@@ -920,8 +915,7 @@ function renderDossier(){
     return;
   }
 
-  const colors = ancColorHex();
-  const tab = colors[p.couleur_carte] || 'var(--ink-faint)';
+  const tab = deptColorCache[state.selectedDept] || 'var(--ink-faint)';
   const titres = p.titre_global.split('|').map(t => `<div>${t.trim()}</div>`).join('');
   const sexeLabel = p.sexe === 'F' ? 'Préfète' : 'Préfet';
 
