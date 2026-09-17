@@ -542,6 +542,7 @@ let geoDepts, geoRegions, geoBassins, prefetsRows;
 let prefetsMap = {};
 let regionOf = {};       // dept code -> region feature (whole department, single point test)
 let bassinOf = {}; // dept code -> bassin feature
+let bassinTouches = {}; // bassinId -> Set(dept codes)
 let regionsById = {};
 let bassinsById = {};
 
@@ -565,6 +566,25 @@ Promise.all([
   rows.forEach(r => prefetsMap[r.departement] = r);
   regions.features.forEach(f => regionsById[f.properties.code] = f);
   bassins.features.forEach(f => bassinsById[f.properties.CdBH] = f);
+  
+  // Pré-calcule quels départements touchent quels bassins
+bassins.features.forEach(bassin => {
+
+  const bassinId = bassin.properties.CdBH;
+
+  bassinTouches[bassinId] = new Set();
+
+  geoDepts.features.forEach(dept => {
+
+    try{
+
+      if(turf.booleanIntersects(dept, bassin)){
+        bassinTouches[bassinId].add(dept.properties.code);
+      }
+
+    }catch(e){}
+  });
+});
 
   // Regions rarely split a department: a single point test is enough.
   geoDepts.features.forEach(d => {
@@ -824,26 +844,7 @@ function deptInScope(code){
   return id === state.selectedScopeId;
 }
 
-function deptTouchesSelectedBassin(code){
 
-  if(state.mode !== 'bassins' || !state.selectedScopeId){
-    return true;
-  }
-
-  const dept = geoDepts.features.find(
-    f => f.properties.code === code
-  );
-
-  const bassin = bassinsById[state.selectedScopeId];
-
-  if(!dept || !bassin) return false;
-
-  try{
-    return turf.booleanIntersects(dept, bassin);
-  }catch(e){
-    return false;
-  }
-}
 
 
 function render(){
@@ -868,7 +869,7 @@ zoomLayer.selectAll('.department')
     && (
       state.mode === 'regions'
         ? deptInScope(code)
-        : deptTouchesSelectedBassin(code)
+        : bassinTouches[state.selectedScopeId]?.has(code)
     )
   ) ? 1 : 0.15;
 });
@@ -883,7 +884,7 @@ return (
   && (
     state.mode === 'regions'
       ? deptInScope(code)
-      : deptTouchesSelectedBassin(code)
+      : bassinTouches[state.selectedScopeId]?.has(code)
   )
 ) ? 0.85 : 0.1;
   });
