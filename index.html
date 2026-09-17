@@ -541,28 +541,14 @@ const state = {
 let geoDepts, geoRegions, geoBassins, prefetsRows;
 let prefetsMap = {};
 let regionOf = {};       // dept code -> region feature (whole department, single point test)
-let bassinPieces = [];   // clipped {code, bassinId} pieces — a department can span several
-let deptBassinIds = {};  // dept code -> Set of bassin ids it actually touches
+let bassinOf = {}; // dept code -> bassin feature
 let regionsById = {};
 let bassinsById = {};
 
-let svg, g, zoomLayer, projection, path, zoomBehavior;
+let svg, zoomLayer, projection, path, zoomBehavior;
 let width, height;
 
-// turf.intersect's signature changed between major versions (two features
-// in v6, a single FeatureCollection in v7). Try both so this keeps working
-// regardless of which turf.js build the CDN actually serves.
-function safeIntersect(a, b){
-  try{
-    const r = turf.intersect(a, b);
-    if(r) return r;
-  }catch(e){}
-  try{
-    return turf.intersect(turf.featureCollection([a, b]));
-  }catch(e){
-    return null;
-  }
-}
+
 
 Promise.all([
   d3.json("data/departements.geojson"),
@@ -587,31 +573,19 @@ Promise.all([
     if(region) regionOf[d.properties.code] = region;
   });
 
-  // Bassins hydrographiques follow watershed lines, not administrative ones —
-  // many departments genuinely straddle two basins. Clip each department to
-  // its real overlap with each bassin so both parts render (and mask) correctly.
-  geoDepts.features.forEach(d => {
-    const code = d.properties.code;
-    deptBassinIds[code] = new Set();
-    const dBbox = turf.bbox(d);
+	// Association simple département -> bassin via point interne
+	geoDepts.features.forEach(d => {
 
-    bassins.features.forEach(b => {
-      const bBbox = turf.bbox(b);
-      if(dBbox[2] < bBbox[0] || dBbox[0] > bBbox[2] || dBbox[3] < bBbox[1] || dBbox[1] > bBbox[3]) return;
+	  const pt = turf.pointOnFeature(d);
 
-      const inter = safeIntersect(d, b);
-      if(!inter) return;
-      if(turf.area(inter) < 1e6) return; // discard slivers under ~1 km²
+	  const bassin = bassins.features.find(b =>
+		turf.booleanPointInPolygon(pt, b)
+	  );
 
-      inter.properties = { code, bassinId: b.properties.CdBH };
-      bassinPieces.push(inter);
-      deptBassinIds[code].add(b.properties.CdBH);
-    });
-  });
-
-  if(bassinPieces.length === 0){
-    console.error('Aucun découpage département/bassin obtenu — vérifier la version de turf.js chargée.');
-  }
+	  if(bassin){
+		bassinOf[d.properties.code] = bassin;
+	  }
+	});
 
   buildMap();
   buildOverseasList();
@@ -635,6 +609,10 @@ function buildMap(){
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', `0 0 ${width} ${height}`);
+	
+svg.append('defs')
+  .append('clipPath')
+  .attr('id', 'bassin-clip');
 
   projection = d3.geoMercator().fitSize([width, height], geoDepts);
   path = d3.geoPath().projection(projection);
@@ -712,11 +690,10 @@ function buildMap(){
 }
 
 function renderDepartments(){
-  // Régions: whole departments (works well, one region each).
-  // Bassins: clipped pieces, since ~40% of departments straddle two basins.
-  const data = state.mode === 'regions' ? geoDepts.features : bassinPieces;
 
-  const sel = zoomLayer.select('.dept-layer').selectAll('path').data(data);
+  const sel = zoomLayer.select('.dept-layer')
+    .selectAll('path')
+    .data(geoDepts.features);
 
   sel.exit().remove();
 
@@ -776,27 +753,32 @@ function onDeptLeave(){
 }
 
 function onDeptClick(event, d){
+
   const code = d.properties.code;
 
+  const parent = state.mode === 'regions'
+    ? regionOf[code]
+    : bassinOf[code];
+
   state.selectedDept = code;
+
   state.searchTerm = '';
+
   document.getElementById('search').value = '';
 
-  if(state.mode === 'regions'){
-    const parent = regionOf[code];
-    if(parent){
-      state.selectedScopeId = parent.properties.code;
-      zoomToFeature(parent);
-    }
-  }else{
-    // d is the exact clipped piece the user clicked — its bassinId is the
-    // real answer, not an approximation from a single test point.
-    const bassinId = d.properties.bassinId;
-    state.selectedScopeId = bassinId;
-    zoomToFeature(bassinsById[bassinId]);
+  if(parent){
+
+    const id = state.mode === 'regions'
+      ? parent.properties.code
+      : parent.properties.CdBH;
+
+    state.selectedScopeId = id;
+
+    zoomToFeature(parent);
   }
 
   renderBoundaries();
+
   render();
 }
 
@@ -827,50 +809,94 @@ function deptMatchesSearch(code){
       || code.includes(state.searchTerm);
 }
 
-// Exact scope test for whatever is bound to a .department path —
-// a whole department (régions) or one clipped piece (bassins).
-function pieceInScope(d){
+
+function deptInScope(code){
+
   if(!state.selectedScopeId) return true;
-  if(state.mode === 'regions'){
-    const parent = regionOf[d.properties.code];
-    return !!parent && parent.properties.code === state.selectedScopeId;
-  }
-  return d.properties.bassinId === state.selectedScopeId;
+
+  const parent = state.mode === 'regions'
+    ? regionOf[code]
+    : bassinOf[code];
+
+  if(!parent) return false;
+
+  const id = state.mode === 'regions'
+    ? parent.properties.code
+    : parent.properties.CdBH;
+
+  return id === state.selectedScopeId;
 }
 
-// Whole-department scope test, used for the (always whole-department) labels —
-// a department counts as "in scope" if any of its pieces are.
-function codeInScope(code){
-  if(!state.selectedScopeId) return true;
-  if(state.mode === 'regions'){
-    const parent = regionOf[code];
-    return !!parent && parent.properties.code === state.selectedScopeId;
+
+function updateBassinClip(){
+
+  const clip = svg.select('#bassin-clip');
+
+  clip.selectAll('*').remove();
+
+  // Pas de masque si pas en mode bassin
+  if(state.mode !== 'bassins' || !state.selectedScopeId){
+
+    zoomLayer.select('.dept-layer')
+      .attr('clip-path', null);
+
+    return;
   }
-  return !!deptBassinIds[code] && deptBassinIds[code].has(state.selectedScopeId);
+
+  const bassin = bassinsById[state.selectedScopeId];
+
+  clip.append('path')
+    .attr('d', path(bassin));
+
+  zoomLayer.select('.dept-layer')
+    .attr('clip-path', 'url(#bassin-clip)');
 }
+
 
 function render(){
+
   const colors = ancColorHex();
 
   zoomLayer.selectAll('.department')
     .attr('fill', d => {
+
       const p = prefetsMap[d.properties.code];
-      return p ? colors[p.couleur_carte] : 'var(--none)';
+
+      return p
+        ? colors[p.couleur_carte]
+        : 'var(--none)';
     })
     .style('opacity', d => {
-      return (deptMatchesSearch(d.properties.code) && pieceInScope(d)) ? 1 : 0.15;
+
+      const code = d.properties.code;
+
+      return (
+        deptMatchesSearch(code)
+        && deptInScope(code)
+      ) ? 1 : 0.15;
     });
 
   zoomLayer.selectAll('.dept-label')
     .style('opacity', d => {
+
       const code = d.properties.code;
-      return (deptMatchesSearch(code) && codeInScope(code)) ? 0.85 : 0.1;
+
+      return (
+        deptMatchesSearch(code)
+        && deptInScope(code)
+      ) ? 0.85 : 0.1;
     });
 
   zoomLayer.selectAll('.boundary')
-    .attr('class', d => 'boundary' + (boundaryIsSelected(d) ? ' selected' : ''));
+    .attr(
+      'class',
+      d => 'boundary' + (boundaryIsSelected(d) ? ' selected' : '')
+    );
+
+  updateBassinClip();
 
   renderBreadcrumb();
+
   renderDossier();
 }
 
