@@ -527,6 +527,7 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
   const next = cur === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', next);
   try{ localStorage.setItem('prefets-theme', next); }catch(e){}
+  buildColorCache(); // Reconstruit le cache de couleurs
   render();
 });
 
@@ -549,7 +550,47 @@ let bassinsById = {};
 let svg, zoomLayer, projection, path, zoomBehavior;
 let width, height;
 
+// ========== AJOUT : CACHES ==========
+let deptColorCache = {};
+let centroidsCache = {};
+let deptVisibilityCache = {};
 
+// ========== AJOUT : FONCTIONS DE CACHE ==========
+function buildColorCache() {
+  const colors = ancColorHex();
+  const s = getComputedStyle(document.documentElement);
+  const noneColor = s.getPropertyValue('--none').trim();
+  
+  geoDepts.features.forEach(d => {
+    const code = d.properties.code;
+    const p = prefetsMap[code];
+    deptColorCache[code] = p ? colors[p.couleur_carte] : noneColor;
+  });
+}
+
+function buildCentroidsCache() {
+  geoDepts.features.forEach(d => {
+    centroidsCache[d.properties.code] = path.centroid(d);
+  });
+}
+
+function updateVisibilityCache() {
+  geoDepts.features.forEach(d => {
+    const code = d.properties.code;
+    deptVisibilityCache[code] = shouldShowDept(code);
+  });
+}
+
+function shouldShowDept(code) {
+  if (!deptMatchesSearch(code)) return false;
+  if (!state.selectedScopeId) return true;
+  
+  if (state.mode === 'regions') {
+    return deptInScope(code);
+  } else {
+    return bassinTouches[state.selectedScopeId]?.has(code) ?? false;
+  }
+}
 
 Promise.all([
   d3.json("data/departements.geojson"),
@@ -568,46 +609,42 @@ Promise.all([
   bassins.features.forEach(f => bassinsById[f.properties.CdBH] = f);
   
   // Pré-calcule quels départements touchent quels bassins
-bassins.features.forEach(bassin => {
+  bassins.features.forEach(bassin => {
+    const bassinId = bassin.properties.CdBH;
+    bassinTouches[bassinId] = new Set();
 
-  const bassinId = bassin.properties.CdBH;
-
-  bassinTouches[bassinId] = new Set();
-
-  geoDepts.features.forEach(dept => {
-
-    try{
-
-      if(turf.booleanIntersects(dept, bassin)){
-        bassinTouches[bassinId].add(dept.properties.code);
-      }
-
-    }catch(e){}
+    geoDepts.features.forEach(dept => {
+      try{
+        if(turf.booleanIntersects(dept, bassin)){
+          bassinTouches[bassinId].add(dept.properties.code);
+        }
+      }catch(e){}
+    });
   });
-});
 
-  // Regions rarely split a department: a single point test is enough.
   geoDepts.features.forEach(d => {
     const pt = turf.pointOnFeature(d);
     const region = regions.features.find(r => turf.booleanPointInPolygon(pt, r));
     if(region) regionOf[d.properties.code] = region;
   });
 
-	// Association simple département -> bassin via point interne
-	geoDepts.features.forEach(d => {
-
-	  const pt = turf.pointOnFeature(d);
-
-	  const bassin = bassins.features.find(b =>
-		turf.booleanPointInPolygon(pt, b)
-	  );
-
-	  if(bassin){
-		bassinOf[d.properties.code] = bassin;
-	  }
-	});
+  geoDepts.features.forEach(d => {
+    const pt = turf.pointOnFeature(d);
+    const bassin = bassins.features.find(b =>
+      turf.booleanPointInPolygon(pt, b)
+    );
+    if(bassin){
+      bassinOf[d.properties.code] = bassin;
+    }
+  });
 
   buildMap();
+  
+  // ========== AJOUT : Construction des caches ==========
+  buildCentroidsCache();
+  buildColorCache();
+  // ========== FIN AJOUT ==========
+  
   buildOverseasList();
   render();
 
@@ -648,7 +685,7 @@ function buildMap(){
       zoomLayer.selectAll('.department').attr('stroke-width', 1 / k);
       zoomLayer.selectAll('.boundary').attr('stroke-width', d => (boundaryIsSelected(d) ? 2.6 : 1.4) / k);
       zoomLayer.selectAll('.dept-label').attr('transform', d => {
-        const c = path.centroid(d);
+        const c = centroidsCache[d.properties.code] || [0, 0];
         return `translate(${c[0]},${c[1]}) scale(${1 / k})`;
       });
     });
@@ -663,7 +700,7 @@ function buildMap(){
     .append('text')
     .attr('class', 'dept-label')
     .attr('transform', d => {
-      const c = path.centroid(d);
+      const c = centroidsCache[d.properties.code] || [0, 0];
       return `translate(${c[0]},${c[1]})`;
     })
     .text(d => d.properties.code);
@@ -672,13 +709,17 @@ function buildMap(){
     // Keep it simple: re-render on resize without a full rebuild of geometry.
   });
 
+  let searchTimeout;
   document.getElementById('search').addEventListener('input', (e) => {
-    state.searchTerm = e.target.value.trim().toLowerCase();
-    if(state.searchTerm){
-      state.selectedScopeId = null;
-      resetZoom();
-    }
-    render();
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      state.searchTerm = e.target.value.trim().toLowerCase();
+      if(state.searchTerm){
+        state.selectedScopeId = null;
+        resetZoom();
+      }
+      render();
+    }, 150);
   });
 
   document.getElementById('back-btn').addEventListener('click', () => {
@@ -740,7 +781,8 @@ function renderBoundaries(){
   sel.enter()
     .append('path')
     .merge(sel)
-    .attr('class', d => 'boundary' + (boundaryIsSelected(d) ? ' selected' : ''))
+    .attr('class', 'boundary')
+    .classed('selected', d => boundaryIsSelected(d))
     .attr('d', path);
 }
 
@@ -815,8 +857,6 @@ function resetZoom(){
     .call(zoomBehavior.transform, d3.zoomIdentity);
 }
 
-// ---------- Rendering ----------
-
 function deptMatchesSearch(code){
   if(!state.searchTerm) return true;
   const p = prefetsMap[code];
@@ -826,21 +866,15 @@ function deptMatchesSearch(code){
       || code.includes(state.searchTerm);
 }
 
-
 function deptInScope(code){
-
   if(!state.selectedScopeId) return true;
-
   const parent = state.mode === 'regions'
     ? regionOf[code]
     : bassinOf[code];
-
   if(!parent) return false;
-
   const id = state.mode === 'regions'
     ? parent.properties.code
     : parent.properties.CdBH;
-
   return id === state.selectedScopeId;
 }
 
@@ -849,55 +883,19 @@ function deptInScope(code){
 
 function render(){
 
-  const colors = ancColorHex();
+  updateVisibilityCache();
 
-zoomLayer.selectAll('.department')
-  .attr('fill', d => {
+  zoomLayer.selectAll('.department')
+    .attr('fill', d => deptColorCache[d.properties.code])
+    .style('opacity', d => deptVisibilityCache[d.properties.code] ? 1 : 0.15);
 
-    const p = prefetsMap[d.properties.code];
-
-    return p
-      ? colors[p.couleur_carte]
-      : 'var(--none)';
-  })
-.style('opacity', d => {
-
-  const code = d.properties.code;
-
-  return (
-    deptMatchesSearch(code)
-    && (
-      state.mode === 'regions'
-        ? deptInScope(code)
-        : bassinTouches[state.selectedScopeId]?.has(code)
-    )
-  ) ? 1 : 0.15;
-});
-
-zoomLayer.selectAll('.dept-label')
-  .style('opacity', d => {
-
-    const code = d.properties.code;
-
-return (
-  deptMatchesSearch(code)
-  && (
-    state.mode === 'regions'
-      ? deptInScope(code)
-      : bassinTouches[state.selectedScopeId]?.has(code)
-  )
-) ? 0.85 : 0.1;
-  });
+  zoomLayer.selectAll('.dept-label')
+    .style('opacity', d => deptVisibilityCache[d.properties.code] ? 0.85 : 0.1);
 
   zoomLayer.selectAll('.boundary')
-    .attr(
-      'class',
-      d => 'boundary' + (boundaryIsSelected(d) ? ' selected' : '')
-    );
-
+    .classed('selected', d => boundaryIsSelected(d));
 
   renderBreadcrumb();
-
   renderDossier();
 }
 
