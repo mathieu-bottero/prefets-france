@@ -825,78 +825,41 @@ function deptInScope(code){
 }
 
 
-function updateBassinClip(){
-
-  svg.selectAll('.bassin-mask').remove();
-
-  // Pas de masque hors mode bassins
-  if(state.mode !== 'bassins' || !state.selectedScopeId){
-    return;
-  }
-
-  const bassin = bassinsById[state.selectedScopeId];
-
-  // Grand rectangle couvrant toute la carte
-  const overlay = zoomLayer.append('path')
-    .attr('class', 'bassin-mask');
-
-  // Rectangle total SVG
-  const full = `
-    M0,0
-    H${width}
-    V${height}
-    H0
-    Z
-  `;
-
-  // Trou du bassin
-  const basinPath = path(bassin);
-
-  // evenodd = découpe le bassin dans le rectangle
-  overlay
-    .attr('d', full + basinPath)
-    .attr('fill-rule', 'evenodd')
-    .attr('fill', 'rgba(15,21,32,0.45)')
-    .attr('pointer-events', 'none');
-}
 
 
 function render(){
 
   const colors = ancColorHex();
 
-  zoomLayer.selectAll('.department')
-    .attr('fill', d => {
+zoomLayer.selectAll('.department')
+  .attr('fill', d => {
 
-      const p = prefetsMap[d.properties.code];
+    const p = prefetsMap[d.properties.code];
 
-      return p
-        ? colors[p.couleur_carte]
-        : 'var(--none)';
-    })
-	.style('opacity', d => {
+    return p
+      ? colors[p.couleur_carte]
+      : 'var(--none)';
+  })
+  .style('opacity', d => {
 
-	  const code = d.properties.code;
+    const code = d.properties.code;
 
-	  // En mode bassin, le clipPath masque déjà hors zone
-		return (
-		  deptMatchesSearch(code)
-		  && deptInScope(code)
-		) ? 1 : 0.15;
+    return (
+      deptMatchesSearch(code)
+      && deptInScope(code)
+    ) ? 1 : 0.15;
+  });
 
-	});
+zoomLayer.selectAll('.dept-label')
+  .style('opacity', d => {
 
-  zoomLayer.selectAll('.dept-label')
-    .style('opacity', d => {
+    const code = d.properties.code;
 
-      const code = d.properties.code;
-
-
-		return (
-		  deptMatchesSearch(code)
-		  && deptInScope(code)
-		) ? 0.85 : 0.1;
-    });
+    return (
+      deptMatchesSearch(code)
+      && deptInScope(code)
+    ) ? 0.85 : 0.1;
+  });
 
   zoomLayer.selectAll('.boundary')
     .attr(
@@ -904,7 +867,6 @@ function render(){
       d => 'boundary' + (boundaryIsSelected(d) ? ' selected' : '')
     );
 
-  updateBassinClip();
 
   renderBreadcrumb();
 
