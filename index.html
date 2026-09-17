@@ -3,582 +3,937 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Préfets de France — carte territoriale</title>
 
-<title>Carte des préfets de France</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js"></script>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
-body{
-    font-family:Segoe UI, sans-serif;
-    background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
-    min-height:100vh;
-    padding:20px;
-}
+  /* ============ Design tokens ============ */
+  :root{
+    --paper:#EEF1F5;
+    --surface:#FFFFFF;
+    --surface-soft:#E4E9EE;
+    --ink:#182338;
+    --ink-soft:#54627A;
+    --ink-faint:#8894A6;
+    --line:#D3DAE2;
+    --accent:#2E6F6B;
+    --accent-strong:#1F4E4B;
+    --gold:#A9803F;
+    --none:#DADFE3;
 
-.container{
-    max-width:1600px;
-    margin:auto;
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 20px 60px rgba(0,0,0,0.25);
-}
+    --anc-0:#4E9F6E;
+    --anc-1:#D6A93B;
+    --anc-2:#C97A3E;
+    --anc-3:#B94A3F;
 
-header{
-    padding:40px;
-    color:white;
-    text-align:center;
-    background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
-}
+    --shadow: 0 12px 30px rgba(24,35,56,.10);
+    --radius: 10px;
 
-h1{
-    font-size:2.5rem;
-    margin-bottom:10px;
-}
+    --font-display:'Fraunces', serif;
+    --font-body:'IBM Plex Sans', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+  }
 
-.subtitle{
-    opacity:.9;
-}
+  :root[data-theme="dark"]{
+    --paper:#0F1520;
+    --surface:#161F2C;
+    --surface-soft:#1D2836;
+    --ink:#E8ECF1;
+    --ink-soft:#AAB5C4;
+    --ink-faint:#6E7A8C;
+    --line:#2A3546;
+    --accent:#57B0A8;
+    --accent-strong:#7FCBC3;
+    --gold:#C9A465;
+    --none:#26303D;
 
-.content{
-    display:grid;
-    grid-template-columns:1fr 380px;
-}
+    --anc-0:#5FBE85;
+    --anc-1:#E6C15B;
+    --anc-2:#E08F55;
+    --anc-3:#D6635A;
 
-.map-section{
-    padding:20px;
-    background:#f8fafc;
-}
+    --shadow: 0 12px 30px rgba(0,0,0,.35);
+  }
 
-.sidebar{
-    padding:25px;
-    border-left:1px solid #e5e7eb;
-    overflow-y:auto;
-}
+  *{ margin:0; padding:0; box-sizing:border-box; }
 
-#map{
-    width:100%;
-    height:750px;
-    background:white;
-    border-radius:14px;
-}
+  html, body{ height:100%; }
 
-.search-box{
-    margin-bottom:20px;
-}
+  body{
+    font-family:var(--font-body);
+    background:var(--paper);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
 
-.search-box input{
-    width:100%;
-    padding:12px 14px;
-    border-radius:10px;
-    border:2px solid #d1d5db;
-    font-size:15px;
-}
+  button, input{ font-family:inherit; color:inherit; }
 
-.search-box input:focus{
+  /* ============ Masthead ============ */
+
+  .masthead{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    padding:16px 28px;
+    border-bottom:1px solid var(--line);
+    background:var(--surface);
+    flex-wrap:wrap;
+  }
+
+  .masthead-title h1{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:1.5rem;
+    letter-spacing:.2px;
+  }
+
+  .masthead-title p{
+    font-size:.85rem;
+    color:var(--ink-soft);
+    margin-top:2px;
+  }
+
+  .masthead-controls{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+
+  .mode-switch{
+    display:flex;
+    background:var(--surface-soft);
+    border-radius:999px;
+    padding:3px;
+    gap:2px;
+  }
+
+  .mode-btn{
+    border:none;
+    background:transparent;
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:.85rem;
+    font-weight:500;
+    color:var(--ink-soft);
+    cursor:pointer;
+    transition:background .15s, color .15s;
+    white-space:nowrap;
+  }
+
+  .mode-btn.active{
+    background:var(--accent);
+    color:#fff;
+  }
+
+  .search-box input{
+    width:230px;
+    padding:9px 14px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:var(--paper);
+    font-size:.85rem;
+  }
+
+  .search-box input:focus{
     outline:none;
-    border-color:#667eea;
-}
+    border-color:var(--accent);
+  }
 
-.legend{
-    background:#f8fafc;
-    border-radius:12px;
-    padding:20px;
-    margin-bottom:20px;
-}
+  .theme-toggle{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:var(--paper);
+    cursor:pointer;
+    font-size:1rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
 
-.legend h3{
-    margin-bottom:15px;
-}
+  /* ============ Stage layout ============ */
 
-.legend-item{
+  .stage{
+    display:grid;
+    grid-template-columns:1fr 360px;
+    height:calc(100vh - 78px);
+    min-height:560px;
+  }
+
+  .map-pane{
+    position:relative;
+    background:
+      linear-gradient(var(--line) 1px, transparent 1px) 0 0/40px 40px,
+      linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0/40px 40px,
+      var(--paper);
+    background-blend-mode:normal;
+    overflow:hidden;
+  }
+
+  :root[data-theme="dark"] .map-pane{
+    opacity:1;
+  }
+
+  .map-pane svg{ display:block; }
+
+  .map-pane .grid-overlay{ opacity:.35; }
+
+  #map{ width:100%; height:100%; }
+
+  .breadcrumb{
+    position:absolute;
+    top:18px;
+    left:18px;
+    z-index:5;
     display:flex;
     align-items:center;
     gap:10px;
-    margin-bottom:10px;
-}
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:8px 8px 8px 16px;
+    box-shadow:var(--shadow);
+    font-size:.85rem;
+  }
 
-.legend-color{
-    width:35px;
-    height:20px;
-    border-radius:5px;
-    border:1px solid #333;
-}
+  .breadcrumb button{
+    border:none;
+    background:var(--accent);
+    color:#fff;
+    border-radius:999px;
+    padding:6px 14px;
+    font-size:.8rem;
+    cursor:pointer;
+    font-weight:500;
+  }
 
-.stats{
+  .breadcrumb .scope-name{
+    font-weight:600;
+    font-family:var(--font-display);
+  }
+
+  /* ============ Dossier rail (sidebar) ============ */
+
+  .dossier-rail{
+    border-left:1px solid var(--line);
+    background:var(--surface);
+    overflow-y:auto;
+    padding:22px;
+  }
+
+  .rail-section{
+    padding-bottom:20px;
+    margin-bottom:20px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .rail-section:last-child{
+    border-bottom:none;
+    margin-bottom:0;
+  }
+
+  .rail-section h2{
+    font-family:var(--font-display);
+    font-size:1rem;
+    font-weight:600;
+    margin-bottom:12px;
+  }
+
+  .legend-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:8px;
+    font-size:.85rem;
+    color:var(--ink-soft);
+  }
+
+  .legend-swatch{
+    width:26px;
+    height:14px;
+    border-radius:4px;
+    flex-shrink:0;
+  }
+
+  .stat-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:15px;
-    margin-bottom:20px;
-}
+    gap:10px;
+  }
 
-.stat-card{
-    background:#f8fafc;
-    border-radius:12px;
-    padding:15px;
+  .stat-card{
+    background:var(--surface-soft);
+    border-radius:var(--radius);
+    padding:12px;
     text-align:center;
-}
+  }
 
-.stat-number{
-    font-size:2rem;
-    font-weight:bold;
-    color:#667eea;
-}
+  .stat-number{
+    font-family:var(--font-mono);
+    font-size:1.5rem;
+    font-weight:500;
+    color:var(--accent-strong);
+  }
 
-.stat-label{
+  .stat-label{
+    font-size:.75rem;
+    color:var(--ink-soft);
+    margin-top:2px;
+  }
+
+  .dossier-placeholder{
+    font-size:.88rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+
+  .dossier-card{
+    position:relative;
+    background:var(--surface-soft);
+    border-radius:var(--radius);
+    padding:18px 18px 18px 22px;
+    overflow:hidden;
+  }
+
+  .dossier-card::before{
+    content:"";
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width:6px;
+    background:var(--tab-color, var(--ink-faint));
+  }
+
+  .dossier-card h3{
+    font-family:var(--font-display);
+    font-size:1.15rem;
+    font-weight:600;
+    margin-bottom:4px;
+  }
+
+  .dossier-territoire{
     font-size:.85rem;
-    color:#666;
-}
+    color:var(--ink-soft);
+    margin-bottom:12px;
+  }
 
-.info-panel{
-    background:#f8fafc;
-    padding:20px;
-    border-radius:12px;
-}
+  .dossier-titres{
+    font-size:.82rem;
+    line-height:1.6;
+    margin-bottom:12px;
+  }
 
-.department{
-    stroke:white;
-    stroke-width:1.2;
+  .dossier-titres div::before{
+    content:"— ";
+    color:var(--ink-faint);
+  }
+
+  .dossier-meta{
+    display:flex;
+    justify-content:space-between;
+    font-family:var(--font-mono);
+    font-size:.78rem;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--line);
+    padding-top:10px;
+  }
+
+  .overseas-list{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .overseas-list li button{
+    width:100%;
+    text-align:left;
+    background:transparent;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:8px 12px;
+    font-size:.82rem;
     cursor:pointer;
-    transition:.2s;
-}
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:8px;
+  }
 
-.department:hover{
-    stroke:#111827;
-    stroke-width:2.5;
-    filter:brightness(1.05);
-}
+  .overseas-list li button:hover{
+    border-color:var(--accent);
+  }
 
-.region{
+  .overseas-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    flex-shrink:0;
+  }
+
+  /* ============ Map elements ============ */
+
+  .department{
+    stroke:var(--surface);
+    stroke-width:1;
+    cursor:pointer;
+    transition:opacity .25s, filter .15s;
+  }
+
+  .department:hover{
+    filter:brightness(1.08);
+  }
+
+  .boundary{
+    fill:none;
     pointer-events:none;
-}
+    stroke:var(--ink-faint);
+    stroke-width:1.4;
+    opacity:.55;
+  }
 
-.dept-label{
-    font-size:10px;
-    font-weight:bold;
-    fill:#1f2937;
+  .boundary.selected{
+    stroke:var(--gold);
+    stroke-width:2.6;
+    opacity:1;
+  }
+
+  .dept-label{
+    font-family:var(--font-mono);
+    font-size:9.5px;
+    fill:var(--ink);
     text-anchor:middle;
     pointer-events:none;
-}
+    transition:opacity .25s;
+  }
 
-.tooltip{
+  .tooltip{
     position:fixed;
     z-index:9999;
-    background:rgba(17,24,39,.96);
-    color:white;
-    padding:16px;
-    border-radius:12px;
-    max-width:350px;
+    background:var(--ink);
+    color:var(--paper);
+    padding:14px 16px;
+    border-radius:10px;
+    max-width:300px;
     pointer-events:none;
     opacity:0;
-    transition:.2s;
+    transition:opacity .15s;
     line-height:1.5;
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
-}
+    font-size:.82rem;
+    box-shadow:var(--shadow);
+  }
 
-.tooltip.visible{
-    opacity:1;
-}
+  :root[data-theme="dark"] .tooltip{
+    background:var(--surface-soft);
+    color:var(--ink);
+    border:1px solid var(--line);
+  }
 
-.tooltip h3{
-    margin-bottom:10px;
-    border-bottom:1px solid rgba(255,255,255,.2);
-    padding-bottom:8px;
-}
+  .tooltip.visible{ opacity:1; }
 
-@media(max-width:1100px){
+  .tooltip h4{
+    font-family:var(--font-display);
+    font-size:.95rem;
+    margin-bottom:6px;
+  }
 
-    .content{
-        grid-template-columns:1fr;
+  .tooltip .t-territoire{
+    color:var(--accent-strong);
+    font-weight:500;
+    margin-bottom:6px;
+  }
+
+  :root[data-theme="dark"] .tooltip .t-territoire{ color:var(--accent-strong); }
+
+  .tooltip .t-meta{
+    font-family:var(--font-mono);
+    font-size:.72rem;
+    opacity:.8;
+    margin-top:6px;
+  }
+
+  @media(max-width:980px){
+    .stage{
+      grid-template-columns:1fr;
+      height:auto;
     }
-
-    .sidebar{
-        border-left:none;
-        border-top:1px solid #e5e7eb;
+    #map{ height:70vh; }
+    .dossier-rail{
+      border-left:none;
+      border-top:1px solid var(--line);
     }
-
-}
+  }
 
 </style>
 </head>
-
 <body>
 
-<div class="container">
+<header class="masthead">
+  <div class="masthead-title">
+    <h1>Préfets de France</h1>
+    <p>Territoires en poste, ancienneté et bassins hydrographiques</p>
+  </div>
 
-<header>
-    <h1>🗺️ Carte des préfets de France</h1>
-    <div class="subtitle">
-        Répartition géographique et ancienneté
+  <div class="masthead-controls">
+    <div class="mode-switch" role="tablist">
+      <button class="mode-btn active" data-mode="regions" role="tab" aria-selected="true">Régions</button>
+      <button class="mode-btn" data-mode="bassins" role="tab" aria-selected="false">Bassins hydrographiques</button>
     </div>
+
+    <div class="search-box">
+      <input type="search" id="search" placeholder="Nom, département, région…">
+    </div>
+
+    <button class="theme-toggle" id="theme-toggle" title="Basculer le thème">🌓</button>
+  </div>
 </header>
 
-<div class="content">
+<main class="stage">
 
-    <div class="map-section">
-        <div id="map"></div>
+  <section class="map-pane">
+    <div class="breadcrumb" id="breadcrumb" hidden>
+      <button id="back-btn">France entière</button>
+      <span class="scope-name" id="scope-name"></span>
     </div>
+    <div id="map"></div>
+  </section>
 
-    <aside class="sidebar">
+  <aside class="dossier-rail">
 
-        <div class="search-box">
-            <input
-                type="text"
-                id="search"
-                placeholder="Rechercher un département ou un préfet..."
-            >
-        </div>
+    <section class="rail-section">
+      <h2>Ancienneté en poste</h2>
+      <div class="legend-row"><div class="legend-swatch" style="background:var(--anc-0)"></div><div>Moins de 6 mois</div></div>
+      <div class="legend-row"><div class="legend-swatch" style="background:var(--anc-1)"></div><div>6 mois à 1 an</div></div>
+      <div class="legend-row"><div class="legend-swatch" style="background:var(--anc-2)"></div><div>1 an à 2 ans</div></div>
+      <div class="legend-row"><div class="legend-swatch" style="background:var(--anc-3)"></div><div>Plus de 2 ans</div></div>
+    </section>
 
-        <div class="legend">
-            <h3>Ancienneté en poste</h3>
+    <section class="rail-section">
+      <h2 id="stats-title">France entière</h2>
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-number" id="stat-total">–</div><div class="stat-label">Préfets</div></div>
+        <div class="stat-card"><div class="stat-number" id="stat-femmes">–</div><div class="stat-label">Femmes</div></div>
+        <div class="stat-card"><div class="stat-number" id="stat-hommes">–</div><div class="stat-label">Hommes</div></div>
+        <div class="stat-card"><div class="stat-number" id="stat-moyenne">–</div><div class="stat-label">Ancienneté moy. (j)</div></div>
+      </div>
+    </section>
 
-            <div class="legend-item">
-                <div class="legend-color" style="background:#4ade80"></div>
-                <div>Moins de 6 mois</div>
-            </div>
+    <section class="rail-section">
+      <h2>Dossier</h2>
+      <div id="dossier">
+        <p class="dossier-placeholder">Cliquez sur un département pour afficher le préfet en poste — la région (ou le bassin) associé sera mis en évidence sur la carte.</p>
+      </div>
+    </section>
 
-            <div class="legend-item">
-                <div class="legend-color" style="background:#facc15"></div>
-                <div>6 mois à 1 an</div>
-            </div>
+    <section class="rail-section">
+      <h2>Outre-mer</h2>
+      <ul class="overseas-list" id="overseas-list"></ul>
+    </section>
 
-            <div class="legend-item">
-                <div class="legend-color" style="background:#fb923c"></div>
-                <div>1 an à 2 ans</div>
-            </div>
+  </aside>
 
-            <div class="legend-item">
-                <div class="legend-color" style="background:#ef4444"></div>
-                <div>Plus de 2 ans</div>
-            </div>
-        </div>
-
-        <div class="stats">
-
-            <div class="stat-card">
-                <div class="stat-number" id="total-prefets">-</div>
-                <div class="stat-label">Préfets</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-number" id="total-femmes">-</div>
-                <div class="stat-label">Femmes</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-number" id="total-hommes">-</div>
-                <div class="stat-label">Hommes</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-number" id="anciennete-moyenne">-</div>
-                <div class="stat-label">Ancienneté moyenne</div>
-            </div>
-
-        </div>
-
-        <div class="info-panel" id="info-panel">
-            <h3>Information</h3>
-
-            <p>
-                Survolez ou cliquez sur un département
-                pour afficher les informations détaillées.
-            </p>
-        </div>
-
-    </aside>
-
-</div>
-
-</div>
+</main>
 
 <div id="tooltip" class="tooltip"></div>
 
 <script>
 
-const colors = {
-    green:"#4ade80",
-    yellow:"#facc15",
-    orange:"#fb923c",
-    red:"#ef4444"
+const ancColors = {
+  green:"var(--anc-0)", yellow:"var(--anc-1)", orange:"var(--anc-2)", red:"var(--anc-3)"
+};
+const ancColorHex = () => {
+  const s = getComputedStyle(document.documentElement);
+  return {
+    green: s.getPropertyValue('--anc-0').trim(),
+    yellow: s.getPropertyValue('--anc-1').trim(),
+    orange: s.getPropertyValue('--anc-2').trim(),
+    red: s.getPropertyValue('--anc-3').trim()
+  };
 };
 
+// ---------- Theme ----------
+(function initTheme(){
+  let saved = null;
+  try{ saved = localStorage.getItem('prefets-theme'); }catch(e){}
+  const preferred = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', preferred);
+})();
+
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme');
+  const next = cur === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  try{ localStorage.setItem('prefets-theme', next); }catch(e){}
+  render();
+});
+
+// ---------- State ----------
+const state = {
+  mode: 'regions',        // 'regions' | 'bassins'
+  selectedScopeId: null,  // region code or bassin CdBH
+  selectedDept: null,     // department code shown in dossier
+  searchTerm: ''
+};
+
+let geoDepts, geoRegions, geoBassins, prefetsRows;
+let prefetsMap = {};
+let regionOf = {};   // dept code -> region feature
+let bassinOf = {};   // dept code -> bassin feature
+let regionsById = {};
+let bassinsById = {};
+
+let svg, g, zoomLayer, projection, path, zoomBehavior;
+let width, height;
+
 Promise.all([
-    d3.json("data/departements.geojson"),
-    d3.json("data/regions.geojson"),
-    d3.dsv(";", "data/prefets_departements.csv")
-])
+  d3.json("data/departements.geojson"),
+  d3.json("data/regions.geojson"),
+  d3.json("data/bassins.geojson"),
+  d3.dsv(";", "data/prefets_departements.csv")
+]).then(([depts, regions, bassins, rows]) => {
 
-.then(([geoData, regionsData, prefetsData]) => {
+  geoDepts = depts;
+  geoRegions = regions;
+  geoBassins = bassins;
+  prefetsRows = rows;
 
-    const prefetsMap = {};
+  rows.forEach(r => prefetsMap[r.departement] = r);
+  regions.features.forEach(f => regionsById[f.properties.code] = f);
+  bassins.features.forEach(f => bassinsById[f.properties.CdBH] = f);
 
-    prefetsData.forEach(p => {
-        prefetsMap[p.departement] = p;
+  // Spatial join: department -> region / bassin, via a point guaranteed inside the polygon
+  geoDepts.features.forEach(d => {
+    const pt = turf.pointOnFeature(d);
+    const region = regions.features.find(r => turf.booleanPointInPolygon(pt, r));
+    const bassin = bassins.features.find(b => turf.booleanPointInPolygon(pt, b));
+    if(region) regionOf[d.properties.code] = region;
+    if(bassin) bassinOf[d.properties.code] = bassin;
+  });
+
+  buildMap();
+  buildOverseasList();
+  render();
+
+}).catch(err => {
+  console.error(err);
+  document.getElementById('map').innerHTML =
+    '<div style="padding:40px;color:#B94A3F">Erreur de chargement des données.</div>';
+});
+
+// ---------- Map construction ----------
+
+function buildMap(){
+
+  const container = document.getElementById('map');
+  width = container.clientWidth;
+  height = container.clientHeight;
+
+  svg = d3.select('#map').append('svg')
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', `0 0 ${width} ${height}`);
+
+  projection = d3.geoMercator().fitSize([width, height], geoDepts);
+  path = d3.geoPath().projection(projection);
+
+  zoomLayer = svg.append('g').attr('class', 'zoom-layer');
+
+  zoomLayer.append('g').attr('class', 'dept-layer');
+  zoomLayer.append('g').attr('class', 'boundary-layer');
+  zoomLayer.append('g').attr('class', 'label-layer');
+
+  zoomBehavior = d3.zoom()
+    .scaleExtent([1, 10])
+    .on('zoom', (event) => {
+      zoomLayer.attr('transform', event.transform);
+      const k = event.transform.k;
+      zoomLayer.selectAll('.department').attr('stroke-width', 1 / k);
+      zoomLayer.selectAll('.boundary').attr('stroke-width', d => (boundaryIsSelected(d) ? 2.6 : 1.4) / k);
+      zoomLayer.selectAll('.dept-label').attr('transform', d => {
+        const c = path.centroid(d);
+        return `translate(${c[0]},${c[1]}) scale(${1 / k})`;
+      });
     });
 
-    const container = document.getElementById("map");
-
-    const width = container.clientWidth;
-    const height = container.clientHeight;
-
-    const svg = d3.select("#map")
-        .append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("viewBox", `0 0 ${width} ${height}`);
-
-    const projection = d3.geoMercator()
-        .fitSize([width, height], geoData);
-
-    const path = d3.geoPath().projection(projection);
-
-    // =========================
-    // Départements
-    // =========================
-
-    const departments = svg.append("g")
-        .selectAll("path")
-        .data(geoData.features)
-        .enter()
-        .append("path")
-        .attr("class", "department")
-        .attr("d", path)
-
-        .attr("fill", d => {
-
-            const code = d.properties.code;
-            const prefet = prefetsMap[code];
-
-            if(!prefet){
-                return "#f3f4f6";
-            }
-
-            return colors[prefet.couleur_carte];
-        })
-
-        .on("mousemove", (event, d) => {
-
-            const code = d.properties.code;
-            const prefet = prefetsMap[code];
-
-            if(!prefet){
-                return;
-            }
-
-            const titres = prefet.titre_global
-                .split("|")
-                .map(t => `• ${t.trim()}`)
-                .join("<br>");
-
-            d3.select("#tooltip")
-                .classed("visible", true)
-                .html(`
-                    <h3>${prefet.nom_prefet}</h3>
-
-                    <div>
-                        <strong>${prefet.territoire}</strong>
-                    </div>
-
-                    <br>
-
-                    <div>${titres}</div>
-
-                    <br>
-
-                    <div>
-                        En poste depuis :
-                        ${prefet.date_prise_fonction}
-                    </div>
-
-                    <div>
-                        Ancienneté :
-                        ${prefet.anciennete_jours} jours
-                    </div>
-                `)
-
-                .style("left", (event.pageX + 20) + "px")
-                .style("top", (event.pageY + 20) + "px");
-        })
-
-        .on("mouseleave", () => {
-
-            d3.select("#tooltip")
-                .classed("visible", false);
-        })
-
-        .on("click", (event, d) => {
-
-            const code = d.properties.code;
-            const prefet = prefetsMap[code];
-
-            if(!prefet){
-                return;
-            }
-
-            document.getElementById("info-panel").innerHTML = `
-                <h3>${prefet.nom_prefet}</h3>
-
-                <p>
-                    <strong>${prefet.territoire}</strong>
-                </p>
-
-                <br>
-
-                <p>
-                    ${prefet.titre_global}
-                </p>
-
-                <br>
-
-                <p>
-                    En poste depuis :
-                    ${prefet.date_prise_fonction}
-                </p>
-
-                <p>
-                    Ancienneté :
-                    ${prefet.anciennete_jours} jours
-                </p>
-            `;
-        });
-
-    // =========================
-    // Régions
-    // =========================
-
-    svg.append("g")
-        .selectAll("path")
-        .data(regionsData.features)
-        .enter()
-        .append("path")
-        .attr("class", "region")
-        .attr("d", path)
-
-        .attr("fill", "none")
-
-        .attr("stroke", d => {
-
-            if(d.properties.nom === "Centre-Val de Loire"){
-                return "#2563eb";
-            }
-
-            return "#374151";
-        })
-
-        .attr("stroke-width", d => {
-
-            if(d.properties.nom === "Centre-Val de Loire"){
-                return 4;
-            }
-
-            return 1.2;
-        })
-
-        .attr("opacity", d => {
-
-            if(d.properties.nom === "Centre-Val de Loire"){
-                return 1;
-            }
-
-            return 0.3;
-        });
-
-    // =========================
-    // Labels départements
-    // =========================
-
-    svg.append("g")
-        .selectAll("text")
-        .data(geoData.features)
-        .enter()
-        .append("text")
-        .attr("class", "dept-label")
-
-        .attr("transform", d => {
-
-            const centroid = path.centroid(d);
-
-            return `translate(${centroid[0]}, ${centroid[1]})`;
-        })
-
-        .text(d => d.properties.code);
-
-    // =========================
-    // Recherche
-    // =========================
-
-    document.getElementById("search")
-        .addEventListener("input", e => {
-
-            const search = e.target.value.toLowerCase();
-
-            departments.style("opacity", d => {
-
-                if(!search){
-                    return 1;
-                }
-
-                const code = d.properties.code;
-                const prefet = prefetsMap[code];
-
-                if(!prefet){
-                    return 0.2;
-                }
-
-                const match =
-                    prefet.nom_prefet.toLowerCase().includes(search)
-                    ||
-                    prefet.territoire.toLowerCase().includes(search)
-                    ||
-                    prefet.departement.includes(search);
-
-                return match ? 1 : 0.15;
-            });
-
-        });
-
-    // =========================
-    // Stats
-    // =========================
-
-    document.getElementById("total-prefets")
-        .textContent = prefetsData.length;
-
-    document.getElementById("total-femmes")
-        .textContent = prefetsData.filter(p => p.sexe === "F").length;
-
-    document.getElementById("total-hommes")
-        .textContent = prefetsData.filter(p => p.sexe === "M").length;
-
-    const moyenne = Math.round(
-        prefetsData.reduce((sum, p) => {
-            return sum + parseInt(p.anciennete_jours);
-        }, 0) / prefetsData.length
-    );
-
-    document.getElementById("anciennete-moyenne")
-        .textContent = moyenne;
-
-})
-
-.catch(error => {
-
-    console.error(error);
-
-    document.getElementById("map").innerHTML = `
-        <div style="padding:40px;color:red">
-            Erreur de chargement des données.
-        </div>
-    `;
-});
+  svg.call(zoomBehavior);
+
+  zoomLayer.select('.dept-layer').selectAll('path')
+    .data(geoDepts.features)
+    .enter()
+    .append('path')
+    .attr('class', 'department')
+    .attr('d', path)
+    .on('mousemove', onDeptHover)
+    .on('mouseleave', onDeptLeave)
+    .on('click', onDeptClick);
+
+  zoomLayer.select('.label-layer').selectAll('text')
+    .data(geoDepts.features)
+    .enter()
+    .append('text')
+    .attr('class', 'dept-label')
+    .attr('transform', d => {
+      const c = path.centroid(d);
+      return `translate(${c[0]},${c[1]})`;
+    })
+    .text(d => d.properties.code);
+
+  window.addEventListener('resize', () => {
+    // Keep it simple: re-render on resize without a full rebuild of geometry.
+  });
+
+  document.getElementById('search').addEventListener('input', (e) => {
+    state.searchTerm = e.target.value.trim().toLowerCase();
+    if(state.searchTerm){
+      state.selectedScopeId = null;
+      resetZoom();
+    }
+    render();
+  });
+
+  document.getElementById('back-btn').addEventListener('click', () => {
+    state.selectedScopeId = null;
+    resetZoom();
+    render();
+  });
+
+  document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if(btn.dataset.mode === state.mode) return;
+      state.mode = btn.dataset.mode;
+      state.selectedScopeId = null;
+      document.querySelectorAll('.mode-btn').forEach(b => {
+        b.classList.toggle('active', b === btn);
+        b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+      });
+      resetZoom();
+      renderBoundaries();
+      render();
+    });
+  });
+
+  renderBoundaries();
+}
+
+function boundaryIsSelected(d){
+  if(!state.selectedScopeId) return false;
+  const id = state.mode === 'regions' ? d.properties.code : d.properties.CdBH;
+  return id === state.selectedScopeId;
+}
+
+function renderBoundaries(){
+  const data = state.mode === 'regions' ? geoRegions.features : geoBassins.features;
+
+  const sel = zoomLayer.select('.boundary-layer').selectAll('path').data(data);
+
+  sel.exit().remove();
+
+  sel.enter()
+    .append('path')
+    .merge(sel)
+    .attr('class', d => 'boundary' + (boundaryIsSelected(d) ? ' selected' : ''))
+    .attr('d', path);
+}
+
+// ---------- Interaction ----------
+
+function onDeptHover(event, d){
+  const code = d.properties.code;
+  const p = prefetsMap[code];
+  if(!p) return;
+
+  const titres = p.titre_global.split('|').map(t => `<div>${t.trim()}</div>`).join('');
+
+  d3.select('#tooltip')
+    .classed('visible', true)
+    .html(`
+      <h4>${p.nom_prefet}</h4>
+      <div class="t-territoire">${p.territoire}</div>
+      ${titres}
+      <div class="t-meta">Depuis le ${p.date_prise_fonction} · ${p.anciennete_jours} j</div>
+    `)
+    .style('left', (event.clientX + 18) + 'px')
+    .style('top', (event.clientY + 18) + 'px');
+}
+
+function onDeptLeave(){
+  d3.select('#tooltip').classed('visible', false);
+}
+
+function onDeptClick(event, d){
+  const code = d.properties.code;
+  const parent = state.mode === 'regions' ? regionOf[code] : bassinOf[code];
+
+  state.selectedDept = code;
+  state.searchTerm = '';
+  document.getElementById('search').value = '';
+
+  if(parent){
+    const id = state.mode === 'regions' ? parent.properties.code : parent.properties.CdBH;
+    state.selectedScopeId = id;
+    zoomToFeature(parent);
+  }
+
+  renderBoundaries();
+  render();
+}
+
+function zoomToFeature(feature){
+  const [[x0, y0], [x1, y1]] = path.bounds(feature);
+  const dx = x1 - x0, dy = y1 - y0;
+  const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+  const scale = Math.max(1, Math.min(9, 0.86 / Math.max(dx / width, dy / height)));
+  const translate = [width / 2 - scale * cx, height / 2 - scale * cy];
+
+  svg.transition().duration(700).ease(d3.easeCubicInOut)
+    .call(zoomBehavior.transform, d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale));
+}
+
+function resetZoom(){
+  svg.transition().duration(600).ease(d3.easeCubicInOut)
+    .call(zoomBehavior.transform, d3.zoomIdentity);
+}
+
+// ---------- Rendering ----------
+
+function deptMatchesSearch(code){
+  if(!state.searchTerm) return true;
+  const p = prefetsMap[code];
+  if(!p) return false;
+  return p.nom_prefet.toLowerCase().includes(state.searchTerm)
+      || p.territoire.toLowerCase().includes(state.searchTerm)
+      || code.includes(state.searchTerm);
+}
+
+function deptInScope(code){
+  if(!state.selectedScopeId) return true;
+  const parent = state.mode === 'regions' ? regionOf[code] : bassinOf[code];
+  if(!parent) return false;
+  const id = state.mode === 'regions' ? parent.properties.code : parent.properties.CdBH;
+  return id === state.selectedScopeId;
+}
+
+function render(){
+  const colors = ancColorHex();
+
+  zoomLayer.selectAll('.department')
+    .attr('fill', d => {
+      const p = prefetsMap[d.properties.code];
+      return p ? colors[p.couleur_carte] : 'var(--none)';
+    })
+    .style('opacity', d => {
+      const code = d.properties.code;
+      return (deptMatchesSearch(code) && deptInScope(code)) ? 1 : 0.15;
+    });
+
+  zoomLayer.selectAll('.dept-label')
+    .style('opacity', d => {
+      const code = d.properties.code;
+      return (deptMatchesSearch(code) && deptInScope(code)) ? 0.85 : 0.1;
+    });
+
+  zoomLayer.selectAll('.boundary')
+    .attr('class', d => 'boundary' + (boundaryIsSelected(d) ? ' selected' : ''));
+
+  renderBreadcrumb();
+  renderStats();
+  renderDossier();
+}
+
+function renderBreadcrumb(){
+  const bc = document.getElementById('breadcrumb');
+  if(!state.selectedScopeId){
+    bc.hidden = true;
+    return;
+  }
+  const feature = state.mode === 'regions' ? regionsById[state.selectedScopeId] : bassinsById[state.selectedScopeId];
+  const name = state.mode === 'regions' ? feature.properties.nom : feature.properties.LbBH;
+  document.getElementById('scope-name').textContent = name;
+  bc.hidden = false;
+}
+
+function scopedDeptCodes(){
+  return geoDepts.features
+    .map(f => f.properties.code)
+    .filter(code => deptInScope(code));
+}
+
+function renderStats(){
+  const codes = scopedDeptCodes();
+  const rows = codes.map(c => prefetsMap[c]).filter(Boolean);
+
+  const title = state.selectedScopeId
+    ? (state.mode === 'regions' ? regionsById[state.selectedScopeId].properties.nom : bassinsById[state.selectedScopeId].properties.LbBH)
+    : 'France entière';
+
+  document.getElementById('stats-title').textContent = title;
+  document.getElementById('stat-total').textContent = rows.length;
+  document.getElementById('stat-femmes').textContent = rows.filter(r => r.sexe === 'F').length;
+  document.getElementById('stat-hommes').textContent = rows.filter(r => r.sexe === 'M').length;
+
+  const moyenne = rows.length
+    ? Math.round(rows.reduce((s, r) => s + parseInt(r.anciennete_jours, 10), 0) / rows.length)
+    : 0;
+  document.getElementById('stat-moyenne').textContent = moyenne;
+}
+
+function renderDossier(){
+  const el = document.getElementById('dossier');
+  const p = state.selectedDept ? prefetsMap[state.selectedDept] : null;
+
+  if(!p){
+    el.innerHTML = '<p class="dossier-placeholder">Cliquez sur un département pour afficher le préfet en poste — la région (ou le bassin) associé sera mis en évidence sur la carte.</p>';
+    return;
+  }
+
+  const colors = ancColorHex();
+  const tab = colors[p.couleur_carte] || 'var(--ink-faint)';
+  const titres = p.titre_global.split('|').map(t => `<div>${t.trim()}</div>`).join('');
+  const sexeLabel = p.sexe === 'F' ? 'Préfète' : 'Préfet';
+
+  el.innerHTML = `
+    <div class="dossier-card" style="--tab-color:${tab}">
+      <h3>${p.nom_prefet}</h3>
+      <div class="dossier-territoire">${sexeLabel} · ${p.territoire}</div>
+      <div class="dossier-titres">${titres}</div>
+      <div class="dossier-meta">
+        <span>Depuis le ${p.date_prise_fonction}</span>
+        <span>${p.anciennete_jours} j</span>
+      </div>
+    </div>
+  `;
+}
+
+function buildOverseasList(){
+  const mapped = new Set(geoDepts.features.map(f => f.properties.code));
+  const overseas = prefetsRows.filter(r => !mapped.has(r.departement));
+  const colors = ancColorHex();
+
+  const ul = document.getElementById('overseas-list');
+  overseas.forEach(r => {
+    const li = document.createElement('li');
+    const btn = document.createElement('button');
+    btn.innerHTML = `<span>${r.territoire}</span><span class="overseas-dot" style="background:${colors[r.couleur_carte]}"></span>`;
+    btn.addEventListener('click', () => {
+      state.selectedDept = r.departement;
+      state.selectedScopeId = null;
+      resetZoom();
+      renderBoundaries();
+      render();
+    });
+    li.appendChild(btn);
+    ul.appendChild(li);
+  });
+}
 
 </script>
 
