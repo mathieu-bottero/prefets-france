@@ -640,8 +640,22 @@ Promise.all([
   buildMap();
   buildCentroidsCache();
   buildColorCache();
+  buildLabels(); // ✅ AJOUTÉ - crée les labels après les caches
   buildOverseasList();
   render();
+  
+  renderDepartments();
+
+  zoomLayer.select('.label-layer').selectAll('text')
+    .data(geoDepts.features)
+    .enter()
+    .append('text')
+    .attr('class', 'dept-label')
+    .attr('transform', d => {
+      const c = centroidsCache[d.properties.code] || [0, 0];
+      return `translate(${c[0]},${c[1]})`;
+    })
+    .text(d => d.properties.code);
 
 }).catch(err => {
   console.error(err);
@@ -661,7 +675,6 @@ function buildMap(){
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', `0 0 ${width} ${height}`);
-	
 
   projection = d3.geoMercator().fitSize([width, height], geoDepts);
   path = d3.geoPath().projection(projection);
@@ -689,17 +702,8 @@ function buildMap(){
 
   renderDepartments();
 
-  zoomLayer.select('.label-layer').selectAll('text')
-    .data(geoDepts.features)
-    .enter()
-    .append('text')
-    .attr('class', 'dept-label')
-    .attr('transform', d => {
-      const c = centroidsCache[d.properties.code] || [0, 0];
-      return `translate(${c[0]},${c[1]})`;
-    })
-    .text(d => d.properties.code);
-
+  // ✅ DÉPLACÉ APRÈS - sera appelé une fois les caches construits
+  
   window.addEventListener('resize', () => {
     // Keep it simple: re-render on resize without a full rebuild of geometry.
   });
@@ -740,6 +744,19 @@ function buildMap(){
   });
 
   renderBoundaries();
+}
+
+function buildLabels(){
+  zoomLayer.select('.label-layer').selectAll('text')
+    .data(geoDepts.features)
+    .enter()
+    .append('text')
+    .attr('class', 'dept-label')
+    .attr('transform', d => {
+      const c = centroidsCache[d.properties.code] || [0, 0];
+      return `translate(${c[0]},${c[1]})`;
+    })
+    .text(d => d.properties.code);
 }
 
 function renderDepartments(){
