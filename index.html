@@ -824,7 +824,26 @@ function deptInScope(code){
   return id === state.selectedScopeId;
 }
 
+function deptTouchesSelectedBassin(code){
 
+  if(state.mode !== 'bassins' || !state.selectedScopeId){
+    return true;
+  }
+
+  const dept = geoDepts.features.find(
+    f => f.properties.code === code
+  );
+
+  const bassin = bassinsById[state.selectedScopeId];
+
+  if(!dept || !bassin) return false;
+
+  try{
+    return turf.booleanIntersects(dept, bassin);
+  }catch(e){
+    return false;
+  }
+}
 
 
 function render(){
@@ -840,25 +859,33 @@ zoomLayer.selectAll('.department')
       ? colors[p.couleur_carte]
       : 'var(--none)';
   })
-  .style('opacity', d => {
+.style('opacity', d => {
 
-    const code = d.properties.code;
+  const code = d.properties.code;
 
-    return (
-      deptMatchesSearch(code)
-      && deptInScope(code)
-    ) ? 1 : 0.15;
-  });
+  return (
+    deptMatchesSearch(code)
+    && (
+      state.mode === 'regions'
+        ? deptInScope(code)
+        : deptTouchesSelectedBassin(code)
+    )
+  ) ? 1 : 0.15;
+});
 
 zoomLayer.selectAll('.dept-label')
   .style('opacity', d => {
 
     const code = d.properties.code;
 
-    return (
-      deptMatchesSearch(code)
-      && deptInScope(code)
-    ) ? 0.85 : 0.1;
+return (
+  deptMatchesSearch(code)
+  && (
+    state.mode === 'regions'
+      ? deptInScope(code)
+      : deptTouchesSelectedBassin(code)
+  )
+) ? 0.85 : 0.1;
   });
 
   zoomLayer.selectAll('.boundary')
