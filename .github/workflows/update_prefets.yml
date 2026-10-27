@@ -1,0 +1,58 @@
+name: 🤖 MAJ Préfets Automatique
+
+on:
+  schedule:
+    # Tous les lundis à 7h00 UTC (= 8h Paris en hiver, 9h en été)
+    - cron: '0 7 * * 1'
+  
+  # Permet de lancer manuellement depuis GitHub
+  workflow_dispatch:
+
+jobs:
+  update-prefets:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Récupération du code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 🐍 Installation de Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: 📦 Installation des dépendances
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: 🔄 Exécution du script de mise à jour
+        run: |
+          python maj_base_prefets.py --mois 1
+      
+      - name: 📊 Vérification des changements
+        id: check_changes
+        run: |
+          if git diff --quiet data/prefets_departements.csv; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "✅ Aucun changement détecté"
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "🔄 Changements détectés !"
+          fi
+      
+      - name: 🚀 Commit et push des modifications
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/prefets_departements.csv
+          git commit -m "🤖 MAJ automatique préfets - $(date +'%Y-%m-%d %H:%M')"
+          git push
+      
+      - name: ℹ️ Pas de changement
+        if: steps.check_changes.outputs.changes == 'false'
+        run: echo "📋 Pas de mise à jour nécessaire cette semaine"
