@@ -36,12 +36,13 @@ jobs:
       - name: 📊 Vérification des changements
         id: check_changes
         run: |
-          if git diff --quiet data/prefets_departements.csv; then
+          if git diff --quiet data/; then
             echo "changes=false" >> $GITHUB_OUTPUT
             echo "✅ Aucun changement détecté"
           else
             echo "changes=true" >> $GITHUB_OUTPUT
             echo "🔄 Changements détectés !"
+            git diff --stat data/
           fi
       
       - name: 🚀 Commit et push des modifications
@@ -49,7 +50,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/prefets_departements.csv
+          git add data/
           git commit -m "🤖 MAJ automatique préfets - $(date +'%Y-%m-%d %H:%M')"
           git push
       

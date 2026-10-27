@@ -43,9 +43,10 @@ from datetime import datetime, timedelta
 
 from poste_prefectoral import classifier_postes, LIBELLES_ROLE
 
+os.makedirs('data', exist_ok=True)  # Crée data/ si n'existe pas
 URL_JO = "https://www.data.gouv.fr/api/1/datasets/r/1c5ac28d-92ca-4a19-aefb-63fbde4387a2"
-FICHIER_ETAT = "etat_prefets.json"
-FICHIER_CSV = "base_prefets.csv"
+FICHIER_ETAT = "data/etat_prefets.json"
+FICHIER_CSV = "data/base_prefets.csv"
 
 
 
@@ -641,7 +642,7 @@ def exporter_csv(etat):
     
 def exporter_prefets_departements(etat):
 
-    fichier = "prefets_departements.csv"
+    fichier = "data/prefets_departements.csv"
 
     colonnes = [
         'departement',
