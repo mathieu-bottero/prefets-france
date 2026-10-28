@@ -31,18 +31,18 @@ jobs:
       
       - name: 🔄 Exécution du script de mise à jour
         run: |
-          python maj_base_prefets.py --mois 1
+          python maj_administrations.py --mois 1
       
       - name: 📊 Vérification des changements
         id: check_changes
         run: |
-          if git diff --quiet data/; then
+          if git diff --quiet commun/data/; then
             echo "changes=false" >> $GITHUB_OUTPUT
             echo "✅ Aucun changement détecté"
           else
             echo "changes=true" >> $GITHUB_OUTPUT
             echo "🔄 Changements détectés !"
-            git diff --stat data/
+            git diff --stat commun/data/
           fi
       
       - name: 🚀 Commit et push des modifications
@@ -50,7 +50,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add commun/data/
           git commit -m "🤖 MAJ automatique préfets - $(date +'%Y-%m-%d %H:%M')"
           git push
       
