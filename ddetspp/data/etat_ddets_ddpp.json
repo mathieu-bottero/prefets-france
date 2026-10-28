@@ -1,0 +1,4673 @@
+{
+  "departements": {
+    "Gironde": {
+      "territoire": "Gironde",
+      "code_dept": "33",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1640000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Thierry BERGERON",
+          "nom": "BERGERON",
+          "prenom": "Thierry",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "23/08/2023",
+          "date_prise_fonction": "23/08/2023",
+          "source_id": "JORFTEXT000047986828",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de la Gironde attaché d'administration de l'Etat hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Frédérique HENRION",
+          "nom": "HENRION",
+          "prenom": "Frédérique",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "31/03/2024",
+          "date_prise_fonction": "31/03/2024",
+          "source_id": "JORFTEXT000049346305",
+          "texte_source": "directrice départementale de la protection des populations de la Gironde attachée d'administration de l'Etat hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Jean-Charles QUINTARD",
+            "nom": "QUINTARD",
+            "prenom": "Jean-Charles",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "30/10/2020",
+            "date_prise_fonction": "01/11/2020",
+            "source_id": "JORFTEXT000042475909",
+            "texte_source": "dans leurs fonctions les directeurs départementaux interministériels suivants directeur départemental de la protection des populations de la Gironde",
+            "action": "remplacé",
+            "date_fin": "28/05/2021"
+          },
+          {
+            "nom_complet": "Benoît LEURET",
+            "nom": "LEURET",
+            "prenom": "Benoît",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "28/05/2021",
+            "date_prise_fonction": "28/05/2021",
+            "source_id": "JORFTEXT000043542073",
+            "texte_source": "directeur départemental de la protection des populations de la Gironde directeur départemental de 2e classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "31/03/2024"
+          }
+        ]
+      }
+    },
+    "Sarthe": {
+      "territoire": "Sarthe",
+      "code_dept": "72",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 566000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Jean-Michel LOUYER",
+          "nom": "LOUYER",
+          "prenom": "Jean-Michel",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "23/08/2023",
+          "date_prise_fonction": "23/08/2023",
+          "source_id": "JORFTEXT000047986820",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de la Sarthe directeur du travail"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Karine PROUX",
+          "nom": "PROUX",
+          "prenom": "Karine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "23/08/2023",
+          "date_prise_fonction": "23/08/2023",
+          "source_id": "JORFTEXT000047986820",
+          "texte_source": "directrice départementale de la protection des populations de la Sarthe inspectrice générale de santé publique vétérinaire"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Agnès WERNER",
+            "nom": "WERNER",
+            "prenom": "Agnès",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "30/10/2020",
+            "date_prise_fonction": "16/11/2020",
+            "source_id": "JORFTEXT000042475905",
+            "texte_source": "directrice départementale de la protection des populations de la Sarthe inspecteur en chef de la santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "23/08/2023"
+          }
+        ]
+      }
+    },
+    "Nord": {
+      "territoire": "Nord",
+      "code_dept": "59",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 2608000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Jacques TESTA",
+          "nom": "TESTA",
+          "prenom": "Jacques",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "03/12/2025",
+          "date_prise_fonction": "03/12/2025",
+          "source_id": "JORFTEXT000052983703",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités du Nord | avec une période probatoire de six mois directeur du travail"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Emmanuel RICHARD",
+            "nom": "RICHARD",
+            "prenom": "Emmanuel",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directeur départemental de l'emploi, du travail et des solidarités du Nord",
+            "action": "remplacé",
+            "date_fin": "03/12/2025"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Frédéric PIRON",
+          "nom": "PIRON",
+          "prenom": "Frédéric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "29/12/2023",
+          "date_prise_fonction": "29/12/2023",
+          "source_id": "JORFTEXT000048709060",
+          "texte_source": "directeur départemental de la protection des populations du Nord inspecteur général de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Magali PECQUERY",
+            "nom": "PECQUERY",
+            "prenom": "Magali",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "30/10/2020",
+            "date_prise_fonction": "16/11/2020",
+            "source_id": "JORFTEXT000042475905",
+            "texte_source": "directrice départementale de la protection des populations du Nord inspectrice en chef de la santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "29/12/2023"
+          }
+        ]
+      }
+    },
+    "Meurthe-et-Moselle": {
+      "territoire": "Meurthe-et-Moselle",
+      "code_dept": "54",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 733000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Annie TOUROLLE",
+          "nom": "TOUROLLE",
+          "prenom": "Annie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "23/06/2024",
+          "date_prise_fonction": "23/06/2024",
+          "source_id": "JORFTEXT000049767529",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités de Meurthe-et-Moselle inspectrice de classe exceptionnelle de l'action sanitaire et sociale"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Belkacem ROUINA",
+          "nom": "ROUINA",
+          "prenom": "Belkacem",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "28/10/2026",
+          "date_prise_fonction": "28/10/2026",
+          "source_id": "JORFTEXT000055020829",
+          "texte_source": "directeur départemental de la protection des populations de Meurthe-et-Moselle | avec une période probatoire de six mois | à compter du 1er novembre 2026 ingénieur de l'agriculture et de l'environnement hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Juliette SORRENTINO",
+            "nom": "SORRENTINO",
+            "prenom": "Juliette",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "26/11/2020",
+            "date_prise_fonction": "01/12/2020",
+            "source_id": "JORFTEXT000042565437",
+            "texte_source": "dans leurs fonctions les directeurs départementaux interministériels et directeurs départementaux interministériels adjoints suivants directrice départementale de la protection des populations de Meurthe-et-Moselle",
+            "action": "remplacé",
+            "date_fin": "26/03/2021"
+          },
+          {
+            "nom_complet": "Florence FERRAND",
+            "nom": "FERRAND",
+            "prenom": "Florence",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "26/03/2021",
+            "date_prise_fonction": "26/03/2021",
+            "source_id": "JORFTEXT000043290449",
+            "texte_source": "directrice départementale de la protection des populations de Meurthe-et-Moselle directrice départementale de 2e classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "06/04/2025"
+          },
+          {
+            "nom_complet": "Florence FERRAND",
+            "nom": "FERRAND",
+            "prenom": "Florence",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "19/03/2025",
+            "date_prise_fonction": "06/04/2025",
+            "source_id": "JORFTEXT000051348278",
+            "texte_source": "dans leurs fonctions de directeurs départementaux interministériels, dans les conditions suivantes | 2° directrice départementale de la protection des populations de Meurthe-et-Moselle",
+            "action": "remplacé",
+            "date_fin": "06/04/2026"
+          },
+          {
+            "nom_complet": "Florence FERRAND",
+            "nom": "FERRAND",
+            "prenom": "Florence",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "07/03/2026",
+            "date_prise_fonction": "06/04/2026",
+            "source_id": "JORFTEXT000053635034",
+            "texte_source": "dans leurs fonctions de directeurs départementaux interministériels, dans les conditions suivantes directrice départementale de la protection des populations de Meurthe-et-Moselle",
+            "action": "remplacé",
+            "date_fin": "28/10/2026"
+          }
+        ]
+      }
+    },
+    "Hérault": {
+      "territoire": "Hérault",
+      "code_dept": "34",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1175000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "François DELEMOTTE",
+          "nom": "DELEMOTTE",
+          "prenom": "François",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "15/06/2024",
+          "date_prise_fonction": "15/06/2024",
+          "source_id": "JORFTEXT000049722427",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de l'Hérault directeur du travail hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Vincent PFISTER",
+          "nom": "PFISTER",
+          "prenom": "Vincent",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/06/2026",
+          "date_prise_fonction": "29/06/2026",
+          "source_id": "JORFTEXT000054208747",
+          "texte_source": "directeur départemental de la protection des populations de l'Hérault | avec une période probatoire de six mois inspecteur général de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Yann LOUGUET",
+            "nom": "LOUGUET",
+            "prenom": "Yann",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "20/11/2020",
+            "date_prise_fonction": "01/12/2020",
+            "source_id": "JORFTEXT000042539471",
+            "texte_source": "directeur départemental de la protection des populations de l'Hérault inspecteur en chef de santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "01/12/2024"
+          },
+          {
+            "nom_complet": "Yann LOUGUET",
+            "nom": "LOUGUET",
+            "prenom": "Yann",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "09/11/2024",
+            "date_prise_fonction": "01/12/2024",
+            "source_id": "JORFTEXT000050478361",
+            "texte_source": "dans leurs fonctions de directeurs départementaux interministériels, dans les conditions suivantes directeur départemental de la protection des populations de l'Hérault",
+            "action": "remplacé",
+            "date_fin": "08/11/2025"
+          },
+          {
+            "nom_complet": "Yann LOUGUET",
+            "nom": "LOUGUET",
+            "prenom": "Yann",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "08/11/2025",
+            "date_prise_fonction": "08/11/2025",
+            "source_id": "JORFTEXT000052541664",
+            "texte_source": "dans ses fonctions | à compter du 1er décembre 2025 directeur départemental de la protection des populations de l'Hérault",
+            "action": "remplacé",
+            "date_fin": "29/06/2026"
+          }
+        ]
+      }
+    },
+    "Pas-de-Calais": {
+      "territoire": "Pas-de-Calais",
+      "code_dept": "62",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1465000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Nathalie CHOMETTE",
+          "nom": "CHOMETTE",
+          "prenom": "Nathalie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "11/03/2026",
+          "date_prise_fonction": "11/03/2026",
+          "source_id": "JORFTEXT000053649979",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel | à compter du 1er avril 2026 directrice départementale de l'emploi, du travail et des solidarités du Pas-de-Calais"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Nathalie CHOMETTE",
+            "nom": "CHOMETTE",
+            "prenom": "Nathalie",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directrice départementale de l'emploi, du travail et des solidarités du Pas-de-Calais",
+            "action": "remplacé",
+            "date_fin": "11/03/2026"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Catherine MAINGUET",
+          "nom": "MAINGUET",
+          "prenom": "Catherine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "07/07/2024",
+          "date_prise_fonction": "07/07/2024",
+          "source_id": "JORFTEXT000049894381",
+          "texte_source": "directrice départementale de la protection des populations du Pas-de-Calais directrice départementale de 2e classe de la concurrence, de la consommation et de la répression des fraudes"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Redouane OUAHRANI",
+            "nom": "OUAHRANI",
+            "prenom": "Redouane",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "03/12/2020",
+            "date_prise_fonction": "15/12/2020",
+            "source_id": "JORFTEXT000042602568",
+            "texte_source": "directeur départemental de la protection des populations du Pas-de-Calais inspecteur général de santé publique vétérinaire de classe normale",
+            "action": "remplacé",
+            "date_fin": "07/07/2024"
+          }
+        ]
+      }
+    },
+    "Loire-Atlantique": {
+      "territoire": "Loire-Atlantique",
+      "code_dept": "44",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1429000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Sabine GIRAULT",
+          "nom": "GIRAULT",
+          "prenom": "Sabine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "19/03/2025",
+          "date_prise_fonction": "19/03/2025",
+          "source_id": "JORFTEXT000051348270",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités de la Loire-Atlantique attachée d'administration de l'Etat hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Nathalie FRANQUET",
+          "nom": "FRANQUET",
+          "prenom": "Nathalie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "12/02/2026",
+          "date_prise_fonction": "12/02/2026",
+          "source_id": "JORFTEXT000053459255",
+          "texte_source": "directrice départementale de la protection des populations de la Loire-Atlantique | avec une période probatoire de six mois | à compter du 1er mars 2026 inspectrice générale de la santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Guillaume CHENUT",
+            "nom": "CHENUT",
+            "prenom": "Guillaume",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "26/12/2020",
+            "date_prise_fonction": "26/12/2020",
+            "source_id": "JORFTEXT000042740121",
+            "texte_source": "directeur départemental de la protection des populations de la Loire-Atlantique inspecteur général de santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "01/01/2025"
+          },
+          {
+            "nom_complet": "Guillaume CHENUT",
+            "nom": "CHENUT",
+            "prenom": "Guillaume",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "08/12/2024",
+            "date_prise_fonction": "01/01/2025",
+            "source_id": "JORFTEXT000050756611",
+            "texte_source": "dans leurs fonctions de directeurs départementaux interministériels directeur départemental de la protection des populations de la Loire-Atlantique",
+            "action": "remplacé",
+            "date_fin": "12/02/2026"
+          }
+        ]
+      }
+    },
+    "Haute-Garonne": {
+      "territoire": "Haute-Garonne",
+      "code_dept": "31",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1415000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Patrick LECUYER",
+          "nom": "LECUYER",
+          "prenom": "Patrick",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "07/07/2024",
+          "date_prise_fonction": "07/07/2024",
+          "source_id": "JORFTEXT000049894381",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de la Haute-Garonne inspecteur de classe exceptionnelle de l'action sanitaire et sociale"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Daniel HIRSCHY",
+          "nom": "HIRSCHY",
+          "prenom": "Daniel",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "25/01/2025",
+          "date_prise_fonction": "01/02/2025",
+          "source_id": "JORFTEXT000051031910",
+          "texte_source": "directeur départemental de la protection des populations de la Haute-Garonne | avec une période probatoire de six mois directeur départemental de 2e classe de la concurrence, de la consommation et de la répression des fraudes"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Juliette SORRENTINO",
+            "nom": "SORRENTINO",
+            "prenom": "Juliette",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "26/12/2020",
+            "date_prise_fonction": "26/12/2020",
+            "source_id": "JORFTEXT000042740121",
+            "texte_source": "directrice départementale de la protection des populations de la Haute-Garonne directrice départementale de 2e classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "01/02/2025"
+          }
+        ]
+      }
+    },
+    "Finistère": {
+      "territoire": "Finistère",
+      "code_dept": "29",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 915000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Olivier NAYS",
+          "nom": "NAYS",
+          "prenom": "Olivier",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/06/2026",
+          "date_prise_fonction": "18/07/2026",
+          "source_id": "JORFTEXT000054208740",
+          "texte_source": "dans leurs fonctions de directeurs départementaux interministériels, dans les conditions suivantes directeur départemental de l'emploi, du travail et des solidarités du Finistère"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Olivier NAYS",
+            "nom": "NAYS",
+            "prenom": "Olivier",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "01/07/2022",
+            "date_prise_fonction": "18/07/2022",
+            "source_id": "JORFTEXT000045997428",
+            "texte_source": "directeur départemental de l'emploi, du travail et des solidarités du Finistère | avec une période probatoire de six mois directeur du travail hors classe",
+            "action": "remplacé",
+            "date_fin": "18/07/2026"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Estelle NEAU",
+          "nom": "NEAU",
+          "prenom": "Estelle",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "16/01/2026",
+          "date_prise_fonction": "26/01/2026",
+          "source_id": "JORFTEXT000053374248",
+          "texte_source": "directrice départementale de la protection des populations du Finistère inspectrice générale de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Yvan LOBJOIT",
+            "nom": "LOBJOIT",
+            "prenom": "Yvan",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "31/12/2020",
+            "date_prise_fonction": "31/12/2020",
+            "source_id": "JORFTEXT000042842438",
+            "texte_source": "directeur départemental de la protection des populations du Finistère ingénieur général de la santé publique vétérinaire de classe exceptionnelle",
+            "action": "remplacé",
+            "date_fin": "16/01/2022"
+          },
+          {
+            "nom_complet": "François POUILLY",
+            "nom": "POUILLY",
+            "prenom": "François",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "16/01/2022",
+            "date_prise_fonction": "16/01/2022",
+            "source_id": "JORFTEXT000044993853",
+            "texte_source": "directeur départemental de la protection des populations du Finistère inspecteur général de santé publique vétérinaire de classe normale",
+            "action": "remplacé",
+            "date_fin": "26/01/2026"
+          }
+        ]
+      }
+    },
+    "Val-de-Marne": {
+      "territoire": "Val-de-Marne",
+      "code_dept": "94",
+      "type_organisation": "organisation_locale_specifique",
+      "population_estimee": 1398000,
+      "poste_ddets": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Frédéric PIRON",
+          "nom": "PIRON",
+          "prenom": "Frédéric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "11/09/2026",
+          "date_prise_fonction": "14/09/2026",
+          "source_id": "JORFTEXT000054827065",
+          "texte_source": "directeur départemental de la protection des populations du Val-de-Marne | avec une période probatoire de six mois inspecteur général de la santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Paul MENNECIER",
+            "nom": "MENNECIER",
+            "prenom": "Paul",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "27/01/2021",
+            "date_prise_fonction": "27/01/2021",
+            "source_id": "JORFTEXT000043053953",
+            "texte_source": "directeur départemental de la protection des populations du Val-de-Marne inspecteur général de santé publique vétérinaire de classe normale",
+            "action": "remplacé",
+            "date_fin": "01/02/2025"
+          },
+          {
+            "nom_complet": "Paul MENNECIER",
+            "nom": "MENNECIER",
+            "prenom": "Paul",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "26/01/2025",
+            "date_prise_fonction": "01/02/2025",
+            "source_id": "JORFTEXT000051033093",
+            "texte_source": "dans ses fonctions directeur départemental de la protection des populations du Val-de-Marne",
+            "action": "remplacé",
+            "date_fin": "14/09/2026"
+          }
+        ]
+      }
+    },
+    "Drôme": {
+      "territoire": "Drôme",
+      "code_dept": "26",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 517000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Agnès COL",
+          "nom": "COL",
+          "prenom": "Agnès",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "13/08/2026",
+          "date_prise_fonction": "13/08/2026",
+          "source_id": "JORFTEXT000054673373",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités de la Drôme directrice du travail"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Pascale MATHEY",
+            "nom": "MATHEY",
+            "prenom": "Pascale",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "17/07/2021",
+            "date_prise_fonction": "17/07/2021",
+            "source_id": "JORFTEXT000043798769",
+            "texte_source": "directrice départementale de l'emploi, du travail et des solidarités de la Drôme inspectrice de classe exceptionnelle de l'action sanitaire et sociale",
+            "action": "remplacé",
+            "date_fin": "15/08/2025"
+          },
+          {
+            "nom_complet": "Pascale MATHEY",
+            "nom": "MATHEY",
+            "prenom": "Pascale",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "23/07/2025",
+            "date_prise_fonction": "15/08/2025",
+            "source_id": "JORFTEXT000051942544",
+            "texte_source": "dans ses fonctions directrice départementale de l'emploi, du travail et des solidarités de la Drôme",
+            "action": "remplacé",
+            "date_fin": "13/08/2026"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Jean-François GRAVIER",
+          "nom": "GRAVIER",
+          "prenom": "Jean-François",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "28/04/2023",
+          "date_prise_fonction": "15/05/2023",
+          "source_id": "JORFTEXT000047501634",
+          "texte_source": "directeur départemental de la protection des populations de la Drôme | avec une période probatoire de six mois ingénieur en chef des ponts, des eaux et des forêts"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Catherine WENNER",
+            "nom": "WENNER",
+            "prenom": "Catherine",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "27/01/2021",
+            "date_prise_fonction": "27/01/2021",
+            "source_id": "JORFTEXT000043053953",
+            "texte_source": "directrice départementale de la protection des populations de la Drôme inspectrice en cheffe de santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "15/05/2023"
+          }
+        ]
+      }
+    },
+    "Indre-et-Loire": {
+      "territoire": "Indre-et-Loire",
+      "code_dept": "37",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 610000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Guillemette RABIN",
+          "nom": "RABIN",
+          "prenom": "Guillemette",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "11/06/2023",
+          "date_prise_fonction": "03/07/2023",
+          "source_id": "JORFTEXT000047664790",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités d'Indre-et-Loire | avec une période probatoire de six mois inspectrice de classe exceptionnelle de l'action sanitaire et sociale"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Fabienne BIBET",
+          "nom": "BIBET",
+          "prenom": "Fabienne",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "28/10/2026",
+          "date_prise_fonction": "28/10/2026",
+          "source_id": "JORFTEXT000055020821",
+          "texte_source": "directrice départementale de la protection des populations d'Indre-et-Loire directrice départementale de la concurrence, de la consommation et de la répression des fraudes de 1re classe"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Fany MOLIN",
+            "nom": "MOLIN",
+            "prenom": "Fany",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "12/02/2021",
+            "date_prise_fonction": "01/03/2021",
+            "source_id": "JORFTEXT000043121867",
+            "texte_source": "directrice départementale de la protection des populations d'Indre-et-Loire ingénieure générale des ponts, des eaux et des forêts de classe normale",
+            "action": "remplacé",
+            "date_fin": "01/11/2023"
+          },
+          {
+            "nom_complet": "Carine BAR",
+            "nom": "BAR",
+            "prenom": "Carine",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "29/10/2023",
+            "date_prise_fonction": "01/11/2023",
+            "source_id": "JORFTEXT000048276483",
+            "texte_source": "directrice départementale de la protection des populations d'Indre-et-Loire directrice départementale de 2e classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "28/10/2026"
+          }
+        ]
+      }
+    },
+    "Seine-et-Marne": {
+      "territoire": "Seine-et-Marne",
+      "code_dept": "77",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1403000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Nicolas DROUART",
+          "nom": "DROUART",
+          "prenom": "Nicolas",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "04/10/2025",
+          "date_prise_fonction": "04/10/2025",
+          "source_id": "JORFTEXT000052353470",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de Seine-et-Marne | avec une période probatoire de six mois | à compter du 1er novembre 2025 inspecteur de classe exceptionnelle de l'action sanitaire et sociale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Hervé DESCOINS",
+            "nom": "DESCOINS",
+            "prenom": "Hervé",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "24/01/2025",
+            "date_prise_fonction": "01/02/2025",
+            "source_id": "JORFTEXT000051023081",
+            "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de Seine-et-Marne | avec une période probatoire de six mois ingénieur des ponts, des eaux et des forêts",
+            "action": "remplacé",
+            "date_fin": "04/10/2025"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Redouane OUAHRANI",
+          "nom": "OUAHRANI",
+          "prenom": "Redouane",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "11/04/2024",
+          "date_prise_fonction": "11/04/2024",
+          "source_id": "JORFTEXT000049402466",
+          "texte_source": "directeur départemental de la protection des populations de Seine-et-Marne inspecteur général de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Frédéric PIRON",
+            "nom": "PIRON",
+            "prenom": "Frédéric",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "26/03/2021",
+            "date_prise_fonction": "26/03/2021",
+            "source_id": "JORFTEXT000043290449",
+            "texte_source": "directeur départemental de la protection des populations de Seine-et-Marne inspecteur général de santé publique vétérinaire de classe normale",
+            "action": "remplacé",
+            "date_fin": "11/04/2024"
+          }
+        ]
+      }
+    },
+    "Saône-et-Loire": {
+      "territoire": "Saône-et-Loire",
+      "code_dept": "71",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 551000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Daniel BOUSSIT",
+          "nom": "BOUSSIT",
+          "prenom": "Daniel",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "24/01/2025",
+          "date_prise_fonction": "01/02/2025",
+          "source_id": "JORFTEXT000051023085",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de Saône-et-Loire | avec une période probatoire de six mois directeur du travail"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Anne COSTAZ",
+          "nom": "COSTAZ",
+          "prenom": "Anne",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "07/03/2026",
+          "date_prise_fonction": "07/03/2026",
+          "source_id": "JORFTEXT000053635034",
+          "texte_source": "dans leurs fonctions de directeurs départementaux interministériels, dans les conditions suivantes directrice départementale de la protection des populations de Saône-et-Loire | à compter du 1er avril 2026"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Anne COSTAZ",
+            "nom": "COSTAZ",
+            "prenom": "Anne",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "26/03/2021",
+            "date_prise_fonction": "26/03/2021",
+            "source_id": "JORFTEXT000043290449",
+            "texte_source": "directrice départementale de la protection des populations de Saône-et-Loire inspectrice générale de santé publique vétérinaire de classe normale",
+            "action": "remplacé",
+            "date_fin": "07/02/2025"
+          },
+          {
+            "nom_complet": "Anne COSTAZ",
+            "nom": "COSTAZ",
+            "prenom": "Anne",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "25/01/2025",
+            "date_prise_fonction": "07/02/2025",
+            "source_id": "JORFTEXT000051031953",
+            "texte_source": "membres du conseil d'administration de l'Institut national de formation des personnels du ministère de l'agriculture | au titre des personnalités qualifiées directrice départementale de la protection des populations de Saône-et-Loire",
+            "action": "remplacé",
+            "date_fin": "01/04/2025"
+          },
+          {
+            "nom_complet": "Anne COSTAZ",
+            "nom": "COSTAZ",
+            "prenom": "Anne",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "19/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051348278",
+            "texte_source": "dans leurs fonctions de directeurs départementaux interministériels, dans les conditions suivantes | 1° directrice départementale de la protection des populations de Saône-et-Loire",
+            "action": "remplacé",
+            "date_fin": "07/03/2026"
+          }
+        ]
+      }
+    },
+    "Ille-et-Vilaine": {
+      "territoire": "Ille-et-Vilaine",
+      "code_dept": "35",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1096000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Cyril DUWOYE",
+          "nom": "DUWOYE",
+          "prenom": "Cyril",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "16/02/2024",
+          "date_prise_fonction": "26/02/2024",
+          "source_id": "JORFTEXT000049151112",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités d'Ille-et-Vilaine | avec une période probatoire de six mois administrateur de l'Etat du deuxième grade"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Christian JARDIN",
+          "nom": "JARDIN",
+          "prenom": "Christian",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "25/03/2025",
+          "date_prise_fonction": "20/04/2025",
+          "source_id": "JORFTEXT000051368885",
+          "texte_source": "dans ses fonctions directeur départemental de la protection des populations d'Ille-et-Vilaine"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Christian JARDIN",
+            "nom": "JARDIN",
+            "prenom": "Christian",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "22/04/2021",
+            "date_prise_fonction": "22/04/2021",
+            "source_id": "JORFTEXT000043404097",
+            "texte_source": "directeur départemental de la protection des populations d'Ille-et-Vilaine inspecteur de santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "20/04/2025"
+          }
+        ]
+      }
+    },
+    "Hauts-de-Seine": {
+      "territoire": "Hauts-de-Seine",
+      "code_dept": "92",
+      "type_organisation": "organisation_locale_specifique",
+      "population_estimee": 1609000,
+      "poste_ddets": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Ghislaine CAMAZON",
+          "nom": "CAMAZON",
+          "prenom": "Ghislaine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "19/08/2026",
+          "date_prise_fonction": "19/09/2026",
+          "source_id": "JORFTEXT000054708808",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel | dans les conditions suivantes directrice départementale de la protection des populations des Hauts-de-Seine"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Patrick DROUET",
+            "nom": "DROUET",
+            "prenom": "Patrick",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "27/04/2021",
+            "date_prise_fonction": "18/05/2021",
+            "source_id": "JORFTEXT000043421772",
+            "texte_source": "dans leurs fonctions le directeur départemental interministériel et le directeur départemental interministériel adjoint suivants directeur départemental de la protection des populations des Hauts-de-Seine",
+            "action": "remplacé",
+            "date_fin": "18/05/2022"
+          },
+          {
+            "nom_complet": "Patrick DROUET",
+            "nom": "DROUET",
+            "prenom": "Patrick",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "14/04/2022",
+            "date_prise_fonction": "18/05/2022",
+            "source_id": "JORFTEXT000045571782",
+            "texte_source": "dans leurs fonctions directeur départemental de la protection des populations des Hauts-de-Seine",
+            "action": "remplacé",
+            "date_fin": "07/08/2022"
+          },
+          {
+            "nom_complet": "Ghislaine CAMAZON",
+            "nom": "CAMAZON",
+            "prenom": "Ghislaine",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "07/08/2022",
+            "date_prise_fonction": "07/08/2022",
+            "source_id": "JORFTEXT000046152368",
+            "texte_source": "directrice départementale de la protection des populations des Hauts-de-Seine directrice départementale de 2e classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "19/09/2026"
+          }
+        ]
+      }
+    },
+    "Aveyron": {
+      "territoire": "Aveyron",
+      "code_dept": "12",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 279000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Franck BUFFEL",
+          "nom": "BUFFEL",
+          "prenom": "Franck",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "19/02/2025",
+          "date_prise_fonction": "17/03/2025",
+          "source_id": "JORFTEXT000051195134",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de l'Aveyron | avec une période probatoire de six mois ingénieur de l'agriculture et de l'environnement hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Marie-Claire MARGUIER",
+            "nom": "MARGUIER",
+            "prenom": "Marie-Claire",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "23/06/2021",
+            "date_prise_fonction": "23/06/2021",
+            "source_id": "JORFTEXT000043688931",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de l'Aveyron inspectrice générale de santé publique vétérinaire de classe normale",
+            "action": "remplacé",
+            "date_fin": "11/08/2021"
+          },
+          {
+            "nom_complet": "Isabelle SERRES",
+            "nom": "SERRES",
+            "prenom": "Isabelle",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "11/08/2021",
+            "date_prise_fonction": "11/08/2021",
+            "source_id": "JORFTEXT000043927507",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de l'Aveyron directrice du travail",
+            "action": "remplacé",
+            "date_fin": "01/09/2021"
+          },
+          {
+            "nom_complet": "Isabelle SERRES",
+            "nom": "SERRES",
+            "prenom": "Isabelle",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "01/09/2021",
+            "date_prise_fonction": "01/09/2021",
+            "source_id": "JORFTEXT000044000685",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de l'Aveyron ; » directrice du travail",
+            "action": "remplacé",
+            "date_fin": "17/03/2025"
+          }
+        ]
+      }
+    },
+    "Essonne": {
+      "territoire": "Essonne",
+      "code_dept": "91",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1296000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Philippe COUPARD",
+          "nom": "COUPARD",
+          "prenom": "Philippe",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "26/04/2024",
+          "date_prise_fonction": "26/04/2024",
+          "source_id": "JORFTEXT000049474779",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de l'Essonne directeur du travail hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Fabien CAMACHO",
+          "nom": "CAMACHO",
+          "prenom": "Fabien",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "12/04/2025",
+          "date_prise_fonction": "14/04/2025",
+          "source_id": "JORFTEXT000051452966",
+          "texte_source": "directeur départemental de la protection des populations de l'Essonne | avec une période probatoire de six mois directeur départemental de 2e classe de la concurrence, de la consommation et de la répression des fraudes"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Céline GERSTER",
+            "nom": "GERSTER",
+            "prenom": "Céline",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "23/06/2021",
+            "date_prise_fonction": "23/06/2021",
+            "source_id": "JORFTEXT000043688931",
+            "texte_source": "directrice départementale de la protection des populations de l'Essonne inspectrice en cheffe de santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "14/04/2025"
+          }
+        ]
+      }
+    },
+    "Dordogne": {
+      "territoire": "Dordogne",
+      "code_dept": "24",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 413000,
+      "poste_ddets": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Eric PRIGENT DECHERF",
+          "nom": "PRIGENT DECHERF",
+          "prenom": "Eric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "03/07/2024",
+          "date_prise_fonction": "03/07/2024",
+          "source_id": "JORFTEXT000049862722",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de la Dordogne ingénieur en chef des ponts, des eaux et des forêts"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Catherine FAMOSE",
+            "nom": "FAMOSE",
+            "prenom": "Catherine",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "23/06/2021",
+            "date_prise_fonction": "23/06/2021",
+            "source_id": "JORFTEXT000043688931",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Dordogne inspectrice générale de santé publique vétérinaire de classe exceptionnelle",
+            "action": "remplacé",
+            "date_fin": "03/07/2024"
+          }
+        ]
+      }
+    },
+    "Cher": {
+      "territoire": "Cher",
+      "code_dept": "18",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 302000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Didier AUBINEAU",
+          "nom": "AUBINEAU",
+          "prenom": "Didier",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "19/03/2025",
+          "date_prise_fonction": "19/03/2025",
+          "source_id": "JORFTEXT000051348285",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations du Cher inspecteur de classe exceptionnelle de l'action sanitaire et sociale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Alix BARBOUX",
+            "nom": "BARBOUX",
+            "prenom": "Alix",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "17/07/2021",
+            "date_prise_fonction": "17/07/2021",
+            "source_id": "JORFTEXT000043798769",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations du Cher inspectrice principale de la jeunesse et des sports",
+            "action": "remplacé",
+            "date_fin": "19/03/2025"
+          }
+        ]
+      }
+    },
+    "Lot-et-Garonne": {
+      "territoire": "Lot-et-Garonne",
+      "code_dept": "47",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 332000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Viviane DUPUY-CHRISTOPHE",
+          "nom": "DUPUY-CHRISTOPHE",
+          "prenom": "Viviane",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "04/07/2024",
+          "date_prise_fonction": "29/08/2024",
+          "source_id": "JORFTEXT000049871704",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de Lot-et-Garonne | avec une période probatoire de six mois directrice du travail"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Brice MORALES",
+            "nom": "MORALES",
+            "prenom": "Brice",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "11/08/2021",
+            "date_prise_fonction": "11/08/2021",
+            "source_id": "JORFTEXT000043927507",
+            "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de Lot-et-Garonne inspecteur de l'action sanitaire et sociale",
+            "action": "remplacé",
+            "date_fin": "01/09/2021"
+          },
+          {
+            "nom_complet": "Brice MORALES",
+            "nom": "MORALES",
+            "prenom": "Brice",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "01/09/2021",
+            "date_prise_fonction": "01/09/2021",
+            "source_id": "JORFTEXT000044000685",
+            "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de Lot-et-Garonne ; » inspecteur de l'action sanitaire et sociale",
+            "action": "remplacé",
+            "date_fin": "29/08/2024"
+          }
+        ]
+      }
+    },
+    "Maine-et-Loire": {
+      "territoire": "Maine-et-Loire",
+      "code_dept": "49",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 818000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Wilfrid PELISSIER",
+          "nom": "PELISSIER",
+          "prenom": "Wilfrid",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "03/09/2025",
+          "date_prise_fonction": "03/09/2025",
+          "source_id": "JORFTEXT000052180668",
+          "texte_source": "dans ses fonctions | à compter du 1er octobre 2025 directeur départemental de l'emploi, du travail et des solidarités de Maine-et-Loire"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Wilfrid PELISSIER",
+            "nom": "PELISSIER",
+            "prenom": "Wilfrid",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "11/09/2021",
+            "date_prise_fonction": "11/09/2021",
+            "source_id": "JORFTEXT000044035688",
+            "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de Maine-et-Loire inspecteur de la jeunesse et des sports de classe exceptionnelle",
+            "action": "remplacé",
+            "date_fin": "03/09/2025"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Eric DAVID",
+          "nom": "DAVID",
+          "prenom": "Eric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "10/09/2026",
+          "date_prise_fonction": "07/10/2026",
+          "source_id": "JORFTEXT000054817175",
+          "texte_source": "dans ses fonctions | jusqu'au 1er juillet 2027 directeur départemental de la protection des populations de Maine-et-Loire"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Eric DAVID",
+            "nom": "DAVID",
+            "prenom": "Eric",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "06/09/2024",
+            "date_prise_fonction": "07/10/2024",
+            "source_id": "JORFTEXT000050185623",
+            "texte_source": "dans leurs fonctions de directeurs départementaux interministériels, dans les conditions suivantes directeur départemental de la protection des populations de Maine-et-Loire",
+            "action": "remplacé",
+            "date_fin": "07/10/2026"
+          }
+        ]
+      }
+    },
+    "Charente-Maritime": {
+      "territoire": "Charente-Maritime",
+      "code_dept": "17",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 651000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Xavier GABILLAUD",
+          "nom": "GABILLAUD",
+          "prenom": "Xavier",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "07/04/2023",
+          "date_prise_fonction": "02/05/2023",
+          "source_id": "JORFTEXT000047416965",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de la Charente-Maritime | avec une période probatoire de six mois inspecteur de la jeunesse et des sports de classe exceptionnelle"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Carine BAR",
+          "nom": "BAR",
+          "prenom": "Carine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "11/09/2026",
+          "date_prise_fonction": "28/09/2026",
+          "source_id": "JORFTEXT000054827065",
+          "texte_source": "directrice départementale de la protection des populations de la Charente-Maritime | avec une période probatoire de six mois directrice départementale de la concurrence, de la consommation et de la répression des fraudes de 1re classe"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Myriam PEURON",
+            "nom": "PEURON",
+            "prenom": "Myriam",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "11/09/2021",
+            "date_prise_fonction": "11/09/2021",
+            "source_id": "JORFTEXT000044035688",
+            "texte_source": "directrice départementale de la protection des populations de la Charente-Maritime directrice départementale de 2e classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "15/09/2025"
+          },
+          {
+            "nom_complet": "Myriam PEURON",
+            "nom": "PEURON",
+            "prenom": "Myriam",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "19/08/2025",
+            "date_prise_fonction": "15/09/2025",
+            "source_id": "JORFTEXT000052115209",
+            "texte_source": "dans ses fonctions directrice départementale de la protection des populations de la Charente-Maritime",
+            "action": "remplacé",
+            "date_fin": "28/09/2026"
+          }
+        ]
+      }
+    },
+    "Vienne": {
+      "territoire": "Vienne",
+      "code_dept": "86",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 438000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Corinne BERRIEIX",
+          "nom": "BERRIEIX",
+          "prenom": "Corinne",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "16/01/2026",
+          "date_prise_fonction": "16/01/2026",
+          "source_id": "JORFTEXT000053374248",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités de la Vienne | à compter du 1er février 2026 directrice adjointe du travail"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Agnès MOTTET",
+            "nom": "MOTTET",
+            "prenom": "Agnès",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directrice départementale de l'emploi, du travail et des solidarités de la Vienne",
+            "action": "remplacé",
+            "date_fin": "16/01/2026"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Nicolas VINRECH",
+          "nom": "VINRECH",
+          "prenom": "Nicolas",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "09/10/2026",
+          "date_prise_fonction": "09/10/2026",
+          "source_id": "JORFTEXT000054965862",
+          "texte_source": "directeur départemental de la protection des populations de la Vienne | avec une période probatoire de six mois | à compter du 1er novembre 2026 inspecteur principal de la concurrence, de la consommation et de la répression des fraudes"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Philippe NOLLEN",
+            "nom": "NOLLEN",
+            "prenom": "Philippe",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "14/10/2021",
+            "date_prise_fonction": "14/10/2021",
+            "source_id": "JORFTEXT000044202273",
+            "texte_source": "directeur départemental de la protection des populations de la Vienne directeur départemental de 2e classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "24/02/2023"
+          },
+          {
+            "nom_complet": "Yves CERISIER",
+            "nom": "CERISIER",
+            "prenom": "Yves",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "24/02/2023",
+            "date_prise_fonction": "24/02/2023",
+            "source_id": "JORFTEXT000047219590",
+            "texte_source": "directeur départemental de la protection des populations de la Vienne inspecteur général de santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "09/10/2026"
+          }
+        ]
+      }
+    },
+    "Yonne": {
+      "territoire": "Yonne",
+      "code_dept": "89",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 335000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Sylvain CHEVRON",
+          "nom": "CHEVRON",
+          "prenom": "Sylvain",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "07/02/2026",
+          "date_prise_fonction": "07/02/2026",
+          "source_id": "JORFTEXT000053447720",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de l'Yonne | avec une période probatoire de six mois | à compter du 1er mars 2026 inspecteur hors classe de l'action sanitaire et sociale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Jean-Michel LOUYER",
+            "nom": "LOUYER",
+            "prenom": "Jean-Michel",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "14/10/2021",
+            "date_prise_fonction": "14/10/2021",
+            "source_id": "JORFTEXT000044202273",
+            "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de l'Yonne directeur du travail",
+            "action": "remplacé",
+            "date_fin": "15/12/2023"
+          },
+          {
+            "nom_complet": "Salia RABHI",
+            "nom": "RABHI",
+            "prenom": "Salia",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "25/11/2023",
+            "date_prise_fonction": "15/12/2023",
+            "source_id": "JORFTEXT000048458837",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de l'Yonne | avec une période probatoire de six mois attachée principale d'administration",
+            "action": "remplacé",
+            "date_fin": "07/02/2026"
+          }
+        ]
+      }
+    },
+    "Hautes-Pyrénées": {
+      "territoire": "Hautes-Pyrénées",
+      "code_dept": "65",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 229000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Grégory FERRA",
+          "nom": "FERRA",
+          "prenom": "Grégory",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "11/10/2026",
+          "date_prise_fonction": "11/10/2026",
+          "source_id": "JORFTEXT000054971266",
+          "texte_source": "dans ses fonctions | à compter du 1er novembre 2026 directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations des Hautes-Pyrénées"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Grégory FERRA",
+            "nom": "FERRA",
+            "prenom": "Grégory",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "14/10/2021",
+            "date_prise_fonction": "14/10/2021",
+            "source_id": "JORFTEXT000044202273",
+            "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations des Hautes-Pyrénées directeur du travail",
+            "action": "remplacé",
+            "date_fin": "10/10/2025"
+          },
+          {
+            "nom_complet": "Grégory FERRA",
+            "nom": "FERRA",
+            "prenom": "Grégory",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "10/10/2025",
+            "date_prise_fonction": "10/10/2025",
+            "source_id": "JORFTEXT000052377758",
+            "texte_source": "dans ses fonctions | à compter du 1er novembre 2025 directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations des Hautes-Pyrénées",
+            "action": "remplacé",
+            "date_fin": "11/10/2026"
+          }
+        ]
+      }
+    },
+    "Paris": {
+      "territoire": "Paris",
+      "code_dept": "75",
+      "type_organisation": "organisation_locale_specifique",
+      "population_estimee": 2165000,
+      "poste_ddets": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Marie-Hélène TREBILLON",
+          "nom": "TREBILLON",
+          "prenom": "Marie-Hélène",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "31/10/2025",
+          "date_prise_fonction": "15/11/2025",
+          "source_id": "JORFTEXT000052467414",
+          "texte_source": "dans ses fonctions directrice départementale de la protection des populations de Paris"
+        },
+        "titulaire_designe": {
+          "nom_complet": "Marie-Hélène TREBILLON",
+          "nom": "TREBILLON",
+          "prenom": "Marie-Hélène",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "28/10/2026",
+          "date_prise_fonction": "15/11/2026",
+          "source_id": "JORFTEXT000055020814",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel, dans les conditions suivantes | 1° directrice départementale de la protection des populations de Paris"
+        },
+        "historique": [
+          {
+            "nom_complet": "Marie-Hélène TREBILLON",
+            "nom": "TREBILLON",
+            "prenom": "Marie-Hélène",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "14/10/2021",
+            "date_prise_fonction": "14/10/2021",
+            "source_id": "JORFTEXT000044202273",
+            "texte_source": "directrice départementale de la protection des populations de Paris directrice départementale de 2e classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "15/11/2025"
+          }
+        ]
+      }
+    },
+    "Somme": {
+      "territoire": "Somme",
+      "code_dept": "80",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 569000,
+      "poste_ddets": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Bénédicte SCHMITZ",
+          "nom": "SCHMITZ",
+          "prenom": "Bénédicte",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "18/10/2026",
+          "date_prise_fonction": "18/10/2026",
+          "source_id": "JORFTEXT000054993762",
+          "texte_source": "dans ses fonctions | à compter du 1er novembre 2026 directrice départementale de la protection des populations de la Somme"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Bénédicte SCHMITZ",
+            "nom": "SCHMITZ",
+            "prenom": "Bénédicte",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "14/10/2021",
+            "date_prise_fonction": "14/10/2021",
+            "source_id": "JORFTEXT000044202273",
+            "texte_source": "directrice départementale de la protection des populations de la Somme inspectrice en chef de santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "09/10/2025"
+          },
+          {
+            "nom_complet": "Bénédicte SCHMITZ",
+            "nom": "SCHMITZ",
+            "prenom": "Bénédicte",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "09/10/2025",
+            "date_prise_fonction": "09/10/2025",
+            "source_id": "JORFTEXT000052376221",
+            "texte_source": "dans ses fonctions | à compter du 1er novembre 2025 directrice départementale de la protection des populations de la Somme",
+            "action": "remplacé",
+            "date_fin": "18/10/2026"
+          }
+        ]
+      }
+    },
+    "Seine-Saint-Denis": {
+      "territoire": "Seine-Saint-Denis",
+      "code_dept": "93",
+      "type_organisation": "organisation_locale_specifique",
+      "population_estimee": 1632000,
+      "poste_ddets": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Nathalie PIHIER",
+          "nom": "PIHIER",
+          "prenom": "Nathalie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "28/01/2026",
+          "date_prise_fonction": "16/02/2026",
+          "source_id": "JORFTEXT000053407699",
+          "texte_source": "directrice départementale de la protection des populations de la Seine-Saint-Denis | avec une période probatoire de six mois inspectrice générale de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Emmanuelle LARIVIERE",
+            "nom": "LARIVIERE",
+            "prenom": "Emmanuelle",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "14/10/2021",
+            "date_prise_fonction": "14/10/2021",
+            "source_id": "JORFTEXT000044202273",
+            "texte_source": "directrice départementale de la protection des populations de la Seine-Saint-Denis inspectrice générale de santé publique vétérinaire de classe normale",
+            "action": "remplacé",
+            "date_fin": "16/02/2026"
+          }
+        ]
+      }
+    },
+    "Haute-Loire": {
+      "territoire": "Haute-Loire",
+      "code_dept": "43",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 227000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Carole SOUVIGNET",
+          "nom": "SOUVIGNET",
+          "prenom": "Carole",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "05/01/2024",
+          "date_prise_fonction": "15/01/2024",
+          "source_id": "JORFTEXT000048851722",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Haute-Loire | avec une période probatoire de six mois attachée principale d'administration de l'Etat"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Sylvie BONNET",
+            "nom": "BONNET",
+            "prenom": "Sylvie",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "14/10/2021",
+            "date_prise_fonction": "14/10/2021",
+            "source_id": "JORFTEXT000044202273",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de Haute-Loire inspectrice générale de santé publique vétérinaire de classe normale",
+            "action": "remplacé",
+            "date_fin": "15/01/2024"
+          }
+        ]
+      }
+    },
+    "Bas-Rhin": {
+      "territoire": "Bas-Rhin",
+      "code_dept": "67",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1142000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Anoutchka CHABEAU",
+          "nom": "CHABEAU",
+          "prenom": "Anoutchka",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "03/03/2024",
+          "date_prise_fonction": "03/03/2024",
+          "source_id": "JORFTEXT000049225719",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités du Bas-Rhin inspectrice de l'action sanitaire et sociale de classe exceptionnelle"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Jean-Paul WUCHER",
+          "nom": "WUCHER",
+          "prenom": "Jean-Paul",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "09/10/2024",
+          "date_prise_fonction": "09/10/2024",
+          "source_id": "JORFTEXT000050321259",
+          "texte_source": "directeur départemental de la protection des populations du Bas-Rhin directeur départemental de 1re classe de la concurrence, de la consommation et de la répression des fraudes"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Isabelle JEUDY",
+            "nom": "JEUDY",
+            "prenom": "Isabelle",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "08/12/2021",
+            "date_prise_fonction": "08/12/2021",
+            "source_id": "JORFTEXT000044447570",
+            "texte_source": "directrice départementale de la protection des populations du Bas-Rhin inspectrice générale de santé publique vétérinaire de classe normale",
+            "action": "remplacé",
+            "date_fin": "09/10/2024"
+          }
+        ]
+      }
+    },
+    "Corse-du-Sud": {
+      "territoire": "Corse-du-Sud",
+      "code_dept": "2A",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 158000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Myriam SAVIO",
+          "nom": "SAVIO",
+          "prenom": "Myriam",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "19/02/2025",
+          "date_prise_fonction": "01/03/2025",
+          "source_id": "JORFTEXT000051195141",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Corse-du-Sud | avec une période probatoire de six mois attachée territoriale principale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Sandrine POLYCHRONOPOULOS",
+            "nom": "POLYCHRONOPOULOS",
+            "prenom": "Sandrine",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/12/2021",
+            "date_prise_fonction": "18/12/2021",
+            "source_id": "JORFTEXT000044514924",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Corse-du-Sud attachée principale d'administration de l'Etat",
+            "action": "remplacé",
+            "date_fin": "01/03/2025"
+          }
+        ]
+      }
+    },
+    "Eure": {
+      "territoire": "Eure",
+      "code_dept": "27",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 601000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Benoît DESHOGUES",
+          "nom": "DESHOGUES",
+          "prenom": "Benoît",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "24/02/2023",
+          "date_prise_fonction": "13/03/2023",
+          "source_id": "JORFTEXT000047219588",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de l'Eure | avec une période probatoire de six mois directeur du travail"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Arnaud VINCENT",
+          "nom": "VINCENT",
+          "prenom": "Arnaud",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "11/04/2025",
+          "date_prise_fonction": "11/04/2025",
+          "source_id": "JORFTEXT000051448304",
+          "texte_source": "directeur départemental de la protection des populations de l'Eure inspecteur en chef de la santé publique vétérinaire"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Anne-Marie GRIFFON-PICARD",
+            "nom": "GRIFFON-PICARD",
+            "prenom": "Anne-Marie",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/12/2021",
+            "date_prise_fonction": "18/12/2021",
+            "source_id": "JORFTEXT000044514924",
+            "texte_source": "directrice départementale de la protection des populations de l'Eure inspectrice en chef de santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "11/04/2025"
+          }
+        ]
+      }
+    },
+    "Lozère": {
+      "territoire": "Lozère",
+      "code_dept": "48",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 76000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Audrey LAYMAND",
+          "nom": "LAYMAND",
+          "prenom": "Audrey",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "11/04/2024",
+          "date_prise_fonction": "11/04/2024",
+          "source_id": "JORFTEXT000049402466",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Lozère directrice du travail"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Sophie BOUDOT",
+            "nom": "BOUDOT",
+            "prenom": "Sophie",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "29/12/2021",
+            "date_prise_fonction": "29/12/2021",
+            "source_id": "JORFTEXT000044593215",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Lozère attachée hors classe d'administration de l'Etat",
+            "action": "remplacé",
+            "date_fin": "11/04/2024"
+          }
+        ]
+      }
+    },
+    "Calvados": {
+      "territoire": "Calvados",
+      "code_dept": "14",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 694000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Eric SEGUIN",
+          "nom": "SEGUIN",
+          "prenom": "Eric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "10/09/2025",
+          "date_prise_fonction": "10/09/2025",
+          "source_id": "JORFTEXT000052222538",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités du Calvados | avec une période probatoire de six mois inspecteur hors classe de l'action sanitaire et sociale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Stéphane DE CARLI",
+            "nom": "DE CARLI",
+            "prenom": "Stéphane",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directeur départemental de l'emploi, du travail et des solidarités du Calvados",
+            "action": "remplacé",
+            "date_fin": "10/09/2025"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Raphaël FAYAZ-POUR",
+          "nom": "FAYAZ-POUR",
+          "prenom": "Raphaël",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "29/12/2023",
+          "date_prise_fonction": "29/12/2023",
+          "source_id": "JORFTEXT000048709060",
+          "texte_source": "directeur départemental de la protection des populations du Calvados inspecteur général de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Christophe MARTINET",
+            "nom": "MARTINET",
+            "prenom": "Christophe",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "10/12/2021",
+            "date_prise_fonction": "01/01/2022",
+            "source_id": "JORFTEXT000044465006",
+            "texte_source": "dans leurs fonctions de directeurs départementaux interministériels directeur départemental de la protection des populations du Calvados",
+            "action": "remplacé",
+            "date_fin": "01/01/2023"
+          },
+          {
+            "nom_complet": "Christophe MARTINET",
+            "nom": "MARTINET",
+            "prenom": "Christophe",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "22/12/2022",
+            "date_prise_fonction": "01/01/2023",
+            "source_id": "JORFTEXT000046772665",
+            "texte_source": "dans ses fonctions directeur départemental de la protection des populations du Calvados",
+            "action": "remplacé",
+            "date_fin": "29/12/2023"
+          }
+        ]
+      }
+    },
+    "Val-d'Oise": {
+      "territoire": "Val-d'Oise",
+      "code_dept": "95",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1243000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Johana BERTHAU",
+          "nom": "BERTHAU",
+          "prenom": "Johana",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "09/10/2025",
+          "date_prise_fonction": "09/10/2025",
+          "source_id": "JORFTEXT000052376214",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités du Val-d'Oise | avec une période probatoire de six mois inspectrice hors classe de l'action sanitaire et sociale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Riad BOUHAFS",
+            "nom": "BOUHAFS",
+            "prenom": "Riad",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directeur départemental de l'emploi, du travail et des solidarités du Val-d'Oise",
+            "action": "remplacé",
+            "date_fin": "09/10/2025"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Marguerite LAFANECHERE",
+          "nom": "LAFANECHERE",
+          "prenom": "Marguerite",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "03/03/2024",
+          "date_prise_fonction": "03/03/2024",
+          "source_id": "JORFTEXT000049225719",
+          "texte_source": "directrice départementale de la protection des populations du Val-d'Oise inspectrice générale de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Valérie HUMMEL-FOURRAT",
+            "nom": "HUMMEL-FOURRAT",
+            "prenom": "Valérie",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "29/12/2021",
+            "date_prise_fonction": "10/01/2022",
+            "source_id": "JORFTEXT000044593221",
+            "texte_source": "directrice départementale de la protection des populations du Val-d'Oise | avec une période probatoire de six mois directrice départementale de la concurrence, de la consommation et de la répression des fraudes de 2e classe",
+            "action": "remplacé",
+            "date_fin": "03/03/2024"
+          }
+        ]
+      }
+    },
+    "Haute-Saône": {
+      "territoire": "Haute-Saône",
+      "code_dept": "70",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 235000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Yves LAMBERT",
+          "nom": "LAMBERT",
+          "prenom": "Yves",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "15/01/2026",
+          "date_prise_fonction": "15/01/2026",
+          "source_id": "JORFTEXT000053368816",
+          "texte_source": "dans ses fonctions | à compter du 1er février 2026 directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de la Haute-Saône"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Yves LAMBERT",
+            "nom": "LAMBERT",
+            "prenom": "Yves",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "16/01/2022",
+            "date_prise_fonction": "16/01/2022",
+            "source_id": "JORFTEXT000044993853",
+            "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de la Haute-Saône inspecteur en chef de santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "15/01/2026"
+          }
+        ]
+      }
+    },
+    "Deux-Sèvres": {
+      "territoire": "Deux-Sèvres",
+      "code_dept": "79",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 374000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Émilie DUPONT",
+          "nom": "DUPONT",
+          "prenom": "Émilie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "06/03/2026",
+          "date_prise_fonction": "06/03/2026",
+          "source_id": "JORFTEXT000053626201",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations des Deux-Sèvres | avec une période probatoire de six mois directrice départementale de 2e classe de la concurrence, de la consommation et de la répression des fraudes"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Christophe ADAMUS",
+            "nom": "ADAMUS",
+            "prenom": "Christophe",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "26/01/2022",
+            "date_prise_fonction": "26/01/2022",
+            "source_id": "JORFTEXT000045073088",
+            "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations des Deux-Sèvres inspecteur général de santé publique vétérinaire de classe normale",
+            "action": "remplacé",
+            "date_fin": "06/03/2026"
+          }
+        ]
+      }
+    },
+    "Pyrénées-Atlantiques": {
+      "territoire": "Pyrénées-Atlantiques",
+      "code_dept": "64",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 682000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Hélène VIAL",
+          "nom": "VIAL",
+          "prenom": "Hélène",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "24/02/2023",
+          "date_prise_fonction": "24/02/2023",
+          "source_id": "JORFTEXT000047219590",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités des Pyrénées-Atlantiques directrice du travail"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Nathalie LAPHITZ",
+          "nom": "LAPHITZ",
+          "prenom": "Nathalie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "10/01/2025",
+          "date_prise_fonction": "10/01/2025",
+          "source_id": "JORFTEXT000050963070",
+          "texte_source": "directrice départementale de la protection des populations des Pyrénées-Atlantiques | avec une période probatoire de six mois inspectrice en chef de la santé publique vétérinaire"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Alain MESPLEDE",
+            "nom": "MESPLEDE",
+            "prenom": "Alain",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "12/01/2022",
+            "date_prise_fonction": "01/02/2022",
+            "source_id": "JORFTEXT000044931112",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel et directrice départementale interministérielle adjointe directeur départemental de la protection des populations des Pyrénées-Atlantiques",
+            "action": "remplacé",
+            "date_fin": "10/01/2025"
+          }
+        ]
+      }
+    },
+    "Haute-Corse": {
+      "territoire": "Haute-Corse",
+      "code_dept": "2B",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 182000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Nelly BLOUET",
+          "nom": "BLOUET",
+          "prenom": "Nelly",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "08/03/2026",
+          "date_prise_fonction": "08/03/2026",
+          "source_id": "JORFTEXT000053636385",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Haute-Corse | avec une période probatoire de six mois | à compter du 1er avril 2026 personnel de direction de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Marie-Françoise BALDACCI",
+            "nom": "BALDACCI",
+            "prenom": "Marie-Françoise",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "06/03/2022",
+            "date_prise_fonction": "01/04/2022",
+            "source_id": "JORFTEXT000045300333",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Haute-Corse | avec une période probatoire de six mois attachée d'administration de l'Etat hors classe",
+            "action": "remplacé",
+            "date_fin": "18/01/2025"
+          },
+          {
+            "nom_complet": "Baldacci, née Memmi (Marie-Françoise)",
+            "nom": "BALDACCI",
+            "prenom": "Marie-Françoise",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/01/2025",
+            "date_prise_fonction": "18/01/2025",
+            "source_id": "JORFTEXT000050997617",
+            "texte_source": "pour prendre rang à la date de la remise réglementaire de l'insigne | Ministère du partenariat avec les territoires et de la décentralisation | Au grade de chevalier directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de Haute-Corse ; 40 ans de services",
+            "action": "remplacé",
+            "date_fin": "08/03/2026"
+          }
+        ]
+      }
+    },
+    "Creuse": {
+      "territoire": "Creuse",
+      "code_dept": "23",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 116000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Emmanuelle THILL",
+          "nom": "THILL",
+          "prenom": "Emmanuelle",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "06/06/2026",
+          "date_prise_fonction": "04/07/2026",
+          "source_id": "JORFTEXT000054208740",
+          "texte_source": "dans leurs fonctions de directeurs départementaux interministériels, dans les conditions suivantes directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Creuse"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Emmanuelle THILL",
+            "nom": "THILL",
+            "prenom": "Emmanuelle",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "12/06/2022",
+            "date_prise_fonction": "12/06/2022",
+            "source_id": "JORFTEXT000045897351",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Creuse inspectrice en chef de santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "04/07/2026"
+          }
+        ]
+      }
+    },
+    "Bouches-du-Rhône": {
+      "territoire": "Bouches-du-Rhône",
+      "code_dept": "13",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 2044000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Luce VIDAL",
+          "nom": "VIDAL",
+          "prenom": "Luce",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "13/08/2026",
+          "date_prise_fonction": "10/09/2026",
+          "source_id": "JORFTEXT000054673396",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités des Bouches-du-Rhône | avec une période probatoire de six mois inspectrice de classe exceptionnelle de l'action sanitaire et sociale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Nathalie DAUSSY",
+            "nom": "DAUSSY",
+            "prenom": "Nathalie",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directrice départementale de l'emploi, du travail et des solidarités des Bouches-du-Rhône",
+            "action": "remplacé",
+            "date_fin": "10/09/2026"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Yves ZELLMEYER",
+          "nom": "ZELLMEYER",
+          "prenom": "Yves",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/06/2026",
+          "date_prise_fonction": "25/07/2026",
+          "source_id": "JORFTEXT000054208740",
+          "texte_source": "dans leurs fonctions de directeurs départementaux interministériels, dans les conditions suivantes directeur départemental de la protection des populations des Bouches-du-Rhône"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Yves ZELLMEYER",
+            "nom": "ZELLMEYER",
+            "prenom": "Yves",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "21/07/2022",
+            "date_prise_fonction": "21/07/2022",
+            "source_id": "JORFTEXT000046070732",
+            "texte_source": "directeur départemental de la protection des populations des Bouches-du-Rhône directeur départemental de 1re classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "25/07/2026"
+          }
+        ]
+      }
+    },
+    "Pyrénées-Orientales": {
+      "territoire": "Pyrénées-Orientales",
+      "code_dept": "66",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 479000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Chrystèle MARTINEZ",
+          "nom": "MARTINEZ",
+          "prenom": "Chrystèle",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "24/05/2026",
+          "date_prise_fonction": "15/06/2026",
+          "source_id": "JORFTEXT000054126919",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités des Pyrénées-Orientales | avec une période probatoire de six mois attachée hors classe d'administration de l'Etat"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Eric DOAT",
+            "nom": "DOAT",
+            "prenom": "Eric",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "18/03/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "directeur départemental de l'emploi, du travail et des solidarités des Pyrénées-Orientales ",
+            "action": "remplacé",
+            "date_fin": "15/06/2026"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Frédéric GUILLOT",
+          "nom": "GUILLOT",
+          "prenom": "Frédéric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "10/07/2026",
+          "date_prise_fonction": "08/08/2026",
+          "source_id": "JORFTEXT000054408569",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel, dans les conditions suivantes | 1° directeur départemental de la protection des populations des Pyrénées-Orientales"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Frédéric GUILLOT",
+            "nom": "GUILLOT",
+            "prenom": "Frédéric",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "21/07/2022",
+            "date_prise_fonction": "21/07/2022",
+            "source_id": "JORFTEXT000046070732",
+            "texte_source": "directeur départemental de la protection des populations des Pyrénées-Orientales directeur départemental de 2e classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "08/08/2026"
+          }
+        ]
+      }
+    },
+    "Oise": {
+      "territoire": "Oise",
+      "code_dept": "60",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 829000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Bertrand VANDEMOORTELE",
+          "nom": "VANDEMOORTELE",
+          "prenom": "Bertrand",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "22/11/2024",
+          "date_prise_fonction": "16/12/2024",
+          "source_id": "JORFTEXT000050652187",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de l'Oise | avec une période probatoire de six mois inspecteur de l'action sanitaire et sociale de classe exceptionnelle"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Nathalie RIVEROLA",
+          "nom": "RIVEROLA",
+          "prenom": "Nathalie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "15/08/2026",
+          "date_prise_fonction": "15/08/2026",
+          "source_id": "JORFTEXT000054683689",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel, dans les conditions suivantes | 1° A compter du 1er septembre 2026 directrice départementale de la protection des populations de l'Oise"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Nathalie RIVEROLA",
+            "nom": "RIVEROLA",
+            "prenom": "Nathalie",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "21/07/2022",
+            "date_prise_fonction": "21/07/2022",
+            "source_id": "JORFTEXT000046070732",
+            "texte_source": "directrice départementale de la protection des populations de l'Oise inspectrice principale de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "15/08/2026"
+          }
+        ]
+      }
+    },
+    "Aisne": {
+      "territoire": "Aisne",
+      "code_dept": "02",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 531000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Luc RENARD",
+          "nom": "RENARD",
+          "prenom": "Luc",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "20/06/2025",
+          "date_prise_fonction": "05/07/2025",
+          "source_id": "JORFTEXT000051766735",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de l'Aisne | avec une période probatoire de six mois inspecteur de l'action sanitaire et sociale de classe exceptionnelle"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Michel GUERRIER",
+          "nom": "GUERRIER",
+          "prenom": "Michel",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "16/07/2026",
+          "date_prise_fonction": "04/08/2026",
+          "source_id": "JORFTEXT000054427628",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel, dans les conditions suivantes directeur départemental de la protection des populations de l'Aisne | jusqu'au 1er mars 2027"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Michel GUERRIER",
+            "nom": "GUERRIER",
+            "prenom": "Michel",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "05/08/2022",
+            "date_prise_fonction": "05/08/2022",
+            "source_id": "JORFTEXT000046144717",
+            "texte_source": "directeur départemental de la protection des populations de l'Aisne directeur départemental de 2e classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "04/08/2026"
+          }
+        ]
+      }
+    },
+    "Haute-Marne": {
+      "territoire": "Haute-Marne",
+      "code_dept": "52",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 172000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Fabienne LOGEROT",
+          "nom": "LOGEROT",
+          "prenom": "Fabienne",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "16/07/2026",
+          "date_prise_fonction": "04/08/2026",
+          "source_id": "JORFTEXT000054427628",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel, dans les conditions suivantes directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Haute-Marne"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Fabienne LOGEROT",
+            "nom": "LOGEROT",
+            "prenom": "Fabienne",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "05/08/2022",
+            "date_prise_fonction": "05/08/2022",
+            "source_id": "JORFTEXT000046144717",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Haute-Marne attachée principale d'administration de l'Etat",
+            "action": "remplacé",
+            "date_fin": "04/08/2026"
+          }
+        ]
+      }
+    },
+    "Cantal": {
+      "territoire": "Cantal",
+      "code_dept": "15",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 144000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Sandrine DUCARUGE",
+          "nom": "DUCARUGE",
+          "prenom": "Sandrine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "07/06/2025",
+          "date_prise_fonction": "01/07/2025",
+          "source_id": "JORFTEXT000051699084",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations du Cantal | avec une période probatoire de six mois inspectrice hors classe de l'action sanitaire et sociale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Myriam SAVIO",
+            "nom": "SAVIO",
+            "prenom": "Myriam",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "07/08/2022",
+            "date_prise_fonction": "07/08/2022",
+            "source_id": "JORFTEXT000046152368",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations du Cantal attachée principale territoriale",
+            "action": "remplacé",
+            "date_fin": "01/07/2025"
+          }
+        ]
+      }
+    },
+    "Seine-Maritime": {
+      "territoire": "Seine-Maritime",
+      "code_dept": "76",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1255000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Vincent LEPREVOST",
+          "nom": "LEPREVOST",
+          "prenom": "Vincent",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "22/10/2023",
+          "date_prise_fonction": "06/11/2023",
+          "source_id": "JORFTEXT000048236676",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de la Seine-Maritime | avec une période probatoire de six mois ingénieur en chef des ponts, des eaux et des forêts"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Isabelle JEUDY",
+          "nom": "JEUDY",
+          "prenom": "Isabelle",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "28/10/2026",
+          "date_prise_fonction": "28/10/2026",
+          "source_id": "JORFTEXT000055020821",
+          "texte_source": "directrice départementale de la protection des populations de la Seine-Maritime inspectrice générale de la santé publique vétérinaire de classe exceptionnelle"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Thanya LAHLOU",
+            "nom": "LAHLOU",
+            "prenom": "Thanya",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "07/08/2022",
+            "date_prise_fonction": "07/08/2022",
+            "source_id": "JORFTEXT000046152368",
+            "texte_source": "directrice départementale de la protection des populations de la Seine-Maritime inspectrice en chef de santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "28/10/2026"
+          }
+        ]
+      }
+    },
+    "Moselle": {
+      "territoire": "Moselle",
+      "code_dept": "57",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1043000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Fabienne LOGEROT",
+          "nom": "LOGEROT",
+          "prenom": "Fabienne",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "22/08/2026",
+          "date_prise_fonction": "15/09/2026",
+          "source_id": "JORFTEXT000054733819",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités de la Moselle | avec une période probatoire de six mois attachée principale d'administration de l'Etat"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Martine ARTZ",
+            "nom": "ARTZ",
+            "prenom": "Martine",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directrice départementale de l'emploi, du travail et des solidarités de la Moselle",
+            "action": "remplacé",
+            "date_fin": "11/03/2026"
+          },
+          {
+            "nom_complet": "Martine ARTZ",
+            "nom": "ARTZ",
+            "prenom": "Martine",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "11/03/2026",
+            "date_prise_fonction": "11/03/2026",
+            "source_id": "JORFTEXT000053649979",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel | à compter du 1er avril 2026 directrice départementale de l'emploi, du travail et des solidarités de la Moselle",
+            "action": "remplacé",
+            "date_fin": "15/09/2026"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Rabah BELLAHSENE",
+          "nom": "BELLAHSENE",
+          "prenom": "Rabah",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "28/02/2024",
+          "date_prise_fonction": "28/02/2024",
+          "source_id": "JORFTEXT000049205873",
+          "texte_source": "directeur départemental de la protection des populations de la Moselle inspecteur général de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Peggy RASQUIN",
+            "nom": "RASQUIN",
+            "prenom": "Peggy",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "11/08/2022",
+            "date_prise_fonction": "01/09/2022",
+            "source_id": "JORFTEXT000046169476",
+            "texte_source": "dans leurs fonctions de directeurs départementaux interministériels directrice départementale de la protection des populations de la Moselle",
+            "action": "remplacé",
+            "date_fin": "28/02/2024"
+          }
+        ]
+      }
+    },
+    "Loir-et-Cher": {
+      "territoire": "Loir-et-Cher",
+      "code_dept": "41",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 329000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Serge MILON",
+          "nom": "MILON",
+          "prenom": "Serge",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/10/2026",
+          "date_prise_fonction": "19/10/2026",
+          "source_id": "JORFTEXT000054953395",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de Loir-et-Cher | avec une période probatoire de six mois inspecteur de la jeunesse et des sports de classe exceptionnelle"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Daniel RAMELET",
+            "nom": "RAMELET",
+            "prenom": "Daniel",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "03/09/2022",
+            "date_prise_fonction": "03/09/2022",
+            "source_id": "JORFTEXT000046253773",
+            "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de Loir-et-Cher inspecteur hors classe de l'action sanitaire et sociale",
+            "action": "remplacé",
+            "date_fin": "19/10/2026"
+          }
+        ]
+      }
+    },
+    "Lot": {
+      "territoire": "Lot",
+      "code_dept": "46",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 173000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Jean-Marc TOULLIEU",
+          "nom": "TOULLIEU",
+          "prenom": "Jean-Marc",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "15/08/2026",
+          "date_prise_fonction": "08/09/2026",
+          "source_id": "JORFTEXT000054683689",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel, dans les conditions suivantes | 2° directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations du Lot"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Jean-Marc TOULLIEU",
+            "nom": "TOULLIEU",
+            "prenom": "Jean-Marc",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "09/09/2022",
+            "date_prise_fonction": "09/09/2022",
+            "source_id": "JORFTEXT000046270021",
+            "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations du Lot | avec une période probatoire de six mois inspecteur général de santé publique vétérinaire",
+            "action": "remplacé",
+            "date_fin": "08/09/2026"
+          }
+        ]
+      }
+    },
+    "Gard": {
+      "territoire": "Gard",
+      "code_dept": "30",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 748000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Sophie BOUDOT",
+          "nom": "BOUDOT",
+          "prenom": "Sophie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "01/02/2024",
+          "date_prise_fonction": "01/02/2024",
+          "source_id": "JORFTEXT000049068395",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités du Gard attachée d'administration hors classe de l'Etat"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Frédéric FORNER",
+          "nom": "FORNER",
+          "prenom": "Frédéric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "10/01/2025",
+          "date_prise_fonction": "01/02/2025",
+          "source_id": "JORFTEXT000050963064",
+          "texte_source": "directeur départemental de la protection des populations du Gard | avec une période probatoire de six mois attaché principal d'administration de l'Etat"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Claude COLARDELLE",
+            "nom": "COLARDELLE",
+            "prenom": "Claude",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "11/08/2022",
+            "date_prise_fonction": "11/09/2022",
+            "source_id": "JORFTEXT000046169476",
+            "texte_source": "dans leurs fonctions de directeurs départementaux interministériels directeur départemental de la protection des populations du Gard",
+            "action": "remplacé",
+            "date_fin": "11/09/2024"
+          },
+          {
+            "nom_complet": "Claude COLARDELLE",
+            "nom": "COLARDELLE",
+            "prenom": "Claude",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "17/07/2024",
+            "date_prise_fonction": "11/09/2024",
+            "source_id": "JORFTEXT000050002481",
+            "texte_source": "dans leurs fonctions de directeurs départementaux interministériels directeur départemental de la protection des populations du Gard",
+            "action": "remplacé",
+            "date_fin": "01/02/2025"
+          }
+        ]
+      }
+    },
+    "Isère": {
+      "territoire": "Isère",
+      "code_dept": "38",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1272000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Lise RUEFLIN",
+          "nom": "RUEFLIN",
+          "prenom": "Lise",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "17/05/2026",
+          "date_prise_fonction": "17/05/2026",
+          "source_id": "JORFTEXT000054105012",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités de l'Isère | avec une période probatoire de six mois | à compter du 1er juin 2026 directrice du travail"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Corinne GAUTHERIN",
+            "nom": "GAUTHERIN",
+            "prenom": "Corinne",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "18/03/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "directrice départementale de l'emploi, du travail et des solidarités de l'Isère ",
+            "action": "remplacé",
+            "date_fin": "17/05/2026"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Jean-Luc DELRIEUX",
+          "nom": "DELRIEUX",
+          "prenom": "Jean-Luc",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "27/10/2023",
+          "date_prise_fonction": "02/11/2023",
+          "source_id": "JORFTEXT000048264421",
+          "texte_source": "directeur départemental de la protection des populations de l'Isère | avec une période probatoire de six mois ingénieur de l'agriculture et de l'environnement hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Stéphan PINEDE",
+            "nom": "PINEDE",
+            "prenom": "Stéphan",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "23/10/2022",
+            "date_prise_fonction": "01/11/2022",
+            "source_id": "JORFTEXT000046474182",
+            "texte_source": "dans ses fonctions directeur départemental de la protection des populations de l'Isère",
+            "action": "remplacé",
+            "date_fin": "02/11/2023"
+          }
+        ]
+      }
+    },
+    "Vaucluse": {
+      "territoire": "Vaucluse",
+      "code_dept": "84",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 561000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Christine MAISON",
+          "nom": "MAISON",
+          "prenom": "Christine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "18/03/2025",
+          "date_prise_fonction": "01/04/2025",
+          "source_id": "JORFTEXT000051336856",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel directrice départementale de l'emploi, du travail et des solidarités de Vaucluse"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Philippe BERNARD",
+          "nom": "BERNARD",
+          "prenom": "Philippe",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "27/11/2022",
+          "date_prise_fonction": "01/12/2022",
+          "source_id": "JORFTEXT000046619365",
+          "texte_source": "directeur départemental de la protection des populations de Vaucluse | avec une période probatoire de six mois directeur départemental de 1re classe de la concurrence, de la consommation et de la répression des fraudes"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Landes": {
+      "territoire": "Landes",
+      "code_dept": "40",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 413000,
+      "poste_ddets": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Philippe NOLLEN",
+          "nom": "NOLLEN",
+          "prenom": "Philippe",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "17/12/2022",
+          "date_prise_fonction": "23/12/2022",
+          "source_id": "JORFTEXT000046751727",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations des Landes | avec une période probatoire de six mois directeur départemental de 2e classe de la concurrence, de la consommation et de la répression des fraudes"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Loire": {
+      "territoire": "Loire",
+      "code_dept": "42",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 765000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Agnès COL",
+          "nom": "COL",
+          "prenom": "Agnès",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "24/12/2022",
+          "date_prise_fonction": "01/01/2023",
+          "source_id": "JORFTEXT000046794302",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités de la Loire | avec une période probatoire de six mois directrice du travail"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Pierre CABRIDENC",
+          "nom": "CABRIDENC",
+          "prenom": "Pierre",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "28/02/2024",
+          "date_prise_fonction": "28/02/2024",
+          "source_id": "JORFTEXT000049205873",
+          "texte_source": "directeur départemental de la protection des populations de la Loire directeur départemental de 1re classe de la concurrence, de la consommation et de la répression des fraudes"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Côtes-d'Armor": {
+      "territoire": "Côtes-d'Armor",
+      "code_dept": "22",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 598000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Annie GUYADER",
+          "nom": "GUYADER",
+          "prenom": "Annie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "18/03/2025",
+          "date_prise_fonction": "01/04/2025",
+          "source_id": "JORFTEXT000051336856",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel directrice départementale de l'emploi, du travail et des solidarités des Côtes-d'Armor"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Claude LE QUERE",
+          "nom": "LE QUERE",
+          "prenom": "Claude",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "08/10/2024",
+          "date_prise_fonction": "08/10/2024",
+          "source_id": "JORFTEXT000050316887",
+          "texte_source": "directeur départemental de la protection des populations des Côtes-d'Armor inspecteur général de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Véronique SOLERE",
+            "nom": "SOLERE",
+            "prenom": "Véronique",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "29/03/2023",
+            "date_prise_fonction": "15/04/2023",
+            "source_id": "JORFTEXT000047358785",
+            "texte_source": "directrice départementale de la protection des populations des Côtes-d'Armor | avec une période probatoire de six mois inspectrice générale de santé publique vétérinaire de classe normale",
+            "action": "remplacé",
+            "date_fin": "08/10/2024"
+          }
+        ]
+      }
+    },
+    "Var": {
+      "territoire": "Var",
+      "code_dept": "83",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1076000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Sandrine POLYCHRONOPOULOS",
+          "nom": "POLYCHRONOPOULOS",
+          "prenom": "Sandrine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "19/01/2025",
+          "date_prise_fonction": "19/01/2025",
+          "source_id": "JORFTEXT000050999744",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités du Var attachée d'administration de l'Etat hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Nathalie GUERSON",
+          "nom": "GUERSON",
+          "prenom": "Nathalie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "15/03/2024",
+          "date_prise_fonction": "18/03/2024",
+          "source_id": "JORFTEXT000049283380",
+          "texte_source": "directrice départementale de la protection des populations du Var | avec une période probatoire de six mois inspectrice générale de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Laure FLORENT",
+            "nom": "FLORENT",
+            "prenom": "Laure",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "22/04/2023",
+            "date_prise_fonction": "14/05/2023",
+            "source_id": "JORFTEXT000047477002",
+            "texte_source": "dans ses fonctions directrice départementale de la protection des populations du Var",
+            "action": "remplacé",
+            "date_fin": "18/03/2024"
+          }
+        ]
+      }
+    },
+    "Yvelines": {
+      "territoire": "Yvelines",
+      "code_dept": "78",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1438000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Patrick DONNADIEU",
+          "nom": "DONNADIEU",
+          "prenom": "Patrick",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "30/04/2023",
+          "date_prise_fonction": "15/05/2023",
+          "source_id": "JORFTEXT000047507211",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités des Yvelines | avec une période probatoire de six mois attaché d'administration de l'Etat hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Virshna HENG",
+          "nom": "HENG",
+          "prenom": "Virshna",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "13/08/2026",
+          "date_prise_fonction": "13/08/2026",
+          "source_id": "JORFTEXT000054673373",
+          "texte_source": "directeur départemental de la protection des populations des Yvelines directeur départemental de la concurrence, de la consommation et de la répression des fraudes de 2e classe"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Jean-Bernard BARIDON",
+            "nom": "BARIDON",
+            "prenom": "Jean-Bernard",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "17/09/2023",
+            "date_prise_fonction": "11/10/2023",
+            "source_id": "JORFTEXT000048080113",
+            "texte_source": "dans ses fonctions directeur départemental de la protection des populations des Yvelines",
+            "action": "remplacé",
+            "date_fin": "15/12/2023"
+          },
+          {
+            "nom_complet": "Philippe RAULT",
+            "nom": "RAULT",
+            "prenom": "Philippe",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "24/11/2023",
+            "date_prise_fonction": "15/12/2023",
+            "source_id": "JORFTEXT000048453532",
+            "texte_source": "directeur départemental de la protection des populations des Yvelines | avec une période probatoire de six mois directeur départemental de 1re classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "13/08/2026"
+          }
+        ]
+      }
+    },
+    "Tarn-et-Garonne": {
+      "territoire": "Tarn-et-Garonne",
+      "code_dept": "82",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 260000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Mohamed MEHENNI",
+          "nom": "MEHENNI",
+          "prenom": "Mohamed",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "10/06/2023",
+          "date_prise_fonction": "12/06/2023",
+          "source_id": "JORFTEXT000047663450",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de Tarn-et-Garonne | avec une période probatoire de six mois inspecteur de classe exceptionnelle de l'action sanitaire et sociale"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Nièvre": {
+      "territoire": "Nièvre",
+      "code_dept": "58",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 204000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Géraldine CHARLAT-SPONY",
+          "nom": "CHARLAT-SPONY",
+          "prenom": "Géraldine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "30/06/2023",
+          "date_prise_fonction": "30/06/2023",
+          "source_id": "JORFTEXT000047753731",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Nièvre | avec une période probatoire de six mois ingénieure divisionnaire de l'agriculture et de l'environnement"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Ariège": {
+      "territoire": "Ariège",
+      "code_dept": "09",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 153000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Frédéric PUJOL",
+          "nom": "PUJOL",
+          "prenom": "Frédéric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "30/06/2023",
+          "date_prise_fonction": "30/06/2023",
+          "source_id": "JORFTEXT000047753729",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de l'Ariège | avec une période probatoire de six mois inspecteur en chef de santé publique vétérinaire"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Rhône": {
+      "territoire": "Rhône",
+      "code_dept": "69",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1885000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Laurent WILLEMAN",
+          "nom": "WILLEMAN",
+          "prenom": "Laurent",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/08/2023",
+          "date_prise_fonction": "06/08/2023",
+          "source_id": "JORFTEXT000047937695",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités du Rhône | avec une période probatoire de six mois attaché principal d'administration de l'Etat"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Bertrand TOULOUSE",
+          "nom": "TOULOUSE",
+          "prenom": "Bertrand",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "19/03/2025",
+          "date_prise_fonction": "19/03/2025",
+          "source_id": "JORFTEXT000051348270",
+          "texte_source": "directeur départemental de la protection des populations du Rhône inspecteur général de la santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Valérie LE BOURG",
+            "nom": "LE BOURG",
+            "prenom": "Valérie",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "23/11/2023",
+            "date_prise_fonction": "01/12/2023",
+            "source_id": "JORFTEXT000048449607",
+            "texte_source": "dans ses fonctions directrice départementale de la protection des populations du Rhône",
+            "action": "remplacé",
+            "date_fin": "18/01/2025"
+          },
+          {
+            "nom_complet": "Le Bourg, née Guissard (Valérie, Michèle)",
+            "nom": "LE BOURG",
+            "prenom": "Valérie",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/01/2025",
+            "date_prise_fonction": "18/01/2025",
+            "source_id": "JORFTEXT000050997617",
+            "texte_source": "pour prendre rang à la date de la remise réglementaire de l'insigne | Ministère du partenariat avec les territoires et de la décentralisation | Au grade d'officier directrice départementale de la protection des populations du Rhône ; 27 ans de services",
+            "action": "remplacé",
+            "date_fin": "19/03/2025"
+          }
+        ]
+      }
+    },
+    "Allier": {
+      "territoire": "Allier",
+      "code_dept": "03",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 335000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Noël QUIPOURT",
+          "nom": "QUIPOURT",
+          "prenom": "Noël",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "05/08/2023",
+          "date_prise_fonction": "15/08/2023",
+          "source_id": "JORFTEXT000047936496",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de l'Allier | avec une période probatoire de six mois directeur du travail"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Gers": {
+      "territoire": "Gers",
+      "code_dept": "32",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 191000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Antoine MAILLARD",
+          "nom": "MAILLARD",
+          "prenom": "Antoine",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "05/08/2023",
+          "date_prise_fonction": "21/08/2023",
+          "source_id": "JORFTEXT000047936492",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations du Gers | avec une période probatoire de six mois inspecteur général de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Haute-Vienne": {
+      "territoire": "Haute-Vienne",
+      "code_dept": "87",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 374000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Hélène ROY-MARCOU",
+          "nom": "ROY-MARCOU",
+          "prenom": "Hélène",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "16/09/2023",
+          "date_prise_fonction": "16/09/2023",
+          "source_id": "JORFTEXT000048079497",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Haute-Vienne inspectrice de l'action sanitaire et sociale de classe exceptionnelle"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Loiret": {
+      "territoire": "Loiret",
+      "code_dept": "45",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 680000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Géraud TARDIF",
+          "nom": "TARDIF",
+          "prenom": "Géraud",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "18/03/2025",
+          "date_prise_fonction": "01/04/2025",
+          "source_id": "JORFTEXT000051336856",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel directeur départemental de l'emploi, du travail et des solidarités du Loiret"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Jean-Noël RIEFFEL",
+          "nom": "RIEFFEL",
+          "prenom": "Jean-Noël",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "10/04/2026",
+          "date_prise_fonction": "10/04/2026",
+          "source_id": "JORFTEXT000053788234",
+          "texte_source": "directeur départemental de la protection des populations du Loiret | avec une période probatoire de six mois | à compter du 1er mai 2026 inspecteur en chef de santé publique vétérinaire"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Sylvie HERPIN",
+            "nom": "HERPIN",
+            "prenom": "Sylvie",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "16/09/2023",
+            "date_prise_fonction": "16/09/2023",
+            "source_id": "JORFTEXT000048079497",
+            "texte_source": "directrice départementale de la protection des populations du Loiret directrice départementale de deuxième classe de la concurrence, de la consommation et de la répression des fraudes",
+            "action": "remplacé",
+            "date_fin": "10/04/2026"
+          }
+        ]
+      }
+    },
+    "Côte-d'Or": {
+      "territoire": "Côte-d'Or",
+      "code_dept": "21",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 534000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Armelle LEON",
+          "nom": "LEON",
+          "prenom": "Armelle",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "08/10/2024",
+          "date_prise_fonction": "08/10/2024",
+          "source_id": "JORFTEXT000050316887",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités de la Côte-d'Or directrice du travail"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Didier ROOSE",
+          "nom": "ROOSE",
+          "prenom": "Didier",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "16/09/2023",
+          "date_prise_fonction": "18/09/2023",
+          "source_id": "JORFTEXT000048079499",
+          "texte_source": "directeur départemental de la protection des populations de la Côte-d'Or | avec une période probatoire de six mois inspecteur général de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Orne": {
+      "territoire": "Orne",
+      "code_dept": "61",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 279000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Blandine GRIMALDI",
+          "nom": "GRIMALDI",
+          "prenom": "Blandine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "12/08/2026",
+          "date_prise_fonction": "31/08/2026",
+          "source_id": "JORFTEXT000054666958",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de l'Orne | avec une période probatoire de six mois inspectrice de l'action sanitaire et sociale de classe exceptionnelle"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Thierry LANDAIS",
+            "nom": "LANDAIS",
+            "prenom": "Thierry",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "06/10/2023",
+            "date_prise_fonction": "16/10/2023",
+            "source_id": "JORFTEXT000048159025",
+            "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de l'Orne | avec une période probatoire de six mois attaché d'administration de l'Etat hors classe",
+            "action": "remplacé",
+            "date_fin": "31/08/2026"
+          }
+        ]
+      }
+    },
+    "Morbihan": {
+      "territoire": "Morbihan",
+      "code_dept": "56",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 750000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Bertrand LE ROY",
+          "nom": "LE ROY",
+          "prenom": "Bertrand",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "11/04/2024",
+          "date_prise_fonction": "11/04/2024",
+          "source_id": "JORFTEXT000049402466",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités du Morbihan inspecteur de l'action sanitaire et sociale de classe exceptionnelle"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Christophe ADAMUS",
+          "nom": "ADAMUS",
+          "prenom": "Christophe",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "14/12/2025",
+          "date_prise_fonction": "12/01/2026",
+          "source_id": "JORFTEXT000053021604",
+          "texte_source": "directeur départemental de la protection des populations du Morbihan | avec une période probatoire de six mois inspecteur général de la santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Jean-Michel CHAPPRON",
+            "nom": "CHAPPRON",
+            "prenom": "Jean-Michel",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "25/10/2023",
+            "date_prise_fonction": "05/11/2023",
+            "source_id": "JORFTEXT000048249752",
+            "texte_source": "dans ses fonctions directeur départemental de la protection des populations du Morbihan",
+            "action": "remplacé",
+            "date_fin": "12/01/2026"
+          }
+        ]
+      }
+    },
+    "Puy-de-Dôme": {
+      "territoire": "Puy-de-Dôme",
+      "code_dept": "63",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 664000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Jérôme CHARASSE",
+          "nom": "CHARASSE",
+          "prenom": "Jérôme",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "29/12/2023",
+          "date_prise_fonction": "29/12/2023",
+          "source_id": "JORFTEXT000048709062",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités du Puy-de-Dôme administrateur de l'Etat du premier grade"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Silvain TRAYNARD",
+          "nom": "TRAYNARD",
+          "prenom": "Silvain",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "10/08/2025",
+          "date_prise_fonction": "18/08/2025",
+          "source_id": "JORFTEXT000052067407",
+          "texte_source": "directeur départemental de la protection des populations du Puy-de-Dôme | avec une période probatoire de six mois inspecteur général de classe normale de la santé publique vétérinaire"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Bertrand TOULOUSE",
+            "nom": "TOULOUSE",
+            "prenom": "Bertrand",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "17/07/2024",
+            "date_prise_fonction": "07/09/2024",
+            "source_id": "JORFTEXT000050002481",
+            "texte_source": "dans leurs fonctions de directeurs départementaux interministériels directeur départemental de la protection des populations du Puy-de-Dôme",
+            "action": "remplacé",
+            "date_fin": "18/08/2025"
+          }
+        ]
+      }
+    },
+    "Haute-Savoie": {
+      "territoire": "Haute-Savoie",
+      "code_dept": "74",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 829000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Delphine THERMOZ",
+          "nom": "THERMOZ",
+          "prenom": "Delphine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "12/08/2026",
+          "date_prise_fonction": "12/08/2026",
+          "source_id": "JORFTEXT000054666978",
+          "texte_source": "directrice départementale de l'emploi, du travail et des solidarités de la Haute-Savoie | avec une période probatoire de six mois | à compter du 1er septembre 2026 directrice du travail"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Chrystèle MARTINEZ",
+            "nom": "MARTINEZ",
+            "prenom": "Chrystèle",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directrice départementale de l'emploi, du travail et des solidarités de la Haute-Savoie",
+            "action": "remplacé",
+            "date_fin": "11/03/2026"
+          },
+          {
+            "nom_complet": "Chrystèle MARTINEZ",
+            "nom": "MARTINEZ",
+            "prenom": "Chrystèle",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "11/03/2026",
+            "date_prise_fonction": "11/03/2026",
+            "source_id": "JORFTEXT000053649979",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel | à compter du 1er avril 2026 directrice départementale de l'emploi, du travail et des solidarités de la Haute-Savoie",
+            "action": "remplacé",
+            "date_fin": "12/08/2026"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Sébastien RIU",
+          "nom": "RIU",
+          "prenom": "Sébastien",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "07/07/2024",
+          "date_prise_fonction": "07/07/2024",
+          "source_id": "JORFTEXT000049894389",
+          "texte_source": "directeur départemental de la protection des populations de la Haute-Savoie | avec une période probatoire de six mois directeur départemental de la concurrence, de la consommation et de la répression des fraudes de 2e classe"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Chantal BAUDIN",
+            "nom": "BAUDIN",
+            "prenom": "Chantal",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "29/12/2023",
+            "date_prise_fonction": "01/01/2024",
+            "source_id": "JORFTEXT000048709064",
+            "texte_source": "dans ses fonctions directrice départementale de la protection des populations de la Haute-Savoie",
+            "action": "remplacé",
+            "date_fin": "07/07/2024"
+          }
+        ]
+      },
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Chrystèle MARTINEZ",
+          "nom": "MARTINEZ",
+          "prenom": "Chrystèle",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "09/03/2025",
+          "date_prise_fonction": "09/03/2025",
+          "source_id": "JORFTEXT000051305989",
+          "texte_source": "membres du conseil d'administration de l'Institut national du travail, de l'emploi et de la formation professionnelle | institué par l'article 4 du décret du | modifié relatif à l'Institut national du travail, de l'emploi et de la formation professionnelle | 3° | directeur départemental de l'emploi, du travail et des solidarités ou de directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations | sur proposition du ministre de l'intérieur directrice départementale de la DDETS Haute-Savoie"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Eure-et-Loir": {
+      "territoire": "Eure-et-Loir",
+      "code_dept": "28",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 431000,
+      "poste_ddets": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Matthieu GREMAUD",
+          "nom": "GREMAUD",
+          "prenom": "Matthieu",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/12/2025",
+          "date_prise_fonction": "05/01/2026",
+          "source_id": "JORFTEXT000052994019",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations d'Eure-et-Loir | avec une période probatoire de six mois directeur adjoint du travail"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Nicolas DROUART",
+            "nom": "DROUART",
+            "prenom": "Nicolas",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "01/02/2024",
+            "date_prise_fonction": "01/02/2024",
+            "source_id": "JORFTEXT000049068395",
+            "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations d'Eure-et-Loir inspecteur de l'action sanitaire et sociale de classe exceptionnelle",
+            "action": "remplacé",
+            "date_fin": "05/01/2026"
+          }
+        ]
+      }
+    },
+    "Alpes-Maritimes": {
+      "territoire": "Alpes-Maritimes",
+      "code_dept": "06",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 1094000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Psylvia DEWAS",
+          "nom": "DEWAS",
+          "prenom": "Psylvia",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "28/02/2026",
+          "date_prise_fonction": "28/02/2026",
+          "source_id": "JORFTEXT000053594739",
+          "texte_source": "membres du conseil d'administration de l'institut régional d'administration de Bastia | a) | fonctionnaire exerçant au sein d'une administration où peuvent être affectés les élèves de l'institut, dans chaque univers professionnel directrice départementale de l'emploi, du travail et des solidarités des Alpes-Maritimes, représentant l'univers professionnel de l'administration territoriale de l'Etat"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Psylvia DEWAS",
+            "nom": "DEWAS",
+            "prenom": "Psylvia",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "13/12/2024",
+            "date_prise_fonction": "01/01/2025",
+            "source_id": "JORFTEXT000050771592",
+            "texte_source": "directrice départementale de l'emploi, du travail et des solidarités des Alpes-Maritimes | avec une période probatoire de six mois directrice d'établissement sanitaire, social et médico-social hors-classe",
+            "action": "remplacé",
+            "date_fin": "28/02/2026"
+          }
+        ]
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Magali BRETON",
+          "nom": "BRETON",
+          "prenom": "Magali",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "24/05/2026",
+          "date_prise_fonction": "22/06/2026",
+          "source_id": "JORFTEXT000054126919",
+          "texte_source": "directrice départementale de la protection des populations des Alpes-Maritimes | avec une période probatoire de six mois inspectrice générale de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Véronique FAJARDI",
+            "nom": "FAJARDI",
+            "prenom": "Véronique",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "07/02/2024",
+            "date_prise_fonction": "18/02/2024",
+            "source_id": "JORFTEXT000049097872",
+            "texte_source": "dans ses fonctions directrice départementale de la protection des populations des Alpes-Maritimes",
+            "action": "remplacé",
+            "date_fin": "22/06/2026"
+          }
+        ]
+      }
+    },
+    "Ain": {
+      "territoire": "Ain",
+      "code_dept": "01",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 652000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Olivier PATERNOSTER",
+          "nom": "PATERNOSTER",
+          "prenom": "Olivier",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "09/03/2024",
+          "date_prise_fonction": "25/03/2024",
+          "source_id": "JORFTEXT000049251786",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de l'Ain | avec une période probatoire de six mois attaché principal d'administration de l'Etat"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Eric KEROURIO",
+          "nom": "KEROURIO",
+          "prenom": "Eric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "26/04/2024",
+          "date_prise_fonction": "26/04/2024",
+          "source_id": "JORFTEXT000049474779",
+          "texte_source": "directeur départemental de la protection des populations de l'Ain inspecteur général de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Charente": {
+      "territoire": "Charente",
+      "code_dept": "16",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 352000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Marilyne MARTINEZ",
+          "nom": "MARTINEZ",
+          "prenom": "Marilyne",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "31/03/2024",
+          "date_prise_fonction": "31/03/2024",
+          "source_id": "JORFTEXT000049346305",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Charente directrice du travail"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Manche": {
+      "territoire": "Manche",
+      "code_dept": "50",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 495000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Christophe LECOMTE",
+          "nom": "LECOMTE",
+          "prenom": "Christophe",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "10/09/2026",
+          "date_prise_fonction": "10/09/2026",
+          "source_id": "JORFTEXT000054817175",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel | à compter du 1er octobre 2026, dans les conditions suivantes directeur départemental de l'emploi, du travail et des solidarités de la Manche"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Pol KERMORGANT",
+          "nom": "KERMORGANT",
+          "prenom": "Pol",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "29/03/2024",
+          "date_prise_fonction": "01/04/2024",
+          "source_id": "JORFTEXT000049339583",
+          "texte_source": "directeur départemental de la protection des populations de la Manche | avec une période probatoire de six mois inspecteur général de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Hautes-Alpes": {
+      "territoire": "Hautes-Alpes",
+      "code_dept": "05",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 141000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Stanislas MARCELJA",
+          "nom": "MARCELJA",
+          "prenom": "Stanislas",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "29/08/2026",
+          "date_prise_fonction": "21/09/2026",
+          "source_id": "JORFTEXT000054761897",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations des Hautes-Alpes | avec une période probatoire de six mois directeur du travail"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Magali BRETON",
+            "nom": "BRETON",
+            "prenom": "Magali",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "11/04/2024",
+            "date_prise_fonction": "11/04/2024",
+            "source_id": "JORFTEXT000049402466",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations des Hautes-Alpes inspectrice générale de santé publique vétérinaire de classe normale",
+            "action": "remplacé",
+            "date_fin": "21/09/2026"
+          }
+        ]
+      }
+    },
+    "Vendée": {
+      "territoire": "Vendée",
+      "code_dept": "85",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 685000,
+      "poste_ddets": {
+        "titulaire_actuel": {
+          "nom_complet": "Philippe RAFFLEGEAU",
+          "nom": "RAFFLEGEAU",
+          "prenom": "Philippe",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "19/05/2024",
+          "date_prise_fonction": "01/06/2024",
+          "source_id": "JORFTEXT000049549477",
+          "texte_source": "directeur départemental de l'emploi, du travail et des solidarités de la Vendée | avec une période probatoire de six mois directeur du travail"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": {
+          "nom_complet": "Christophe MOURRIERAS",
+          "nom": "MOURRIERAS",
+          "prenom": "Christophe",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "16/07/2026",
+          "date_prise_fonction": "30/07/2026",
+          "source_id": "JORFTEXT000054427628",
+          "texte_source": "dans ses fonctions | jusqu'au 1er mai 2027 directeur départemental de la protection des populations de la Vendée"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Christophe MOURRIERAS",
+            "nom": "MOURRIERAS",
+            "prenom": "Christophe",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "07/07/2024",
+            "date_prise_fonction": "30/07/2024",
+            "source_id": "JORFTEXT000049894391",
+            "texte_source": "dans ses fonctions directeur départemental de la protection des populations de la Vendée",
+            "action": "remplacé",
+            "date_fin": "21/01/2026"
+          },
+          {
+            "nom_complet": "Christophe MOURRIÈRAS",
+            "nom": "MOURRIÈRAS",
+            "prenom": "Christophe",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "21/01/2026",
+            "date_prise_fonction": "21/01/2026",
+            "source_id": "JORFTEXT000053388675",
+            "texte_source": "membres du jury compétent pour le contrôle des connaissances | directeur départemental en charge de la protection des populations de l'un des départements du territoire métropolitain inspecteur général de la santé publique vétérinaire, directeur départemental de la protection des populations de Vendée, titulaire",
+            "action": "remplacé",
+            "date_fin": "30/07/2026"
+          }
+        ]
+      }
+    },
+    "Territoire de Belfort": {
+      "territoire": "Territoire de Belfort",
+      "code_dept": "90",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 141000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Laurent CLAUDET",
+          "nom": "CLAUDET",
+          "prenom": "Laurent",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "15/06/2024",
+          "date_prise_fonction": "15/06/2024",
+          "source_id": "JORFTEXT000049722427",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations du Territoire de Belfort inspecteur général de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Jura": {
+      "territoire": "Jura",
+      "code_dept": "39",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 259000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Anne-Cécile COTILLON",
+          "nom": "COTILLON",
+          "prenom": "Anne-Cécile",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "03/07/2024",
+          "date_prise_fonction": "03/07/2024",
+          "source_id": "JORFTEXT000049862718",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations du Jura | avec une période probatoire de six mois ingénieure générale des ponts, des eaux et des forêts de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Aude": {
+      "territoire": "Aude",
+      "code_dept": "11",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 374000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Véronique COSTEDOAT-LAMARQUE",
+          "nom": "COSTEDOAT-LAMARQUE",
+          "prenom": "Véronique",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "29/06/2024",
+          "date_prise_fonction": "12/08/2024",
+          "source_id": "JORFTEXT000049833201",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de l'Aude | avec une période probatoire de six mois inspectrice générale de santé publique vétérinaire de classe normale"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Indre": {
+      "territoire": "Indre",
+      "code_dept": "36",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 217000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Éric GROGNIER",
+          "nom": "GROGNIER",
+          "prenom": "Éric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "13/07/2025",
+          "date_prise_fonction": "13/07/2025",
+          "source_id": "JORFTEXT000051886880",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de l'Indre | avec une période probatoire de six mois conseiller principal d'éducation des établissements d'enseignement agricole hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Véronique ALIES-GIRARDOT",
+            "nom": "ALIES-GIRARDOT",
+            "prenom": "Véronique",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/08/2024",
+            "date_prise_fonction": "15/09/2024",
+            "source_id": "JORFTEXT000050104597",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de l'Indre | avec une période probatoire de six mois directrice du travail",
+            "action": "remplacé",
+            "date_fin": "13/07/2025"
+          }
+        ]
+      }
+    },
+    "Doubs": {
+      "territoire": "Doubs",
+      "code_dept": "25",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 543000,
+      "poste_ddets": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Bruno VINCENT",
+          "nom": "VINCENT",
+          "prenom": "Bruno",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "28/08/2024",
+          "date_prise_fonction": "23/09/2024",
+          "source_id": "JORFTEXT000050143445",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations du Doubs | avec une période probatoire de six mois inspecteur des affaires sociales de 1re classe"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Savoie": {
+      "territoire": "Savoie",
+      "code_dept": "73",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 436000,
+      "poste_ddets": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Emmanuel GIROD",
+          "nom": "GIROD",
+          "prenom": "Emmanuel",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "18/01/2026",
+          "date_prise_fonction": "16/02/2026",
+          "source_id": "JORFTEXT000053380904",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de la Savoie | avec une période probatoire de six mois directeur du travail"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Thierry POTHET",
+            "nom": "POTHET",
+            "prenom": "Thierry",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "18/03/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de la Savoie ",
+            "action": "remplacé",
+            "date_fin": "16/02/2026"
+          }
+        ]
+      }
+    },
+    "Marne": {
+      "territoire": "Marne",
+      "code_dept": "51",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 566000,
+      "poste_ddets": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Nadège CALENDINI",
+          "nom": "CALENDINI",
+          "prenom": "Nadège",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "07/03/2026",
+          "date_prise_fonction": "07/03/2026",
+          "source_id": "JORFTEXT000053635026",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Marne | avec une période probatoire de six mois | à compter du 1er avril 2026 attachée principale d'administration de l'Etat"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Ghislaine LUCOT",
+            "nom": "LUCOT",
+            "prenom": "Ghislaine",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "18/03/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Marne ",
+            "action": "remplacé",
+            "date_fin": "07/03/2026"
+          }
+        ]
+      }
+    },
+    "Mayenne": {
+      "territoire": "Mayenne",
+      "code_dept": "53",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 307000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Serge MILON",
+          "nom": "MILON",
+          "prenom": "Serge",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "11/03/2026",
+          "date_prise_fonction": "11/03/2026",
+          "source_id": "JORFTEXT000053649979",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel | à compter du 1er avril 2026 directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de la Mayenne"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Serge MILON",
+            "nom": "MILON",
+            "prenom": "Serge",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de la Mayenne",
+            "action": "remplacé",
+            "date_fin": "11/03/2026"
+          }
+        ]
+      }
+    },
+    "Haut-Rhin": {
+      "territoire": "Haut-Rhin",
+      "code_dept": "68",
+      "type_organisation": "ddets_ddpp_separees",
+      "population_estimee": 767000,
+      "poste_ddets": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddpp": {
+        "titulaire_actuel": null,
+        "titulaire_designe": null,
+        "historique": []
+      },
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Aline SCHNEIDER",
+          "nom": "SCHNEIDER",
+          "prenom": "Aline",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "17/04/2026",
+          "date_prise_fonction": "17/04/2026",
+          "source_id": "JORFTEXT000053907450",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations du Haut-Rhin | avec une période probatoire de six mois | à compter du 1er mai 2026 directrice du travail"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Emmanuel GIROD",
+            "nom": "GIROD",
+            "prenom": "Emmanuel",
+            "sexe": "M",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations du Haut-Rhin",
+            "action": "remplacé",
+            "date_fin": "17/04/2026"
+          }
+        ]
+      }
+    },
+    "Tarn": {
+      "territoire": "Tarn",
+      "code_dept": "81",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 387000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Luce VIDAL-ROZOY",
+          "nom": "VIDAL-ROZOY",
+          "prenom": "Luce",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "11/03/2026",
+          "date_prise_fonction": "11/03/2026",
+          "source_id": "JORFTEXT000053649979",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel | à compter du 1er avril 2026 directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations du Tarn"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Luce VIDAL-ROZOY",
+            "nom": "VIDAL-ROZOY",
+            "prenom": "Luce",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations du Tarn",
+            "action": "remplacé",
+            "date_fin": "11/03/2026"
+          }
+        ]
+      }
+    },
+    "Alpes-de-Haute-Provence": {
+      "territoire": "Alpes-de-Haute-Provence",
+      "code_dept": "04",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 164000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Anne-Marie DURAND",
+          "nom": "DURAND",
+          "prenom": "Anne-Marie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "11/03/2026",
+          "date_prise_fonction": "11/03/2026",
+          "source_id": "JORFTEXT000053649979",
+          "texte_source": "dans leurs fonctions de directeur départemental interministériel | à compter du 1er avril 2026 directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations des Alpes-de-Haute-Provence"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Anne-Marie DURAND",
+            "nom": "DURAND",
+            "prenom": "Anne-Marie",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations des Alpes-de-Haute-Provence",
+            "action": "remplacé",
+            "date_fin": "11/03/2026"
+          }
+        ]
+      }
+    },
+    "Meuse": {
+      "territoire": "Meuse",
+      "code_dept": "55",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 184000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Laurent ZAKRZEWSKI",
+          "nom": "ZAKRZEWSKI",
+          "prenom": "Laurent",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "05/09/2025",
+          "date_prise_fonction": "05/09/2025",
+          "source_id": "JORFTEXT000052194443",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de la Meuse | avec une période probatoire de six mois | à compter du 1er octobre 2025 administrateur territorial hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": [
+          {
+            "nom_complet": "Corinne BIBAUT",
+            "nom": "BIBAUT",
+            "prenom": "Corinne",
+            "sexe": "F",
+            "grade": "",
+            "date_decision": "18/03/2025",
+            "date_prise_fonction": "01/04/2025",
+            "source_id": "JORFTEXT000051336856",
+            "texte_source": "dans leurs fonctions de directeur départemental interministériel directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Meuse",
+            "action": "remplacé",
+            "date_fin": "05/09/2025"
+          }
+        ]
+      }
+    },
+    "Aube": {
+      "territoire": "Aube",
+      "code_dept": "10",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 0,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Corinne BIBAUT",
+          "nom": "BIBAUT",
+          "prenom": "Corinne",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "28/03/2025",
+          "date_prise_fonction": "14/04/2025",
+          "source_id": "JORFTEXT000051384625",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de l'Aube | avec une période probatoire de six mois inspectrice de l'action sanitaire et sociale de classe exceptionnelle"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Ardennes": {
+      "territoire": "Ardennes",
+      "code_dept": "08",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 270000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Nathalie GATIER",
+          "nom": "GATIER",
+          "prenom": "Nathalie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "24/04/2025",
+          "date_prise_fonction": "28/04/2025",
+          "source_id": "JORFTEXT000051508434",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations des Ardennes | avec une période probatoire de six mois inspectrice de l'action sanitaire et sociale"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Ardèche": {
+      "territoire": "Ardèche",
+      "code_dept": "07",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 328000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Salia RABHI",
+          "nom": "RABHI",
+          "prenom": "Salia",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "30/04/2025",
+          "date_prise_fonction": "19/05/2025",
+          "source_id": "JORFTEXT000051534017",
+          "texte_source": "directrice départementale de l'emploi, du travail, des solidarités et de la protection des populations de l'Ardèche | avec une période probatoire de six mois attachée d'administration de l'Etat hors classe"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Vosges": {
+      "territoire": "Vosges",
+      "code_dept": "88",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 364000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Patrick OSTER",
+          "nom": "OSTER",
+          "prenom": "Patrick",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "07/06/2025",
+          "date_prise_fonction": "07/06/2025",
+          "source_id": "JORFTEXT000051699098",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations des Vosges | avec une période probatoire de six mois directeur du travail"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    },
+    "Corrèze": {
+      "territoire": "Corrèze",
+      "code_dept": "19",
+      "type_organisation": "ddetspp_fusionnee",
+      "population_estimee": 239000,
+      "poste_ddetspp": {
+        "titulaire_actuel": {
+          "nom_complet": "Xavier MOINE",
+          "nom": "MOINE",
+          "prenom": "Xavier",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "05/12/2025",
+          "date_prise_fonction": "05/01/2026",
+          "source_id": "JORFTEXT000052990763",
+          "texte_source": "directeur départemental de l'emploi, du travail, des solidarités et de la protection des populations de la Corrèze | avec une période probatoire de six mois directeur du travail"
+        },
+        "titulaire_designe": null,
+        "historique": []
+      }
+    }
+  },
+  "source_id_traites": [
+    "JORFTEXT000045997428",
+    "JORFTEXT000052376221",
+    "JORFTEXT000049474779",
+    "JORFTEXT000046169476",
+    "JORFTEXT000051886880",
+    "JORFTEXT000053447720",
+    "JORFTEXT000053636385",
+    "JORFTEXT000043798769",
+    "JORFTEXT000048159025",
+    "JORFTEXT000052467414",
+    "JORFTEXT000051368885",
+    "JORFTEXT000050771592",
+    "JORFTEXT000042475909",
+    "JORFTEXT000047477002",
+    "JORFTEXT000051195141",
+    "JORFTEXT000052990763",
+    "JORFTEXT000046794302",
+    "JORFTEXT000042602568",
+    "JORFTEXT000043290449",
+    "JORFTEXT000042565437",
+    "JORFTEXT000048236676",
+    "JORFTEXT000049402466",
+    "JORFTEXT000043121867",
+    "JORFTEXT000043542073",
+    "JORFTEXT000053788234",
+    "JORFTEXT000053388675",
+    "JORFTEXT000054733819",
+    "JORFTEXT000046772665",
+    "JORFTEXT000048851722",
+    "JORFTEXT000047219590",
+    "JORFTEXT000044465006",
+    "JORFTEXT000048453532",
+    "JORFTEXT000049871704",
+    "JORFTEXT000044202273",
+    "JORFTEXT000042842438",
+    "JORFTEXT000051448304",
+    "JORFTEXT000053368816",
+    "JORFTEXT000047501634",
+    "JORFTEXT000048709064",
+    "JORFTEXT000054817175",
+    "JORFTEXT000050963070",
+    "JORFTEXT000054708808",
+    "JORFTEXT000054965862",
+    "JORFTEXT000054953395",
+    "JORFTEXT000051305989",
+    "JORFTEXT000047664790",
+    "JORFTEXT000052541664",
+    "JORFTEXT000054971266",
+    "JORFTEXT000054427628",
+    "JORFTEXT000049339583",
+    "JORFTEXT000051508434",
+    "JORFTEXT000042475905",
+    "JORFTEXT000051766735",
+    "JORFTEXT000051942544",
+    "JORFTEXT000055020829",
+    "JORFTEXT000051534017",
+    "JORFTEXT000047507211",
+    "JORFTEXT000050997617",
+    "JORFTEXT000055020821",
+    "JORFTEXT000051031953",
+    "JORFTEXT000045073088",
+    "JORFTEXT000049862718",
+    "JORFTEXT000051348285",
+    "JORFTEXT000055020814",
+    "JORFTEXT000052222538",
+    "JORFTEXT000046144717",
+    "JORFTEXT000053907450",
+    "JORFTEXT000054993762",
+    "JORFTEXT000044931112",
+    "JORFTEXT000050999744",
+    "JORFTEXT000049549477",
+    "JORFTEXT000049068395",
+    "JORFTEXT000047663450",
+    "JORFTEXT000051023081",
+    "JORFTEXT000054761897",
+    "JORFTEXT000052115209",
+    "JORFTEXT000044514924",
+    "JORFTEXT000050104597",
+    "JORFTEXT000051452966",
+    "JORFTEXT000051033093",
+    "JORFTEXT000047753729",
+    "JORFTEXT000047416965",
+    "JORFTEXT000051699098",
+    "JORFTEXT000048458837",
+    "JORFTEXT000051336856",
+    "JORFTEXT000051023085",
+    "JORFTEXT000046619365",
+    "JORFTEXT000049862722",
+    "JORFTEXT000044035688",
+    "JORFTEXT000044593215",
+    "JORFTEXT000045897351",
+    "JORFTEXT000054126919",
+    "JORFTEXT000046070732",
+    "JORFTEXT000053635026",
+    "JORFTEXT000048709060",
+    "JORFTEXT000047986820",
+    "JORFTEXT000049833201",
+    "JORFTEXT000043688931",
+    "JORFTEXT000049767529",
+    "JORFTEXT000052376214",
+    "JORFTEXT000048249752",
+    "JORFTEXT000043404097",
+    "JORFTEXT000050316887",
+    "JORFTEXT000051031910",
+    "JORFTEXT000048079497",
+    "JORFTEXT000054827065",
+    "JORFTEXT000051195134",
+    "JORFTEXT000049346305",
+    "JORFTEXT000051384625",
+    "JORFTEXT000054683689",
+    "JORFTEXT000052377758",
+    "JORFTEXT000053380904",
+    "JORFTEXT000042740121",
+    "JORFTEXT000046751727",
+    "JORFTEXT000047937695",
+    "JORFTEXT000050756611",
+    "JORFTEXT000043053953",
+    "JORFTEXT000046474182",
+    "JORFTEXT000048080113",
+    "JORFTEXT000052180668",
+    "JORFTEXT000044447570",
+    "JORFTEXT000047936492",
+    "JORFTEXT000049205873",
+    "JORFTEXT000049225719",
+    "JORFTEXT000053021604",
+    "JORFTEXT000053626201",
+    "JORFTEXT000047358785",
+    "JORFTEXT000053635034",
+    "JORFTEXT000052994019",
+    "JORFTEXT000050478361",
+    "JORFTEXT000047986828",
+    "JORFTEXT000049722427",
+    "JORFTEXT000048449607",
+    "JORFTEXT000051699084",
+    "JORFTEXT000044000685",
+    "JORFTEXT000054673373",
+    "JORFTEXT000049251786",
+    "JORFTEXT000046270021",
+    "JORFTEXT000052353470",
+    "JORFTEXT000053649979",
+    "JORFTEXT000054408569",
+    "JORFTEXT000050652187",
+    "JORFTEXT000048709062",
+    "JORFTEXT000049097872",
+    "JORFTEXT000053374248",
+    "JORFTEXT000054208747",
+    "JORFTEXT000054208740",
+    "JORFTEXT000046253773",
+    "JORFTEXT000049283380",
+    "JORFTEXT000053594739",
+    "JORFTEXT000054673396",
+    "JORFTEXT000044993853",
+    "JORFTEXT000048079499",
+    "JORFTEXT000054666958",
+    "JORFTEXT000046152368",
+    "JORFTEXT000050002481",
+    "JORFTEXT000049151112",
+    "JORFTEXT000047753731",
+    "JORFTEXT000053407699",
+    "JORFTEXT000049894381",
+    "JORFTEXT000048264421",
+    "JORFTEXT000050143445",
+    "JORFTEXT000052194443",
+    "JORFTEXT000050963064",
+    "JORFTEXT000050321259",
+    "JORFTEXT000044593221",
+    "JORFTEXT000047936496",
+    "JORFTEXT000054666978",
+    "JORFTEXT000049894391",
+    "JORFTEXT000042539471",
+    "JORFTEXT000048276483",
+    "JORFTEXT000052067407",
+    "JORFTEXT000051348278",
+    "JORFTEXT000045300333",
+    "JORFTEXT000050185623",
+    "JORFTEXT000043421772",
+    "JORFTEXT000043927507",
+    "JORFTEXT000047219588",
+    "JORFTEXT000045571782",
+    "JORFTEXT000049894389",
+    "JORFTEXT000052983703",
+    "JORFTEXT000053459255",
+    "JORFTEXT000051348270",
+    "JORFTEXT000054105012"
+  ],
+  "date_maj": "28/10/2026 14:47",
+  "statistiques": {
+    "total_departements_ddets_ddpp": 54,
+    "total_departements_ddetspp": 38,
+    "total_directeurs_ddets": 46,
+    "total_directeurs_ddpp": 51,
+    "total_directeurs_ddetspp": 46
+  }
+}
