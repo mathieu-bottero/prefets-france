@@ -6,7 +6,7 @@ Visualisation interactive des **préfets** et **directeurs départementaux des t
 
 ## 📸 Aperçu
 
-- Carte choroplèthe de la France métropolitaine et de l'outre-mer
+- Carte thématique de la France métropolitaine et de l'outre-mer
 - Coloration par ancienneté en poste (< 6 mois / 6 mois–1 an / 1–2 ans / > 2 ans)
 - Regroupement par **régions** ou **bassins hydrographiques**
 - Dossier latéral avec titres complets, date de prise de fonction et successeur désigné
@@ -76,7 +76,7 @@ Les bibliothèques principales utilisées sont `requests`, `beautifulsoup4`, `se
 ### Premier lancement (construction de l'historique complet)
 
 ```bash
-python maj_administrations.py --mois 48 --init-ddt
+python maj_administrations.py --mois 48 --init
 ```
 
 Télécharge et analyse les 4 dernières années de nominations publiées au Journal Officiel. Cette opération peut prendre plusieurs minutes.
