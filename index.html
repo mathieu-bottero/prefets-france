@@ -651,41 +651,115 @@ function normalizeDdt(r){
 //  - DDETS + DDPP séparées : deux postes
 //  - Île-de-France (75, 92, 93, 94) : DDPP seule, compétences emploi/travail gérées par la DRIEETS
 //  - Outre-mer : non renseigné
-function normalizeDdets(r){
-  const type = clean(r.ddetspp_type_organisation);
+function normalizeDdets(r) {
+  // Tolère les espaces, BOM éventuel et variations de casse
+  const type = clean(
+    r.ddetspp_type_organisation ??
+    r['\ufeffddetspp_type_organisation']
+  ).toLowerCase();
+
   const mk = (key, titre) => {
-    const g = suffix => r[`ddetspp_directeur_${key}_${suffix}`];
-    const des = clean(g('designe_nom'));
+    const field = suffix => `ddetspp_directeur_${key}_${suffix}`;
+    const designe = clean(r[field('designe_nom')]);
+
     return {
-      titre, nom: clean(g('nom_complet')), sexe: clean(g('sexe')),
-      date: clean(g('date_prise_fonction')), jours: toDays(g('anciennete_jours')),
-      designe: des ? { nom: des, date: clean(g('designe_date')) } : null
+      titre,
+      nom: clean(r[field('nom_complet')]),
+      sexe: clean(r[field('sexe')]),
+      date: clean(r[field('date_prise_fonction')]),
+      jours: toDays(r[field('anciennete_jours')]),
+      designe: designe
+        ? {
+            nom: designe,
+            date: clean(r[field('designe_date')])
+          }
+        : null
     };
   };
-  const T_DDETS   = 'Directeur(rice) départemental(e) de l\u2019emploi, du travail et des solidarités (DDETS)';
-  const T_DDPP    = 'Directeur(rice) départemental(e) de la protection des populations (DDPP)';
-  const T_DDETSPP = 'Directeur(rice) départemental(e) de l\u2019emploi, du travail, des solidarités et de la protection des populations (DDETSPP)';
 
-  let candidats;
-  if(type === 'ddetspp_fusionnee')                 candidats = [mk('ddetspp', T_DDETSPP)];
-  else if(type === 'ddets_ddpp_separees')          candidats = [mk('ddets', T_DDETS), mk('ddpp', T_DDPP)];
-  else if(type === 'organisation_locale_specifique') candidats = [mk('ddpp', T_DDPP)];   // 75, 92, 93, 94
-  else return emptyRow(r, clean(r.ddetspp_message) || 'Poste non renseigné');
+  const T_DDETS =
+    'Directeur(rice) départemental(e) de l’emploi, du travail et des solidarités (DDETS)';
 
-  // On ne garde que les postes pour lesquels un titulaire est renseigné
-  const postes = candidats.filter(q => q.nom);
-  if(!postes.length) return emptyRow(r, 'Aucune information disponible');
+  const T_DDPP =
+    'Directeur(rice) départemental(e) de la protection des populations (DDPP)';
 
-  // Couleur : titulaire arrivé le plus récemment (plus petite ancienneté)
-  const jours = postes.filter(q => q.jours != null).map(q => q.jours);
-  const j = jours.length ? Math.min(...jours) : null;
+  const T_DDETSPP =
+    'Directeur(rice) départemental(e) de l’emploi, du travail, des solidarités et de la protection des populations (DDETSPP)';
+
+  let candidats = [];
+
+  switch (type) {
+    case 'ddetspp_fusionnee':
+      candidats = [mk('ddetspp', T_DDETSPP)];
+      break;
+
+    case 'ddets_ddpp_separees':
+      candidats = [
+        mk('ddets', T_DDETS),
+        mk('ddpp', T_DDPP)
+      ];
+      break;
+
+    case 'organisation_locale_specifique':
+      // Paris et petite couronne : DDPP seulement
+      candidats = [mk('ddpp', T_DDPP)];
+      break;
+
+    case 'non renseigne':
+    case '':
+      return emptyRow(
+        r,
+        clean(r.ddetspp_message) || 'Aucune information disponible'
+      );
+
+    default:
+      console.warn(
+        'Type d’organisation DDETS/DDPP inconnu :',
+        type,
+        '— département :',
+        deptOf(r),
+        r
+      );
+
+      return emptyRow(
+        r,
+        clean(r.ddetspp_message) ||
+          `Organisation non reconnue : ${type || '(valeur vide)'}`
+      );
+  }
+
+  // Ne retenir que les postes ayant un titulaire
+  const postes = candidats.filter(poste => poste.nom);
+
+  if (!postes.length) {
+    return emptyRow(
+      r,
+      clean(r.ddetspp_message) || 'Aucun titulaire renseigné'
+    );
+  }
+
+  // Pour une paire DDETS + DDPP :
+  // la couleur de carte est celle de la personne arrivée le plus récemment.
+  const anciennetes = postes
+    .map(poste => poste.jours)
+    .filter(jours => jours != null);
+
+  const joursMin = anciennetes.length ? Math.min(...anciennetes) : null;
 
   return {
-    departement: deptOf(r), territoire: clean(r.territoire), vide: false,
+    departement: deptOf(r),
+    territoire: clean(r.territoire),
+    vide: false,
     postes,
-    nom_prefet: postes.map(q => q.nom).join(' '),
-    titre_global: '', sexe: '', date_prise_fonction: '', anciennete_jours: j ?? '—',
-    couleur_carte: couleurFromJours(j)
+
+    // Utilisé notamment par la recherche.
+    nom_prefet: postes.map(poste => poste.nom).join(' '),
+
+    titre_global: '',
+    sexe: '',
+    date_prise_fonction: '',
+    anciennete_jours: joursMin ?? '—',
+    couleur_carte: couleurFromJours(joursMin)
   };
 }
 
