@@ -40,12 +40,14 @@ import json
 import argparse
 import os
 from datetime import datetime, timedelta
+from pathlib import Path
 
 from poste_prefectoral import classifier_postes, LIBELLES_ROLE
 
 URL_JO = "https://www.data.gouv.fr/api/1/datasets/r/1c5ac28d-92ca-4a19-aefb-63fbde4387a2"
-FICHIER_ETAT = "prefets/data/etat_prefets.json"
-FICHIER_CSV = "prefets/data/base_prefets.csv"
+_RACINE_SCRIPT = Path(__file__).resolve().parent   # = .../prefets/
+FICHIER_ETAT   = str(_RACINE_SCRIPT / "data" / "etat_prefets.json")
+FICHIER_CSV    = str(_RACINE_SCRIPT / "data" / "base_prefets.csv")
 
 
 
@@ -136,6 +138,7 @@ def charger_etat():
     return {"postes": {}, "source_id_traites": [], "date_maj": None}
 
 def sauvegarder_etat(etat):
+    Path(FICHIER_ETAT).parent.mkdir(parents=True, exist_ok=True)
     with open(FICHIER_ETAT, 'w', encoding='utf-8') as f:
         json.dump(etat, f, ensure_ascii=False, indent=2, default=str)
 
@@ -538,6 +541,7 @@ def construire_titre_global(territoire, sexe):
     return " | ".join(titres)
     
 def exporter_csv(etat):
+    Path(FICHIER_CSV).parent.mkdir(parents=True, exist_ok=True)
     colonnes = [
         'role',
         'territoire',
@@ -641,7 +645,8 @@ def exporter_csv(etat):
     
 def exporter_prefets_departements(etat):
 
-    fichier = "prefets_departements.csv"
+    fichier = _RACINE_SCRIPT / "data" / "prefets_departements.csv"  # ✅ chemin absolu
+
 
     colonnes = [
         'departement',
@@ -711,6 +716,8 @@ def exporter_prefets_departements(etat):
         })
 
     lignes.sort(key=lambda x: x['departement'])
+
+    fichier.parent.mkdir(parents=True, exist_ok=True)
 
     with open(fichier, 'w', encoding='utf-8-sig', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=colonnes, delimiter=';')

@@ -1,158 +1,158 @@
 ﻿role;territoire;departement;prefet_de_departement;titulaire_actuel_nom_complet;titulaire_actuel_sexe;date_decision;date_prise_fonction;titulaire_designe_nom_complet;titulaire_designe_date_prise_fonction;texte_source;titre_global;anciennete_jours;couleur_carte
-Préfet(ète) de région;Auvergne-Rhône-Alpes;;;Etienne GUYOT;M;23/04/2026;18/05/2026;;;préfet de la région Auvergne-Rhône-Alpes, préfet de la zone de défense et de sécurité Sud-Est, préfet du Rhône;;161;vert
-Préfet(ète) de région;Bourgogne-Franche-Comté;;;Violaine DEMARET;F;09/04/2026;09/04/2026;;;préfète de la région Bourgogne-Franche-Comté, préfète de la Côte-d'Or;;200;jaune
-Préfet(ète) de région;Bretagne;;;Emmanuelle DUBEE;F;25/06/2026;25/06/2026;;;préfète de la région Bretagne, préfète de la zone de défense et de sécurité Ouest, préfète d'Ille-et-Vilaine;;123;vert
-Préfet(ète) de région;Centre-Val de Loire;;;Hugues MOUTOUH;M;23/04/2026;18/05/2026;;;préfet de la région Centre-Val de Loire, préfet du Loiret;;161;vert
-Préfet(ète) de région;Corse;;;Eric JALON;M;24/07/2025;25/08/2025;;;préfet de la région Corse, préfet de la Corse-du-Sud;;427;orange
-Préfet(ète) de région;Grand Est;;;Amaury de SAINT-QUENTIN;M;20/11/2025;20/11/2025;;;préfet de la région Grand Est, préfet de la zone de défense et de sécurité Est, préfet du Bas-Rhin;;340;jaune
-Préfet(ète) de région;Guadeloupe;;;Thierry DEVIMEUX;M;31/07/2025;31/07/2025;;;préfet de la région Guadeloupe, préfet de la Guadeloupe | à compter du 1er septembre 2025;;452;orange
-Préfet(ète) de région;Guyane;;;Antoine POUSSIER;M;14/07/2023;21/08/2023;;;préfet de la région Guyane, préfet de la Guyane;;1162;rouge
-Préfet(ète) de région;Hauts-de-France;;;Bertrand GAUME;M;18/01/2024;18/01/2024;;;préfet de la région Hauts-de-France, préfet de la zone de défense et de sécurité Nord, préfet du Nord;;1012;rouge
-Préfet(ète) de région;Martinique;;;Etienne DESPLANQUES;M;16/01/2025;16/01/2025;;;préfet de la région Martinique, préfet de la Martinique;;648;orange
-Préfet(ète) de région;Normandie;;;Jean-Benoît ALBERTINI;M;12/01/2023;12/01/2023;;;préfet de la région Normandie, préfet de la Seine-Maritime;;1383;rouge
-Préfet(ète) de région;Nouvelle-Aquitaine;;;Sophie BROCAS;F;23/04/2026;18/05/2026;;;préfète de la région Nouvelle-Aquitaine, préfète de la zone de défense et de sécurité Sud-Ouest, préfète de la Gironde;;161;vert
-Préfet(ète) de région;Occitanie;;;Fabrice RIGOULET-ROZE;M;28/05/2026;29/06/2026;;;préfet de la région Occitanie, préfet de la Haute-Garonne;;119;vert
-Préfet(ète) de région;Pays de la Loire;;;Laurent HOTTIAUX;M;25/06/2026;25/06/2026;;;préfet de la région Pays de la Loire, préfet de la Loire-Atlantique;;123;vert
-Préfet(ète) de région;Pays-de-la-Loire;;;Fabrice RIGOULET-ROZE;M;12/01/2023;30/01/2023;;;préfet de la région Pays-de-la-Loire, préfet de la Loire-Atlantique;;1365;rouge
-Préfet(ète) de région;Provence-Alpes-Côte d'Azur;;;Jacques WITKOWSKI;M;20/11/2025;20/11/2025;;;préfet de la région Provence-Alpes-Côte d'Azur, préfet de la zone de défense et de sécurité Sud, préfet des Bouches-du-Rhône;;340;jaune
-Préfet(ète) de région;Réunion;;;Patrice LATRON;M;01/11/2024;01/11/2024;;;préfet de la région Réunion, préfet de La Réunion;;724;orange
-Préfet(ète) de région;d'Ile-de-France;;;Georges-François LECLERC;M;28/05/2026;28/05/2026;;;préfet de la région d'Ile-de-France, préfet de Paris;;151;vert
-Préfet(ète) de zone de défense et de sécurité;Est;;;Amaury de SAINT-QUENTIN;M;20/11/2025;20/11/2025;;;préfet de la région Grand Est, préfet de la zone de défense et de sécurité Est, préfet du Bas-Rhin;;340;jaune
-Préfet(ète) de zone de défense et de sécurité;Nord;;;Bertrand GAUME;M;18/01/2024;18/01/2024;;;préfet de la région Hauts-de-France, préfet de la zone de défense et de sécurité Nord, préfet du Nord;;1012;rouge
-Préfet(ète) de zone de défense et de sécurité;Ouest;;;Emmanuelle DUBEE;F;25/06/2026;25/06/2026;;;préfète de la région Bretagne, préfète de la zone de défense et de sécurité Ouest, préfète d'Ille-et-Vilaine;;123;vert
-Préfet(ète) de zone de défense et de sécurité;Sud;;;Jacques WITKOWSKI;M;20/11/2025;20/11/2025;;;préfet de la région Provence-Alpes-Côte d'Azur, préfet de la zone de défense et de sécurité Sud, préfet des Bouches-du-Rhône;;340;jaune
-Préfet(ète) de zone de défense et de sécurité;Sud-Est;;;Etienne GUYOT;M;23/04/2026;18/05/2026;;;préfet de la région Auvergne-Rhône-Alpes, préfet de la zone de défense et de sécurité Sud-Est, préfet du Rhône;;161;vert
-Préfet(ète) de zone de défense et de sécurité;Sud-Ouest;;;Sophie BROCAS;F;23/04/2026;18/05/2026;;;préfète de la région Nouvelle-Aquitaine, préfète de la zone de défense et de sécurité Sud-Ouest, préfète de la Gironde;;161;vert
-Préfet(ète);Ain;01;Oui;Louis-Xavier THIRODE;M;03/12/2025;03/12/2025;;;préfet de l'Ain;Préfet de l'Ain;327;jaune
-Préfet(ète);Aisne;02;Oui;Isabelle EPAILLARD;F;28/07/2026;31/08/2026;;;préfète de l'Aisne;Préfète de l'Aisne;56;vert
-Préfet(ète);Allier;03;Oui;Christophe NOEL DU PAYRAT;M;09/01/2025;09/01/2025;;;préfet de l'Allier;Préfet de l'Allier;655;orange
-Préfet(ète);Alpes-Maritimes;06;Oui;Jean-Marie GIRIER;M;10/07/2026;10/07/2026;;;préfet des Alpes-Maritimes;Préfet des Alpes-Maritimes;108;vert
-Préfet(ète);Alpes-de-Haute-Provence;04;Oui;Isabelle TOMATIS;F;28/08/2025;22/09/2025;;;préfète des Alpes-de-Haute-Provence;Préfète des Alpes-de-Haute-Provence;399;orange
-Préfet(ète);Ardennes;08;Oui;Christian CHASSAING;M;17/07/2025;25/08/2025;;;préfet des Ardennes;Préfet des Ardennes;427;orange
-Préfet(ète);Ardèche;07;Oui;Benoît TREVISANI;M;17/07/2025;25/08/2025;;;préfet de l'Ardèche;Préfet de l'Ardèche;427;orange
-Préfet(ète);Ariège;09;Oui;Hervé BRABANT;M;23/10/2025;23/10/2025;;;préfet de l'Ariège;Préfet de l'Ariège;368;orange
-Préfet(ète);Aube;10;Oui;Pascal GAUCI;M;28/05/2026;28/05/2026;;;préfet de l'Aube;Préfet de l'Aube;151;vert
-Préfet(ète);Aude;11;Oui;Alain BUCQUET;M;17/07/2025;25/08/2025;;;préfet de l'Aude;Préfet de l'Aude;427;orange
-Préfet(ète);Aveyron;12;Oui;Claire CHAUFFOUR-ROUILLARD;F;07/11/2024;07/11/2024;;;préfète de l'Aveyron;Préfète de l'Aveyron;718;orange
-Préfet(ète);Bas-Rhin;67;Oui;Amaury de SAINT-QUENTIN;M;20/11/2025;20/11/2025;;;préfet de la région Grand Est, préfet de la zone de défense et de sécurité Est, préfet du Bas-Rhin;Préfet du Bas-Rhin | Préfet de la région Grand Est | Préfet de la zone de défense et de sécurité Est | Préfet coordonnateur de bassin Rhin-Meuse;340;jaune
-Préfet(ète);Bouches-du-Rhône;13;Oui;Jacques WITKOWSKI;M;20/11/2025;20/11/2025;;;préfet de la région Provence-Alpes-Côte d'Azur, préfet de la zone de défense et de sécurité Sud, préfet des Bouches-du-Rhône;Préfet des Bouches-du-Rhône | Préfet de la région Provence-Alpes-Côte d'Azur | Préfet de la zone de défense et de sécurité Sud | Préfet coordonnateur de bassin Rhône-Méditerranée;340;jaune
-Préfet(ète);Calvados;14;Oui;David CLAVIERE;M;23/04/2026;18/05/2026;;;préfet du Calvados;Préfet du Calvados;161;vert
-Préfet(ète);Cantal;15;Oui;Philippe LOOS;M;24/10/2024;24/10/2024;;;préfet du Cantal;Préfet du Cantal;732;rouge
-Préfet(ète);Charente;16;Oui;Jérôme HARNOIS;M;04/07/2024;19/08/2024;;;préfet de la Charente;Préfet de la Charente;798;rouge
-Préfet(ète);Charente-Maritime;17;Oui;Michel PROSIC;M;28/05/2026;28/05/2026;;;préfet de la Charente-Maritime;Préfet de la Charente-Maritime;151;vert
+Préfet(ète) de région;Auvergne-Rhône-Alpes;;;Etienne GUYOT;M;23/04/2026;18/05/2026;;;préfet de la région Auvergne-Rhône-Alpes, préfet de la zone de défense et de sécurité Sud-Est, préfet du Rhône;;163;vert
+Préfet(ète) de région;Bourgogne-Franche-Comté;;;Violaine DEMARET;F;09/04/2026;09/04/2026;;;préfète de la région Bourgogne-Franche-Comté, préfète de la Côte-d'Or;;202;jaune
+Préfet(ète) de région;Bretagne;;;Emmanuelle DUBEE;F;25/06/2026;25/06/2026;;;préfète de la région Bretagne, préfète de la zone de défense et de sécurité Ouest, préfète d'Ille-et-Vilaine;;125;vert
+Préfet(ète) de région;Centre-Val de Loire;;;Hugues MOUTOUH;M;23/04/2026;18/05/2026;;;préfet de la région Centre-Val de Loire, préfet du Loiret;;163;vert
+Préfet(ète) de région;Corse;;;Eric JALON;M;24/07/2025;25/08/2025;;;préfet de la région Corse, préfet de la Corse-du-Sud;;429;orange
+Préfet(ète) de région;Grand Est;;;Amaury de SAINT-QUENTIN;M;20/11/2025;20/11/2025;;;préfet de la région Grand Est, préfet de la zone de défense et de sécurité Est, préfet du Bas-Rhin;;342;jaune
+Préfet(ète) de région;Guadeloupe;;;Thierry DEVIMEUX;M;31/07/2025;31/07/2025;;;préfet de la région Guadeloupe, préfet de la Guadeloupe | à compter du 1er septembre 2025;;454;orange
+Préfet(ète) de région;Guyane;;;Antoine POUSSIER;M;14/07/2023;21/08/2023;;;préfet de la région Guyane, préfet de la Guyane;;1164;rouge
+Préfet(ète) de région;Hauts-de-France;;;Bertrand GAUME;M;18/01/2024;18/01/2024;;;préfet de la région Hauts-de-France, préfet de la zone de défense et de sécurité Nord, préfet du Nord;;1014;rouge
+Préfet(ète) de région;Martinique;;;Etienne DESPLANQUES;M;16/01/2025;16/01/2025;;;préfet de la région Martinique, préfet de la Martinique;;650;orange
+Préfet(ète) de région;Normandie;;;Jean-Benoît ALBERTINI;M;12/01/2023;12/01/2023;;;préfet de la région Normandie, préfet de la Seine-Maritime;;1385;rouge
+Préfet(ète) de région;Nouvelle-Aquitaine;;;Sophie BROCAS;F;23/04/2026;18/05/2026;;;préfète de la région Nouvelle-Aquitaine, préfète de la zone de défense et de sécurité Sud-Ouest, préfète de la Gironde;;163;vert
+Préfet(ète) de région;Occitanie;;;Fabrice RIGOULET-ROZE;M;28/05/2026;29/06/2026;;;préfet de la région Occitanie, préfet de la Haute-Garonne;;121;vert
+Préfet(ète) de région;Pays de la Loire;;;Laurent HOTTIAUX;M;25/06/2026;25/06/2026;;;préfet de la région Pays de la Loire, préfet de la Loire-Atlantique;;125;vert
+Préfet(ète) de région;Pays-de-la-Loire;;;Fabrice RIGOULET-ROZE;M;12/01/2023;30/01/2023;;;préfet de la région Pays-de-la-Loire, préfet de la Loire-Atlantique;;1367;rouge
+Préfet(ète) de région;Provence-Alpes-Côte d'Azur;;;Jacques WITKOWSKI;M;20/11/2025;20/11/2025;;;préfet de la région Provence-Alpes-Côte d'Azur, préfet de la zone de défense et de sécurité Sud, préfet des Bouches-du-Rhône;;342;jaune
+Préfet(ète) de région;Réunion;;;Patrice LATRON;M;01/11/2024;01/11/2024;;;préfet de la région Réunion, préfet de La Réunion;;726;orange
+Préfet(ète) de région;d'Ile-de-France;;;Georges-François LECLERC;M;28/05/2026;28/05/2026;;;préfet de la région d'Ile-de-France, préfet de Paris;;153;vert
+Préfet(ète) de zone de défense et de sécurité;Est;;;Amaury de SAINT-QUENTIN;M;20/11/2025;20/11/2025;;;préfet de la région Grand Est, préfet de la zone de défense et de sécurité Est, préfet du Bas-Rhin;;342;jaune
+Préfet(ète) de zone de défense et de sécurité;Nord;;;Bertrand GAUME;M;18/01/2024;18/01/2024;;;préfet de la région Hauts-de-France, préfet de la zone de défense et de sécurité Nord, préfet du Nord;;1014;rouge
+Préfet(ète) de zone de défense et de sécurité;Ouest;;;Emmanuelle DUBEE;F;25/06/2026;25/06/2026;;;préfète de la région Bretagne, préfète de la zone de défense et de sécurité Ouest, préfète d'Ille-et-Vilaine;;125;vert
+Préfet(ète) de zone de défense et de sécurité;Sud;;;Jacques WITKOWSKI;M;20/11/2025;20/11/2025;;;préfet de la région Provence-Alpes-Côte d'Azur, préfet de la zone de défense et de sécurité Sud, préfet des Bouches-du-Rhône;;342;jaune
+Préfet(ète) de zone de défense et de sécurité;Sud-Est;;;Etienne GUYOT;M;23/04/2026;18/05/2026;;;préfet de la région Auvergne-Rhône-Alpes, préfet de la zone de défense et de sécurité Sud-Est, préfet du Rhône;;163;vert
+Préfet(ète) de zone de défense et de sécurité;Sud-Ouest;;;Sophie BROCAS;F;23/04/2026;18/05/2026;;;préfète de la région Nouvelle-Aquitaine, préfète de la zone de défense et de sécurité Sud-Ouest, préfète de la Gironde;;163;vert
+Préfet(ète);Ain;01;Oui;Louis-Xavier THIRODE;M;03/12/2025;03/12/2025;;;préfet de l'Ain;Préfet de l'Ain;329;jaune
+Préfet(ète);Aisne;02;Oui;Isabelle EPAILLARD;F;28/07/2026;31/08/2026;;;préfète de l'Aisne;Préfète de l'Aisne;58;vert
+Préfet(ète);Allier;03;Oui;Christophe NOEL DU PAYRAT;M;09/01/2025;09/01/2025;;;préfet de l'Allier;Préfet de l'Allier;657;orange
+Préfet(ète);Alpes-Maritimes;06;Oui;Jean-Marie GIRIER;M;10/07/2026;10/07/2026;;;préfet des Alpes-Maritimes;Préfet des Alpes-Maritimes;110;vert
+Préfet(ète);Alpes-de-Haute-Provence;04;Oui;Isabelle TOMATIS;F;28/08/2025;22/09/2025;;;préfète des Alpes-de-Haute-Provence;Préfète des Alpes-de-Haute-Provence;401;orange
+Préfet(ète);Ardennes;08;Oui;Christian CHASSAING;M;17/07/2025;25/08/2025;;;préfet des Ardennes;Préfet des Ardennes;429;orange
+Préfet(ète);Ardèche;07;Oui;Benoît TREVISANI;M;17/07/2025;25/08/2025;;;préfet de l'Ardèche;Préfet de l'Ardèche;429;orange
+Préfet(ète);Ariège;09;Oui;Hervé BRABANT;M;23/10/2025;23/10/2025;;;préfet de l'Ariège;Préfet de l'Ariège;370;orange
+Préfet(ète);Aube;10;Oui;Pascal GAUCI;M;28/05/2026;28/05/2026;;;préfet de l'Aube;Préfet de l'Aube;153;vert
+Préfet(ète);Aude;11;Oui;Alain BUCQUET;M;17/07/2025;25/08/2025;;;préfet de l'Aude;Préfet de l'Aude;429;orange
+Préfet(ète);Aveyron;12;Oui;Claire CHAUFFOUR-ROUILLARD;F;07/11/2024;07/11/2024;;;préfète de l'Aveyron;Préfète de l'Aveyron;720;orange
+Préfet(ète);Bas-Rhin;67;Oui;Amaury de SAINT-QUENTIN;M;20/11/2025;20/11/2025;;;préfet de la région Grand Est, préfet de la zone de défense et de sécurité Est, préfet du Bas-Rhin;Préfet du Bas-Rhin | Préfet de la région Grand Est | Préfet de la zone de défense et de sécurité Est | Préfet coordonnateur de bassin Rhin-Meuse;342;jaune
+Préfet(ète);Bouches-du-Rhône;13;Oui;Jacques WITKOWSKI;M;20/11/2025;20/11/2025;;;préfet de la région Provence-Alpes-Côte d'Azur, préfet de la zone de défense et de sécurité Sud, préfet des Bouches-du-Rhône;Préfet des Bouches-du-Rhône | Préfet de la région Provence-Alpes-Côte d'Azur | Préfet de la zone de défense et de sécurité Sud | Préfet coordonnateur de bassin Rhône-Méditerranée;342;jaune
+Préfet(ète);Calvados;14;Oui;David CLAVIERE;M;23/04/2026;18/05/2026;;;préfet du Calvados;Préfet du Calvados;163;vert
+Préfet(ète);Cantal;15;Oui;Philippe LOOS;M;24/10/2024;24/10/2024;;;préfet du Cantal;Préfet du Cantal;734;rouge
+Préfet(ète);Charente;16;Oui;Jérôme HARNOIS;M;04/07/2024;19/08/2024;;;préfet de la Charente;Préfet de la Charente;800;rouge
+Préfet(ète);Charente-Maritime;17;Oui;Michel PROSIC;M;28/05/2026;28/05/2026;;;préfet de la Charente-Maritime;Préfet de la Charente-Maritime;153;vert
 Préfet(ète);Charente-Maritime relatif à la méthode de dialogue et de concertation sur les cas groupés de cancers pédiatriques survenus sur la commune de Saint-Rogatien;;Oui;;;;;;;;Préfet de la Charente-Maritime relatif à la méthode de dialogue et de concertation sur les cas groupés de cancers pédiatriques survenus sur la commune de Saint-Rogatien;;
-Préfet(ète);Cher;18;Oui;Philippe LE MOING SURZUR;M;23/10/2025;24/11/2025;;;préfet du Cher;Préfet du Cher;336;jaune
-Préfet(ète);Corrèze;19;Oui;Vincent BERTON;M;16/01/2025;16/01/2025;;;préfet de la Corrèze;Préfet de la Corrèze;648;orange
-Préfet(ète);Corse;;Oui;Jérôme FILIPPINI;M;11/10/2024;11/10/2024;;;préfet de Corse, préfet de la Corse-du-Sud;Préfet de la Corse;745;rouge
-Préfet(ète);Corse-du-Sud;2A;Oui;Eric JALON;M;24/07/2025;25/08/2025;;;préfet de la région Corse, préfet de la Corse-du-Sud;Préfet de la Corse-du-Sud;427;orange
-Préfet(ète);Creuse;23;Oui;Jean-Philippe LEGUEULT;M;18/12/2025;18/12/2025;;;préfet de la Creuse;Préfet de la Creuse;312;jaune
-Préfet(ète);Côte-d'Or;21;Oui;Violaine DEMARET;F;09/04/2026;09/04/2026;;;préfète de la région Bourgogne-Franche-Comté, préfète de la Côte-d'Or;Préfète de la Côte-d'Or | Préfète de la région Bourgogne-Franche-Comté;200;jaune
-Préfet(ète);Côtes-d'Armor;22;Oui;François GUILLOTOU de KERÉVER;M;24/10/2024;24/10/2024;;;préfet des Côtes-d'Armor;Préfet des Côtes-d'Armor;732;rouge
-Préfet(ète);Deux-Sèvres;79;Oui;Valérie MICHEL-MOREAUX;F;23/07/2026;24/08/2026;;;préfète des Deux-Sèvres;Préfète des Deux-Sèvres;63;vert
-Préfet(ète);Dordogne;24;Oui;Marie AUBERT;F;07/11/2024;07/11/2024;;;préfète de la Dordogne;Préfète de la Dordogne;718;orange
-Préfet(ète);Doubs;25;Oui;Rémi BASTILLE;M;13/01/2024;13/01/2024;;;préfet du Doubs;Préfet du Doubs;1017;rouge
-Préfet(ète);Drôme;26;Oui;Marie-Aimée GASPARI;F;31/07/2025;31/07/2025;;;préfète de la Drôme | à compter du 1er septembre 2025;Préfète de la Drôme;452;orange
-Préfet(ète);Essonne;91;Oui;Fabienne BALUSSOU;F;28/08/2025;22/09/2025;;;préfète de l'Essonne;Préfète de l'Essonne;399;orange
-Préfet(ète);Eure;27;Oui;Xavier DELARUE;M;09/04/2026;06/05/2026;;;préfet de l'Eure;Préfet de l'Eure;173;vert
-Préfet(ète);Eure-et-Loir;28;Oui;Xavier PELLETIER;M;28/07/2026;31/08/2026;;;préfet d'Eure-et-Loir;Préfet de Eure-et-Loir;56;vert
-Préfet(ète);Finistère;29;Oui;Louis LE FRANC;M;29/04/2025;29/04/2025;;;préfet du Finistère;Préfet du Finistère;545;orange
-Préfet(ète);Gard;30;Oui;Fabienne DECOTTIGNIES;F;23/07/2026;17/08/2026;;;préfète du Gard;Préfète du Gard;70;vert
-Préfet(ète);Gers;32;Oui;Alain CASTANIER;M;28/11/2024;28/11/2024;;;préfet du Gers;Préfet du Gers;697;orange
-Préfet(ète);Gironde;33;Oui;Sophie BROCAS;F;23/04/2026;18/05/2026;;;préfète de la région Nouvelle-Aquitaine, préfète de la zone de défense et de sécurité Sud-Ouest, préfète de la Gironde;Préfète de la Gironde | Préfète de la région Nouvelle-Aquitaine | Préfète de la zone de défense et de sécurité Sud-Ouest | Préfète coordonnatrice de bassin Adour-Garonne;161;vert
-Préfet(ète);Guadeloupe;971;Oui;Thierry DEVIMEUX;M;31/07/2025;31/07/2025;;;préfet de la région Guadeloupe, préfet de la Guadeloupe | à compter du 1er septembre 2025;Préfet de la Guadeloupe | Préfet de la région Guadeloupe;452;orange
-Préfet(ète);Guyane;973;Oui;Antoine POUSSIER;M;14/07/2023;21/08/2023;;;préfet de la région Guyane, préfet de la Guyane;Préfet de la Guyane | Préfet de la région Guyane;1162;rouge
-Préfet(ète);Haut-Rhin;68;Oui;Emmanuel AUBRY;M;13/06/2025;13/06/2025;;;préfet du Haut-Rhin;Préfet de l'Haut-Rhin;500;orange
-Préfet(ète);Haute-Corse;2B;Oui;Véronique DEPREZ-BOUDIER;F;28/05/2026;28/05/2026;;;préfète de la Haute-Corse;Préfète de l'Haute-Corse;151;vert
-Préfet(ète);Haute-Garonne;31;Oui;Fabrice RIGOULET-ROZE;M;28/05/2026;29/06/2026;;;préfet de la région Occitanie, préfet de la Haute-Garonne;Préfet de l'Haute-Garonne | Préfet de la région Occitanie | Préfet coordonnateur de bassin Adour-Garonne;119;vert
-Préfet(ète);Haute-Loire;43;Oui;Yvan CORDIER;M;14/07/2023;21/08/2023;;;préfet de la Haute-Loire;Préfet de l'Haute-Loire;1162;rouge
-Préfet(ète);Haute-Marne;52;Oui;Régine PAM;F;14/07/2023;21/08/2023;;;préfète de la Haute-Marne;Préfète de l'Haute-Marne;1162;rouge
-Préfet(ète);Haute-Savoie;74;Oui;Jérôme BONET;M;23/07/2026;17/08/2026;;;préfet de la Haute-Savoie;Préfet de l'Haute-Savoie;70;vert
-Préfet(ète);Haute-Saône;70;Oui;Serge JACOB;M;24/07/2025;24/07/2025;;;préfet de la Haute-Saône | à compter du 1er septembre 2025;Préfet de l'Haute-Saône;459;orange
-Préfet(ète);Haute-Vienne;87;Oui;Maurice BARATE;M;03/12/2025;03/12/2025;;;préfet de la Haute-Vienne;Préfet de l'Haute-Vienne;327;jaune
-Préfet(ète);Hautes-Alpes;05;Oui;Philippe BAILBE;M;24/07/2025;25/08/2025;;;préfet des Hautes-Alpes;Préfet des Hautes-Alpes;427;orange
-Préfet(ète);Hautes-Pyrénées;65;Oui;Sibylle SAMOYAULT;F;23/07/2026;24/08/2026;;;préfète des Hautes-Pyrénées;Préfète des Hautes-Pyrénées;63;vert
-Préfet(ète);Hauts-de-Seine;92;Oui;Alexandre BRUGERE;M;01/11/2024;01/11/2024;;;préfet des Hauts-de-Seine;Préfet des Hauts-de-Seine;724;orange
-Préfet(ète);Hérault;34;Oui;Chantal MAUCHET;F;03/12/2025;03/12/2025;;;préfète de l'Hérault;Préfète de l'Hérault;327;jaune
-Préfet(ète);Ille-et-Vilaine;35;Oui;Emmanuelle DUBEE;F;25/06/2026;25/06/2026;;;préfète de la région Bretagne, préfète de la zone de défense et de sécurité Ouest, préfète d'Ille-et-Vilaine;Préfète de l'Ille-et-Vilaine | Préfète de la région Bretagne | Préfète de la zone de défense et de sécurité Ouest;123;vert
-Préfet(ète);Indre;36;Oui;Maryvonne LE BRIGNONEN;F;09/04/2026;09/04/2026;;;préfète de l'Indre;Préfète de l'Indre;200;jaune
-Préfet(ète);Indre-et-Loire;37;Oui;Thomas CAMPEAUX;M;07/11/2024;07/11/2024;;;préfet d'Indre-et-Loire;Préfet de Indre-et-Loire;718;orange
-Préfet(ète);Isère;38;Oui;Catherine SEGUIN;F;07/11/2024;07/11/2024;;;préfète de l'Isère;Préfète de l'Isère;718;orange
-Préfet(ète);Jura;39;Oui;Pierre-Edouard COLLIEX;M;13/03/2025;13/03/2025;;;préfet du Jura;Préfet du Jura;592;orange
-Préfet(ète);Landes;40;Oui;Gilles CLAVREUL;M;27/03/2025;27/03/2025;;;préfet des Landes;Préfet des Landes;578;orange
-Préfet(ète);Loir-et-Cher;41;Oui;Joseph ZIMET;M;24/07/2025;25/08/2025;;;préfet de Loir-et-Cher;Préfet de Loir-et-Cher;427;orange
-Préfet(ète);Loire;42;Oui;François-Xavier BIEUVILLE;M;23/04/2026;18/05/2026;;;préfet de la Loire;Préfet de la Loire;161;vert
-Préfet(ète);Loire-Atlantique;44;Oui;Laurent HOTTIAUX;M;25/06/2026;25/06/2026;;;préfet de la région Pays de la Loire, préfet de la Loire-Atlantique;Préfet de la Loire-Atlantique | Préfet de la région Pays de la Loire;123;vert
-Préfet(ète);Loiret;45;Oui;Hugues MOUTOUH;M;23/04/2026;18/05/2026;;;préfet de la région Centre-Val de Loire, préfet du Loiret;Préfet du Loiret | Préfet de la région Centre-Val de Loire | Préfet coordonnateur de bassin Loire-Bretagne;161;vert
-Préfet(ète);Lot;46;Oui;Marilyne POULAIN;F;20/01/2026;20/01/2026;;;préfète du Lot;Préfète du Lot;279;jaune
-Préfet(ète);Lot-et-Garonne;47;Oui;Bruno ANDRÉ;M;18/12/2025;18/12/2025;;;préfet de Lot-et-Garonne;Préfet de Lot-et-Garonne;312;jaune
-Préfet(ète);Lozère;48;Oui;Gilles QUÉNÉHERVÉ;M;07/11/2024;07/11/2024;;;préfet de la Lozère;Préfet de la Lozère;718;orange
-Préfet(ète);Maine-et-Loire;49;Oui;François PESNEAU;M;03/12/2025;03/12/2025;;;préfet de Maine-et-Loire;Préfet de Maine-et-Loire;327;jaune
-Préfet(ète);Manche;50;Oui;Marc CHAPPUIS;M;28/08/2025;22/09/2025;;;préfet de la Manche;Préfet de la Manche;399;orange
-Préfet(ète);Marne;51;Oui;Romain ROYET;M;24/07/2025;24/07/2025;;;préfet de la Marne | à compter du 1er septembre 2025;Préfet de la Marne;459;orange
-Préfet(ète);Martinique;972;Oui;Etienne DESPLANQUES;M;16/01/2025;16/01/2025;;;préfet de la région Martinique, préfet de la Martinique;Préfet de la Martinique | Préfet de la région Martinique;648;orange
-Préfet(ète);Mayenne;53;Oui;Nadège BAPTISTA;F;31/07/2025;31/07/2025;;;préfète de la Mayenne | à compter du 1er septembre 2025;Préfète de la Mayenne;452;orange
-Préfet(ète);Mayotte;976;Oui;Frédéric POISOT;M;23/04/2026;18/05/2026;;;préfet de Mayotte;Préfet de Mayotte;161;vert
-Préfet(ète);Meurthe-et-Moselle;54;Oui;Yves SEGUY;M;24/07/2025;25/08/2025;;;préfet de Meurthe-et-Moselle;Préfet de Meurthe-et-Moselle;427;orange
-Préfet(ète);Meuse;55;Oui;Anne-Florence CANTON;F;09/04/2026;06/05/2026;;;préfète de la Meuse;Préfète de la Meuse;173;vert
-Préfet(ète);Morbihan;56;Oui;Michaël GALY;M;08/05/2025;08/05/2025;;;préfet du Morbihan;Préfet du Morbihan;536;orange
-Préfet(ète);Moselle;57;Oui;Pascal BOLOT;M;29/04/2025;29/04/2025;;;préfet de la Moselle;Préfet de la Moselle;545;orange
-Préfet(ète);Nièvre;58;Oui;Victor DEVOUGE;M;23/07/2026;24/08/2026;;;préfet de la Nièvre;Préfet de la Nièvre;63;vert
-Préfet(ète);Nord;59;Oui;Bertrand GAUME;M;18/01/2024;18/01/2024;;;préfet de la région Hauts-de-France, préfet de la zone de défense et de sécurité Nord, préfet du Nord;Préfet du Nord | Préfet de la région Hauts-de-France | Préfet de la zone de défense et de sécurité Nord | Préfet coordonnateur de bassin Artois-Picardie;1012;rouge
-Préfet(ète);Oise;60;Oui;Jean-Marie CAILLAUD;M;07/11/2024;07/11/2024;;;préfet de l'Oise;Préfet de l'Oise;718;orange
-Préfet(ète);Orne;61;Oui;Hervé TOURMENTE;M;24/07/2025;25/08/2025;;;préfet de l'Orne;Préfet de l'Orne;427;orange
-Préfet(ète);Paris;75;Oui;Georges-François LECLERC;M;28/05/2026;28/05/2026;;;préfet de la région d'Ile-de-France, préfet de Paris;Préfet de Paris | Préfet de la région Île-de-France | Préfet de la zone de défense et de sécurité Paris;151;vert
-Préfet(ète);Pas-de-Calais;62;Oui;François-Xavier LAUCH;M;03/12/2025;03/12/2025;;;préfet du Pas-de-Calais;Préfet du Pas-de-Calais;327;jaune
-Préfet(ète);Puy-de-Dôme;63;Oui;Anne FRACKOWIAK-JACOBS;F;18/12/2025;18/12/2025;;;préfète du Puy-de-Dôme;Préfète du Puy-de-Dôme;312;jaune
-Préfet(ète);Pyrénées-Atlantiques;64;Oui;Simon FETET;M;23/07/2026;24/08/2026;;;préfet des Pyrénées-Atlantiques;Préfet des Pyrénées-Atlantiques;63;vert
-Préfet(ète);Pyrénées-Orientales;66;Oui;Pierre REGNAULT DE LA MOTHE;M;17/07/2025;25/08/2025;;;préfet des Pyrénées-Orientales;Préfet des Pyrénées-Orientales;427;orange
-Préfet(ète);Rhône;69;Oui;Etienne GUYOT;M;23/04/2026;18/05/2026;;;préfet de la région Auvergne-Rhône-Alpes, préfet de la zone de défense et de sécurité Sud-Est, préfet du Rhône;Préfet du Rhône | Préfet de la région Auvergne-Rhône-Alpes | Préfet de la zone de défense et de sécurité Sud-Est | Préfet coordonnateur de bassin Rhône-Méditerranée;161;vert
-Préfet(ète);Réunion;974;Oui;Patrice LATRON;M;01/11/2024;01/11/2024;;;préfet de la région Réunion, préfet de La Réunion;Préfet de la Réunion | Préfet de la région Réunion;724;orange
-Préfet(ète);Sarthe;72;Oui;Sébastien JALLET;M;13/06/2025;13/06/2025;;;préfet de la Sarthe;Préfet de la Sarthe;500;orange
-Préfet(ète);Savoie;73;Oui;Vanina NICOLI;F;27/03/2025;27/03/2025;;;préfète de la Savoie;Préfète de la Savoie;578;orange
-Préfet(ète);Saône-et-Loire;71;Oui;Dominique DUFOUR;M;24/07/2025;25/08/2025;;;préfet de Saône-et-Loire;Préfet de Saône-et-Loire;427;orange
-Préfet(ète);Seine-Maritime;76;Oui;Jean-Benoît ALBERTINI;M;12/01/2023;12/01/2023;;;préfet de la région Normandie, préfet de la Seine-Maritime;Préfet de la Seine-Maritime | Préfet de la région Normandie;1383;rouge
-Préfet(ète);Seine-Saint-Denis;93;Oui;Julien CHARLES;M;07/11/2024;07/11/2024;;;préfet de la Seine-Saint-Denis;Préfet de la Seine-Saint-Denis;718;orange
-Préfet(ète);Seine-et-Marne;77;Oui;Pierre ORY;M;07/09/2023;07/09/2023;;;préfet de Seine-et-Marne;Préfet de Seine-et-Marne;1145;rouge
-Préfet(ète);Somme;80;Oui;Rollon MOUCHEL-BLAISOT;M;14/07/2023;24/07/2023;;;préfet de la Somme;Préfet de la Somme;1190;rouge
-Préfet(ète);Tarn;81;Oui;Simon BERTOUX;M;23/10/2025;23/10/2025;;;préfet du Tarn;Préfet du Tarn;368;orange
-Préfet(ète);Tarn-et-Garonne;82;Oui;Sébastien CAUWEL;M;28/05/2026;28/05/2026;;;préfet de Tarn-et-Garonne | à compter du 1er juin 2026;Préfet de Tarn-et-Garonne;151;vert
-Préfet(ète);Territoire de Belfort;90;Oui;Alain CHARRIER;M;07/11/2024;07/11/2024;;;préfet du Territoire de Belfort;Préfet du Territoire de Belfort;718;orange
-Préfet(ète);Val-d'Oise;95;Oui;Philippe COURT;M;10/03/2022;10/03/2022;;;préfet du Val-d'Oise;Préfet du Val-d'Oise;1691;rouge
-Préfet(ète);Val-de-Marne;94;Oui;Stanislas BOURRON;M;23/04/2026;18/05/2026;;;préfet du Val-de-Marne;Préfet de la Val-de-Marne;161;vert
-Préfet(ète);Var;83;Oui;Simon BABRE;M;16/05/2025;16/05/2025;;;préfet du Var;Préfet du Var;528;orange
-Préfet(ète);Vaucluse;84;Oui;Thierry SUQUET;M;15/02/2024;04/03/2024;;;préfet de Vaucluse;Préfet de Vaucluse;966;rouge
-Préfet(ète);Vendée;85;Oui;Éric FREYSSELINARD;M;03/12/2025;03/12/2025;;;préfet de la Vendée;Préfet de la Vendée;327;jaune
-Préfet(ète);Vienne;86;Oui;Charles GIUSTI;M;09/04/2026;06/05/2026;;;préfet de la Vienne;Préfet de la Vienne;173;vert
-Préfet(ète);Vosges;88;Oui;Blaise GOURTAY;M;11/11/2025;24/11/2025;;;préfet des Vosges;Préfet des Vosges;336;jaune
-Préfet(ète);Yonne;89;Oui;Jean SALOMON;M;23/07/2026;24/08/2026;;;préfet de l'Yonne;Préfet de l'Yonne;63;vert
-Préfet(ète);Yvelines;78;Oui;Brice BLONDEL;M;28/05/2026;28/05/2026;;;préfet des Yvelines;Préfet des Yvelines;151;vert
+Préfet(ète);Cher;18;Oui;Philippe LE MOING SURZUR;M;23/10/2025;24/11/2025;;;préfet du Cher;Préfet du Cher;338;jaune
+Préfet(ète);Corrèze;19;Oui;Vincent BERTON;M;16/01/2025;16/01/2025;;;préfet de la Corrèze;Préfet de la Corrèze;650;orange
+Préfet(ète);Corse;;Oui;Jérôme FILIPPINI;M;11/10/2024;11/10/2024;;;préfet de Corse, préfet de la Corse-du-Sud;Préfet de la Corse;747;rouge
+Préfet(ète);Corse-du-Sud;2A;Oui;Eric JALON;M;24/07/2025;25/08/2025;;;préfet de la région Corse, préfet de la Corse-du-Sud;Préfet de la Corse-du-Sud;429;orange
+Préfet(ète);Creuse;23;Oui;Jean-Philippe LEGUEULT;M;18/12/2025;18/12/2025;;;préfet de la Creuse;Préfet de la Creuse;314;jaune
+Préfet(ète);Côte-d'Or;21;Oui;Violaine DEMARET;F;09/04/2026;09/04/2026;;;préfète de la région Bourgogne-Franche-Comté, préfète de la Côte-d'Or;Préfète de la Côte-d'Or | Préfète de la région Bourgogne-Franche-Comté;202;jaune
+Préfet(ète);Côtes-d'Armor;22;Oui;François GUILLOTOU de KERÉVER;M;24/10/2024;24/10/2024;;;préfet des Côtes-d'Armor;Préfet des Côtes-d'Armor;734;rouge
+Préfet(ète);Deux-Sèvres;79;Oui;Valérie MICHEL-MOREAUX;F;23/07/2026;24/08/2026;;;préfète des Deux-Sèvres;Préfète des Deux-Sèvres;65;vert
+Préfet(ète);Dordogne;24;Oui;Marie AUBERT;F;07/11/2024;07/11/2024;;;préfète de la Dordogne;Préfète de la Dordogne;720;orange
+Préfet(ète);Doubs;25;Oui;Rémi BASTILLE;M;13/01/2024;13/01/2024;;;préfet du Doubs;Préfet du Doubs;1019;rouge
+Préfet(ète);Drôme;26;Oui;Marie-Aimée GASPARI;F;31/07/2025;31/07/2025;;;préfète de la Drôme | à compter du 1er septembre 2025;Préfète de la Drôme;454;orange
+Préfet(ète);Essonne;91;Oui;Fabienne BALUSSOU;F;28/08/2025;22/09/2025;;;préfète de l'Essonne;Préfète de l'Essonne;401;orange
+Préfet(ète);Eure;27;Oui;Xavier DELARUE;M;09/04/2026;06/05/2026;;;préfet de l'Eure;Préfet de l'Eure;175;vert
+Préfet(ète);Eure-et-Loir;28;Oui;Xavier PELLETIER;M;28/07/2026;31/08/2026;;;préfet d'Eure-et-Loir;Préfet de Eure-et-Loir;58;vert
+Préfet(ète);Finistère;29;Oui;Louis LE FRANC;M;29/04/2025;29/04/2025;;;préfet du Finistère;Préfet du Finistère;547;orange
+Préfet(ète);Gard;30;Oui;Fabienne DECOTTIGNIES;F;23/07/2026;17/08/2026;;;préfète du Gard;Préfète du Gard;72;vert
+Préfet(ète);Gers;32;Oui;Alain CASTANIER;M;28/11/2024;28/11/2024;;;préfet du Gers;Préfet du Gers;699;orange
+Préfet(ète);Gironde;33;Oui;Sophie BROCAS;F;23/04/2026;18/05/2026;;;préfète de la région Nouvelle-Aquitaine, préfète de la zone de défense et de sécurité Sud-Ouest, préfète de la Gironde;Préfète de la Gironde | Préfète de la région Nouvelle-Aquitaine | Préfète de la zone de défense et de sécurité Sud-Ouest | Préfète coordonnatrice de bassin Adour-Garonne;163;vert
+Préfet(ète);Guadeloupe;971;Oui;Thierry DEVIMEUX;M;31/07/2025;31/07/2025;;;préfet de la région Guadeloupe, préfet de la Guadeloupe | à compter du 1er septembre 2025;Préfet de la Guadeloupe | Préfet de la région Guadeloupe;454;orange
+Préfet(ète);Guyane;973;Oui;Antoine POUSSIER;M;14/07/2023;21/08/2023;;;préfet de la région Guyane, préfet de la Guyane;Préfet de la Guyane | Préfet de la région Guyane;1164;rouge
+Préfet(ète);Haut-Rhin;68;Oui;Emmanuel AUBRY;M;13/06/2025;13/06/2025;;;préfet du Haut-Rhin;Préfet de l'Haut-Rhin;502;orange
+Préfet(ète);Haute-Corse;2B;Oui;Véronique DEPREZ-BOUDIER;F;28/05/2026;28/05/2026;;;préfète de la Haute-Corse;Préfète de l'Haute-Corse;153;vert
+Préfet(ète);Haute-Garonne;31;Oui;Fabrice RIGOULET-ROZE;M;28/05/2026;29/06/2026;;;préfet de la région Occitanie, préfet de la Haute-Garonne;Préfet de l'Haute-Garonne | Préfet de la région Occitanie | Préfet coordonnateur de bassin Adour-Garonne;121;vert
+Préfet(ète);Haute-Loire;43;Oui;Yvan CORDIER;M;14/07/2023;21/08/2023;;;préfet de la Haute-Loire;Préfet de l'Haute-Loire;1164;rouge
+Préfet(ète);Haute-Marne;52;Oui;Régine PAM;F;14/07/2023;21/08/2023;;;préfète de la Haute-Marne;Préfète de l'Haute-Marne;1164;rouge
+Préfet(ète);Haute-Savoie;74;Oui;Jérôme BONET;M;23/07/2026;17/08/2026;;;préfet de la Haute-Savoie;Préfet de l'Haute-Savoie;72;vert
+Préfet(ète);Haute-Saône;70;Oui;Serge JACOB;M;24/07/2025;24/07/2025;;;préfet de la Haute-Saône | à compter du 1er septembre 2025;Préfet de l'Haute-Saône;461;orange
+Préfet(ète);Haute-Vienne;87;Oui;Maurice BARATE;M;03/12/2025;03/12/2025;;;préfet de la Haute-Vienne;Préfet de l'Haute-Vienne;329;jaune
+Préfet(ète);Hautes-Alpes;05;Oui;Philippe BAILBE;M;24/07/2025;25/08/2025;;;préfet des Hautes-Alpes;Préfet des Hautes-Alpes;429;orange
+Préfet(ète);Hautes-Pyrénées;65;Oui;Sibylle SAMOYAULT;F;23/07/2026;24/08/2026;;;préfète des Hautes-Pyrénées;Préfète des Hautes-Pyrénées;65;vert
+Préfet(ète);Hauts-de-Seine;92;Oui;Alexandre BRUGERE;M;01/11/2024;01/11/2024;;;préfet des Hauts-de-Seine;Préfet des Hauts-de-Seine;726;orange
+Préfet(ète);Hérault;34;Oui;Chantal MAUCHET;F;03/12/2025;03/12/2025;;;préfète de l'Hérault;Préfète de l'Hérault;329;jaune
+Préfet(ète);Ille-et-Vilaine;35;Oui;Emmanuelle DUBEE;F;25/06/2026;25/06/2026;;;préfète de la région Bretagne, préfète de la zone de défense et de sécurité Ouest, préfète d'Ille-et-Vilaine;Préfète de l'Ille-et-Vilaine | Préfète de la région Bretagne | Préfète de la zone de défense et de sécurité Ouest;125;vert
+Préfet(ète);Indre;36;Oui;Maryvonne LE BRIGNONEN;F;09/04/2026;09/04/2026;;;préfète de l'Indre;Préfète de l'Indre;202;jaune
+Préfet(ète);Indre-et-Loire;37;Oui;Thomas CAMPEAUX;M;07/11/2024;07/11/2024;;;préfet d'Indre-et-Loire;Préfet de Indre-et-Loire;720;orange
+Préfet(ète);Isère;38;Oui;Catherine SEGUIN;F;07/11/2024;07/11/2024;;;préfète de l'Isère;Préfète de l'Isère;720;orange
+Préfet(ète);Jura;39;Oui;Pierre-Edouard COLLIEX;M;13/03/2025;13/03/2025;;;préfet du Jura;Préfet du Jura;594;orange
+Préfet(ète);Landes;40;Oui;Gilles CLAVREUL;M;27/03/2025;27/03/2025;;;préfet des Landes;Préfet des Landes;580;orange
+Préfet(ète);Loir-et-Cher;41;Oui;Joseph ZIMET;M;24/07/2025;25/08/2025;;;préfet de Loir-et-Cher;Préfet de Loir-et-Cher;429;orange
+Préfet(ète);Loire;42;Oui;François-Xavier BIEUVILLE;M;23/04/2026;18/05/2026;;;préfet de la Loire;Préfet de la Loire;163;vert
+Préfet(ète);Loire-Atlantique;44;Oui;Laurent HOTTIAUX;M;25/06/2026;25/06/2026;;;préfet de la région Pays de la Loire, préfet de la Loire-Atlantique;Préfet de la Loire-Atlantique | Préfet de la région Pays de la Loire;125;vert
+Préfet(ète);Loiret;45;Oui;Hugues MOUTOUH;M;23/04/2026;18/05/2026;;;préfet de la région Centre-Val de Loire, préfet du Loiret;Préfet du Loiret | Préfet de la région Centre-Val de Loire | Préfet coordonnateur de bassin Loire-Bretagne;163;vert
+Préfet(ète);Lot;46;Oui;Marilyne POULAIN;F;20/01/2026;20/01/2026;;;préfète du Lot;Préfète du Lot;281;jaune
+Préfet(ète);Lot-et-Garonne;47;Oui;Bruno ANDRÉ;M;18/12/2025;18/12/2025;;;préfet de Lot-et-Garonne;Préfet de Lot-et-Garonne;314;jaune
+Préfet(ète);Lozère;48;Oui;Gilles QUÉNÉHERVÉ;M;07/11/2024;07/11/2024;;;préfet de la Lozère;Préfet de la Lozère;720;orange
+Préfet(ète);Maine-et-Loire;49;Oui;François PESNEAU;M;03/12/2025;03/12/2025;;;préfet de Maine-et-Loire;Préfet de Maine-et-Loire;329;jaune
+Préfet(ète);Manche;50;Oui;Marc CHAPPUIS;M;28/08/2025;22/09/2025;;;préfet de la Manche;Préfet de la Manche;401;orange
+Préfet(ète);Marne;51;Oui;Romain ROYET;M;24/07/2025;24/07/2025;;;préfet de la Marne | à compter du 1er septembre 2025;Préfet de la Marne;461;orange
+Préfet(ète);Martinique;972;Oui;Etienne DESPLANQUES;M;16/01/2025;16/01/2025;;;préfet de la région Martinique, préfet de la Martinique;Préfet de la Martinique | Préfet de la région Martinique;650;orange
+Préfet(ète);Mayenne;53;Oui;Nadège BAPTISTA;F;31/07/2025;31/07/2025;;;préfète de la Mayenne | à compter du 1er septembre 2025;Préfète de la Mayenne;454;orange
+Préfet(ète);Mayotte;976;Oui;Frédéric POISOT;M;23/04/2026;18/05/2026;;;préfet de Mayotte;Préfet de Mayotte;163;vert
+Préfet(ète);Meurthe-et-Moselle;54;Oui;Yves SEGUY;M;24/07/2025;25/08/2025;;;préfet de Meurthe-et-Moselle;Préfet de Meurthe-et-Moselle;429;orange
+Préfet(ète);Meuse;55;Oui;Anne-Florence CANTON;F;09/04/2026;06/05/2026;;;préfète de la Meuse;Préfète de la Meuse;175;vert
+Préfet(ète);Morbihan;56;Oui;Michaël GALY;M;08/05/2025;08/05/2025;;;préfet du Morbihan;Préfet du Morbihan;538;orange
+Préfet(ète);Moselle;57;Oui;Pascal BOLOT;M;29/04/2025;29/04/2025;;;préfet de la Moselle;Préfet de la Moselle;547;orange
+Préfet(ète);Nièvre;58;Oui;Victor DEVOUGE;M;23/07/2026;24/08/2026;;;préfet de la Nièvre;Préfet de la Nièvre;65;vert
+Préfet(ète);Nord;59;Oui;Bertrand GAUME;M;18/01/2024;18/01/2024;;;préfet de la région Hauts-de-France, préfet de la zone de défense et de sécurité Nord, préfet du Nord;Préfet du Nord | Préfet de la région Hauts-de-France | Préfet de la zone de défense et de sécurité Nord | Préfet coordonnateur de bassin Artois-Picardie;1014;rouge
+Préfet(ète);Oise;60;Oui;Jean-Marie CAILLAUD;M;07/11/2024;07/11/2024;;;préfet de l'Oise;Préfet de l'Oise;720;orange
+Préfet(ète);Orne;61;Oui;Hervé TOURMENTE;M;24/07/2025;25/08/2025;;;préfet de l'Orne;Préfet de l'Orne;429;orange
+Préfet(ète);Paris;75;Oui;Georges-François LECLERC;M;28/05/2026;28/05/2026;;;préfet de la région d'Ile-de-France, préfet de Paris;Préfet de Paris | Préfet de la région Île-de-France | Préfet de la zone de défense et de sécurité Paris;153;vert
+Préfet(ète);Pas-de-Calais;62;Oui;François-Xavier LAUCH;M;03/12/2025;03/12/2025;;;préfet du Pas-de-Calais;Préfet du Pas-de-Calais;329;jaune
+Préfet(ète);Puy-de-Dôme;63;Oui;Anne FRACKOWIAK-JACOBS;F;18/12/2025;18/12/2025;;;préfète du Puy-de-Dôme;Préfète du Puy-de-Dôme;314;jaune
+Préfet(ète);Pyrénées-Atlantiques;64;Oui;Simon FETET;M;23/07/2026;24/08/2026;;;préfet des Pyrénées-Atlantiques;Préfet des Pyrénées-Atlantiques;65;vert
+Préfet(ète);Pyrénées-Orientales;66;Oui;Pierre REGNAULT DE LA MOTHE;M;17/07/2025;25/08/2025;;;préfet des Pyrénées-Orientales;Préfet des Pyrénées-Orientales;429;orange
+Préfet(ète);Rhône;69;Oui;Etienne GUYOT;M;23/04/2026;18/05/2026;;;préfet de la région Auvergne-Rhône-Alpes, préfet de la zone de défense et de sécurité Sud-Est, préfet du Rhône;Préfet du Rhône | Préfet de la région Auvergne-Rhône-Alpes | Préfet de la zone de défense et de sécurité Sud-Est | Préfet coordonnateur de bassin Rhône-Méditerranée;163;vert
+Préfet(ète);Réunion;974;Oui;Patrice LATRON;M;01/11/2024;01/11/2024;;;préfet de la région Réunion, préfet de La Réunion;Préfet de la Réunion | Préfet de la région Réunion;726;orange
+Préfet(ète);Sarthe;72;Oui;Sébastien JALLET;M;13/06/2025;13/06/2025;;;préfet de la Sarthe;Préfet de la Sarthe;502;orange
+Préfet(ète);Savoie;73;Oui;Vanina NICOLI;F;27/03/2025;27/03/2025;;;préfète de la Savoie;Préfète de la Savoie;580;orange
+Préfet(ète);Saône-et-Loire;71;Oui;Dominique DUFOUR;M;24/07/2025;25/08/2025;;;préfet de Saône-et-Loire;Préfet de Saône-et-Loire;429;orange
+Préfet(ète);Seine-Maritime;76;Oui;Jean-Benoît ALBERTINI;M;12/01/2023;12/01/2023;;;préfet de la région Normandie, préfet de la Seine-Maritime;Préfet de la Seine-Maritime | Préfet de la région Normandie;1385;rouge
+Préfet(ète);Seine-Saint-Denis;93;Oui;Julien CHARLES;M;07/11/2024;07/11/2024;;;préfet de la Seine-Saint-Denis;Préfet de la Seine-Saint-Denis;720;orange
+Préfet(ète);Seine-et-Marne;77;Oui;Pierre ORY;M;07/09/2023;07/09/2023;;;préfet de Seine-et-Marne;Préfet de Seine-et-Marne;1147;rouge
+Préfet(ète);Somme;80;Oui;Rollon MOUCHEL-BLAISOT;M;14/07/2023;24/07/2023;;;préfet de la Somme;Préfet de la Somme;1192;rouge
+Préfet(ète);Tarn;81;Oui;Simon BERTOUX;M;23/10/2025;23/10/2025;;;préfet du Tarn;Préfet du Tarn;370;orange
+Préfet(ète);Tarn-et-Garonne;82;Oui;Sébastien CAUWEL;M;28/05/2026;28/05/2026;;;préfet de Tarn-et-Garonne | à compter du 1er juin 2026;Préfet de Tarn-et-Garonne;153;vert
+Préfet(ète);Territoire de Belfort;90;Oui;Alain CHARRIER;M;07/11/2024;07/11/2024;;;préfet du Territoire de Belfort;Préfet du Territoire de Belfort;720;orange
+Préfet(ète);Val-d'Oise;95;Oui;Philippe COURT;M;10/03/2022;10/03/2022;;;préfet du Val-d'Oise;Préfet du Val-d'Oise;1693;rouge
+Préfet(ète);Val-de-Marne;94;Oui;Stanislas BOURRON;M;23/04/2026;18/05/2026;;;préfet du Val-de-Marne;Préfet de la Val-de-Marne;163;vert
+Préfet(ète);Var;83;Oui;Simon BABRE;M;16/05/2025;16/05/2025;;;préfet du Var;Préfet du Var;530;orange
+Préfet(ète);Vaucluse;84;Oui;Thierry SUQUET;M;15/02/2024;04/03/2024;;;préfet de Vaucluse;Préfet de Vaucluse;968;rouge
+Préfet(ète);Vendée;85;Oui;Éric FREYSSELINARD;M;03/12/2025;03/12/2025;;;préfet de la Vendée;Préfet de la Vendée;329;jaune
+Préfet(ète);Vienne;86;Oui;Charles GIUSTI;M;09/04/2026;06/05/2026;;;préfet de la Vienne;Préfet de la Vienne;175;vert
+Préfet(ète);Vosges;88;Oui;Blaise GOURTAY;M;11/11/2025;24/11/2025;;;préfet des Vosges;Préfet des Vosges;338;jaune
+Préfet(ète);Yonne;89;Oui;Jean SALOMON;M;23/07/2026;24/08/2026;;;préfet de l'Yonne;Préfet de l'Yonne;65;vert
+Préfet(ète);Yvelines;78;Oui;Brice BLONDEL;M;28/05/2026;28/05/2026;;;préfet des Yvelines;Préfet des Yvelines;153;vert
 Préfet(ète);classe normale;;Oui;;;;;;;;Préfet de la classe normale;;
-Préfet(ète);collectivité territoriale de Saint-Pierre-et-Miquelon;975;Oui;Marc DIDIO;M;18/12/2025;18/12/2025;;;préfet de la collectivité territoriale de Saint-Pierre-et-Miquelon;Préfet de collectivité territoriale de Saint-Pierre-et-Miquelon;312;jaune
-Préfet(ète);police;;Oui;Charles-François BARBIER;M;20/11/2025;20/11/2025;;;sous-préfet, directeur adjoint du cabinet du préfet de police (groupe II) | pour une durée initiale de trois ans;Préfet de la police;340;jaune
+Préfet(ète);collectivité territoriale de Saint-Pierre-et-Miquelon;975;Oui;Marc DIDIO;M;18/12/2025;18/12/2025;;;préfet de la collectivité territoriale de Saint-Pierre-et-Miquelon;Préfet de collectivité territoriale de Saint-Pierre-et-Miquelon;314;jaune
+Préfet(ète);police;;Oui;Charles-François BARBIER;M;20/11/2025;20/11/2025;;;sous-préfet, directeur adjoint du cabinet du préfet de police (groupe II) | pour une durée initiale de trois ans;Préfet de la police;342;jaune
 Préfet(ète);police des Bouches-du-Rhône;;Oui;;;;;;;;Préfet de la police des Bouches-du-Rhône;;
-Préfet(ète);police à Paris (75);;Oui;Jérôme MAZZARIOL;M;03/08/2022;18/07/2022;;;contrôleur général des services actifs de la police nationale, conseiller technique chargé des affaires de police au cabinet du préfet de police à Paris (75) | renouvelable dans la limite d'une durée totale d'occupation du même emploi de six ans;Préfet de la police à Paris (75);1561;rouge
-Préfet(ète);région;;Oui;Bertrand GAUME;M;22/10/2026;22/10/2026;;;membres du conseil d'administration du Groupe des instituts du service public | 1° Au titre de préfet de région;Préfet de la région;4;bleu
-Préfet(ète);région Auvergne-Rhône-Alpes;;Oui;Etienne GUYOT;M;23/04/2026;18/05/2026;;;préfet de la région Auvergne-Rhône-Alpes, préfet de la zone de défense et de sécurité Sud-Est, préfet du Rhône;Préfet de la région Auvergne-Rhône-Alpes;161;vert
-Préfet(ète);région Bourgogne-Franche-Comté;;Oui;Violaine DEMARET;F;09/04/2026;09/04/2026;;;préfète de la région Bourgogne-Franche-Comté, préfète de la Côte-d'Or;Préfète de la région Bourgogne-Franche-Comté;200;jaune
-Préfet(ète);région Bretagne;;Oui;Emmanuelle DUBEE;F;25/06/2026;25/06/2026;;;préfète de la région Bretagne, préfète de la zone de défense et de sécurité Ouest, préfète d'Ille-et-Vilaine;Préfète de la région Bretagne;123;vert
-Préfet(ète);région Centre-Val de Loire;;Oui;Hugues MOUTOUH;M;23/04/2026;18/05/2026;;;préfet de la région Centre-Val de Loire, préfet du Loiret;Préfet de la région Centre-Val de Loire;161;vert
-Préfet(ète);région Corse;;Oui;Eric JALON;M;24/07/2025;25/08/2025;;;préfet de la région Corse, préfet de la Corse-du-Sud;Préfet de la région Corse;427;orange
-Préfet(ète);région Grand Est;;Oui;Amaury de SAINT-QUENTIN;M;20/11/2025;20/11/2025;;;préfet de la région Grand Est, préfet de la zone de défense et de sécurité Est, préfet du Bas-Rhin;Préfet de la région Grand Est;340;jaune
-Préfet(ète);région Guadeloupe;;Oui;Thierry DEVIMEUX;M;31/07/2025;31/07/2025;;;préfet de la région Guadeloupe, préfet de la Guadeloupe | à compter du 1er septembre 2025;Préfet de la région Guadeloupe;452;orange
-Préfet(ète);région Guyane;;Oui;Antoine POUSSIER;M;14/07/2023;21/08/2023;;;préfet de la région Guyane, préfet de la Guyane;Préfet de la région Guyane;1162;rouge
-Préfet(ète);région Hauts-de-France;;Oui;Bertrand GAUME;M;18/01/2024;18/01/2024;;;préfet de la région Hauts-de-France, préfet de la zone de défense et de sécurité Nord, préfet du Nord;Préfet de la région Hauts-de-France;1012;rouge
-Préfet(ète);région Martinique;;Oui;Etienne DESPLANQUES;M;16/01/2025;16/01/2025;;;préfet de la région Martinique, préfet de la Martinique;Préfet de la région Martinique;648;orange
-Préfet(ète);région Normandie;;Oui;Jean-Benoît ALBERTINI;M;12/01/2023;12/01/2023;;;préfet de la région Normandie, préfet de la Seine-Maritime;Préfet de la région Normandie;1383;rouge
-Préfet(ète);région Nouvelle-Aquitaine;;Oui;Sophie BROCAS;F;23/04/2026;18/05/2026;;;préfète de la région Nouvelle-Aquitaine, préfète de la zone de défense et de sécurité Sud-Ouest, préfète de la Gironde;Préfète de la région Nouvelle-Aquitaine;161;vert
-Préfet(ète);région Occitanie;;Oui;Fabrice RIGOULET-ROZE;M;28/05/2026;29/06/2026;;;préfet de la région Occitanie, préfet de la Haute-Garonne;Préfet de la région Occitanie;119;vert
-Préfet(ète);région Pays de la Loire;;Oui;Laurent HOTTIAUX;M;25/06/2026;25/06/2026;;;préfet de la région Pays de la Loire, préfet de la Loire-Atlantique;Préfet de la région Pays de la Loire;123;vert
-Préfet(ète);région Pays-de-la-Loire;;Oui;Fabrice RIGOULET-ROZE;M;12/01/2023;30/01/2023;;;préfet de la région Pays-de-la-Loire, préfet de la Loire-Atlantique;Préfet de la région Pays-de-la-Loire;1365;rouge
-Préfet(ète);région Provence-Alpes-Côte d'Azur;;Oui;Jacques WITKOWSKI;M;20/11/2025;20/11/2025;;;préfet de la région Provence-Alpes-Côte d'Azur, préfet de la zone de défense et de sécurité Sud, préfet des Bouches-du-Rhône;Préfet de la région Provence-Alpes-Côte d'Azur;340;jaune
-Préfet(ète);région Réunion;;Oui;Patrice LATRON;M;01/11/2024;01/11/2024;;;préfet de la région Réunion, préfet de La Réunion;Préfet de la région Réunion;724;orange
-Préfet(ète);région d'Ile-de-France;;Oui;Georges-François LECLERC;M;28/05/2026;28/05/2026;;;préfet de la région d'Ile-de-France, préfet de Paris;Préfet de la région d'Ile-de-France;151;vert
-Préfet(ète);zone de défense et de sécurité Est;;Oui;Amaury de SAINT-QUENTIN;M;20/11/2025;20/11/2025;;;préfet de la région Grand Est, préfet de la zone de défense et de sécurité Est, préfet du Bas-Rhin;Préfet de la zone de défense et de sécurité Est;340;jaune
-Préfet(ète);zone de défense et de sécurité Nord;;Oui;Bertrand GAUME;M;18/01/2024;18/01/2024;;;préfet de la région Hauts-de-France, préfet de la zone de défense et de sécurité Nord, préfet du Nord;Préfet de la zone de défense et de sécurité Nord;1012;rouge
-Préfet(ète);zone de défense et de sécurité Ouest;;Oui;Emmanuelle DUBEE;F;25/06/2026;25/06/2026;;;préfète de la région Bretagne, préfète de la zone de défense et de sécurité Ouest, préfète d'Ille-et-Vilaine;Préfète de la zone de défense et de sécurité Ouest;123;vert
-Préfet(ète);zone de défense et de sécurité Sud;;Oui;Jacques WITKOWSKI;M;20/11/2025;20/11/2025;;;préfet de la région Provence-Alpes-Côte d'Azur, préfet de la zone de défense et de sécurité Sud, préfet des Bouches-du-Rhône;Préfet de la zone de défense et de sécurité Sud;340;jaune
-Préfet(ète);zone de défense et de sécurité Sud-Est;;Oui;Etienne GUYOT;M;23/04/2026;18/05/2026;;;préfet de la région Auvergne-Rhône-Alpes, préfet de la zone de défense et de sécurité Sud-Est, préfet du Rhône;Préfet de la zone de défense et de sécurité Sud-Est;161;vert
-Préfet(ète);zone de défense et de sécurité Sud-Ouest;;Oui;Sophie BROCAS;F;23/04/2026;18/05/2026;;;préfète de la région Nouvelle-Aquitaine, préfète de la zone de défense et de sécurité Sud-Ouest, préfète de la Gironde;Préfète de la zone de défense et de sécurité Sud-Ouest;161;vert
+Préfet(ète);police à Paris (75);;Oui;Jérôme MAZZARIOL;M;03/08/2022;18/07/2022;;;contrôleur général des services actifs de la police nationale, conseiller technique chargé des affaires de police au cabinet du préfet de police à Paris (75) | renouvelable dans la limite d'une durée totale d'occupation du même emploi de six ans;Préfet de la police à Paris (75);1563;rouge
+Préfet(ète);région;;Oui;Bertrand GAUME;M;22/10/2026;22/10/2026;;;membres du conseil d'administration du Groupe des instituts du service public | 1° Au titre de préfet de région;Préfet de la région;6;bleu
+Préfet(ète);région Auvergne-Rhône-Alpes;;Oui;Etienne GUYOT;M;23/04/2026;18/05/2026;;;préfet de la région Auvergne-Rhône-Alpes, préfet de la zone de défense et de sécurité Sud-Est, préfet du Rhône;Préfet de la région Auvergne-Rhône-Alpes;163;vert
+Préfet(ète);région Bourgogne-Franche-Comté;;Oui;Violaine DEMARET;F;09/04/2026;09/04/2026;;;préfète de la région Bourgogne-Franche-Comté, préfète de la Côte-d'Or;Préfète de la région Bourgogne-Franche-Comté;202;jaune
+Préfet(ète);région Bretagne;;Oui;Emmanuelle DUBEE;F;25/06/2026;25/06/2026;;;préfète de la région Bretagne, préfète de la zone de défense et de sécurité Ouest, préfète d'Ille-et-Vilaine;Préfète de la région Bretagne;125;vert
+Préfet(ète);région Centre-Val de Loire;;Oui;Hugues MOUTOUH;M;23/04/2026;18/05/2026;;;préfet de la région Centre-Val de Loire, préfet du Loiret;Préfet de la région Centre-Val de Loire;163;vert
+Préfet(ète);région Corse;;Oui;Eric JALON;M;24/07/2025;25/08/2025;;;préfet de la région Corse, préfet de la Corse-du-Sud;Préfet de la région Corse;429;orange
+Préfet(ète);région Grand Est;;Oui;Amaury de SAINT-QUENTIN;M;20/11/2025;20/11/2025;;;préfet de la région Grand Est, préfet de la zone de défense et de sécurité Est, préfet du Bas-Rhin;Préfet de la région Grand Est;342;jaune
+Préfet(ète);région Guadeloupe;;Oui;Thierry DEVIMEUX;M;31/07/2025;31/07/2025;;;préfet de la région Guadeloupe, préfet de la Guadeloupe | à compter du 1er septembre 2025;Préfet de la région Guadeloupe;454;orange
+Préfet(ète);région Guyane;;Oui;Antoine POUSSIER;M;14/07/2023;21/08/2023;;;préfet de la région Guyane, préfet de la Guyane;Préfet de la région Guyane;1164;rouge
+Préfet(ète);région Hauts-de-France;;Oui;Bertrand GAUME;M;18/01/2024;18/01/2024;;;préfet de la région Hauts-de-France, préfet de la zone de défense et de sécurité Nord, préfet du Nord;Préfet de la région Hauts-de-France;1014;rouge
+Préfet(ète);région Martinique;;Oui;Etienne DESPLANQUES;M;16/01/2025;16/01/2025;;;préfet de la région Martinique, préfet de la Martinique;Préfet de la région Martinique;650;orange
+Préfet(ète);région Normandie;;Oui;Jean-Benoît ALBERTINI;M;12/01/2023;12/01/2023;;;préfet de la région Normandie, préfet de la Seine-Maritime;Préfet de la région Normandie;1385;rouge
+Préfet(ète);région Nouvelle-Aquitaine;;Oui;Sophie BROCAS;F;23/04/2026;18/05/2026;;;préfète de la région Nouvelle-Aquitaine, préfète de la zone de défense et de sécurité Sud-Ouest, préfète de la Gironde;Préfète de la région Nouvelle-Aquitaine;163;vert
+Préfet(ète);région Occitanie;;Oui;Fabrice RIGOULET-ROZE;M;28/05/2026;29/06/2026;;;préfet de la région Occitanie, préfet de la Haute-Garonne;Préfet de la région Occitanie;121;vert
+Préfet(ète);région Pays de la Loire;;Oui;Laurent HOTTIAUX;M;25/06/2026;25/06/2026;;;préfet de la région Pays de la Loire, préfet de la Loire-Atlantique;Préfet de la région Pays de la Loire;125;vert
+Préfet(ète);région Pays-de-la-Loire;;Oui;Fabrice RIGOULET-ROZE;M;12/01/2023;30/01/2023;;;préfet de la région Pays-de-la-Loire, préfet de la Loire-Atlantique;Préfet de la région Pays-de-la-Loire;1367;rouge
+Préfet(ète);région Provence-Alpes-Côte d'Azur;;Oui;Jacques WITKOWSKI;M;20/11/2025;20/11/2025;;;préfet de la région Provence-Alpes-Côte d'Azur, préfet de la zone de défense et de sécurité Sud, préfet des Bouches-du-Rhône;Préfet de la région Provence-Alpes-Côte d'Azur;342;jaune
+Préfet(ète);région Réunion;;Oui;Patrice LATRON;M;01/11/2024;01/11/2024;;;préfet de la région Réunion, préfet de La Réunion;Préfet de la région Réunion;726;orange
+Préfet(ète);région d'Ile-de-France;;Oui;Georges-François LECLERC;M;28/05/2026;28/05/2026;;;préfet de la région d'Ile-de-France, préfet de Paris;Préfet de la région d'Ile-de-France;153;vert
+Préfet(ète);zone de défense et de sécurité Est;;Oui;Amaury de SAINT-QUENTIN;M;20/11/2025;20/11/2025;;;préfet de la région Grand Est, préfet de la zone de défense et de sécurité Est, préfet du Bas-Rhin;Préfet de la zone de défense et de sécurité Est;342;jaune
+Préfet(ète);zone de défense et de sécurité Nord;;Oui;Bertrand GAUME;M;18/01/2024;18/01/2024;;;préfet de la région Hauts-de-France, préfet de la zone de défense et de sécurité Nord, préfet du Nord;Préfet de la zone de défense et de sécurité Nord;1014;rouge
+Préfet(ète);zone de défense et de sécurité Ouest;;Oui;Emmanuelle DUBEE;F;25/06/2026;25/06/2026;;;préfète de la région Bretagne, préfète de la zone de défense et de sécurité Ouest, préfète d'Ille-et-Vilaine;Préfète de la zone de défense et de sécurité Ouest;125;vert
+Préfet(ète);zone de défense et de sécurité Sud;;Oui;Jacques WITKOWSKI;M;20/11/2025;20/11/2025;;;préfet de la région Provence-Alpes-Côte d'Azur, préfet de la zone de défense et de sécurité Sud, préfet des Bouches-du-Rhône;Préfet de la zone de défense et de sécurité Sud;342;jaune
+Préfet(ète);zone de défense et de sécurité Sud-Est;;Oui;Etienne GUYOT;M;23/04/2026;18/05/2026;;;préfet de la région Auvergne-Rhône-Alpes, préfet de la zone de défense et de sécurité Sud-Est, préfet du Rhône;Préfet de la zone de défense et de sécurité Sud-Est;163;vert
+Préfet(ète);zone de défense et de sécurité Sud-Ouest;;Oui;Sophie BROCAS;F;23/04/2026;18/05/2026;;;préfète de la région Nouvelle-Aquitaine, préfète de la zone de défense et de sécurité Sud-Ouest, préfète de la Gironde;Préfète de la zone de défense et de sécurité Sud-Ouest;163;vert

@@ -1,10 +1,431 @@
 {
   "postes": {
+    "Seine-et-Marne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Seine-et-Marne",
+      "titulaire_actuel": {
+        "nom_complet": "Romain GUILLOT",
+        "nom": "GUILLOT",
+        "prenom": "Romain",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "07/06/2024",
+        "date_prise_fonction": "17/06/2024",
+        "source_id": "JORFTEXT000049666151",
+        "texte_source": "directeur départemental des territoires de Seine-et-Marne | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Igor KISSELEFF",
+          "nom": "KISSELEFF",
+          "prenom": "Igor",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "17/10/2017",
+          "date_prise_fonction": "17/10/2017",
+          "source_id": "JORFTEXT000035817184",
+          "texte_source": "directeur départemental des territoires de Seine-et-Marne",
+          "action": "remplacé",
+          "date_fin": "15/07/2021"
+        },
+        {
+          "nom_complet": "Vincent JECHOUX",
+          "nom": "JECHOUX",
+          "prenom": "Vincent",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "09/07/2021",
+          "date_prise_fonction": "15/07/2021",
+          "source_id": "JORFTEXT000043772011",
+          "texte_source": "directeur départemental des territoires de Seine-et-Marne | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "17/06/2024"
+        }
+      ]
+    },
+    "Loire-Atlantique": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Loire-Atlantique",
+      "titulaire_actuel": {
+        "nom_complet": "Mathieu BATARD",
+        "nom": "BATARD",
+        "prenom": "Mathieu",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "24/12/2022",
+        "date_prise_fonction": "16/01/2023",
+        "source_id": "JORFTEXT000046794302",
+        "texte_source": "directeur départemental des territoires et de la mer de la Loire-Atlantique | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Thierry LATAPIE-BAYROO",
+          "nom": "LATAPIE-BAYROO",
+          "prenom": "Thierry",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "22/11/2017",
+          "date_prise_fonction": "22/11/2017",
+          "source_id": "JORFTEXT000036069441",
+          "texte_source": "directeur départemental des territoires et de la mer de la Loire-Atlantique",
+          "action": "remplacé",
+          "date_fin": "16/01/2023"
+        }
+      ]
+    },
+    "Bas-Rhin": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Bas-Rhin",
+      "titulaire_actuel": {
+        "nom_complet": "Renaud LAHEURTE",
+        "nom": "LAHEURTE",
+        "prenom": "Renaud",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "04/09/2024",
+        "date_prise_fonction": "15/09/2024",
+        "source_id": "JORFTEXT000050174994",
+        "texte_source": "directeur départemental des territoires du Bas-Rhin | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Christophe FOTRE",
+          "nom": "FOTRE",
+          "prenom": "Christophe",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "29/11/2017",
+          "date_prise_fonction": "29/11/2017",
+          "source_id": "JORFTEXT000036109434",
+          "texte_source": "directeur départemental des territoires du Bas-Rhin",
+          "action": "remplacé",
+          "date_fin": "01/09/2021"
+        },
+        {
+          "nom_complet": "Nicolas VENTRE",
+          "nom": "VENTRE",
+          "prenom": "Nicolas",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "27/08/2021",
+          "date_prise_fonction": "01/09/2021",
+          "source_id": "JORFTEXT000043980186",
+          "texte_source": "directeur départemental des territoires du Bas-Rhin | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "15/09/2024"
+        }
+      ]
+    },
+    "Landes": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Landes",
+      "titulaire_actuel": {
+        "nom_complet": "Stéphane LE GOASTER",
+        "nom": "LE GOASTER",
+        "prenom": "Stéphane",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "24/04/2026",
+        "date_prise_fonction": "24/04/2026",
+        "source_id": "JORFTEXT000053935125",
+        "texte_source": "directeur départemental des territoires et de la mer des Landes | avec une période probatoire de six mois | à compter du 1er mai 2026"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Thierry MAZAURY",
+          "nom": "MAZAURY",
+          "prenom": "Thierry",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "24/12/2017",
+          "date_prise_fonction": "24/12/2017",
+          "source_id": "JORFTEXT000036252443",
+          "texte_source": "directeur départemental des territoires et de la mer des Landes",
+          "action": "remplacé",
+          "date_fin": "22/12/2020"
+        },
+        {
+          "nom_complet": "Nadine CHEVASSUS",
+          "nom": "CHEVASSUS",
+          "prenom": "Nadine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "20/11/2020",
+          "date_prise_fonction": "22/12/2020",
+          "source_id": "JORFTEXT000042539471",
+          "texte_source": "directrice départementale des territoires et de la mer des Landes",
+          "action": "remplacé",
+          "date_fin": "24/04/2026"
+        }
+      ]
+    },
+    "Indre-et-Loire": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Indre-et-Loire",
+      "titulaire_actuel": {
+        "nom_complet": "Corinne BIVER",
+        "nom": "BIVER",
+        "prenom": "Corinne",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "09/11/2022",
+        "date_prise_fonction": "09/11/2022",
+        "source_id": "JORFTEXT000046538444",
+        "texte_source": "directrice départementale des territoires d'Indre-et-Loire | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Damien LAMOTTE",
+          "nom": "LAMOTTE",
+          "prenom": "Damien",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "24/12/2017",
+          "date_prise_fonction": "24/12/2017",
+          "source_id": "JORFTEXT000036252441",
+          "texte_source": "directeur départemental des territoires d'Indre-et-Loire",
+          "action": "remplacé",
+          "date_fin": "09/11/2022"
+        }
+      ]
+    },
+    "Ille-et-Vilaine": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Ille-et-Vilaine",
+      "titulaire_actuel": {
+        "nom_complet": "Thierry LATAPIE-BAYROO",
+        "nom": "LATAPIE-BAYROO",
+        "prenom": "Thierry",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "01/10/2022",
+        "date_prise_fonction": "15/10/2022",
+        "source_id": "JORFTEXT000046349973",
+        "texte_source": "directeur départemental des territoires et de la mer d'Ille-et-Vilaine | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Alain JACOBSOONE",
+          "nom": "JACOBSOONE",
+          "prenom": "Alain",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "24/12/2017",
+          "date_prise_fonction": "24/12/2017",
+          "source_id": "JORFTEXT000036252441",
+          "texte_source": "directeur départemental des territoires et de la mer d'Ille-et-Vilaine",
+          "action": "remplacé",
+          "date_fin": "15/10/2022"
+        }
+      ]
+    },
+    "Haute-Loire": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Haute-Loire",
+      "titulaire_actuel": {
+        "nom_complet": "Olivier BRAUD",
+        "nom": "BRAUD",
+        "prenom": "Olivier",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "13/08/2026",
+        "date_prise_fonction": "13/08/2026",
+        "source_id": "JORFTEXT000054673373",
+        "texte_source": "directeur départemental des territoires de la Haute-Loire"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "François GORIEU",
+          "nom": "GORIEU",
+          "prenom": "François",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "24/12/2017",
+          "date_prise_fonction": "24/12/2017",
+          "source_id": "JORFTEXT000036252441",
+          "texte_source": "directeur départemental des territoires de Haute-Loire",
+          "action": "remplacé",
+          "date_fin": "15/03/2021"
+        },
+        {
+          "nom_complet": "Bertrand DUBESSET",
+          "nom": "DUBESSET",
+          "prenom": "Bertrand",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "27/02/2021",
+          "date_prise_fonction": "15/03/2021",
+          "source_id": "JORFTEXT000043190090",
+          "texte_source": "directeur départemental des territoires de la Haute-Loire",
+          "action": "remplacé",
+          "date_fin": "24/02/2023"
+        },
+        {
+          "nom_complet": "Stéphane LE GOASTER",
+          "nom": "LE GOASTER",
+          "prenom": "Stéphane",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "24/02/2023",
+          "date_prise_fonction": "24/02/2023",
+          "source_id": "JORFTEXT000047219590",
+          "texte_source": "directeur départemental des territoires de la Haute-Loire",
+          "action": "remplacé",
+          "date_fin": "13/08/2026"
+        }
+      ]
+    },
+    "Pas-de-Calais": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Pas-de-Calais",
+      "titulaire_actuel": {
+        "nom_complet": "Edouard GAYET",
+        "nom": "GAYET",
+        "prenom": "Edouard",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "28/05/2021",
+        "date_prise_fonction": "28/05/2021",
+        "source_id": "JORFTEXT000043542073",
+        "texte_source": "directeur départemental des territoires et de la mer du Pas-de-Calais"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Denis DELCOUR",
+          "nom": "DELCOUR",
+          "prenom": "Denis",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "13/01/2018",
+          "date_prise_fonction": "15/01/2018",
+          "source_id": "JORFTEXT000036484839",
+          "texte_source": "directeur départemental des territoires et de la mer du Pas-de-Calais",
+          "action": "remplacé",
+          "date_fin": "28/05/2021"
+        }
+      ]
+    },
+    "Deux-Sèvres": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Deux-Sèvres",
+      "titulaire_actuel": {
+        "nom_complet": "Yannick PASTOUREAU",
+        "nom": "PASTOUREAU",
+        "prenom": "Yannick",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "10/10/2025",
+        "date_prise_fonction": "13/10/2025",
+        "source_id": "JORFTEXT000052377765",
+        "texte_source": "directeur départemental des territoires des Deux-Sèvres | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Thierry CHATELAIN",
+          "nom": "CHATELAIN",
+          "prenom": "Thierry",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "01/02/2018",
+          "date_prise_fonction": "01/02/2018",
+          "source_id": "JORFTEXT000036560098",
+          "texte_source": "directeur départemental des territoires des Deux-Sèvres",
+          "action": "remplacé",
+          "date_fin": "15/06/2022"
+        },
+        {
+          "nom_complet": "Éric BATAILLER",
+          "nom": "BATAILLER",
+          "prenom": "Éric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "15/06/2022",
+          "date_prise_fonction": "15/06/2022",
+          "source_id": "JORFTEXT000045911846",
+          "texte_source": "directeur départemental des territoires des Deux-Sèvres",
+          "action": "remplacé",
+          "date_fin": "13/10/2025"
+        }
+      ]
+    },
+    "Eure": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Eure",
+      "titulaire_actuel": {
+        "nom_complet": "Dominique ETIENNE",
+        "nom": "ETIENNE",
+        "prenom": "Dominique",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "17/04/2026",
+        "date_prise_fonction": "17/04/2026",
+        "source_id": "JORFTEXT000053907436",
+        "texte_source": "directeur départemental des territoires et de la mer de l'Eure | avec une période probatoire de six mois | à compter du 1er mai 2026"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Laurent Tessier",
+          "nom": "TESSIER",
+          "prenom": "Laurent",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "14/02/2018",
+          "date_prise_fonction": "19/02/2018",
+          "source_id": "JORFTEXT000036596637",
+          "texte_source": "directeur départemental des territoires et de la mer de l'Eure",
+          "action": "remplacé",
+          "date_fin": "23/07/2022"
+        },
+        {
+          "nom_complet": "François LANDAIS",
+          "nom": "LANDAIS",
+          "prenom": "François",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "23/07/2022",
+          "date_prise_fonction": "23/07/2022",
+          "source_id": "JORFTEXT000046081792",
+          "texte_source": "directeur départemental des territoires et de la mer de l'Eure",
+          "action": "remplacé",
+          "date_fin": "17/04/2026"
+        }
+      ]
+    },
     "Ariège": {
       "type": "ddt",
       "type_libelle": "Directeur(rice) départemental(e) des territoires",
       "territoire": "Ariège",
-      "titulaire_actuel": null,
+      "titulaire_actuel": {
+        "nom_complet": "Anne CALMET",
+        "nom": "CALMET",
+        "prenom": "Anne",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "29/03/2024",
+        "date_prise_fonction": "29/03/2024",
+        "source_id": "JORFTEXT000049339585",
+        "texte_source": "directrice départementale des territoires de l'Ariège"
+      },
       "titulaire_designe": {
         "nom_complet": "Eric PELLOQUIN",
         "nom": "PELLOQUIN",
@@ -16,15 +437,2788 @@
         "source_id": "JORFTEXT000054993769",
         "texte_source": "directeur départemental des territoires de l'Ariège | avec une période probatoire de six mois"
       },
+      "historique": [
+        {
+          "nom_complet": "Stéphane DEFOS",
+          "nom": "DEFOS",
+          "prenom": "Stéphane",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "01/03/2018",
+          "date_prise_fonction": "01/03/2018",
+          "source_id": "JORFTEXT000036659113",
+          "texte_source": "directeur départemental des territoires de l'Ariège",
+          "action": "remplacé",
+          "date_fin": "29/03/2024"
+        }
+      ]
+    },
+    "Vienne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Vienne",
+      "titulaire_actuel": {
+        "nom_complet": "Benoît PREVOST-REVOL",
+        "nom": "PREVOST-REVOL",
+        "prenom": "Benoît",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "11/06/2023",
+        "date_prise_fonction": "26/06/2023",
+        "source_id": "JORFTEXT000047664788",
+        "texte_source": "directeur départemental des territoires de la Vienne | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Eric SIGALAS",
+          "nom": "SIGALAS",
+          "prenom": "Eric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "14/04/2018",
+          "date_prise_fonction": "14/04/2018",
+          "source_id": "JORFTEXT000036799010",
+          "texte_source": "directeur départemental des territoires de la Vienne",
+          "action": "remplacé",
+          "date_fin": "26/06/2023"
+        }
+      ]
+    },
+    "Allier": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Allier",
+      "titulaire_actuel": {
+        "nom_complet": "Cécile DEDIENNE",
+        "nom": "DEDIENNE",
+        "prenom": "Cécile",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "13/06/2026",
+        "date_prise_fonction": "13/06/2026",
+        "source_id": "JORFTEXT000054245994",
+        "texte_source": "directrice départementale des territoires de l'Allier | avec une période probatoire de six mois | à compter du 1er juillet 2026"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Anne RIZAND",
+          "nom": "RIZAND",
+          "prenom": "Anne",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "14/04/2018",
+          "date_prise_fonction": "14/04/2018",
+          "source_id": "JORFTEXT000036799010",
+          "texte_source": "directrice départementale des territoires de l'Allier",
+          "action": "remplacé",
+          "date_fin": "26/01/2022"
+        },
+        {
+          "nom_complet": "Nicolas HARDOUIN",
+          "nom": "HARDOUIN",
+          "prenom": "Nicolas",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "26/01/2022",
+          "date_prise_fonction": "26/01/2022",
+          "source_id": "JORFTEXT000045073088",
+          "texte_source": "directeur départemental des territoires de l'Allier",
+          "action": "remplacé",
+          "date_fin": "12/01/2026"
+        },
+        {
+          "nom_complet": "Claude FAUCHER",
+          "nom": "FAUCHER",
+          "prenom": "Claude",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/01/2026",
+          "date_prise_fonction": "12/01/2026",
+          "source_id": "JORFTEXT000053299137",
+          "texte_source": "directeur départemental des territoires de l'Allier | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "13/06/2026"
+        }
+      ]
+    },
+    "Cantal": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Cantal",
+      "titulaire_actuel": {
+        "nom_complet": "Jérôme PEJOT",
+        "nom": "PEJOT",
+        "prenom": "Jérôme",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "24/02/2023",
+        "date_prise_fonction": "24/02/2023",
+        "source_id": "JORFTEXT000047219590",
+        "texte_source": "directeur départemental des territoires du Cantal"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Mario CHARRIERE",
+          "nom": "CHARRIERE",
+          "prenom": "Mario",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "31/07/2018",
+          "date_prise_fonction": "31/07/2018",
+          "source_id": "JORFTEXT000037262405",
+          "texte_source": "directeur départemental des territoires du Cantal",
+          "action": "remplacé",
+          "date_fin": "24/02/2023"
+        }
+      ]
+    },
+    "Val-d'Oise": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Val-d'Oise",
+      "titulaire_actuel": {
+        "nom_complet": "Nicolas FONTAINE",
+        "nom": "FONTAINE",
+        "prenom": "Nicolas",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "12/04/2024",
+        "date_prise_fonction": "15/04/2024",
+        "source_id": "JORFTEXT000049405776",
+        "texte_source": "directeur départemental des territoires du Val-d'Oise | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Nicolas MOURLON",
+          "nom": "MOURLON",
+          "prenom": "Nicolas",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "07/09/2018",
+          "date_prise_fonction": "07/09/2018",
+          "source_id": "JORFTEXT000037373272",
+          "texte_source": "directeur départemental des territoires du Val-d'Oise",
+          "action": "remplacé",
+          "date_fin": "15/04/2024"
+        }
+      ]
+    },
+    "Yvelines": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Yvelines",
+      "titulaire_actuel": {
+        "nom_complet": "Anne-Florie CORON",
+        "nom": "CORON",
+        "prenom": "Anne-Florie",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "30/11/2023",
+        "date_prise_fonction": "11/12/2023",
+        "source_id": "JORFTEXT000048481146",
+        "texte_source": "directrice départementale des territoires des Yvelines | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Isabelle DERVILLE",
+          "nom": "DERVILLE",
+          "prenom": "Isabelle",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "29/09/2018",
+          "date_prise_fonction": "29/09/2018",
+          "source_id": "JORFTEXT000037444862",
+          "texte_source": "directrice départementale des territoires des Yvelines",
+          "action": "remplacé",
+          "date_fin": "21/03/2022"
+        },
+        {
+          "nom_complet": "Sylvain REVERCHON",
+          "nom": "REVERCHON",
+          "prenom": "Sylvain",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "01/03/2022",
+          "date_prise_fonction": "21/03/2022",
+          "source_id": "JORFTEXT000045269718",
+          "texte_source": "directeur départemental des territoires des Yvelines | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "11/12/2023"
+        }
+      ]
+    },
+    "Indre": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Indre",
+      "titulaire_actuel": {
+        "nom_complet": "Rik VENDERERVEN",
+        "nom": "VENDERERVEN",
+        "prenom": "Rik",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "17/07/2021",
+        "date_prise_fonction": "17/07/2021",
+        "source_id": "JORFTEXT000043798769",
+        "texte_source": "directeur départemental des territoires de l'Indre"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Florence COTTIN",
+          "nom": "COTTIN",
+          "prenom": "Florence",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "29/09/2018",
+          "date_prise_fonction": "29/09/2018",
+          "source_id": "JORFTEXT000037444862",
+          "texte_source": "directrice départementale des territoires de l'Indre",
+          "action": "remplacé",
+          "date_fin": "17/07/2021"
+        }
+      ]
+    },
+    "Nièvre": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Nièvre",
+      "titulaire_actuel": {
+        "nom_complet": "Laurent KOMPF",
+        "nom": "KOMPF",
+        "prenom": "Laurent",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "13/07/2025",
+        "date_prise_fonction": "13/07/2025",
+        "source_id": "JORFTEXT000051886873",
+        "texte_source": "directeur départemental des territoires de la Nièvre | à compter du 1er août 2025 | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Nicolas HARDOUIN",
+          "nom": "HARDOUIN",
+          "prenom": "Nicolas",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "19/10/2018",
+          "date_prise_fonction": "19/10/2018",
+          "source_id": "JORFTEXT000037506576",
+          "texte_source": "directeur départemental des territoires de la Nièvre",
+          "action": "remplacé",
+          "date_fin": "04/04/2022"
+        },
+        {
+          "nom_complet": "Pierre PAPADOPOULOS",
+          "nom": "PAPADOPOULOS",
+          "prenom": "Pierre",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "31/03/2022",
+          "date_prise_fonction": "04/04/2022",
+          "source_id": "JORFTEXT000045442998",
+          "texte_source": "directeur départemental des territoires de la Nièvre | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "13/07/2025"
+        }
+      ]
+    },
+    "Savoie": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Savoie",
+      "titulaire_actuel": {
+        "nom_complet": "Isabelle NUTI",
+        "nom": "NUTI",
+        "prenom": "Isabelle",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "07/02/2024",
+        "date_prise_fonction": "21/02/2024",
+        "source_id": "JORFTEXT000049097870",
+        "texte_source": "directrice départementale des territoires de la Savoie | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Hervé BRUNELOT",
+          "nom": "BRUNELOT",
+          "prenom": "Hervé",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "19/10/2018",
+          "date_prise_fonction": "19/10/2018",
+          "source_id": "JORFTEXT000037506576",
+          "texte_source": "directeur départemental des territoires de la Savoie",
+          "action": "remplacé",
+          "date_fin": "20/11/2020"
+        },
+        {
+          "nom_complet": "Xavier AERTS",
+          "nom": "AERTS",
+          "prenom": "Xavier",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/11/2020",
+          "date_prise_fonction": "20/11/2020",
+          "source_id": "JORFTEXT000042500500",
+          "texte_source": "directeur départemental des territoires de la Savoie",
+          "action": "remplacé",
+          "date_fin": "21/02/2024"
+        }
+      ]
+    },
+    "Oise": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Oise",
+      "titulaire_actuel": {
+        "nom_complet": "David WITT",
+        "nom": "WITT",
+        "prenom": "David",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "11/11/2023",
+        "date_prise_fonction": "11/11/2023",
+        "source_id": "JORFTEXT000048385812",
+        "texte_source": "directeur départemental des territoires de l'Oise"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Claude SOUILLER",
+          "nom": "SOUILLER",
+          "prenom": "Claude",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "30/11/2018",
+          "date_prise_fonction": "30/11/2018",
+          "source_id": "JORFTEXT000037662971",
+          "texte_source": "directeur départemental des territoires de l'Oise",
+          "action": "remplacé",
+          "date_fin": "11/11/2023"
+        }
+      ]
+    },
+    "Cher": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Cher",
+      "titulaire_actuel": {
+        "nom_complet": "Olivier PETIOT",
+        "nom": "PETIOT",
+        "prenom": "Olivier",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "23/01/2025",
+        "date_prise_fonction": "12/02/2025",
+        "source_id": "JORFTEXT000051021037",
+        "texte_source": "directeur départemental des territoires du Cher | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Thierry TOUZET",
+          "nom": "TOUZET",
+          "prenom": "Thierry",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "21/12/2018",
+          "date_prise_fonction": "21/12/2018",
+          "source_id": "JORFTEXT000037840175",
+          "texte_source": "directeur départemental des territoires du Cher",
+          "action": "remplacé",
+          "date_fin": "26/02/2022"
+        },
+        {
+          "nom_complet": "Éric DALUZ",
+          "nom": "DALUZ",
+          "prenom": "Éric",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "26/02/2022",
+          "date_prise_fonction": "26/02/2022",
+          "source_id": "JORFTEXT000045244039",
+          "texte_source": "directeur départemental des territoires du Cher",
+          "action": "remplacé",
+          "date_fin": "12/02/2025"
+        }
+      ]
+    },
+    "Gironde": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Gironde",
+      "titulaire_actuel": {
+        "nom_complet": "Mathieu ESCAFRE",
+        "nom": "ESCAFRE",
+        "prenom": "Mathieu",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "15/10/2024",
+        "date_prise_fonction": "15/10/2024",
+        "source_id": "JORFTEXT000050343263",
+        "texte_source": "directeur départemental des territoires et de la mer de la Gironde"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Renaud LAHEURTE",
+          "nom": "LAHEURTE",
+          "prenom": "Renaud",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "21/12/2018",
+          "date_prise_fonction": "21/12/2018",
+          "source_id": "JORFTEXT000037840175",
+          "texte_source": "directeur départemental des territoires et de la mer de la Gironde",
+          "action": "remplacé",
+          "date_fin": "15/10/2024"
+        }
+      ]
+    },
+    "Essonne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Essonne",
+      "titulaire_actuel": {
+        "nom_complet": "Simone SAILLANT",
+        "nom": "SAILLANT",
+        "prenom": "Simone",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "21/01/2024",
+        "date_prise_fonction": "22/01/2024",
+        "source_id": "JORFTEXT000048982807",
+        "texte_source": "directrice départementale des territoires de l'Essonne | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Philippe ROGIER",
+          "nom": "ROGIER",
+          "prenom": "Philippe",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "14/02/2019",
+          "date_prise_fonction": "14/02/2019",
+          "source_id": "JORFTEXT000038124962",
+          "texte_source": "directeur départemental des territoires de l'Essonne",
+          "action": "remplacé",
+          "date_fin": "22/01/2024"
+        }
+      ]
+    },
+    "Isère": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Isère",
+      "titulaire_actuel": {
+        "nom_complet": "François GORIEU",
+        "nom": "GORIEU",
+        "prenom": "François",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "11/04/2024",
+        "date_prise_fonction": "11/04/2024",
+        "source_id": "JORFTEXT000049402466",
+        "texte_source": "directeur départemental des territoires de l'Isère"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "François-Xavier CEREZA",
+          "nom": "CEREZA",
+          "prenom": "François-Xavier",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/03/2019",
+          "date_prise_fonction": "06/03/2019",
+          "source_id": "JORFTEXT000038201154",
+          "texte_source": "directeur départemental des territoires de l'Isère",
+          "action": "remplacé",
+          "date_fin": "11/04/2024"
+        }
+      ]
+    },
+    "Jura": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Jura",
+      "titulaire_actuel": {
+        "nom_complet": "Nicolas FOURRIER",
+        "nom": "FOURRIER",
+        "prenom": "Nicolas",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "15/06/2022",
+        "date_prise_fonction": "15/06/2022",
+        "source_id": "JORFTEXT000045911846",
+        "texte_source": "directeur départemental des territoires du Jura"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Jean-Luc IEMMOLO",
+          "nom": "IEMMOLO",
+          "prenom": "Jean-Luc",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "04/05/2019",
+          "date_prise_fonction": "04/05/2019",
+          "source_id": "JORFTEXT000038438346",
+          "texte_source": "directeur départemental des territoires du Jura",
+          "action": "remplacé",
+          "date_fin": "15/06/2022"
+        }
+      ]
+    },
+    "Corse-du-Sud": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Corse-du-Sud",
+      "titulaire_actuel": {
+        "nom_complet": "David VRIGNAUD",
+        "nom": "VRIGNAUD",
+        "prenom": "David",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "11/01/2025",
+        "date_prise_fonction": "11/01/2025",
+        "source_id": "JORFTEXT000050966436",
+        "texte_source": "directeur départemental des territoires de la Corse-du-Sud | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Catherine WENNER",
+          "nom": "WENNER",
+          "prenom": "Catherine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "04/05/2019",
+          "date_prise_fonction": "04/05/2019",
+          "source_id": "JORFTEXT000038438346",
+          "texte_source": "directrice départementale des territoires et de la mer de Corse-du-Sud",
+          "action": "remplacé",
+          "date_fin": "27/02/2021"
+        },
+        {
+          "nom_complet": "Yves SIMON",
+          "nom": "SIMON",
+          "prenom": "Yves",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "27/02/2021",
+          "date_prise_fonction": "27/02/2021",
+          "source_id": "JORFTEXT000043190088",
+          "texte_source": "directeur départemental des territoires et de la mer de Corse-du-Sud",
+          "action": "remplacé",
+          "date_fin": "11/01/2025"
+        }
+      ]
+    },
+    "Haute-Corse": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Haute-Corse",
+      "titulaire_actuel": {
+        "nom_complet": "Alexandre ROYER",
+        "nom": "ROYER",
+        "prenom": "Alexandre",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "03/09/2025",
+        "date_prise_fonction": "03/09/2025",
+        "source_id": "JORFTEXT000052180674",
+        "texte_source": "directeur départemental des territoires de la Haute-Corse | avec une période probatoire de six mois | à compter du 1er octobre 2025"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Laurent BOULET",
+          "nom": "BOULET",
+          "prenom": "Laurent",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "28/06/2019",
+          "date_prise_fonction": "28/06/2019",
+          "source_id": "JORFTEXT000038696455",
+          "texte_source": "directeur départemental des territoires et de la mer de Haute-Corse",
+          "action": "remplacé",
+          "date_fin": "15/05/2022"
+        },
+        {
+          "nom_complet": "Muriel JOER LE CORRE",
+          "nom": "JOER LE CORRE",
+          "prenom": "Muriel",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "15/05/2022",
+          "date_prise_fonction": "15/05/2022",
+          "source_id": "JORFTEXT000045797823",
+          "texte_source": "directrice départementale des territoires de la Haute-Corse",
+          "action": "remplacé",
+          "date_fin": "16/09/2024"
+        },
+        {
+          "nom_complet": "Chris VAN VAERENBERGH",
+          "nom": "VAN VAERENBERGH",
+          "prenom": "Chris",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "24/08/2024",
+          "date_prise_fonction": "16/09/2024",
+          "source_id": "JORFTEXT000050133932",
+          "texte_source": "directeur départemental des territoires de la Haute-Corse | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "03/09/2025"
+        }
+      ]
+    },
+    "Rhône": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Rhône",
+      "titulaire_actuel": {
+        "nom_complet": "Xavier CEREZA",
+        "nom": "CEREZA",
+        "prenom": "Xavier",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "01/02/2024",
+        "date_prise_fonction": "01/02/2024",
+        "source_id": "JORFTEXT000049068395",
+        "texte_source": "directeur départemental des territoires du Rhône"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Jacques BANDERIER",
+          "nom": "BANDERIER",
+          "prenom": "Jacques",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "28/06/2019",
+          "date_prise_fonction": "28/06/2019",
+          "source_id": "JORFTEXT000038696455",
+          "texte_source": "directeur départemental des territoires du Rhône",
+          "action": "remplacé",
+          "date_fin": "01/02/2024"
+        }
+      ]
+    },
+    "Loire": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Loire",
+      "titulaire_actuel": {
+        "nom_complet": "Sébastien VIENOT",
+        "nom": "VIENOT",
+        "prenom": "Sébastien",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "29/03/2024",
+        "date_prise_fonction": "29/03/2024",
+        "source_id": "JORFTEXT000049339585",
+        "texte_source": "directeur départemental des territoires de la Loire"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Elise REGNIER",
+          "nom": "REGNIER",
+          "prenom": "Elise",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "28/06/2019",
+          "date_prise_fonction": "28/06/2019",
+          "source_id": "JORFTEXT000038696455",
+          "texte_source": "directrice départementale des territoires de la Loire",
+          "action": "remplacé",
+          "date_fin": "29/03/2024"
+        }
+      ]
+    },
+    "Dordogne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Dordogne",
+      "titulaire_actuel": {
+        "nom_complet": "Christophe LEYSSENNE",
+        "nom": "LEYSSENNE",
+        "prenom": "Christophe",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "12/05/2024",
+        "date_prise_fonction": "01/06/2024",
+        "source_id": "JORFTEXT000049526056",
+        "texte_source": "directeur départemental des territoires de la Dordogne | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Emmanuel DIDON",
+          "nom": "DIDON",
+          "prenom": "Emmanuel",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "12/07/2019",
+          "date_prise_fonction": "22/07/2019",
+          "source_id": "JORFTEXT000038754805",
+          "texte_source": "directeur départemental des territoires de la Dordogne",
+          "action": "remplacé",
+          "date_fin": "01/06/2024"
+        }
+      ]
+    },
+    "Drôme": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Drôme",
+      "titulaire_actuel": {
+        "nom_complet": "Pierre BARBERA",
+        "nom": "BARBERA",
+        "prenom": "Pierre",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "11/04/2024",
+        "date_prise_fonction": "11/04/2024",
+        "source_id": "JORFTEXT000049402466",
+        "texte_source": "directeur départemental des territoires de la Drôme"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Isabelle NUTI",
+          "nom": "NUTI",
+          "prenom": "Isabelle",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "31/07/2019",
+          "date_prise_fonction": "31/07/2019",
+          "source_id": "JORFTEXT000038851397",
+          "texte_source": "directrice départementale des territoires de la Drôme",
+          "action": "remplacé",
+          "date_fin": "11/04/2024"
+        }
+      ]
+    },
+    "Somme": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Somme",
+      "titulaire_actuel": {
+        "nom_complet": "Xavier ROUSSET",
+        "nom": "ROUSSET",
+        "prenom": "Xavier",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "14/06/2024",
+        "date_prise_fonction": "24/06/2024",
+        "source_id": "JORFTEXT000049708264",
+        "texte_source": "directeur départemental des territoires et de la mer de la Somme | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Emmanuelle CLOMES",
+          "nom": "CLOMES",
+          "prenom": "Emmanuelle",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "07/09/2019",
+          "date_prise_fonction": "07/09/2019",
+          "source_id": "JORFTEXT000039060604",
+          "texte_source": "directrice départementale des territoires et de la mer de la Somme",
+          "action": "remplacé",
+          "date_fin": "24/06/2024"
+        }
+      ]
+    },
+    "Creuse": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Creuse",
+      "titulaire_actuel": {
+        "nom_complet": "Hélène BURGAUD-TOCCHET",
+        "nom": "BURGAUD-TOCCHET",
+        "prenom": "Hélène",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "31/12/2023",
+        "date_prise_fonction": "15/01/2024",
+        "source_id": "JORFTEXT000048737867",
+        "texte_source": "directrice départementale des territoires de la Creuse | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Pierre SCHWARTZ",
+          "nom": "SCHWARTZ",
+          "prenom": "Pierre",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "29/09/2019",
+          "date_prise_fonction": "29/09/2019",
+          "source_id": "JORFTEXT000039147220",
+          "texte_source": "directeur départemental des territoires de la Creuse",
+          "action": "remplacé",
+          "date_fin": "15/01/2024"
+        }
+      ]
+    },
+    "Saône-et-Loire": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Saône-et-Loire",
+      "titulaire_actuel": {
+        "nom_complet": "Yves PICOCHE",
+        "nom": "PICOCHE",
+        "prenom": "Yves",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "19/12/2024",
+        "date_prise_fonction": "06/01/2025",
+        "source_id": "JORFTEXT000050793962",
+        "texte_source": "directeur départemental des territoires de la Saône-et-Loire | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Jean-Pierre GORON",
+          "nom": "GORON",
+          "prenom": "Jean-Pierre",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "29/09/2019",
+          "date_prise_fonction": "29/09/2019",
+          "source_id": "JORFTEXT000039147220",
+          "texte_source": "directeur départemental des territoires de Saône-et-Loire",
+          "action": "remplacé",
+          "date_fin": "06/01/2025"
+        }
+      ]
+    },
+    "Hautes-Alpes": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Hautes-Alpes",
+      "titulaire_actuel": {
+        "nom_complet": "Thierry DURAND",
+        "nom": "DURAND",
+        "prenom": "Thierry",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "21/12/2024",
+        "date_prise_fonction": "13/01/2025",
+        "source_id": "JORFTEXT000050805479",
+        "texte_source": "directeur départemental des territoires des Hautes-Alpes | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Thierry CHAPEL",
+          "nom": "CHAPEL",
+          "prenom": "Thierry",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "29/09/2019",
+          "date_prise_fonction": "29/09/2019",
+          "source_id": "JORFTEXT000039147220",
+          "texte_source": "directeur départemental des territoires des Hautes-Alpes",
+          "action": "remplacé",
+          "date_fin": "13/01/2025"
+        }
+      ]
+    },
+    "Côte-d'Or": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Côte-d'Or",
+      "titulaire_actuel": {
+        "nom_complet": "Manuelle DUPUY",
+        "nom": "DUPUY",
+        "prenom": "Manuelle",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "19/03/2025",
+        "date_prise_fonction": "19/03/2025",
+        "source_id": "JORFTEXT000051348285",
+        "texte_source": "directrice départementale des territoires de la Côte-d'Or"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Florence LAUBIER",
+          "nom": "LAUBIER",
+          "prenom": "Florence",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "29/09/2019",
+          "date_prise_fonction": "29/09/2019",
+          "source_id": "JORFTEXT000039147220",
+          "texte_source": "directrice départementale des territoires de la Côte-d'Or",
+          "action": "remplacé",
+          "date_fin": "19/03/2025"
+        }
+      ]
+    },
+    "Sarthe": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Sarthe",
+      "titulaire_actuel": {
+        "nom_complet": "Marc SEVERAC",
+        "nom": "SEVERAC",
+        "prenom": "Marc",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "23/08/2023",
+        "date_prise_fonction": "23/08/2023",
+        "source_id": "JORFTEXT000047986828",
+        "texte_source": "directeur départemental des territoires de la Sarthe"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Bernard MEYZIE",
+          "nom": "MEYZIE",
+          "prenom": "Bernard",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "31/10/2019",
+          "date_prise_fonction": "31/10/2019",
+          "source_id": "JORFTEXT000039297326",
+          "texte_source": "directeur départemental des territoires de la Sarthe",
+          "action": "remplacé",
+          "date_fin": "23/08/2023"
+        }
+      ]
+    },
+    "Aube": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Aube",
+      "titulaire_actuel": {
+        "nom_complet": "Jean-Christophe CHOLLEY",
+        "nom": "CHOLLEY",
+        "prenom": "Jean-Christophe",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "07/03/2025",
+        "date_prise_fonction": "10/03/2025",
+        "source_id": "JORFTEXT000051300366",
+        "texte_source": "directeur départemental des territoires de l'Aube | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Jean-François HOU",
+          "nom": "HOU",
+          "prenom": "Jean-François",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "31/10/2019",
+          "date_prise_fonction": "31/10/2019",
+          "source_id": "JORFTEXT000039297326",
+          "texte_source": "directeur départemental des territoires de l'Aube",
+          "action": "remplacé",
+          "date_fin": "10/03/2025"
+        }
+      ]
+    },
+    "Meurthe-et-Moselle": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Meurthe-et-Moselle",
+      "titulaire_actuel": {
+        "nom_complet": "Emmanuel TIRTAINE",
+        "nom": "TIRTAINE",
+        "prenom": "Emmanuel",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "26/03/2021",
+        "date_prise_fonction": "26/03/2021",
+        "source_id": "JORFTEXT000043290449",
+        "texte_source": "directeur départemental des territoires de Meurthe-et-Moselle"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Yann DACQUAY",
+          "nom": "DACQUAY",
+          "prenom": "Yann",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "31/10/2019",
+          "date_prise_fonction": "31/10/2019",
+          "source_id": "JORFTEXT000039297326",
+          "texte_source": "directeur départemental des territoires de Meurthe-et-Moselle",
+          "action": "remplacé",
+          "date_fin": "26/03/2021"
+        }
+      ]
+    },
+    "Loiret": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Loiret",
+      "titulaire_actuel": {
+        "nom_complet": "Jean-Pierre GORON",
+        "nom": "GORON",
+        "prenom": "Jean-Pierre",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "09/10/2024",
+        "date_prise_fonction": "09/10/2024",
+        "source_id": "JORFTEXT000050321259",
+        "texte_source": "directeur départemental des territoires du Loiret"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Christophe HUSS",
+          "nom": "HUSS",
+          "prenom": "Christophe",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "29/11/2019",
+          "date_prise_fonction": "29/11/2019",
+          "source_id": "JORFTEXT000039429545",
+          "texte_source": "directeur départemental des territoires du Loiret",
+          "action": "remplacé",
+          "date_fin": "09/10/2024"
+        }
+      ]
+    },
+    "Aisne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Aisne",
+      "titulaire_actuel": {
+        "nom_complet": "Vincent ROYER",
+        "nom": "ROYER",
+        "prenom": "Vincent",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "29/11/2019",
+        "date_prise_fonction": "29/11/2019",
+        "source_id": "JORFTEXT000039429543",
+        "texte_source": "directeur départemental des territoires de l'Aisne"
+      },
+      "titulaire_designe": null,
       "historique": []
+    },
+    "Morbihan": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Morbihan",
+      "titulaire_actuel": {
+        "nom_complet": "Thierry CHATELAIN",
+        "nom": "CHATELAIN",
+        "prenom": "Thierry",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "24/01/2025",
+        "date_prise_fonction": "24/01/2025",
+        "source_id": "JORFTEXT000051023083",
+        "texte_source": "directeur départemental des territoires et de la mer du Morbihan | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Mathieu ESCAFRE",
+          "nom": "ESCAFRE",
+          "prenom": "Mathieu",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "29/11/2019",
+          "date_prise_fonction": "29/11/2019",
+          "source_id": "JORFTEXT000039429543",
+          "texte_source": "directeur départemental des territoires et de la mer du Morbihan",
+          "action": "remplacé",
+          "date_fin": "24/01/2025"
+        }
+      ]
+    },
+    "Pyrénées-Atlantiques": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Pyrénées-Atlantiques",
+      "titulaire_actuel": {
+        "nom_complet": "Benoît HERLEMONT",
+        "nom": "HERLEMONT",
+        "prenom": "Benoît",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "05/09/2025",
+        "date_prise_fonction": "05/09/2025",
+        "source_id": "JORFTEXT000052194450",
+        "texte_source": "directeur départemental des territoires et de la mer des Pyrénées-Atlantiques | avec une période probatoire de six mois | à compter du 1er octobre 2025"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Fabien MENU",
+          "nom": "MENU",
+          "prenom": "Fabien",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "13/12/2019",
+          "date_prise_fonction": "13/12/2019",
+          "source_id": "JORFTEXT000039494782",
+          "texte_source": "directeur départemental des territoires et de la mer des Pyrénées-Atlantiques",
+          "action": "remplacé",
+          "date_fin": "05/09/2025"
+        }
+      ]
+    },
+    "Eure-et-Loir": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Eure-et-Loir",
+      "titulaire_actuel": {
+        "nom_complet": "Christophe HUSS",
+        "nom": "HUSS",
+        "prenom": "Christophe",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "03/07/2024",
+        "date_prise_fonction": "05/08/2024",
+        "source_id": "JORFTEXT000049862720",
+        "texte_source": "directeur départemental des territoires d'Eure-et-Loir | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Guillaume BARRON",
+          "nom": "BARRON",
+          "prenom": "Guillaume",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "13/12/2019",
+          "date_prise_fonction": "13/12/2019",
+          "source_id": "JORFTEXT000039494782",
+          "texte_source": "directeur départemental des territoires d'Eure-et-Loir",
+          "action": "remplacé",
+          "date_fin": "05/08/2024"
+        }
+      ]
+    },
+    "Aude": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Aude",
+      "titulaire_actuel": {
+        "nom_complet": "Sylvie LEMONNIER",
+        "nom": "LEMONNIER",
+        "prenom": "Sylvie",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "11/05/2024",
+        "date_prise_fonction": "01/06/2024",
+        "source_id": "JORFTEXT000049523614",
+        "texte_source": "directrice départementale des territoires et de la mer de l'Aude | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Vincent CLIGNIEZ",
+          "nom": "CLIGNIEZ",
+          "prenom": "Vincent",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "20/12/2019",
+          "date_prise_fonction": "20/12/2019",
+          "source_id": "JORFTEXT000039646016",
+          "texte_source": "directeur départemental des territoires et de la mer de l'Aude",
+          "action": "remplacé",
+          "date_fin": "01/06/2024"
+        }
+      ]
+    },
+    "Vosges": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Vosges",
+      "titulaire_actuel": {
+        "nom_complet": "Laurent MARCOS",
+        "nom": "MARCOS",
+        "prenom": "Laurent",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "13/11/2022",
+        "date_prise_fonction": "21/11/2022",
+        "source_id": "JORFTEXT000046550183",
+        "texte_source": "directeur départemental des territoires des Vosges | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Dominique BEMER",
+          "nom": "BEMER",
+          "prenom": "Dominique",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "20/12/2019",
+          "date_prise_fonction": "20/12/2019",
+          "source_id": "JORFTEXT000039646016",
+          "texte_source": "directeur départemental des territoires des Vosges",
+          "action": "remplacé",
+          "date_fin": "21/11/2022"
+        }
+      ]
+    },
+    "Marne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Marne",
+      "titulaire_actuel": {
+        "nom_complet": "David WITT",
+        "nom": "WITT",
+        "prenom": "David",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "12/09/2026",
+        "date_prise_fonction": "12/09/2026",
+        "source_id": "JORFTEXT000054834024",
+        "texte_source": "directeur départemental des territoires de la Marne | avec une période probatoire de six mois | à compter du 1er octobre 2026"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Catherine ROGY",
+          "nom": "ROGY",
+          "prenom": "Catherine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "09/01/2020",
+          "date_prise_fonction": "09/01/2020",
+          "source_id": "JORFTEXT000039799333",
+          "texte_source": "directrice départementale des territoires de la Marne",
+          "action": "remplacé",
+          "date_fin": "02/01/2023"
+        },
+        {
+          "nom_complet": "Sylvestre DELCAMBRE",
+          "nom": "DELCAMBRE",
+          "prenom": "Sylvestre",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "23/12/2022",
+          "date_prise_fonction": "02/01/2023",
+          "source_id": "JORFTEXT000046780715",
+          "texte_source": "directeur départemental des territoires de la Marne | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "12/09/2026"
+        }
+      ]
+    },
+    "Orne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Orne",
+      "titulaire_actuel": {
+        "nom_complet": "Sylvie BLANC",
+        "nom": "BLANC",
+        "prenom": "Sylvie",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "12/08/2026",
+        "date_prise_fonction": "24/08/2026",
+        "source_id": "JORFTEXT000054666958",
+        "texte_source": "directrice départementale des territoires de l'Orne | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Patrick PLANCHON",
+          "nom": "PLANCHON",
+          "prenom": "Patrick",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "15/02/2020",
+          "date_prise_fonction": "15/02/2020",
+          "source_id": "JORFTEXT000041579918",
+          "texte_source": "directeur départemental des territoires de l'Orne",
+          "action": "remplacé",
+          "date_fin": "24/08/2026"
+        }
+      ]
+    },
+    "Pyrénées-Orientales": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Pyrénées-Orientales",
+      "titulaire_actuel": {
+        "nom_complet": "Emilie NAHON",
+        "nom": "NAHON",
+        "prenom": "Emilie",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "21/04/2024",
+        "date_prise_fonction": "21/04/2024",
+        "source_id": "JORFTEXT000049447222",
+        "texte_source": "directrice départementale des territoires et de la mer des Pyrénées-Orientales"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Cyril VANROYE",
+          "nom": "VANROYE",
+          "prenom": "Cyril",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "28/02/2020",
+          "date_prise_fonction": "09/03/2020",
+          "source_id": "JORFTEXT000041654710",
+          "texte_source": "directeur départemental des territoires et de la mer des Pyrénées-Orientales",
+          "action": "remplacé",
+          "date_fin": "21/04/2024"
+        }
+      ]
+    },
+    "Tarn-et-Garonne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Tarn-et-Garonne",
+      "titulaire_actuel": {
+        "nom_complet": "François DUQUESNE",
+        "nom": "DUQUESNE",
+        "prenom": "François",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "29/06/2024",
+        "date_prise_fonction": "05/08/2024",
+        "source_id": "JORFTEXT000049833203",
+        "texte_source": "directeur départemental des territoires de Tarn-et-Garonne | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Nathalie CENCIC",
+          "nom": "CENCIC",
+          "prenom": "Nathalie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "12/03/2020",
+          "date_prise_fonction": "12/03/2020",
+          "source_id": "JORFTEXT000041712660",
+          "texte_source": "directrice départementale des territoires de Tarn-et-Garonne",
+          "action": "remplacé",
+          "date_fin": "02/04/2022"
+        },
+        {
+          "nom_complet": "Lucie CHADOURNE-FACON",
+          "nom": "CHADOURNE-FACON",
+          "prenom": "Lucie",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "02/04/2022",
+          "date_prise_fonction": "02/04/2022",
+          "source_id": "JORFTEXT000045462812",
+          "texte_source": "directrice départementale des territoires du Tarn-et-Garonne",
+          "action": "remplacé",
+          "date_fin": "05/08/2024"
+        }
+      ]
+    },
+    "Corrèze": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Corrèze",
+      "titulaire_actuel": {
+        "nom_complet": "Chris VAN VAERENBERGH",
+        "nom": "VAN VAERENBERGH",
+        "prenom": "Chris",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "09/07/2025",
+        "date_prise_fonction": "04/08/2025",
+        "source_id": "JORFTEXT000051862801",
+        "texte_source": "directeur départemental des territoires de la Corrèze | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Marion SAADE",
+          "nom": "SAADE",
+          "prenom": "Marion",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "28/03/2020",
+          "date_prise_fonction": "06/04/2020",
+          "source_id": "JORFTEXT000041762823",
+          "texte_source": "directrice départementale des territoires de la Corrèze",
+          "action": "remplacé",
+          "date_fin": "04/08/2025"
+        }
+      ]
+    },
+    "Aveyron": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Aveyron",
+      "titulaire_actuel": {
+        "nom_complet": "Elisabeth BIGET-BREDIF",
+        "nom": "BIGET-BREDIF",
+        "prenom": "Elisabeth",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "21/09/2024",
+        "date_prise_fonction": "14/10/2024",
+        "source_id": "JORFTEXT000050245371",
+        "texte_source": "directrice départementale des territoires de l'Aveyron | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Joël FRAYSSE",
+          "nom": "FRAYSSE",
+          "prenom": "Joël",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "19/04/2020",
+          "date_prise_fonction": "15/05/2020",
+          "source_id": "JORFTEXT000041808570",
+          "texte_source": "directeur départemental des territoires de l'Aveyron",
+          "action": "remplacé",
+          "date_fin": "14/10/2024"
+        }
+      ]
+    },
+    "Charente-Maritime": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Charente-Maritime",
+      "titulaire_actuel": {
+        "nom_complet": "Xavier AERTS",
+        "nom": "AERTS",
+        "prenom": "Xavier",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "18/11/2023",
+        "date_prise_fonction": "04/12/2023",
+        "source_id": "JORFTEXT000048423623",
+        "texte_source": "directeur départemental des territoires et de la mer de la Charente-Maritime | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Alain PRIOL",
+          "nom": "PRIOL",
+          "prenom": "Alain",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "12/06/2020",
+          "date_prise_fonction": "12/06/2020",
+          "source_id": "JORFTEXT000041987391",
+          "texte_source": "directeur départemental des territoires des territoires et de la mer de la Charente-Maritime",
+          "action": "remplacé",
+          "date_fin": "04/12/2023"
+        }
+      ]
+    },
+    "Lot": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Lot",
+      "titulaire_actuel": {
+        "nom_complet": "Pierre-Antoine MORAND",
+        "nom": "MORAND",
+        "prenom": "Pierre-Antoine",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "29/12/2023",
+        "date_prise_fonction": "29/12/2023",
+        "source_id": "JORFTEXT000048709062",
+        "texte_source": "directeur départemental des territoires du Lot"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Jean-Pascal LEBRETON",
+          "nom": "LEBRETON",
+          "prenom": "Jean-Pascal",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "12/06/2020",
+          "date_prise_fonction": "12/06/2020",
+          "source_id": "JORFTEXT000041987391",
+          "texte_source": "directeur départemental des territoires du Lot",
+          "action": "remplacé",
+          "date_fin": "29/12/2023"
+        }
+      ]
+    },
+    "Seine-Maritime": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Seine-Maritime",
+      "titulaire_actuel": {
+        "nom_complet": "Laurent TESSIER",
+        "nom": "TESSIER",
+        "prenom": "Laurent",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "19/03/2025",
+        "date_prise_fonction": "19/03/2025",
+        "source_id": "JORFTEXT000051348285",
+        "texte_source": "directeur départemental des territoires et de la mer de la Seine-Maritime"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Jean KUGLER",
+          "nom": "KUGLER",
+          "prenom": "Jean",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "12/06/2020",
+          "date_prise_fonction": "12/06/2020",
+          "source_id": "JORFTEXT000041987391",
+          "texte_source": "directeur départemental des territoires et de la mer de la Seine-Maritime",
+          "action": "remplacé",
+          "date_fin": "19/03/2025"
+        }
+      ]
+    },
+    "Doubs": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Doubs",
+      "titulaire_actuel": {
+        "nom_complet": "Benoît FABBRI",
+        "nom": "FABBRI",
+        "prenom": "Benoît",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "16/09/2023",
+        "date_prise_fonction": "16/09/2023",
+        "source_id": "JORFTEXT000048079497",
+        "texte_source": "directeur départemental des territoires du Doubs"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Patrick VAUTERIN",
+          "nom": "VAUTERIN",
+          "prenom": "Patrick",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "10/06/2020",
+          "date_prise_fonction": "22/06/2020",
+          "source_id": "JORFTEXT000041980371",
+          "texte_source": "directeur départemental des territoires du Doubs | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "16/09/2023"
+        }
+      ]
+    },
+    "Ain": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Ain",
+      "titulaire_actuel": {
+        "nom_complet": "Vincent PATRIARCA",
+        "nom": "PATRIARCA",
+        "prenom": "Vincent",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "01/11/2022",
+        "date_prise_fonction": "15/11/2022",
+        "source_id": "JORFTEXT000046511042",
+        "texte_source": "directeur départemental des territoires de l'Ain | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Guillaume FURRI",
+          "nom": "FURRI",
+          "prenom": "Guillaume",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "27/06/2020",
+          "date_prise_fonction": "01/07/2020",
+          "source_id": "JORFTEXT000042044779",
+          "texte_source": "directeur départemental des territoires de l'Ain | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "15/11/2022"
+        }
+      ]
+    },
+    "Mayenne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Mayenne",
+      "titulaire_actuel": {
+        "nom_complet": "Michel DEBRAY",
+        "nom": "DEBRAY",
+        "prenom": "Michel",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "11/04/2025",
+        "date_prise_fonction": "11/04/2025",
+        "source_id": "JORFTEXT000051448304",
+        "texte_source": "directeur départemental des territoires de la Mayenne"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Isabelle VALADE",
+          "nom": "VALADE",
+          "prenom": "Isabelle",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "12/08/2020",
+          "date_prise_fonction": "12/08/2020",
+          "source_id": "JORFTEXT000042228964",
+          "texte_source": "directrice départementale des territoires de la Mayenne",
+          "action": "remplacé",
+          "date_fin": "11/04/2025"
+        }
+      ]
+    },
+    "Ardèche": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Ardèche",
+      "titulaire_actuel": {
+        "nom_complet": "Anne BRONNER",
+        "nom": "BRONNER",
+        "prenom": "Anne",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "19/03/2025",
+        "date_prise_fonction": "19/03/2025",
+        "source_id": "JORFTEXT000051348285",
+        "texte_source": "directrice départementale des territoires de l'Ardèche"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Jean-Pierre GRAULE",
+          "nom": "GRAULE",
+          "prenom": "Jean-Pierre",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "30/08/2020",
+          "date_prise_fonction": "15/09/2020",
+          "source_id": "JORFTEXT000042285069",
+          "texte_source": "directeur départemental des territoires de l'Ardèche",
+          "action": "remplacé",
+          "date_fin": "19/03/2025"
+        }
+      ]
+    },
+    "Gers": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Gers",
+      "titulaire_actuel": {
+        "nom_complet": "Hervé SERVAT",
+        "nom": "SERVAT",
+        "prenom": "Hervé",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "10/09/2026",
+        "date_prise_fonction": "05/10/2026",
+        "source_id": "JORFTEXT000054817167",
+        "texte_source": "directeur départemental des territoires du Gers | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Philippe BLACHERE",
+          "nom": "BLACHERE",
+          "prenom": "Philippe",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "30/10/2020",
+          "date_prise_fonction": "01/11/2020",
+          "source_id": "JORFTEXT000042475909",
+          "texte_source": "directeur départemental des territoires du Gers",
+          "action": "remplacé",
+          "date_fin": "23/06/2021"
+        },
+        {
+          "nom_complet": "Xavier VANT",
+          "nom": "VANT",
+          "prenom": "Xavier",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "23/06/2021",
+          "date_prise_fonction": "23/06/2021",
+          "source_id": "JORFTEXT000043688929",
+          "texte_source": "directeur départemental des territoires du Gers",
+          "action": "remplacé",
+          "date_fin": "05/10/2026"
+        }
+      ]
+    },
+    "Haut-Rhin": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Haut-Rhin",
+      "titulaire_actuel": {
+        "nom_complet": "Nadine CHEVASSUS",
+        "nom": "CHEVASSUS",
+        "prenom": "Nadine",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "18/01/2026",
+        "date_prise_fonction": "16/02/2026",
+        "source_id": "JORFTEXT000053380897",
+        "texte_source": "directrice départementale des territoires du Haut-Rhin | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Arnaud REVEL",
+          "nom": "REVEL",
+          "prenom": "Arnaud",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/11/2020",
+          "date_prise_fonction": "09/11/2020",
+          "source_id": "JORFTEXT000042500500",
+          "texte_source": "directeur départemental des territoires du Haut-Rhin",
+          "action": "remplacé",
+          "date_fin": "16/02/2026"
+        }
+      ]
+    },
+    "Vaucluse": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Vaucluse",
+      "titulaire_actuel": {
+        "nom_complet": "Edouard BRODHAG",
+        "nom": "BRODHAG",
+        "prenom": "Edouard",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "03/07/2024",
+        "date_prise_fonction": "03/07/2024",
+        "source_id": "JORFTEXT000049862722",
+        "texte_source": "directeur départemental des territoires de Vaucluse"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "François GORIEU",
+          "nom": "GORIEU",
+          "prenom": "François",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "30/10/2020",
+          "date_prise_fonction": "09/11/2020",
+          "source_id": "JORFTEXT000042475907",
+          "texte_source": "directeur départemental des territoires du Vaucluse",
+          "action": "remplacé",
+          "date_fin": "03/07/2024"
+        }
+      ]
+    },
+    "Alpes-Maritimes": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Alpes-Maritimes",
+      "titulaire_actuel": {
+        "nom_complet": "Éric LEFEBVRE",
+        "nom": "LEFEBVRE",
+        "prenom": "Éric",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "11/06/2023",
+        "date_prise_fonction": "26/06/2023",
+        "source_id": "JORFTEXT000047664790",
+        "texte_source": "directeur départemental des territoires et de la mer des Alpes-Maritimes | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Pascal JOBERT",
+          "nom": "JOBERT",
+          "prenom": "Pascal",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/12/2020",
+          "date_prise_fonction": "07/12/2020",
+          "source_id": "JORFTEXT000042614618",
+          "texte_source": "directeur départemental des territoires et de la mer des Alpes-Maritimes | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "26/06/2023"
+        }
+      ]
+    },
+    "Haute-Marne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Haute-Marne",
+      "titulaire_actuel": {
+        "nom_complet": "Xavier LOGEROT",
+        "nom": "LOGEROT",
+        "prenom": "Xavier",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "03/12/2020",
+        "date_prise_fonction": "07/12/2020",
+        "source_id": "JORFTEXT000042602568",
+        "texte_source": "directeur départemental des territoires de la Haute-Marne"
+      },
+      "titulaire_designe": null,
+      "historique": []
+    },
+    "Manche": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Manche",
+      "titulaire_actuel": {
+        "nom_complet": "Guillaume BARRON",
+        "nom": "BARRON",
+        "prenom": "Guillaume",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "23/06/2024",
+        "date_prise_fonction": "23/06/2024",
+        "source_id": "JORFTEXT000049767529",
+        "texte_source": "directeur départemental des territoires et de la mer de la Manche"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Martine CAVALLERA-LEVI",
+          "nom": "CAVALLERA-LEVI",
+          "prenom": "Martine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "03/12/2020",
+          "date_prise_fonction": "07/12/2020",
+          "source_id": "JORFTEXT000042602568",
+          "texte_source": "directrice départementale des territoires et de la mer de la Manche",
+          "action": "remplacé",
+          "date_fin": "23/06/2024"
+        }
+      ]
+    },
+    "Ardennes": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Ardennes",
+      "titulaire_actuel": {
+        "nom_complet": "Christophe FRADIER",
+        "nom": "FRADIER",
+        "prenom": "Christophe",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "28/09/2022",
+        "date_prise_fonction": "01/10/2022",
+        "source_id": "JORFTEXT000046335171",
+        "texte_source": "directeur départemental des territoires des Ardennes | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Philippe CARROT",
+          "nom": "CARROT",
+          "prenom": "Philippe",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "03/12/2020",
+          "date_prise_fonction": "14/12/2020",
+          "source_id": "JORFTEXT000042602568",
+          "texte_source": "directeur départemental des territoires des Ardennes",
+          "action": "remplacé",
+          "date_fin": "01/10/2022"
+        }
+      ]
+    },
+    "Charente": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Charente",
+      "titulaire_actuel": {
+        "nom_complet": "Hervé SERVAT",
+        "nom": "SERVAT",
+        "prenom": "Hervé",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "26/12/2020",
+        "date_prise_fonction": "26/12/2020",
+        "source_id": "JORFTEXT000042740121",
+        "texte_source": "directeur départemental des territoires de la Charente"
+      },
+      "titulaire_designe": null,
+      "historique": []
+    },
+    "Alpes-de-Haute-Provence": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Alpes-de-Haute-Provence",
+      "titulaire_actuel": {
+        "nom_complet": "Eric DALUZ",
+        "nom": "DALUZ",
+        "prenom": "Eric",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "08/12/2024",
+        "date_prise_fonction": "01/01/2025",
+        "source_id": "JORFTEXT000050756609",
+        "texte_source": "directeur départemental des territoires des Alpes-de-Haute-Provence | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Catherine GAILDRAUD",
+          "nom": "GAILDRAUD",
+          "prenom": "Catherine",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "27/01/2021",
+          "date_prise_fonction": "27/01/2021",
+          "source_id": "JORFTEXT000043053953",
+          "texte_source": "directrice départementale des territoires des Alpes-de-Haute-Provence",
+          "action": "remplacé",
+          "date_fin": "01/01/2025"
+        }
+      ]
+    },
+    "Loir-et-Cher": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Loir-et-Cher",
+      "titulaire_actuel": {
+        "nom_complet": "Sandrine REVERCHON-SALLE",
+        "nom": "REVERCHON-SALLE",
+        "prenom": "Sandrine",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "12/07/2025",
+        "date_prise_fonction": "04/08/2025",
+        "source_id": "JORFTEXT000051884243",
+        "texte_source": "directrice départementale des territoires de Loir-et-Cher | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Patrick SEAC'H",
+          "nom": "SEAC'H",
+          "prenom": "Patrick",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "29/01/2021",
+          "date_prise_fonction": "29/01/2021",
+          "source_id": "JORFTEXT000043076383",
+          "texte_source": "directeur départemental des territoires de Loir-et-Cher",
+          "action": "remplacé",
+          "date_fin": "04/08/2025"
+        }
+      ]
+    },
+    "Moselle": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Moselle",
+      "titulaire_actuel": {
+        "nom_complet": "Claude SOUILLER",
+        "nom": "SOUILLER",
+        "prenom": "Claude",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "11/11/2023",
+        "date_prise_fonction": "11/11/2023",
+        "source_id": "JORFTEXT000048385812",
+        "texte_source": "directeur départemental des territoires de Moselle"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Jérôme GIURICI",
+          "nom": "GIURICI",
+          "prenom": "Jérôme",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "27/02/2021",
+          "date_prise_fonction": "27/02/2021",
+          "source_id": "JORFTEXT000043190088",
+          "texte_source": "directeur départemental des territoires de la Moselle",
+          "action": "remplacé",
+          "date_fin": "11/11/2023"
+        }
+      ]
+    },
+    "Meuse": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Meuse",
+      "titulaire_actuel": {
+        "nom_complet": "Fabrice DROUHOT",
+        "nom": "DROUHOT",
+        "prenom": "Fabrice",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "11/04/2025",
+        "date_prise_fonction": "05/05/2025",
+        "source_id": "JORFTEXT000051448318",
+        "texte_source": "directeur départemental des territoires de la Meuse | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Sylvestre DELCAMBRE",
+          "nom": "DELCAMBRE",
+          "prenom": "Sylvestre",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "27/02/2021",
+          "date_prise_fonction": "15/03/2021",
+          "source_id": "JORFTEXT000043190090",
+          "texte_source": "directeur départemental des territoires de la Meuse",
+          "action": "remplacé",
+          "date_fin": "05/02/2023"
+        },
+        {
+          "nom_complet": "Pascal DUCHENE",
+          "nom": "DUCHENE",
+          "prenom": "Pascal",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "05/02/2023",
+          "date_prise_fonction": "05/02/2023",
+          "source_id": "JORFTEXT000047091325",
+          "texte_source": "directeur départemental des territoires de la Meuse | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "05/05/2025"
+        }
+      ]
+    },
+    "Haute-Savoie": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Haute-Savoie",
+      "titulaire_actuel": {
+        "nom_complet": "Jean-François HOU",
+        "nom": "HOU",
+        "prenom": "Jean-François",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "19/01/2025",
+        "date_prise_fonction": "19/01/2025",
+        "source_id": "JORFTEXT000050999744",
+        "texte_source": "directeur départemental des territoires de la Haute-Savoie"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Julien LANGLET",
+          "nom": "LANGLET",
+          "prenom": "Julien",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "12/02/2021",
+          "date_prise_fonction": "18/03/2021",
+          "source_id": "JORFTEXT000043121867",
+          "texte_source": "directeur départemental des territoires de la Haute-Savoie",
+          "action": "remplacé",
+          "date_fin": "19/01/2025"
+        }
+      ]
+    },
+    "Hautes-Pyrénées": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Hautes-Pyrénées",
+      "titulaire_actuel": {
+        "nom_complet": "Malik AÏT-AÏSSA",
+        "nom": "AÏT-AÏSSA",
+        "prenom": "Malik",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "15/06/2024",
+        "date_prise_fonction": "15/06/2024",
+        "source_id": "JORFTEXT000049722427",
+        "texte_source": "directeur départemental des territoires des Hautes-Pyrénées"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Sylvain ROUSSET",
+          "nom": "ROUSSET",
+          "prenom": "Sylvain",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "26/03/2021",
+          "date_prise_fonction": "26/03/2021",
+          "source_id": "JORFTEXT000043290449",
+          "texte_source": "directeur départemental des territoires des Hautes-Pyrénées",
+          "action": "remplacé",
+          "date_fin": "15/06/2024"
+        }
+      ]
+    },
+    "Puy-de-Dôme": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Puy-de-Dôme",
+      "titulaire_actuel": {
+        "nom_complet": "Guilhem BRUN",
+        "nom": "BRUN",
+        "prenom": "Guilhem",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "23/06/2021",
+        "date_prise_fonction": "23/06/2021",
+        "source_id": "JORFTEXT000043688929",
+        "texte_source": "directeur départemental des territoires du Puy-de-Dôme"
+      },
+      "titulaire_designe": null,
+      "historique": []
+    },
+    "Lot-et-Garonne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Lot-et-Garonne",
+      "titulaire_actuel": {
+        "nom_complet": "Henri BOUYSSES",
+        "nom": "BOUYSSES",
+        "prenom": "Henri",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "18/08/2024",
+        "date_prise_fonction": "16/09/2024",
+        "source_id": "JORFTEXT000050104595",
+        "texte_source": "directeur départemental des territoires de Lot-et-Garonne | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Romain GUILLOT",
+          "nom": "GUILLOT",
+          "prenom": "Romain",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "09/07/2021",
+          "date_prise_fonction": "09/07/2021",
+          "source_id": "JORFTEXT000043772009",
+          "texte_source": "directeur départemental des territoires de Lot-et-Garonne",
+          "action": "remplacé",
+          "date_fin": "16/09/2024"
+        }
+      ]
+    },
+    "Territoire de Belfort": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Territoire de Belfort",
+      "titulaire_actuel": {
+        "nom_complet": "Romain COURTET",
+        "nom": "COURTET",
+        "prenom": "Romain",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "22/11/2025",
+        "date_prise_fonction": "22/11/2025",
+        "source_id": "JORFTEXT000052820686",
+        "texte_source": "directeur départemental des territoires du Territoire de Belfort | avec une période probatoire de six mois | à compter du 1er décembre 2025"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Benoît FABBRI",
+          "nom": "FABBRI",
+          "prenom": "Benoît",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "11/09/2021",
+          "date_prise_fonction": "11/09/2021",
+          "source_id": "JORFTEXT000044035686",
+          "texte_source": "directeur départemental des territoires du Territoire de Belfort",
+          "action": "remplacé",
+          "date_fin": "21/10/2023"
+        },
+        {
+          "nom_complet": "Olivier CHAPPAZ",
+          "nom": "CHAPPAZ",
+          "prenom": "Olivier",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "21/10/2023",
+          "date_prise_fonction": "21/10/2023",
+          "source_id": "JORFTEXT000048235491",
+          "texte_source": "directeur départemental des territoires du Territoire de Belfort | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "22/11/2025"
+        }
+      ]
+    },
+    "Finistère": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Finistère",
+      "titulaire_actuel": {
+        "nom_complet": "Raphaël GUILLET",
+        "nom": "GUILLET",
+        "prenom": "Raphaël",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "16/10/2024",
+        "date_prise_fonction": "01/11/2024",
+        "source_id": "JORFTEXT000050350792",
+        "texte_source": "directeur départemental des territoires et de la mer du Finistère | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Stéphane BURON",
+          "nom": "BURON",
+          "prenom": "Stéphane",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "08/12/2021",
+          "date_prise_fonction": "08/12/2021",
+          "source_id": "JORFTEXT000044447570",
+          "texte_source": "directeur départemental des territoires et de la mer du Finistère",
+          "action": "remplacé",
+          "date_fin": "01/11/2024"
+        }
+      ]
+    },
+    "Nord": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Nord",
+      "titulaire_actuel": {
+        "nom_complet": "Luc FERET",
+        "nom": "FERET",
+        "prenom": "Luc",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "16/10/2024",
+        "date_prise_fonction": "16/10/2024",
+        "source_id": "JORFTEXT000050350794",
+        "texte_source": "directeur départemental des territoires et de la mer du Nord"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Antoine LEBEL",
+          "nom": "LEBEL",
+          "prenom": "Antoine",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "26/01/2022",
+          "date_prise_fonction": "26/01/2022",
+          "source_id": "JORFTEXT000045073088",
+          "texte_source": "directeur départemental des territoires et de la mer du Nord",
+          "action": "remplacé",
+          "date_fin": "16/10/2024"
+        }
+      ]
+    },
+    "Haute-Vienne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Haute-Vienne",
+      "titulaire_actuel": {
+        "nom_complet": "Armelle LE BRUN",
+        "nom": "LE BRUN",
+        "prenom": "Armelle",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "12/03/2026",
+        "date_prise_fonction": "30/03/2026",
+        "source_id": "JORFTEXT000053653371",
+        "texte_source": "directrice départementale des territoires de la Haute-Vienne | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Stéphane NUQ",
+          "nom": "NUQ",
+          "prenom": "Stéphane",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "13/02/2022",
+          "date_prise_fonction": "15/02/2022",
+          "source_id": "JORFTEXT000045161137",
+          "texte_source": "directeur départemental des territoires de la Haute-Vienne | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "30/03/2026"
+        }
+      ]
+    },
+    "Vendée": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Vendée",
+      "titulaire_actuel": {
+        "nom_complet": "Didier GERARD",
+        "nom": "GERARD",
+        "prenom": "Didier",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "26/02/2022",
+        "date_prise_fonction": "26/02/2022",
+        "source_id": "JORFTEXT000045244039",
+        "texte_source": "directeur départemental des territoires et de la mer de la Vendée"
+      },
+      "titulaire_designe": null,
+      "historique": []
+    },
+    "Tarn": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Tarn",
+      "titulaire_actuel": {
+        "nom_complet": "Gaëlle LEJOSNE",
+        "nom": "LEJOSNE",
+        "prenom": "Gaëlle",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "10/07/2026",
+        "date_prise_fonction": "10/07/2026",
+        "source_id": "JORFTEXT000054408561",
+        "texte_source": "directrice départementale des territoires du Tarn | avec une période probatoire de six mois | à compter du 1er août 2026"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Maxime CUENOT",
+          "nom": "CUENOT",
+          "prenom": "Maxime",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/03/2022",
+          "date_prise_fonction": "06/03/2022",
+          "source_id": "JORFTEXT000045300331",
+          "texte_source": "directeur départemental des territoires du Tarn",
+          "action": "remplacé",
+          "date_fin": "10/07/2026"
+        }
+      ]
+    },
+    "Calvados": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Calvados",
+      "titulaire_actuel": {
+        "nom_complet": "Marianne PIQUERET",
+        "nom": "PIQUERET",
+        "prenom": "Marianne",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "16/03/2025",
+        "date_prise_fonction": "16/03/2025",
+        "source_id": "JORFTEXT000051330942",
+        "texte_source": "directrice départementale des territoires et de la mer du Calvados | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Thierry CHATELAIN",
+          "nom": "CHATELAIN",
+          "prenom": "Thierry",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/03/2022",
+          "date_prise_fonction": "06/03/2022",
+          "source_id": "JORFTEXT000045300331",
+          "texte_source": "directeur départemental des territoires et de la mer du Calvados",
+          "action": "remplacé",
+          "date_fin": "16/03/2025"
+        }
+      ]
+    },
+    "Var": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Var",
+      "titulaire_actuel": {
+        "nom_complet": "Nicolas MORBE",
+        "nom": "MORBE",
+        "prenom": "Nicolas",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "29/08/2026",
+        "date_prise_fonction": "29/08/2026",
+        "source_id": "JORFTEXT000054761904",
+        "texte_source": "directeur départemental des territoires et de la mer du Var | avec une période probatoire de six mois | à compter du 1er septembre 2026"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Laurent BOULET",
+          "nom": "BOULET",
+          "prenom": "Laurent",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "06/03/2022",
+          "date_prise_fonction": "06/03/2022",
+          "source_id": "JORFTEXT000045300331",
+          "texte_source": "directeur départemental des territoires et de la mer du Var",
+          "action": "remplacé",
+          "date_fin": "29/08/2026"
+        }
+      ]
+    },
+    "Lozère": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Lozère",
+      "titulaire_actuel": {
+        "nom_complet": "Agnès DELSOL",
+        "nom": "DELSOL",
+        "prenom": "Agnès",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "02/04/2022",
+        "date_prise_fonction": "02/04/2022",
+        "source_id": "JORFTEXT000045462812",
+        "texte_source": "directrice départementale des territoires de la Lozère"
+      },
+      "titulaire_designe": null,
+      "historique": []
+    },
+    "Haute-Saône": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Haute-Saône",
+      "titulaire_actuel": {
+        "nom_complet": "Blandine AUBERT",
+        "nom": "AUBERT",
+        "prenom": "Blandine",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "17/09/2026",
+        "date_prise_fonction": "15/10/2026",
+        "source_id": "JORFTEXT000054851035",
+        "texte_source": "directrice départementale des territoires de la Haute-Saône | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Didier CHAPUIS",
+          "nom": "CHAPUIS",
+          "prenom": "Didier",
+          "sexe": "M",
+          "grade": "",
+          "date_decision": "13/05/2022",
+          "date_prise_fonction": "13/05/2022",
+          "source_id": "JORFTEXT000045792640",
+          "texte_source": "directeur départemental des territoires de Haute-Saône",
+          "action": "remplacé",
+          "date_fin": "15/10/2026"
+        }
+      ]
+    },
+    "Maine-et-Loire": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Maine-et-Loire",
+      "titulaire_actuel": {
+        "nom_complet": "Pierre-Julien EYMARD",
+        "nom": "EYMARD",
+        "prenom": "Pierre-Julien",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "15/05/2022",
+        "date_prise_fonction": "15/05/2022",
+        "source_id": "JORFTEXT000045797823",
+        "texte_source": "directeur départemental des territoires de Maine-et-Loire"
+      },
+      "titulaire_designe": null,
+      "historique": []
+    },
+    "Gard": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Gard",
+      "titulaire_actuel": {
+        "nom_complet": "Sébastien FERRA",
+        "nom": "FERRA",
+        "prenom": "Sébastien",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "12/06/2022",
+        "date_prise_fonction": "12/06/2022",
+        "source_id": "JORFTEXT000045897351",
+        "texte_source": "directeur départemental des territoires et de la mer du Gard"
+      },
+      "titulaire_designe": null,
+      "historique": []
+    },
+    "Côtes-d'Armor": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Côtes-d'Armor",
+      "titulaire_actuel": {
+        "nom_complet": "Benoît DUFUMIER",
+        "nom": "DUFUMIER",
+        "prenom": "Benoît",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "23/07/2022",
+        "date_prise_fonction": "23/07/2022",
+        "source_id": "JORFTEXT000046081792",
+        "texte_source": "directeur départemental des territoires et de la mer des Côtes-d'Armor"
+      },
+      "titulaire_designe": null,
+      "historique": []
+    },
+    "Yonne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Yonne",
+      "titulaire_actuel": {
+        "nom_complet": "Manuella INES",
+        "nom": "INES",
+        "prenom": "Manuella",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "03/09/2022",
+        "date_prise_fonction": "03/09/2022",
+        "source_id": "JORFTEXT000046253773",
+        "texte_source": "directrice départementale des territoires de l'Yonne"
+      },
+      "titulaire_designe": null,
+      "historique": []
+    },
+    "Hérault": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Hérault",
+      "titulaire_actuel": {
+        "nom_complet": "Fabrice LEVASSORT",
+        "nom": "LEVASSORT",
+        "prenom": "Fabrice",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "25/03/2023",
+        "date_prise_fonction": "01/04/2023",
+        "source_id": "JORFTEXT000047341564",
+        "texte_source": "directeur départemental des territoires et de la mer de l'Hérault | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": []
+    },
+    "Bouches-du-Rhône": {
+      "type": "ddtm",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires et de la mer",
+      "territoire": "Bouches-du-Rhône",
+      "titulaire_actuel": {
+        "nom_complet": "Patrick VAUTERIN",
+        "nom": "VAUTERIN",
+        "prenom": "Patrick",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "18/06/2023",
+        "date_prise_fonction": "01/07/2023",
+        "source_id": "JORFTEXT000047694024",
+        "texte_source": "directeur départemental des territoires et de la mer des Bouches-du-Rhône | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": []
+    },
+    "Haute-Garonne": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Haute-Garonne",
+      "titulaire_actuel": {
+        "nom_complet": "Anne CALMET",
+        "nom": "CALMET",
+        "prenom": "Anne",
+        "sexe": "F",
+        "grade": "",
+        "date_decision": "24/05/2026",
+        "date_prise_fonction": "15/06/2026",
+        "source_id": "JORFTEXT000054126912",
+        "texte_source": "directrice départementale des territoires de la Haute-Garonne | avec une période probatoire de six mois"
+      },
+      "titulaire_designe": null,
+      "historique": [
+        {
+          "nom_complet": "Laurence PUJO",
+          "nom": "PUJO",
+          "prenom": "Laurence",
+          "sexe": "F",
+          "grade": "",
+          "date_decision": "08/02/2024",
+          "date_prise_fonction": "01/03/2024",
+          "source_id": "JORFTEXT000049102180",
+          "texte_source": "directrice départementale des territoires de la Haute-Garonne | avec une période probatoire de six mois",
+          "action": "remplacé",
+          "date_fin": "15/06/2026"
+        }
+      ]
     }
   },
   "source_id_traites": [
-    "JORFTEXT000054993769"
+    "JORFTEXT000045897351",
+    "JORFTEXT000051886873",
+    "JORFTEXT000050805479",
+    "JORFTEXT000045300331",
+    "JORFTEXT000041980371",
+    "JORFTEXT000051330942",
+    "JORFTEXT000054851035",
+    "JORFTEXT000048737867",
+    "JORFTEXT000043053953",
+    "JORFTEXT000053653371",
+    "JORFTEXT000053907436",
+    "JORFTEXT000039494782",
+    "JORFTEXT000053380897",
+    "JORFTEXT000053935125",
+    "JORFTEXT000049526056",
+    "JORFTEXT000042044779",
+    "JORFTEXT000048709062",
+    "JORFTEXT000039646016",
+    "JORFTEXT000036659113",
+    "JORFTEXT000048079497",
+    "JORFTEXT000043190090",
+    "JORFTEXT000047664788",
+    "JORFTEXT000043772009",
+    "JORFTEXT000046538444",
+    "JORFTEXT000051348285",
+    "JORFTEXT000050104595",
+    "JORFTEXT000044447570",
+    "JORFTEXT000054126912",
+    "JORFTEXT000036252441",
+    "JORFTEXT000035817184",
+    "JORFTEXT000047341564",
+    "JORFTEXT000054666958",
+    "JORFTEXT000046511042",
+    "JORFTEXT000041987391",
+    "JORFTEXT000053299137",
+    "JORFTEXT000043688929",
+    "JORFTEXT000037444862",
+    "JORFTEXT000043542073",
+    "JORFTEXT000042602568",
+    "JORFTEXT000049862720",
+    "JORFTEXT000045244039",
+    "JORFTEXT000046780715",
+    "JORFTEXT000047091325",
+    "JORFTEXT000054817167",
+    "JORFTEXT000043798769",
+    "JORFTEXT000043121867",
+    "JORFTEXT000043290449",
+    "JORFTEXT000052180674",
+    "JORFTEXT000051862801",
+    "JORFTEXT000042539471",
+    "JORFTEXT000036484839",
+    "JORFTEXT000051300366",
+    "JORFTEXT000051448318",
+    "JORFTEXT000039147220",
+    "JORFTEXT000042475909",
+    "JORFTEXT000042500500",
+    "JORFTEXT000045269718",
+    "JORFTEXT000042475907",
+    "JORFTEXT000036252443",
+    "JORFTEXT000036069441",
+    "JORFTEXT000054834024",
+    "JORFTEXT000043190088",
+    "JORFTEXT000036799010",
+    "JORFTEXT000048423623",
+    "JORFTEXT000049833203",
+    "JORFTEXT000050343263",
+    "JORFTEXT000048385812",
+    "JORFTEXT000042228964",
+    "JORFTEXT000038696455",
+    "JORFTEXT000047694024",
+    "JORFTEXT000050966436",
+    "JORFTEXT000046349973",
+    "JORFTEXT000041712660",
+    "JORFTEXT000050793962",
+    "JORFTEXT000050999744",
+    "JORFTEXT000049339585",
+    "JORFTEXT000039297326",
+    "JORFTEXT000041654710",
+    "JORFTEXT000047219590",
+    "JORFTEXT000038851397",
+    "JORFTEXT000054408561",
+    "JORFTEXT000050350792",
+    "JORFTEXT000041808570",
+    "JORFTEXT000047986828",
+    "JORFTEXT000039799333",
+    "JORFTEXT000045792640",
+    "JORFTEXT000045442998",
+    "JORFTEXT000047664790",
+    "JORFTEXT000039429543",
+    "JORFTEXT000037262405",
+    "JORFTEXT000054673373",
+    "JORFTEXT000054245994",
+    "JORFTEXT000046253773",
+    "JORFTEXT000038124962",
+    "JORFTEXT000048235491",
+    "JORFTEXT000045073088",
+    "JORFTEXT000042740121",
+    "JORFTEXT000038438346",
+    "JORFTEXT000036596637",
+    "JORFTEXT000042285069",
+    "JORFTEXT000050321259",
+    "JORFTEXT000045911846",
+    "JORFTEXT000046335171",
+    "JORFTEXT000046550183",
+    "JORFTEXT000051021037",
+    "JORFTEXT000037840175",
+    "JORFTEXT000054761904",
+    "JORFTEXT000046794302",
+    "JORFTEXT000049102180",
+    "JORFTEXT000049523614",
+    "JORFTEXT000038201154",
+    "JORFTEXT000041579918",
+    "JORFTEXT000041762823",
+    "JORFTEXT000049405776",
+    "JORFTEXT000049402466",
+    "JORFTEXT000039060604",
+    "JORFTEXT000049862722",
+    "JORFTEXT000042614618",
+    "JORFTEXT000050133932",
+    "JORFTEXT000048481146",
+    "JORFTEXT000045797823",
+    "JORFTEXT000045161137",
+    "JORFTEXT000050174994",
+    "JORFTEXT000043076383",
+    "JORFTEXT000049666151",
+    "JORFTEXT000049447222",
+    "JORFTEXT000052820686",
+    "JORFTEXT000037662971",
+    "JORFTEXT000036109434",
+    "JORFTEXT000051884243",
+    "JORFTEXT000049097870",
+    "JORFTEXT000043980186",
+    "JORFTEXT000049722427",
+    "JORFTEXT000037373272",
+    "JORFTEXT000043772011",
+    "JORFTEXT000037506576",
+    "JORFTEXT000050245371",
+    "JORFTEXT000039429545",
+    "JORFTEXT000050350794",
+    "JORFTEXT000050756609",
+    "JORFTEXT000054993769",
+    "JORFTEXT000049068395",
+    "JORFTEXT000051448304",
+    "JORFTEXT000038754805",
+    "JORFTEXT000036560098",
+    "JORFTEXT000045462812",
+    "JORFTEXT000052194450",
+    "JORFTEXT000046081792",
+    "JORFTEXT000051023083",
+    "JORFTEXT000044035686",
+    "JORFTEXT000049767529",
+    "JORFTEXT000048982807",
+    "JORFTEXT000049708264",
+    "JORFTEXT000052377765"
   ],
-  "date_maj": "27/10/2026 16:53",
+  "date_maj": "28/10/2026 10:17",
   "statistiques": {
-    "total_ddt": 0,
-    "total_ddtm": 0
+    "total_ddt": 68,
+    "total_ddtm": 24
   }
 }

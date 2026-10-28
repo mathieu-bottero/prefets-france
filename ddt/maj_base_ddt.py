@@ -21,18 +21,31 @@ import requests
 import xml.etree.ElementTree as ET
 import csv
 import json
+import time
 import argparse
 import os
 from datetime import datetime, timedelta
+from pathlib import Path
+from urllib3.exceptions import ProtocolError, IncompleteRead as Urllib3IncompleteRead
+from http.client import IncompleteRead as HttpIncompleteRead
 
 from poste_ddt import classifier_poste_ddt, LIBELLES_TYPE
 
 URL_JO = "https://www.data.gouv.fr/api/1/datasets/r/1c5ac28d-92ca-4a19-aefb-63fbde4387a2"
-FICHIER_ETAT = "ddt/data/etat_ddt.json"
-FICHIER_CSV = "ddt/data/base_ddt.csv"
+
+
+_RACINE_SCRIPT = Path(__file__).resolve().parent   # = .../prefets/
+FICHIER_ETAT   = str(_RACINE_SCRIPT / "data" / "etat_ddt.json")
+FICHIER_CSV    = str(_RACINE_SCRIPT / "data" / "base_ddt.csv")
+
+FICHIER_XML_CACHE = str(_RACINE_SCRIPT / "data" / "jo_flux_cache.xml")
+
+CHUNK_SIZE = 4 * 1024 * 1024   # 4 Mo par batch
+NB_TENTATIVES = 5
+DELAI_RETRY = 10
 
 # Créer le dossier data s'il n'existe pas
-os.makedirs("data", exist_ok=True)
+os.makedirs("ddt/data", exist_ok=True)
 
 # ---------------------------------------------------------------------------
 # 1. Téléchargement et extraction
@@ -81,10 +94,89 @@ def extraire_evenement(result):
 
     return donnees
 
+def telecharger_fichier_avec_reprise(url, chemin_local):
+    """
+    Télécharge un fichier volumineux par chunks de 4 Mo.
+    Reprend automatiquement là où il s'est arrêté si le fichier
+    existe déjà partiellement (header HTTP Range).
+    """
+    chemin = Path(chemin_local)
+    chemin.parent.mkdir(parents=True, exist_ok=True)
+
+    # Taille déjà téléchargée (reprise)
+    debut = chemin.stat().st_size if chemin.exists() else 0
+
+    if debut > 0:
+        print(f"   ↩️  Reprise du téléchargement à partir de {debut / 1024**2:.1f} Mo...")
+
+    for tentative in range(1, NB_TENTATIVES + 1):
+        try:
+            headers = {"Range": f"bytes={debut}-"} if debut > 0 else {}
+            response = requests.get(url, headers=headers, stream=True, timeout=60)
+
+            # 206 = Partial Content (reprise OK), 200 = début normal
+            if response.status_code not in (200, 206):
+                raise requests.exceptions.HTTPError(
+                    f"Statut HTTP inattendu : {response.status_code}"
+                )
+
+            # Si le serveur ne supporte pas Range et renvoie 200,
+            # on repart de zéro pour éviter un fichier corrompu.
+            if response.status_code == 200 and debut > 0:
+                print("   ⚠️  Le serveur ne supporte pas la reprise — redémarrage complet.")
+                debut = 0
+                chemin.unlink(missing_ok=True)
+
+            mode = "ab" if debut > 0 else "wb"
+            taille_totale = int(response.headers.get("Content-Length", 0)) + debut
+
+            print(f"   📥 Téléchargement en cours "
+                  f"({'reprise' if debut > 0 else 'démarrage'}, "
+                  f"taille totale estimée : {taille_totale / 1024**2:.0f} Mo)...")
+
+            with open(chemin, mode) as f:
+                telecharge = debut
+                for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
+                    if chunk:
+                        f.write(chunk)
+                        telecharge += len(chunk)
+                        pct = (telecharge / taille_totale * 100) if taille_totale else 0
+                        print(f"\r   {telecharge / 1024**2:.0f} Mo "
+                              f"/ {taille_totale / 1024**2:.0f} Mo "
+                              f"({pct:.1f} %)", end="", flush=True)
+
+            print(f"\n   ✅ Téléchargement terminé : {telecharge / 1024**2:.0f} Mo")
+            return  # succès
+
+        except (
+            ProtocolError,
+            Urllib3IncompleteRead,
+            HttpIncompleteRead,
+            requests.exceptions.ChunkedEncodingError,
+            requests.exceptions.ConnectionError,
+            requests.exceptions.Timeout,
+        ) as e:
+            # Met à jour la position de reprise pour la prochaine tentative
+            debut = chemin.stat().st_size if chemin.exists() else 0
+            print(f"\n   ⚠️  Coupure réseau (tentative {tentative}/{NB_TENTATIVES}) "
+                  f"après {debut / 1024**2:.1f} Mo : {e}")
+
+            if tentative < NB_TENTATIVES:
+                print(f"   ⏳ Nouvelle tentative dans {DELAI_RETRY}s...")
+                time.sleep(DELAI_RETRY)
+            else:
+                print(f"\n   ❌ Échec après {NB_TENTATIVES} tentatives. "
+                      f"Fichier partiel conservé pour la prochaine exécution.")
+                raise  # On propage uniquement si toutes les tentatives ont échoué
+
+
 def telecharger_evenements(nb_mois_arriere):
-    """Télécharge les décisions du JO sur une période donnée"""
+    """
+    Parse le flux JO en streaming (sans télécharger le fichier complet).
+    Ne conserve que les nominations DDT/DDTM.
+    """
     date_limite = datetime.now() - timedelta(days=nb_mois_arriere * 30)
-    print(f"\n📡 Téléchargement du JO (depuis le {date_limite.strftime('%d/%m/%Y')})...")
+    print(f"\n📡 Connexion au flux JO (depuis le {date_limite.strftime('%d/%m/%Y')})...")
 
     MOTS_CLES = (
         'directeur départemental des territoires',
@@ -92,53 +184,62 @@ def telecharger_evenements(nb_mois_arriere):
     )
     TYPES_RETENUS = {'nomination', 'renouvellement'}
 
+    # ── Streaming direct depuis l'API ────────────────────────────────────
+    print("🔍 Parsing en streaming (pas de téléchargement complet)...")
+    
     evenements = []
-    response = requests.get(URL_JO, stream=True)
-    response.raw.decode_content = True
     total, retenus = 0, 0
+    
+    try:
+        response = requests.get(URL_JO, stream=True, timeout=120)
+        response.raise_for_status()
+        response.raw.decode_content = True
+        
+        # Parse XML au fur et à mesure (sans charger en mémoire)
+        for event, elem in ET.iterparse(response.raw, events=('end',)):
+            if elem.tag != 'result':
+                continue
 
-    for event, elem in ET.iterparse(response.raw, events=('end',)):
-        if elem.tag != 'result':
-            continue
+            total += 1
+            
+            # Afficher la progression tous les 100000 éléments
+            if total % 100000 == 0:
+                print(f"   📊 {total} nominations analysées, {retenus} DDT/DDTM retenues...")
 
-        total += 1
+            # ── filtre date ──────────────────────────────────────────────
+            date_pub = parse_date(elem.get('source_date', ''))
+            if not date_pub or date_pub < date_limite:
+                elem.clear()
+                continue
 
-        # ── 1. filtre date (le moins coûteux, en premier) ──────────────────
-        date_pub = parse_date(elem.get('source_date', ''))
-        if not date_pub or date_pub < date_limite:
-            elem.clear()
-            continue
+            # ── filtre type_ordre ────────────────────────────────────────
+            if elem.get('type_ordre', '').lower() not in TYPES_RETENUS:
+                elem.clear()
+                continue
 
-        # ── 2. filtre type_ordre (comparaison de chaîne, quasi-gratuit) ────
-        if elem.get('type_ordre', '').lower() not in TYPES_RETENUS:
-            elem.clear()
-            continue
+            # ── filtre textuel DDT (AVANT d'extraire tout le contenu) ────
+            obj = elem.find('object')
+            texte_poste = extraire_texte_concatene(obj, 'text') if obj is not None else ''
+            if not any(mot in texte_poste.lower() for mot in MOTS_CLES):
+                elem.clear()
+                continue
 
-        # ── 3. filtre textuel DDT (une seule traversée du DOM) ─────────────
-        obj = elem.find('object')
-        texte_poste = extraire_texte_concatene(obj, 'text') if obj is not None else ''
-        texte_lower = texte_poste.lower()
+            # ── extraction complète SEULEMENT si c'est un DDT/DDTM ───────
+            donnees = extraire_evenement(elem)
+            if not donnees.get('texte_poste'):
+                donnees['texte_poste'] = texte_poste
 
-        if not any(mot in texte_lower for mot in MOTS_CLES):
-            elem.clear()
-            continue
+            evenements.append(donnees)
+            retenus += 1
 
-        # ── 4. extraction complète (l'élément est retenu) ──────────────────
-        donnees = extraire_evenement(elem)
-        # texte_poste déjà calculé : on évite le recalcul dans extraire_evenement
-        if not donnees.get('texte_poste'):
-            donnees['texte_poste'] = texte_poste
+            elem.clear()  # Libérer la mémoire
+        
+        print(f"✅ {retenus} nominations DDT/DDTM retenues sur {total} analysées.\n")
+        
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Erreur de connexion : {e}")
+        raise
 
-        evenements.append(donnees)
-        retenus += 1
-        if retenus % 50 == 0:
-            print(f"   ✓ {retenus} nominations DDT/DDTM retenues "
-                  f"({total} décisions analysées)")
-
-        elem.clear()
-
-    print(f"✅ {retenus} nominations DDT/DDTM retenues "
-          f"sur {total} décisions analysées.\n")
     return evenements
 
 # ---------------------------------------------------------------------------
@@ -551,7 +652,7 @@ Exemples :
     print("""
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║                                                                            ║
-║           🏛️  BASE NATIONALE DDT/DDTM - MISE À JOUR 🏛️                      ║
+║              BASE NATIONALE DDT/DDTM - MISE À JOUR                         ║
 ║                                                                            ║
 ╚════════════════════════════════════════════════════════════════════════════╝
     """)
@@ -584,13 +685,13 @@ Exemples :
     stats = etat['statistiques']
     print(f"""
 ╔════════════════════════════════════════════════════════════════════════════╗
-║ 📊 STATISTIQUES                                                            ║
+║STATISTIQUES                                                                ║
 ╠════════════════════════════════════════════════════════════════════════════╣
-║  DDT en poste  : {stats['total_ddt']:3d}                                                       ║
-║  DDTM en poste : {stats['total_ddtm']:3d}                                                       ║
-║  TOTAL         : {stats['total_ddt'] + stats['total_ddtm']:3d}                                                       ║
+║  DDT en poste  : {stats['total_ddt']:3d}                                   ║
+║  DDTM en poste : {stats['total_ddtm']:3d}                                  ║
+║  TOTAL         : {stats['total_ddt'] + stats['total_ddtm']:3d}             ║
 ║                                                                            ║
-║  Dernière MAJ  : {etat['date_maj']}                                      ║
+║  Dernière MAJ  : {etat['date_maj']}                                        ║
 ╚════════════════════════════════════════════════════════════════════════════╝
     """)
 
