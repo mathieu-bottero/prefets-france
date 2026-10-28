@@ -1,4 +1,4 @@
-name: 🤖 MAJ Préfets Automatique
+name: 🤖 MAJ Administrations Automatique
 
 on:
   schedule:
