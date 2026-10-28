@@ -600,7 +600,7 @@ const ENTITIES = {
   },
   ddets: {
     h1: 'DDETS / DDPP / DDETSPP de France',
-    sub: 'Directions départementales de l\u2019emploi, du travail et des solidarités, de la protection des populations, ou structure fusionnée — ancienneté et bassins hydrographiques',
+    sub: 'Directions départementales de l\u2019emploi, du travail et des solidarités, de la protection des populations — ancienneté et bassins hydrographiques',
     docTitle: 'DDETS / DDPP / DDETSPP de France — carte territoriale',
     search: 'Nom, département, région…',
     placeholder: `Cliquez sur un département pour afficher le ou les directeurs en poste (DDETS et DDPP, ou DDETSPP) — la région (ou le bassin) associé sera mis en évidence sur la carte.`,
@@ -652,11 +652,10 @@ function normalizeDdt(r){
 //  - Île-de-France (75, 92, 93, 94) : DDPP seule, compétences emploi/travail gérées par la DRIEETS
 //  - Outre-mer : non renseigné
 function normalizeDdets(r) {
-  // Tolère les espaces, BOM éventuel et variations de casse
   const type = clean(
     r.ddetspp_type_organisation ??
     r['\ufeffddetspp_type_organisation']
-  ).toLowerCase();
+  ).toLowerCase().replace(/[\uFEFF\s]/g, '');
 
   const mk = (key, titre) => {
     const field = suffix => `ddetspp_directeur_${key}_${suffix}`;
