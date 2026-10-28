@@ -328,6 +328,17 @@
     padding-top:10px;
   }
 
+  .dossier-card + .dossier-card{ margin-top:12px; }
+
+  .t-poste + .t-poste{ margin-top:10px; padding-top:10px; border-top:1px dashed rgba(128,128,128,.4); }
+
+  .legend-note{
+    font-size:.78rem;
+    line-height:1.45;
+    color:var(--ink-faint);
+    margin-top:10px;
+  }
+
   .dossier-designe{
     font-size:.8rem;
     color:var(--ink-soft);
@@ -476,6 +487,7 @@
       <select id="entity-select" aria-label="Choisir la carte à afficher">
         <option value="prefets">Préfets</option>
         <option value="ddt">DDT / DDTM</option>
+        <option value="ddets">DDETS / DDPP / DDETSPP</option>
       </select>
     </div>
 
@@ -510,6 +522,7 @@
       <div class="legend-row"><div class="legend-swatch" style="background:var(--anc-1)"></div><div>6 mois à 1 an</div></div>
       <div class="legend-row"><div class="legend-swatch" style="background:var(--anc-2)"></div><div>1 an à 2 ans</div></div>
       <div class="legend-row"><div class="legend-swatch" style="background:var(--anc-3)"></div><div>Plus de 2 ans</div></div>
+      <p class="legend-note" id="legend-note" hidden></p>
     </section>
 
     <section class="rail-section">
@@ -572,6 +585,7 @@ const ENTITIES = {
     search: 'Nom, département, région…',
     placeholder: 'Cliquez sur un département pour afficher le préfet en poste — la région (ou le bassin) associé sera mis en évidence sur la carte.',
     role: p => p.sexe === 'F' ? 'Préfète' : 'Préfet',
+    legendNote: '',
     normalize: normalizePrefet
   },
   ddt: {
@@ -581,7 +595,18 @@ const ENTITIES = {
     search: 'Nom, département, région…',
     placeholder: 'Cliquez sur un département pour afficher le directeur départemental des territoires (et de la mer) en poste — la région (ou le bassin) associé sera mis en évidence sur la carte.',
     role: p => p.sexe === 'F' ? 'Directrice' : 'Directeur',
+    legendNote: '',
     normalize: normalizeDdt
+  },
+  ddets: {
+    h1: 'DDETS / DDPP / DDETSPP de France',
+    sub: 'Directions départementales de l\u2019emploi, du travail et des solidarités, de la protection des populations, ou structure fusionnée — ancienneté et bassins hydrographiques',
+    docTitle: 'DDETS / DDPP / DDETSPP de France — carte territoriale',
+    search: 'Nom, département, région…',
+    placeholder: `Cliquez sur un département pour afficher le ou les directeurs en poste (DDETS et DDPP, ou DDETSPP) — la région (ou le bassin) associé sera mis en évidence sur la carte.`,
+    role: p => p.sexe === 'F' ? 'Directrice' : 'Directeur',
+    legendNote: 'Départements à deux directions (DDETS + DDPP) : la couleur correspond au titulaire arrivé le plus récemment.',
+    normalize: normalizeDdets
   }
 };
 
@@ -621,9 +646,61 @@ function normalizeDdt(r){
   };
 }
 
+// Directions « emploi / travail / solidarités / protection des populations » :
+//  - DDETSPP fusionnée (départements < 400 000 hab.) : un seul poste
+//  - DDETS + DDPP séparées : deux postes
+//  - Île-de-France (75, 92, 93, 94) : DDPP seule, compétences emploi/travail gérées par la DRIEETS
+//  - Outre-mer : non renseigné
+function normalizeDdets(r){
+  const type = clean(r.ddetspp_type_organisation);
+  const mk = (key, titre) => {
+    const g = suffix => r[`ddetspp_directeur_${key}_${suffix}`];
+    const des = clean(g('designe_nom'));
+    return {
+      titre, nom: clean(g('nom_complet')), sexe: clean(g('sexe')),
+      date: clean(g('date_prise_fonction')), jours: toDays(g('anciennete_jours')),
+      designe: des ? { nom: des, date: clean(g('designe_date')) } : null
+    };
+  };
+  const T_DDETS   = 'Directeur(rice) départemental(e) de l\u2019emploi, du travail et des solidarités (DDETS)';
+  const T_DDPP    = 'Directeur(rice) départemental(e) de la protection des populations (DDPP)';
+  const T_DDETSPP = 'Directeur(rice) départemental(e) de l\u2019emploi, du travail, des solidarités et de la protection des populations (DDETSPP)';
+
+  let candidats;
+  if(type === 'ddetspp_fusionnee')                 candidats = [mk('ddetspp', T_DDETSPP)];
+  else if(type === 'ddets_ddpp_separees')          candidats = [mk('ddets', T_DDETS), mk('ddpp', T_DDPP)];
+  else if(type === 'organisation_locale_specifique') candidats = [mk('ddpp', T_DDPP)];   // 75, 92, 93, 94
+  else return emptyRow(r, clean(r.ddetspp_message) || 'Poste non renseigné');
+
+  // On ne garde que les postes pour lesquels un titulaire est renseigné
+  const postes = candidats.filter(q => q.nom);
+  if(!postes.length) return emptyRow(r, 'Aucune information disponible');
+
+  // Couleur : titulaire arrivé le plus récemment (plus petite ancienneté)
+  const jours = postes.filter(q => q.jours != null).map(q => q.jours);
+  const j = jours.length ? Math.min(...jours) : null;
+
+  return {
+    departement: deptOf(r), territoire: clean(r.territoire), vide: false,
+    postes,
+    nom_prefet: postes.map(q => q.nom).join(' '),
+    titre_global: '', sexe: '', date_prise_fonction: '', anciennete_jours: j ?? '—',
+    couleur_carte: couleurFromJours(j)
+  };
+}
+
+const postesOf = p => p.postes || [{
+  titre: p.titre_global, nom: p.nom_prefet, sexe: p.sexe,
+  date: p.date_prise_fonction, jours: p.anciennete_jours, designe: p.designe
+}];
+
+const designeText = q => !q.designe ? '' :
+  (q.designe.nom === q.nom ? 'Même titulaire désigné' : `Successeur désigné : ${q.designe.nom}`)
+  + (q.designe.date ? ` (à compter du ${q.designe.date})` : '');
+
 // ---------- State ----------
 const state = {
-  entity: 'prefets',      // 'prefets' | 'ddt'
+  entity: 'prefets',      // 'prefets' | 'ddt' | 'ddets'
   mode: 'regions',        // 'regions' | 'bassins'
   selectedScopeId: null,  // region code or bassin CdBH
   selectedDept: null,     // department code shown in dossier
@@ -865,6 +942,10 @@ function setEntity(key){
   document.title = cfg.docTitle;
   onDeptLeave();
 
+  const note = document.getElementById('legend-note');
+  note.textContent = cfg.legendNote;
+  note.hidden = !cfg.legendNote;
+
   buildColorCache();
   buildOverseasList();
   render();
@@ -939,26 +1020,26 @@ function onDeptHover(event, d){
   const p = prefetsMap[code];
   if(!p) return;
 
+  let html;
   if(p.vide){
-    d3.select('#tooltip')
-      .classed('visible', true)
-      .html(`<h4>${p.territoire}</h4><div class="t-meta">${p.message}</div>`)
-      .style('left', (event.clientX + 18) + 'px')
-      .style('top', (event.clientY + 18) + 'px');
-    return;
+    html = `<h4>${p.territoire}</h4><div class="t-meta">${p.message}</div>`;
+  } else {
+    html = postesOf(p).map(q => {
+      const titres = q.titre.split('|').map(t => `<div>${t.trim()}</div>`).join('');
+      return `
+        <div class="t-poste">
+          <h4>${q.nom}</h4>
+          <div class="t-territoire">${p.territoire}</div>
+          ${titres}
+          <div class="t-meta">Depuis le ${q.date} · ${q.jours} j</div>
+          ${q.designe ? `<div class="t-meta">${designeText(q)}</div>` : ''}
+        </div>`;
+    }).join('');
   }
-
-  const titres = p.titre_global.split('|').map(t => `<div>${t.trim()}</div>`).join('');
 
   d3.select('#tooltip')
     .classed('visible', true)
-    .html(`
-      <h4>${p.nom_prefet}</h4>
-      <div class="t-territoire">${p.territoire}</div>
-      ${titres}
-      <div class="t-meta">Depuis le ${p.date_prise_fonction} · ${p.anciennete_jours} j</div>
-      ${p.designe ? `<div class="t-meta">Successeur désigné : ${p.designe.nom}${p.designe.date ? ' (' + p.designe.date + ')' : ''}</div>` : ''}
-    `)
+    .html(html)
     .style('left', (event.clientX + 18) + 'px')
     .style('top', (event.clientY + 18) + 'px');
 }
@@ -1090,21 +1171,24 @@ function renderDossier(){
     return;
   }
 
-  const titres = p.titre_global.split('|').map(t => `<div>${t.trim()}</div>`).join('');
-  const sexeLabel = cfg.role(p);
+  const colors = ancColorHex();
 
-  el.innerHTML = `
-    <div class="dossier-card" style="--tab-color:${tab}">
-      <h3>${p.nom_prefet}</h3>
-      <div class="dossier-territoire">${sexeLabel} · ${p.territoire}</div>
-      <div class="dossier-titres">${titres}</div>
-      ${p.designe ? `<div class="dossier-designe">Successeur désigné : <strong>${p.designe.nom}</strong>${p.designe.date ? ' · à compter du ' + p.designe.date : ''}</div>` : ''}
-      <div class="dossier-meta">
-        <span>Depuis le ${p.date_prise_fonction}</span>
-        <span>${p.anciennete_jours} j</span>
-      </div>
-    </div>
-  `;
+  el.innerHTML = postesOf(p).map(q => {
+    // Plusieurs postes : chaque carte prend la couleur de sa propre ancienneté
+    const c = p.postes ? (colors[couleurFromJours(q.jours)] || tab) : tab;
+    const titres = q.titre.split('|').map(t => `<div>${t.trim()}</div>`).join('');
+    return `
+      <div class="dossier-card" style="--tab-color:${c}">
+        <h3>${q.nom}</h3>
+        <div class="dossier-territoire">${cfg.role(q)} · ${p.territoire}</div>
+        <div class="dossier-titres">${titres}</div>
+        ${q.designe ? `<div class="dossier-designe">${designeText(q)}</div>` : ''}
+        <div class="dossier-meta">
+          <span>Depuis le ${q.date}</span>
+          <span>${q.jours} j</span>
+        </div>
+      </div>`;
+  }).join('');
 }
 
 function buildOverseasList(){
