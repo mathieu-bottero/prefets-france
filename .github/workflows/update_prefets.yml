@@ -51,7 +51,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add commun/data/
-          git commit -m "🤖 MAJ automatique préfets - $(date +'%Y-%m-%d %H:%M')"
+          git commit -m "🤖 MAJ automatique administrations - $(date +'%Y-%m-%d %H:%M')"
           git push
       
       - name: ℹ️ Pas de changement
