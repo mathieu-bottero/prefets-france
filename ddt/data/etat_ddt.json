@@ -1,0 +1,30 @@
+{
+  "postes": {
+    "Ariège": {
+      "type": "ddt",
+      "type_libelle": "Directeur(rice) départemental(e) des territoires",
+      "territoire": "Ariège",
+      "titulaire_actuel": null,
+      "titulaire_designe": {
+        "nom_complet": "Eric PELLOQUIN",
+        "nom": "PELLOQUIN",
+        "prenom": "Eric",
+        "sexe": "M",
+        "grade": "",
+        "date_decision": "18/10/2026",
+        "date_prise_fonction": "12/11/2026",
+        "source_id": "JORFTEXT000054993769",
+        "texte_source": "directeur départemental des territoires de l'Ariège | avec une période probatoire de six mois"
+      },
+      "historique": []
+    }
+  },
+  "source_id_traites": [
+    "JORFTEXT000054993769"
+  ],
+  "date_maj": "27/10/2026 16:53",
+  "statistiques": {
+    "total_ddt": 0,
+    "total_ddtm": 0
+  }
+}
