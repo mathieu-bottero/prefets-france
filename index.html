@@ -15,6 +15,7 @@
 <style>
 
   /* ============ Design tokens ============ */
+
   :root{
     --paper:#EEF1F5;
     --surface:#FFFFFF;
@@ -33,8 +34,8 @@
     --anc-2:#C97A3E;
     --anc-3:#B94A3F;
 
-    --shadow: 0 12px 30px rgba(24,35,56,.10);
-    --radius: 10px;
+    --shadow:0 12px 30px rgba(24,35,56,.10);
+    --radius:10px;
 
     --font-display:'Fraunces', serif;
     --font-body:'IBM Plex Sans', sans-serif;
@@ -59,12 +60,19 @@
     --anc-2:#E08F55;
     --anc-3:#D6635A;
 
-    --shadow: 0 12px 30px rgba(0,0,0,.35);
+    --shadow:0 12px 30px rgba(0,0,0,.35);
   }
 
-  *{ margin:0; padding:0; box-sizing:border-box; }
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
 
-  html, body{ height:100%; }
+  html,
+  body{
+    height:100%;
+  }
 
   body{
     font-family:var(--font-body);
@@ -73,7 +81,12 @@
     -webkit-font-smoothing:antialiased;
   }
 
-  button, input, select{ font-family:inherit; color:inherit; }
+  button,
+  input,
+  select{
+    font-family:inherit;
+    color:inherit;
+  }
 
   /* ============ Masthead ============ */
 
@@ -134,6 +147,10 @@
     color:#fff;
   }
 
+  .mode-switch[hidden]{
+    display:none;
+  }
+
   .search-box input{
     width:230px;
     padding:9px 14px;
@@ -154,7 +171,10 @@
     padding:9px 38px 9px 16px;
     border-radius:999px;
     border:1px solid var(--line);
-    background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%238894A6' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 15px center;
+    background:
+      var(--paper)
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%238894A6' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+      no-repeat right 15px center;
     font-size:.85rem;
     font-weight:600;
     cursor:pointer;
@@ -193,9 +213,14 @@
     overflow:hidden;
   }
 
-  .map-pane svg{ display:block; }
+  .map-pane svg{
+    display:block;
+  }
 
-  #map{ width:100%; height:100%; }
+  #map{
+    width:100%;
+    height:100%;
+  }
 
   .breadcrumb{
     position:absolute;
@@ -229,7 +254,7 @@
     font-family:var(--font-display);
   }
 
-  /* ============ Dossier rail (sidebar) ============ */
+  /* ============ Dossier rail ============ */
 
   .dossier-rail{
     border-left:1px solid var(--line);
@@ -272,6 +297,13 @@
     flex-shrink:0;
   }
 
+  .legend-note{
+    font-size:.78rem;
+    line-height:1.45;
+    color:var(--ink-faint);
+    margin-top:10px;
+  }
+
   .dossier-placeholder{
     font-size:.88rem;
     color:var(--ink-soft);
@@ -289,7 +321,9 @@
   .dossier-card::before{
     content:"";
     position:absolute;
-    left:0; top:0; bottom:0;
+    left:0;
+    top:0;
+    bottom:0;
     width:6px;
     background:var(--tab-color, var(--ink-faint));
   }
@@ -328,15 +362,14 @@
     padding-top:10px;
   }
 
-  .dossier-card + .dossier-card{ margin-top:12px; }
+  .dossier-card + .dossier-card{
+    margin-top:12px;
+  }
 
-  .t-poste + .t-poste{ margin-top:10px; padding-top:10px; border-top:1px dashed rgba(128,128,128,.4); }
-
-  .legend-note{
-    font-size:.78rem;
-    line-height:1.45;
-    color:var(--ink-faint);
+  .t-poste + .t-poste{
     margin-top:10px;
+    padding-top:10px;
+    border-top:1px dashed rgba(128,128,128,.4);
   }
 
   .dossier-designe{
@@ -380,19 +413,7 @@
 
   /* ============ Map elements ============ */
 
-  .department{
-    stroke:var(--surface);
-    stroke-width:1;
-    cursor:pointer;
-    transition:opacity .25s, filter .15s;
-  }
-
-  .department:hover{
-    filter:brightness(1.08);
-  }
-
-  .mode-switch[hidden]{ display:none; }
-
+  .department,
   .region-fill{
     stroke:var(--surface);
     stroke-width:1;
@@ -400,8 +421,21 @@
     transition:opacity .25s, filter .15s;
   }
 
+  .department:hover,
   .region-fill:hover{
     filter:brightness(1.08);
+  }
+
+  /*
+    Calque transparent, présent seulement lorsque l'entité régionale
+    est affichée selon le découpage des bassins. Il permet de cliquer
+    sur le bassin lui-même, y compris lorsqu'il est transrégional.
+  */
+  .basin-hit{
+    fill:transparent;
+    stroke:none;
+    cursor:pointer;
+    pointer-events:all;
   }
 
   .region-label{
@@ -422,12 +456,12 @@
     opacity:.55;
   }
 
-.boundary.selected{
-  stroke:var(--gold);
-  stroke-width:2.6;
-  opacity:1;
-  filter: drop-shadow(0 0 4px rgba(169, 128, 63, 0.5)); /* ✅ Effet glow */
-}
+  .boundary.selected{
+    stroke:var(--gold);
+    stroke-width:2.6;
+    opacity:1;
+    filter:drop-shadow(0 0 4px rgba(169,128,63,.5));
+  }
 
   .dept-label{
     font-family:var(--font-mono);
@@ -460,7 +494,9 @@
     border:1px solid var(--line);
   }
 
-  .tooltip.visible{ opacity:1; }
+  .tooltip.visible{
+    opacity:1;
+  }
 
   .tooltip h4{
     font-family:var(--font-display);
@@ -474,8 +510,6 @@
     margin-bottom:6px;
   }
 
-  :root[data-theme="dark"] .tooltip .t-territoire{ color:var(--accent-strong); }
-
   .tooltip .t-meta{
     font-family:var(--font-mono);
     font-size:.72rem;
@@ -488,7 +522,11 @@
       grid-template-columns:1fr;
       height:auto;
     }
-    #map{ height:70vh; }
+
+    #map{
+      height:70vh;
+    }
+
     .dossier-rail{
       border-left:none;
       border-top:1px solid var(--line);
@@ -497,6 +535,7 @@
 
 </style>
 </head>
+
 <body>
 
 <header class="masthead">
@@ -511,30 +550,42 @@
         <option value="prefets">Préfets</option>
         <option value="ddt">DDT / DDTM</option>
         <option value="ddets">DDETS / DDPP / DDETSPP</option>
-        <option value="dreal">DREAL / DEAL / DRIEAT</option>
+        <option value="dreal">DREAL / DEAL / DRIEAT / DRIHL / DGTM / DTAM</option>
       </select>
     </div>
 
-    <div class="mode-switch" role="tablist">
-      <button class="mode-btn active" data-mode="regions" role="tab" aria-selected="true">Régions</button>
-      <button class="mode-btn" data-mode="bassins" role="tab" aria-selected="false">Bassins hydrographiques</button>
+    <div class="mode-switch" role="tablist" aria-label="Découpage territorial">
+      <button class="mode-btn active" data-mode="regions" role="tab" aria-selected="true">
+        Régions
+      </button>
+      <button class="mode-btn" data-mode="bassins" role="tab" aria-selected="false">
+        Bassins hydrographiques
+      </button>
     </div>
 
     <div class="search-box">
-      <input type="search" id="search" placeholder="Nom, département, région…">
+      <input
+        type="search"
+        id="search"
+        placeholder="Nom, département, région…"
+        aria-label="Rechercher un titulaire ou un territoire"
+      >
     </div>
 
-    <button class="theme-toggle" id="theme-toggle" title="Basculer le thème">🌓</button>
+    <button class="theme-toggle" id="theme-toggle" title="Basculer le thème" aria-label="Basculer le thème">
+      🌓
+    </button>
   </div>
 </header>
 
 <main class="stage">
 
-  <section class="map-pane">
+  <section class="map-pane" aria-label="Carte de France">
     <div class="breadcrumb" id="breadcrumb" hidden>
       <button id="back-btn">France entière</button>
       <span class="scope-name" id="scope-name"></span>
     </div>
+
     <div id="map"></div>
   </section>
 
@@ -542,17 +593,37 @@
 
     <section class="rail-section">
       <h2>Ancienneté en poste</h2>
-      <div class="legend-row"><div class="legend-swatch" style="background:var(--anc-0)"></div><div>Moins de 6 mois</div></div>
-      <div class="legend-row"><div class="legend-swatch" style="background:var(--anc-1)"></div><div>6 mois à 1 an</div></div>
-      <div class="legend-row"><div class="legend-swatch" style="background:var(--anc-2)"></div><div>1 an à 2 ans</div></div>
-      <div class="legend-row"><div class="legend-swatch" style="background:var(--anc-3)"></div><div>Plus de 2 ans</div></div>
+
+      <div class="legend-row">
+        <div class="legend-swatch" style="background:var(--anc-0)"></div>
+        <div>Moins de 6 mois</div>
+      </div>
+
+      <div class="legend-row">
+        <div class="legend-swatch" style="background:var(--anc-1)"></div>
+        <div>6 mois à 1 an</div>
+      </div>
+
+      <div class="legend-row">
+        <div class="legend-swatch" style="background:var(--anc-2)"></div>
+        <div>1 an à 2 ans</div>
+      </div>
+
+      <div class="legend-row">
+        <div class="legend-swatch" style="background:var(--anc-3)"></div>
+        <div>Plus de 2 ans</div>
+      </div>
+
       <p class="legend-note" id="legend-note" hidden></p>
     </section>
 
     <section class="rail-section">
       <h2>Dossier</h2>
+
       <div id="dossier">
-        <p class="dossier-placeholder">Cliquez sur un département pour afficher le préfet en poste — la région (ou le bassin) associé sera mis en évidence sur la carte.</p>
+        <p class="dossier-placeholder">
+          Cliquez sur un département pour afficher le titulaire en poste — la région ou le bassin associé sera mis en évidence sur la carte.
+        </p>
       </div>
     </section>
 
@@ -569,227 +640,328 @@
 
 <script>
 
+/* ============================================================
+   Couleurs et thème
+   ============================================================ */
+
 const ancColors = {
-  green:"var(--anc-0)", yellow:"var(--anc-1)", orange:"var(--anc-2)", red:"var(--anc-3)"
+  green: 'var(--anc-0)',
+  yellow: 'var(--anc-1)',
+  orange: 'var(--anc-2)',
+  red: 'var(--anc-3)'
 };
+
 const ancColorHex = () => {
-  const s = getComputedStyle(document.documentElement);
+  const styles = getComputedStyle(document.documentElement);
+
   return {
-    green: s.getPropertyValue('--anc-0').trim(),
-    yellow: s.getPropertyValue('--anc-1').trim(),
-    orange: s.getPropertyValue('--anc-2').trim(),
-    red: s.getPropertyValue('--anc-3').trim()
+    green: styles.getPropertyValue('--anc-0').trim(),
+    yellow: styles.getPropertyValue('--anc-1').trim(),
+    orange: styles.getPropertyValue('--anc-2').trim(),
+    red: styles.getPropertyValue('--anc-3').trim()
   };
 };
 
-// ---------- Theme ----------
 (function initTheme(){
-  let saved = null;
-  try{ saved = localStorage.getItem('prefets-theme'); }catch(e){}
-  const preferred = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', preferred);
+  let savedTheme = null;
+
+  try{
+    savedTheme = localStorage.getItem('prefets-theme');
+  }catch(e){}
+
+  const theme = savedTheme ||
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+  document.documentElement.setAttribute('data-theme', theme);
 })();
 
 document.getElementById('theme-toggle').addEventListener('click', () => {
-  const cur = document.documentElement.getAttribute('data-theme');
-  const next = cur === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', next);
-  try{ localStorage.setItem('prefets-theme', next); }catch(e){}
-  buildColorCache(); // Reconstruit le cache de couleurs
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+  document.documentElement.setAttribute('data-theme', nextTheme);
+
+  try{
+    localStorage.setItem('prefets-theme', nextTheme);
+  }catch(e){}
+
+  buildColorCache();
   render();
 });
 
-// ---------- Entités (menu déroulant) ----------
-// Pour ajouter une entité : une entrée ici + une fonction de normalisation + une <option> dans le <select>.
+
+/* ============================================================
+   Entités
+   ============================================================ */
+
 const ENTITIES = {
+
   prefets: {
     h1: 'Préfets de France',
     sub: 'Préfets en poste',
     docTitle: 'Préfets de France — carte territoriale',
     search: 'Nom, département, région…',
-    placeholder: 'Cliquez sur un département pour afficher le préfet en poste — la région (ou le bassin) associé sera mis en évidence sur la carte.',
+    placeholder: 'Cliquez sur un département pour afficher le préfet en poste — la région ou le bassin associé sera mis en évidence sur la carte.',
     role: p => p.sexe === 'F' ? 'Préfète' : 'Préfet',
     legendNote: '',
     normalize: normalizePrefet
   },
+
   ddt: {
     h1: 'DDT / DDTM de France',
-    sub: 'Directeurs départementaux des territoires (et de la mer) en poste',
+    sub: 'Directeurs départementaux des territoires et de la mer en poste',
     docTitle: 'DDT / DDTM de France — carte territoriale',
     search: 'Nom, département, région…',
-    placeholder: 'Cliquez sur un département pour afficher le directeur départemental des territoires (et de la mer) en poste — la région (ou le bassin) associé sera mis en évidence sur la carte.',
+    placeholder: 'Cliquez sur un département pour afficher le directeur départemental des territoires, ou des territoires et de la mer, en poste.',
     role: p => p.sexe === 'F' ? 'Directrice' : 'Directeur',
     legendNote: '',
     normalize: normalizeDdt
   },
+
   ddets: {
     h1: 'DDETS / DDPP / DDETSPP de France',
-    sub: 'Directions départementales de l\u2019emploi, du travail et des solidarités, de la protection des populations',
+    sub: 'Directions départementales de l’emploi, du travail, des solidarités et de la protection des populations',
     docTitle: 'DDETS / DDPP / DDETSPP de France — carte territoriale',
     search: 'Nom, département, région…',
-    placeholder: `Cliquez sur un département pour afficher le ou les directeurs en poste (DDETS et DDPP, ou DDETSPP) — la région (ou le bassin) associé sera mis en évidence sur la carte.`,
+    placeholder: 'Cliquez sur un département pour afficher le ou les directeurs en poste : DDETS et DDPP, ou DDETSPP.',
     role: p => p.sexe === 'F' ? 'Directrice' : 'Directeur',
-    legendNote: 'Départements à deux directions (DDETS + DDPP) : la couleur correspond au titulaire arrivé le plus récemment.',
+    legendNote: 'Pour les départements ayant une DDETS et une DDPP, la couleur correspond au titulaire arrivé le plus récemment.',
     normalize: normalizeDdets
   },
-  // Entité régionale : la carte affiche les régions (et non les départements)
+
   dreal: {
     level: 'regions',
-    h1: 'DREAL / DEAL / DRIEAT de France',
-    sub: 'Directeurs régionaux (et territoriaux en outre-mer) de l\u2019environnement, de l\u2019aménagement et du logement en poste',
-    docTitle: 'DREAL / DEAL / DRIEAT de France — carte régionale',
+    h1: 'DREAL / DEAL / DRIEAT / DRIHL de France',
+    sub: 'Directions régionales et territoriales de l’environnement, de l’aménagement, du logement et de l’hébergement',
+    docTitle: 'DREAL / DEAL / DRIEAT / DRIHL de France — carte régionale',
     search: 'Nom, région, département…',
-    placeholder: 'Cliquez sur une région pour afficher le directeur en poste (DREAL, DRIEAT en Île-de-France, DEAL en outre-mer).',
+    placeholder: 'Cliquez sur une région pour afficher le ou les directeurs en poste. En mode « Bassins hydrographiques », cliquez sur un bassin.',
     role: p => p.sexe === 'F' ? 'Directrice' : 'Directeur',
-    legendNote: '',
+    legendNote: 'En Île-de-France, le dossier présente séparément la DRIEAT et la DRIHL. La couleur correspond au titulaire arrivé le plus récemment.',
     normalize: normalizeRegion
   }
 };
 
 const isRegional = () => ENTITIES[state.entity].level === 'regions';
 
-const deptOf = r => (r.departement ?? r['\ufeffdepartement'] ?? '').trim();   // gère un éventuel BOM UTF-8
-const clean  = v => (v ?? '').toString().trim();
-const toDays = v => { const n = parseFloat(clean(v).replace(',', '.')); return isNaN(n) ? null : Math.round(n); };
-const couleurFromJours = j => j == null ? 'none' : j < 183 ? 'green' : j < 365 ? 'yellow' : j < 730 ? 'orange' : 'red';
 
-function emptyRow(r, message){
-  return { departement: deptOf(r), territoire: clean(r.territoire), vide: true, message,
-           nom_prefet: '', titre_global: '', sexe: '', date_prise_fonction: '', anciennete_jours: '', couleur_carte: 'none' };
-}
+/* ============================================================
+   Outils de normalisation
+   ============================================================ */
 
-function normalizePrefet(r){
-  const nom = clean(r.prefet_nom_complet);
-  if(!nom) return emptyRow(r, 'Aucun préfet renseigné');
-  const j = toDays(r.prefet_anciennete_jours);
+const clean = value => (value ?? '').toString().trim();
+
+const deptOf = row =>
+  clean(row.departement ?? row['\ufeffdepartement']);
+
+const toDays = value => {
+  const result = parseFloat(clean(value).replace(',', '.'));
+  return Number.isNaN(result) ? null : Math.round(result);
+};
+
+const couleurFromJours = jours => {
+  if(jours == null) return 'none';
+  if(jours < 183) return 'green';
+  if(jours < 365) return 'yellow';
+  if(jours < 730) return 'orange';
+  return 'red';
+};
+
+function emptyRow(row, message){
   return {
-    departement: deptOf(r), territoire: clean(r.territoire), vide: false,
-    nom_prefet: nom, sexe: clean(r.prefet_sexe), titre_global: clean(r.prefet_titre_global),
-    date_prise_fonction: clean(r.prefet_date_prise_fonction),
-    anciennete_jours: j ?? '—', couleur_carte: couleurFromJours(j)
+    departement: deptOf(row),
+    territoire: clean(row.territoire),
+    vide: true,
+    message,
+
+    nom_prefet: '',
+    titre_global: '',
+    sexe: '',
+    date_prise_fonction: '',
+    anciennete_jours: '',
+    couleur_carte: 'none'
   };
 }
 
-function normalizeDdt(r){
-  const nom = clean(r.ddt_titulaire_nom_complet);
-  if(!nom) return emptyRow(r, clean(r.ddt_message) || 'Poste non renseigné');
-  const j = toDays(r.ddt_anciennete_jours);
-  const designe = clean(r.ddt_titulaire_designe_nom_complet);
+
+/* ============================================================
+   Normalisation : préfets
+   ============================================================ */
+
+function normalizePrefet(row){
+  const nom = clean(row.prefet_nom_complet);
+
+  if(!nom){
+    return emptyRow(row, 'Aucun préfet renseigné');
+  }
+
+  const jours = toDays(row.prefet_anciennete_jours);
+
   return {
-    departement: deptOf(r), territoire: clean(r.territoire), vide: false,
-    nom_prefet: nom, sexe: clean(r.ddt_titulaire_sexe), titre_global: clean(r.ddt_type_poste),
-    date_prise_fonction: clean(r.ddt_date_prise_fonction),
-    anciennete_jours: j ?? '—', couleur_carte: couleurFromJours(j),
-    designe: designe ? { nom: designe, date: clean(r.ddt_titulaire_designe_date_prise_fonction) } : null
+    departement: deptOf(row),
+    territoire: clean(row.territoire),
+    vide: false,
+
+    nom_prefet: nom,
+    sexe: clean(row.prefet_sexe),
+    titre_global: clean(row.prefet_titre_global),
+    date_prise_fonction: clean(row.prefet_date_prise_fonction),
+
+    anciennete_jours: jours ?? '—',
+    couleur_carte: couleurFromJours(jours)
   };
 }
 
-// Directions « emploi / travail / solidarités / protection des populations » :
-//  - DDETSPP fusionnée (départements < 400 000 hab.) : un seul poste
-//  - DDETS + DDPP séparées : deux postes
-//  - Île-de-France (75, 92, 93, 94) : DDPP seule, compétences emploi/travail gérées par la DRIEETS
-//  - Outre-mer : non renseigné
-function normalizeDdets(r) {
+
+/* ============================================================
+   Normalisation : DDT / DDTM
+   ============================================================ */
+
+function normalizeDdt(row){
+  const nom = clean(row.ddt_titulaire_nom_complet);
+
+  if(!nom){
+    return emptyRow(
+      row,
+      clean(row.ddt_message) || 'Poste non renseigné'
+    );
+  }
+
+  const jours = toDays(row.ddt_anciennete_jours);
+  const nomDesigne = clean(row.ddt_titulaire_designe_nom_complet);
+
+  return {
+    departement: deptOf(row),
+    territoire: clean(row.territoire),
+    vide: false,
+
+    nom_prefet: nom,
+    sexe: clean(row.ddt_titulaire_sexe),
+    titre_global: clean(row.ddt_type_poste),
+    date_prise_fonction: clean(row.ddt_date_prise_fonction),
+
+    anciennete_jours: jours ?? '—',
+    couleur_carte: couleurFromJours(jours),
+
+    designe: nomDesigne
+      ? {
+          nom: nomDesigne,
+          date: clean(row.ddt_titulaire_designe_date_prise_fonction)
+        }
+      : null
+  };
+}
+
+
+/* ============================================================
+   Normalisation : DDETS / DDPP / DDETSPP
+   ============================================================ */
+
+function normalizeDdets(row){
+
   const type = clean(
-    r.ddetspp_type_organisation ??
-    r['\ufeffddetspp_type_organisation']
-  ).toLowerCase().replace(/[\uFEFF\s]/g, '');
+    row.ddetspp_type_organisation ??
+    row['\ufeffddetspp_type_organisation']
+  )
+    .toLowerCase()
+    .replace(/[\uFEFF\s]/g, '');
 
-  const mk = (key, titre) => {
+  const createPoste = (key, titre) => {
     const field = suffix => `ddetspp_directeur_${key}_${suffix}`;
-    const designe = clean(r[field('designe_nom')]);
+    const nomDesigne = clean(row[field('designe_nom')]);
 
     return {
       titre,
-      nom: clean(r[field('nom_complet')]),
-      sexe: clean(r[field('sexe')]),
-      date: clean(r[field('date_prise_fonction')]),
-      jours: toDays(r[field('anciennete_jours')]),
-      designe: designe
+      nom: clean(row[field('nom_complet')]),
+      sexe: clean(row[field('sexe')]),
+      date: clean(row[field('date_prise_fonction')]),
+      jours: toDays(row[field('anciennete_jours')]),
+
+      designe: nomDesigne
         ? {
-            nom: designe,
-            date: clean(r[field('designe_date')])
+            nom: nomDesigne,
+            date: clean(row[field('designe_date')])
           }
         : null
     };
   };
 
-  const T_DDETS =
+  const titreDdets =
     'Directeur(rice) départemental(e) de l’emploi, du travail et des solidarités (DDETS)';
 
-  const T_DDPP =
+  const titreDdpp =
     'Directeur(rice) départemental(e) de la protection des populations (DDPP)';
 
-  const T_DDETSPP =
+  const titreDdetspp =
     'Directeur(rice) départemental(e) de l’emploi, du travail, des solidarités et de la protection des populations (DDETSPP)';
 
   let candidats = [];
 
-  switch (type) {
+  switch(type){
+
     case 'ddetspp_fusionnee':
-      candidats = [mk('ddetspp', T_DDETSPP)];
+      candidats = [
+        createPoste('ddetspp', titreDdetspp)
+      ];
       break;
 
     case 'ddets_ddpp_separees':
       candidats = [
-        mk('ddets', T_DDETS),
-        mk('ddpp', T_DDPP)
+        createPoste('ddets', titreDdets),
+        createPoste('ddpp', titreDdpp)
       ];
       break;
 
     case 'organisation_locale_specifique':
-      // Paris et petite couronne : DDPP seulement
-      candidats = [mk('ddpp', T_DDPP)];
+      candidats = [
+        createPoste('ddpp', titreDdpp)
+      ];
       break;
 
-    case 'non renseigne':
     case '':
+    case 'nonrenseigne':
       return emptyRow(
-        r,
-        clean(r.ddetspp_message) || 'Aucune information disponible'
+        row,
+        clean(row.ddetspp_message) || 'Aucune information disponible'
       );
 
     default:
       console.warn(
-        'Type d’organisation DDETS/DDPP inconnu :',
+        'Organisation DDETS/DDPP inconnue :',
         type,
-        '— département :',
-        deptOf(r),
-        r
+        row
       );
 
       return emptyRow(
-        r,
-        clean(r.ddetspp_message) ||
-          `Organisation non reconnue : ${type || '(valeur vide)'}`
+        row,
+        clean(row.ddetspp_message) ||
+          `Organisation non reconnue : ${type}`
       );
   }
 
-  // Ne retenir que les postes ayant un titulaire
   const postes = candidats.filter(poste => poste.nom);
 
-  if (!postes.length) {
+  if(!postes.length){
     return emptyRow(
-      r,
-      clean(r.ddetspp_message) || 'Aucun titulaire renseigné'
+      row,
+      clean(row.ddetspp_message) || 'Aucun titulaire renseigné'
     );
   }
 
-  // Pour une paire DDETS + DDPP :
-  // la couleur de carte est celle de la personne arrivée le plus récemment.
   const anciennetes = postes
     .map(poste => poste.jours)
     .filter(jours => jours != null);
 
-  const joursMin = anciennetes.length ? Math.min(...anciennetes) : null;
+  const joursMin = anciennetes.length
+    ? Math.min(...anciennetes)
+    : null;
 
   return {
-    departement: deptOf(r),
-    territoire: clean(r.territoire),
+    departement: deptOf(row),
+    territoire: clean(row.territoire),
     vide: false,
-    postes,
 
-    // Utilisé notamment par la recherche.
+    postes,
     nom_prefet: postes.map(poste => poste.nom).join(' '),
 
     titre_global: '',
@@ -800,401 +972,602 @@ function normalizeDdets(r) {
   };
 }
 
-// Directions régionales : DREAL (régions), DRIEAT (Île-de-France), DEAL (DROM), DTAM (Saint-Pierre-et-Miquelon).
-// Le code de la région est stocké dans le champ « departement » pour partager le reste du code avec les autres entités.
+
+/* ============================================================
+   Normalisation : DREAL / DEAL / DRIEAT / DRIHL / DGTM / DTAM
+   ============================================================ */
+
 function regionSigle(type){
-  const t = type.toLowerCase();
-  if(/interd[ée]partemental/.test(t))         return 'DRIEAT';
-  if(/^directeur\(rice\) r[ée]gional/.test(t)) return 'DREAL';
-  if(/territoires, de l.alimentation/.test(t)) return 'DTAM';
-  if(/environnement/.test(t))                  return 'DEAL';
+  const titre = clean(type).toLowerCase();
+
+  if(/hébergement.*logement/.test(titre)) return 'DRIHL';
+  if(/interd[ée]partemental/.test(titre)) return 'DRIEAT';
+  if(/général.*territoires.*mer/.test(titre)) return 'DGTM';
+  if(/territoires, de l.alimentation/.test(titre)) return 'DTAM';
+  if(/^directeur\(rice\) régional/.test(titre)) return 'DREAL';
+  if(/environnement/.test(titre)) return 'DEAL';
+
   return '';
 }
 
-function normalizeRegion(r){
-  const code = clean(r.code_region ?? r['\ufeffcode_region']);
-  const territoire = clean(r.region);
-  const nom = clean(r.titulaire_actuel_nom_complet);
-  if(!nom) return emptyRow({ departement: code, territoire }, 'Aucun titulaire renseigné');
+function normalizeRegion(row){
 
-  const type = clean(r.type_poste);
-  const sigle = regionSigle(type);
-  const j = toDays(r.anciennete_jours);
-  const des = clean(r.titulaire_designe_nom_complet);
+  const code = clean(row.code_region ?? row['\ufeffcode_region']);
+  const territoire = clean(row.region);
+
+  const createPoste = ({
+    type,
+    nom,
+    sexe,
+    date,
+    jours,
+    designeNom,
+    designeDate
+  }) => {
+    const titulaire = clean(nom);
+
+    if(!titulaire) return null;
+
+    const titre = clean(type);
+    const sigle = regionSigle(titre);
+    const anciennete = toDays(jours);
+    const successeur = clean(designeNom);
+
+    return {
+      titre: sigle ? `${titre} (${sigle})` : titre,
+      nom: titulaire,
+      sexe: clean(sexe),
+      date: clean(date),
+      jours: anciennete ?? '—',
+
+      designe: successeur
+        ? {
+            nom: successeur,
+            date: clean(designeDate)
+          }
+        : null
+    };
+  };
+
+  /*
+    Premier poste régional :
+    DREAL, DEAL, DRIEAT, DGTM ou DTAM selon le territoire.
+  */
+  const postePrincipal = createPoste({
+    type: row.type_poste,
+    nom: row.titulaire_actuel_nom_complet,
+    sexe: row.titulaire_actuel_sexe,
+    date: row.date_prise_fonction,
+    jours: row.anciennete_jours,
+    designeNom: row.titulaire_designe_nom_complet,
+    designeDate: row.titulaire_designe_date_prise_fonction
+  });
+
+  /*
+    Second poste éventuel :
+    DRIHL, actuellement renseignée pour l’Île-de-France.
+  */
+  const posteDrihl = createPoste({
+    type: row.drihl_type_poste,
+    nom: row.drihl_titulaire_actuel_nom_complet,
+    sexe: row.drihl_titulaire_actuel_sexe,
+    date: row.drihl_date_prise_fonction,
+    jours: row.drihl_anciennete_jours,
+    designeNom: row.drihl_titulaire_designe_nom_complet,
+    designeDate: row.drihl_titulaire_designe_date_prise_fonction
+  });
+
+  const postes = [postePrincipal, posteDrihl].filter(Boolean);
+
+  if(!postes.length){
+    return emptyRow(
+      { departement: code, territoire },
+      'Aucun titulaire renseigné'
+    );
+  }
+
+  /*
+    La couleur de la région est déterminée par le titulaire
+    dont la prise de poste est la plus récente.
+  */
+  const anciennetes = postes
+    .map(poste => poste.jours)
+    .filter(jours => jours !== '—' && jours != null);
+
+  const joursMin = anciennetes.length
+    ? Math.min(...anciennetes)
+    : null;
 
   return {
-    departement: code, territoire, vide: false,
-    nom_prefet: nom, sexe: clean(r.titulaire_actuel_sexe),
-    titre_global: sigle ? `${type} (${sigle})` : type,
-    date_prise_fonction: clean(r.date_prise_fonction),
-    anciennete_jours: j ?? '—', couleur_carte: couleurFromJours(j),
-    designe: des ? { nom: des, date: clean(r.titulaire_designe_date_prise_fonction) } : null
+    departement: code,
+    territoire,
+    vide: false,
+
+    postes,
+    nom_prefet: postes.map(poste => poste.nom).join(' '),
+
+    titre_global: '',
+    sexe: '',
+    date_prise_fonction: '',
+    anciennete_jours: joursMin ?? '—',
+    couleur_carte: couleurFromJours(joursMin)
   };
 }
 
-const postesOf = p => p.postes || [{
-  titre: p.titre_global, nom: p.nom_prefet, sexe: p.sexe,
-  date: p.date_prise_fonction, jours: p.anciennete_jours, designe: p.designe
+
+/* ============================================================
+   Outils communs de rendu des postes
+   ============================================================ */
+
+const postesOf = personne => personne.postes || [{
+  titre: personne.titre_global,
+  nom: personne.nom_prefet,
+  sexe: personne.sexe,
+  date: personne.date_prise_fonction,
+  jours: personne.anciennete_jours,
+  designe: personne.designe
 }];
 
-const designeText = q => !q.designe ? '' :
-  (q.designe.nom === q.nom ? 'Même titulaire désigné' : `Successeur désigné : ${q.designe.nom}`)
-  + (q.designe.date ? ` (à compter du ${q.designe.date})` : '');
+const designeText = poste => {
+  if(!poste.designe) return '';
 
-// ---------- State ----------
+  const texte = poste.designe.nom === poste.nom
+    ? 'Même titulaire désigné'
+    : `Successeur désigné : ${poste.designe.nom}`;
+
+  return poste.designe.date
+    ? `${texte} (à compter du ${poste.designe.date})`
+    : texte;
+};
+
+
+/* ============================================================
+   État global et données géographiques
+   ============================================================ */
+
 const state = {
-  entity: 'prefets',      // 'prefets' | 'ddt' | 'ddets'
-  mode: 'regions',        // 'regions' | 'bassins'
-  selectedScopeId: null,  // region code or bassin CdBH
-  selectedDept: null,     // department code shown in dossier
+  entity: 'prefets',
+  mode: 'regions',
+  selectedScopeId: null,
+  selectedDept: null,
   searchTerm: ''
 };
 
-let geoDepts, geoRegions, geoBassins, prefetsRows;
-let prefetsMap = {};     // = carte de l'entité active (prefets ou ddt), même nom conservé pour limiter les modifs
-let entityRows = {}, entityMaps = {};
-let regionOf = {};       // dept code -> region feature (whole department, single point test)
-let bassinOf = {}; // dept code -> bassin feature
-let bassinTouches = {}; // bassinId -> Set(dept codes)
+let geoDepts;
+let geoRegions;
+let geoBassins;
+
+let prefetsRows;
+let prefetsMap = {};
+
+let entityRows = {};
+let entityMaps = {};
+
+let regionOf = {};
+let bassinOf = {};
+
+let bassinTouches = {};
+let bassinRegions = {};
+
 let regionsById = {};
-let regionDeptsByCode = {};   // code région -> codes départements (recherche d'une région par département)
 let bassinsById = {};
+let regionDeptsByCode = {};
 
-let svg, zoomLayer, projection, path, zoomBehavior;
-let width, height;
+let svg;
+let zoomLayer;
+let projection;
+let path;
+let zoomBehavior;
+let width;
+let height;
 
-// ========== AJOUT : CACHES ==========
 let deptColorCache = {};
-let centroidsCache = {};
 let regionColorCache = {};
+let centroidsCache = {};
 let regionCentroidsCache = {};
-const unitColors = () => isRegional() ? regionColorCache : deptColorCache;
 let deptVisibilityCache = {};
 
-// ========== AJOUT : FONCTIONS DE CACHE ==========
-function buildColorCache() {
-  const colors = ancColorHex();
-  const s = getComputedStyle(document.documentElement);
-  const noneColor = s.getPropertyValue('--none').trim();
-  
-  if (isRegional()) {
-    // prefetsMap est alors indexé par code région : on ne touche pas aux couleurs des départements
-    geoRegions.features.forEach(d => {
-      const code = d.properties.code;
-      const p = prefetsMap[code];
-      regionColorCache[code] = (p && colors[p.couleur_carte]) || noneColor;
-    });
-    return;
-  }
+const unitColors = () =>
+  isRegional() ? regionColorCache : deptColorCache;
 
-  geoDepts.features.forEach(d => {
-    const code = d.properties.code;
-    const p = prefetsMap[code];
-    deptColorCache[code] = (p && colors[p.couleur_carte]) || noneColor;
-  });
-}
+</script>
 
-function buildCentroidsCache() {
-  geoDepts.features.forEach(d => {
-    centroidsCache[d.properties.code] = path.centroid(d);
-  });
-  geoRegions.features.forEach(d => {
-    regionCentroidsCache[d.properties.code] = path.centroid(d);
-  });
-}
-
-function updateVisibilityCache() {
-  geoDepts.features.forEach(d => {
-    const code = d.properties.code;
-    deptVisibilityCache[code] = shouldShowDept(code);
-  });
-}
-
-function shouldShowDept(code) {
-  if (!deptMatchesSearch(code)) return false;
-  if (!state.selectedScopeId) return true;
-  
-  if (state.mode === 'regions') {
-    return deptInScope(code);
-  } else {
-    return bassinTouches[state.selectedScopeId]?.has(code) ?? false;
-  }
-}
+/* ============================================================
+   Chargement des données
+   ============================================================ */
 
 Promise.all([
-  d3.json("commun/data/departements.geojson"),
-  d3.json("commun/data/regions.geojson"),
-  d3.json("commun/data/bassins.geojson"),
-  d3.dsv(";", "commun/data/base_administrations.csv"),
-  d3.json("commun/data/bassin_departements.json"),
-  d3.json("commun/data/region_departements.json"),
-  d3.dsv(";", "commun/data/base_administrations_regionales.csv")
-]).then(([depts, regions, bassins, rows, bassinDeptsData, regionDeptsData, regionalRows]) => {
+  d3.json('commun/data/departements.geojson'),
+  d3.json('commun/data/regions.geojson'),
+  d3.json('commun/data/bassins.geojson'),
+  d3.dsv(';', 'commun/data/base_administrations.csv'),
+  d3.json('commun/data/bassin_departements.json'),
+  d3.json('commun/data/region_departements.json'),
+  d3.dsv(';', 'commun/data/base_administrations_regionales.csv')
+])
+.then(([
+  depts,
+  regions,
+  bassins,
+  rows,
+  bassinDeptsData,
+  regionDeptsData,
+  regionalRows
+]) => {
 
   geoDepts = depts;
   geoRegions = regions;
   geoBassins = bassins;
-  // Une normalisation par entité, à partir du CSV commun
+
+  /*
+    Chaque entité est normalisée depuis son CSV correspondant :
+    - les trois premières utilisent le fichier administratif général ;
+    - DREAL / DEAL / DRIEAT / DRIHL utilise le fichier régional.
+  */
   Object.entries(ENTITIES).forEach(([key, cfg]) => {
-    // Les entités régionales ont leur propre CSV (une ligne par région)
-    entityRows[key] = (cfg.level === 'regions' ? regionalRows : rows).map(cfg.normalize);
+    const source = cfg.level === 'regions' ? regionalRows : rows;
+
+    entityRows[key] = source.map(cfg.normalize);
     entityMaps[key] = {};
-    entityRows[key].forEach(r => entityMaps[key][r.departement] = r);
+
+    entityRows[key].forEach(row => {
+      entityMaps[key][row.departement] = row;
+    });
   });
+
   prefetsRows = entityRows[state.entity];
-  prefetsMap  = entityMaps[state.entity];
+  prefetsMap = entityMaps[state.entity];
 
-  regions.features.forEach(f => regionsById[f.properties.code] = f);
-  bassins.features.forEach(f => bassinsById[f.properties.CdBH] = f);
-  
-  // ✅ INSTANTANÉ - Charge les correspondances bassins
-  Object.entries(bassinDeptsData).forEach(([bassinId, deptCodes]) => {
-    bassinTouches[bassinId] = new Set(deptCodes);
+  geoRegions.features.forEach(feature => {
+    regionsById[feature.properties.code] = feature;
   });
 
-  // ✅ INSTANTANÉ - Charge les correspondances régions
+  geoBassins.features.forEach(feature => {
+    bassinsById[feature.properties.CdBH] = feature;
+  });
+
+  /*
+    Correspondance région -> départements
+    et département -> région.
+  */
   Object.entries(regionDeptsData).forEach(([regionCode, deptCodes]) => {
     regionDeptsByCode[regionCode] = deptCodes;
+
     const region = regionsById[regionCode];
-    if (region) {
+
+    if(region){
       deptCodes.forEach(deptCode => {
         regionOf[deptCode] = region;
       });
     }
   });
 
-  // ✅ Association département -> bassin (simplifié)
-  geoDepts.features.forEach(d => {
-    const deptCode = d.properties.code;
-    // Trouve le bassin qui contient ce département
-    for (let [bassinId, deptCodes] of Object.entries(bassinDeptsData)) {
-      if (deptCodes.includes(deptCode)) {
+  /*
+    Correspondance bassin -> départements.
+  */
+  Object.entries(bassinDeptsData).forEach(([bassinId, deptCodes]) => {
+    bassinTouches[bassinId] = new Set(deptCodes);
+  });
+
+  /*
+    Correspondance département -> bassin.
+    Un département peut théoriquement appartenir à plusieurs grands
+    bassins selon la méthode choisie ; le JSON de correspondance fournit
+    ici le bassin de référence pour le comportement départemental.
+  */
+  geoDepts.features.forEach(feature => {
+    const deptCode = feature.properties.code;
+
+    for(const [bassinId, deptCodes] of Object.entries(bassinDeptsData)){
+      if(deptCodes.includes(deptCode)){
         bassinOf[deptCode] = bassinsById[bassinId];
         break;
       }
     }
   });
 
+  /*
+    Correspondance bassin -> régions touchées.
+
+    Elle est indispensable en affichage régional : lorsqu'un bassin
+    transrégional est choisi, toutes les régions qu'il couvre restent
+    visibles et ne sont pas estompées.
+  */
+  Object.entries(bassinTouches).forEach(([bassinId, deptCodes]) => {
+    bassinRegions[bassinId] = new Set(
+      [...deptCodes]
+        .map(deptCode => regionOf[deptCode]?.properties.code)
+        .filter(Boolean)
+    );
+  });
+
   buildMap();
   buildCentroidsCache();
   buildColorCache();
-  buildLabels(); // ✅ AJOUTÉ - crée les labels après les caches
+  buildLabels();
   buildOverseasList();
   render();
 
-  document.getElementById('entity-select').addEventListener('change', e => setEntity(e.target.value));
+  document
+    .getElementById('entity-select')
+    .addEventListener('change', event => {
+      setEntity(event.target.value);
+    });
+})
+.catch(error => {
+  console.error(error);
 
-  renderDepartments();
-
-  zoomLayer.select('.label-layer').selectAll('text')
-    .data(geoDepts.features)
-    .enter()
-    .append('text')
-    .attr('class', 'dept-label')
-    .attr('transform', d => {
-      const c = centroidsCache[d.properties.code] || [0, 0];
-      return `translate(${c[0]},${c[1]})`;
-    })
-    .text(d => d.properties.code);
-
-}).catch(err => {
-  console.error(err);
-  document.getElementById('map').innerHTML =
-    '<div style="padding:40px;color:#B94A3F">Erreur de chargement des données.</div>';
+  document.getElementById('map').innerHTML = `
+    <div style="padding:40px;color:#B94A3F">
+      Erreur de chargement des données.
+      Vérifiez les chemins vers les fichiers GeoJSON, CSV et JSON.
+    </div>
+  `;
 });
 
-// ---------- Map construction ----------
+
+/* ============================================================
+   Construction de la carte
+   ============================================================ */
 
 function buildMap(){
 
   const container = document.getElementById('map');
+
   width = container.clientWidth;
   height = container.clientHeight;
 
-  svg = d3.select('#map').append('svg')
+  svg = d3.select('#map')
+    .append('svg')
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', `0 0 ${width} ${height}`);
 
-  projection = d3.geoMercator().fitSize([width, height], geoDepts);
-  path = d3.geoPath().projection(projection);
+  projection = d3.geoMercator()
+    .fitSize([width, height], geoDepts);
 
-  zoomLayer = svg.append('g').attr('class', 'zoom-layer');
+  path = d3.geoPath()
+    .projection(projection);
 
-zoomLayer.append('g').attr('class', 'dept-layer');
-zoomLayer.append('g').attr('class', 'region-layer');   // remplis des régions (entités régionales)
-zoomLayer.append('g').attr('class', 'boundary-layer');
-zoomLayer.append('g').attr('class', 'selected-boundary-layer'); // ✅ NOUVEAU calque au-dessus
-zoomLayer.append('g').attr('class', 'label-layer');
+  zoomLayer = svg
+    .append('g')
+    .attr('class', 'zoom-layer');
 
-zoomBehavior = d3.zoom()
-  .scaleExtent([1, 10])
-  .on('zoom', (event) => {
-    zoomLayer.attr('transform', event.transform);
-    const k = event.transform.k;
-    zoomLayer.selectAll('.department').attr('stroke-width', 1 / k);
-    zoomLayer.selectAll('.region-fill').attr('stroke-width', 1 / k);
-    zoomLayer.selectAll('.region-label').attr('transform', d => {
-      const c = regionCentroidsCache[d.properties.code] || [0, 0];
-      return `translate(${c[0]},${c[1]}) scale(${1 / k})`;
+  zoomLayer.append('g').attr('class', 'dept-layer');
+  zoomLayer.append('g').attr('class', 'region-layer');
+
+  /*
+    Calque transparent au-dessus des régions :
+    utilisé uniquement en mode « Bassins » avec l'entité régionale.
+  */
+  zoomLayer.append('g').attr('class', 'basin-hit-layer');
+
+  zoomLayer.append('g').attr('class', 'boundary-layer');
+  zoomLayer.append('g').attr('class', 'selected-boundary-layer');
+  zoomLayer.append('g').attr('class', 'label-layer');
+
+  zoomBehavior = d3.zoom()
+    .scaleExtent([1, 10])
+    .on('zoom', event => {
+      zoomLayer.attr('transform', event.transform);
+
+      const k = event.transform.k;
+
+      zoomLayer
+        .selectAll('.department')
+        .attr('stroke-width', 1 / k);
+
+      zoomLayer
+        .selectAll('.region-fill')
+        .attr('stroke-width', 1 / k);
+
+      zoomLayer
+        .selectAll('.region-label')
+        .attr('transform', feature => {
+          const centroid =
+            regionCentroidsCache[feature.properties.code] || [0, 0];
+
+          return `translate(${centroid[0]},${centroid[1]}) scale(${1 / k})`;
+        });
+
+      zoomLayer
+        .selectAll('.boundary')
+        .attr('stroke-width', feature =>
+          (boundaryIsSelected(feature) ? 2.6 : 1.4) / k
+        );
+
+      zoomLayer
+        .select('.selected-boundary-layer')
+        .selectAll('path')
+        .attr('stroke-width', 2.6 / k);
+
+      zoomLayer
+        .selectAll('.dept-label')
+        .attr('transform', feature => {
+          const centroid =
+            centroidsCache[feature.properties.code] || [0, 0];
+
+          return `translate(${centroid[0]},${centroid[1]}) scale(${1 / k})`;
+        });
     });
-    zoomLayer.selectAll('.boundary').attr('stroke-width', d => (boundaryIsSelected(d) ? 2.6 : 1.4) / k);
-    zoomLayer.select('.selected-boundary-layer').selectAll('path').attr('stroke-width', 2.6 / k); // ✅ AJOUTÉ
-    zoomLayer.selectAll('.dept-label').attr('transform', d => {
-      const c = centroidsCache[d.properties.code] || [0, 0];
-      return `translate(${c[0]},${c[1]}) scale(${1 / k})`;
-    });
-  });
 
   svg.call(zoomBehavior);
 
   renderDepartments();
   renderRegions();
-
-  // ✅ DÉPLACÉ APRÈS - sera appelé une fois les caches construits
-  
-  window.addEventListener('resize', () => {
-    // Keep it simple: re-render on resize without a full rebuild of geometry.
-  });
+  renderBoundaries();
 
   let searchTimeout;
-  document.getElementById('search').addEventListener('input', (e) => {
+
+  document.getElementById('search').addEventListener('input', event => {
     clearTimeout(searchTimeout);
+
     searchTimeout = setTimeout(() => {
-      state.searchTerm = e.target.value.trim().toLowerCase();
+      state.searchTerm = event.target.value.trim().toLowerCase();
+
       if(state.searchTerm){
         state.selectedScopeId = null;
+        state.selectedDept = null;
         resetZoom();
       }
+
+      renderBoundaries();
       render();
     }, 150);
   });
 
   document.getElementById('back-btn').addEventListener('click', () => {
     state.selectedScopeId = null;
+    state.selectedDept = null;
+
     resetZoom();
+    renderBoundaries();
     render();
   });
 
-  document.querySelectorAll('.mode-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if(btn.dataset.mode === state.mode) return;
-      state.mode = btn.dataset.mode;
+  document.querySelectorAll('.mode-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const mode = button.dataset.mode;
+
+      if(mode === state.mode) return;
+
+      state.mode = mode;
       state.selectedScopeId = null;
-      document.querySelectorAll('.mode-btn').forEach(b => {
-        b.classList.toggle('active', b === btn);
-        b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+      state.selectedDept = null;
+      state.searchTerm = '';
+
+      document.getElementById('search').value = '';
+
+      document.querySelectorAll('.mode-btn').forEach(otherButton => {
+        const active = otherButton === button;
+
+        otherButton.classList.toggle('active', active);
+        otherButton.setAttribute('aria-selected', active ? 'true' : 'false');
       });
+
       resetZoom();
-      renderDepartments();
       renderBoundaries();
       render();
     });
   });
 
-  renderBoundaries();
+  window.addEventListener('resize', () => {
+    /*
+      La géométrie est conservée pour éviter un rendu coûteux.
+      Un rechargement de page recalculera la projection si nécessaire.
+    */
+  });
 }
+
+
+/* ============================================================
+   Changement d'entité
+   ============================================================ */
 
 function setEntity(key){
   if(!ENTITIES[key] || key === state.entity) return;
+
   const cfg = ENTITIES[key];
   const wasRegional = isRegional();
+
   state.entity = key;
+
   prefetsRows = entityRows[key];
-  prefetsMap  = entityMaps[key];
+  prefetsMap = entityMaps[key];
 
-  // Carte par régions : le choix Régions / Bassins n'a pas de sens, on le masque
   const nowRegional = cfg.level === 'regions';
-  document.querySelector('.mode-switch').hidden = nowRegional;
-  if(nowRegional && state.mode !== 'regions'){
-    state.mode = 'regions';
-    document.querySelectorAll('.mode-btn').forEach(b => {
-      const active = b.dataset.mode === 'regions';
-      b.classList.toggle('active', active);
-      b.setAttribute('aria-selected', active ? 'true' : 'false');
-    });
-  }
-  // Les codes région et département ne sont pas les mêmes : on repart d'une sélection vide
-  if(wasRegional !== nowRegional){
-    state.selectedDept = null;
-    state.selectedScopeId = null;
-    resetZoom();
-    renderBoundaries();
-  }
 
+  /*
+    Important :
+    le sélecteur Régions / Bassins reste visible pour les DREAL,
+    car les bassins peuvent couvrir plusieurs régions.
+  */
+  document.querySelector('.mode-switch').hidden = false;
+
+  state.selectedDept = null;
+  state.selectedScopeId = null;
   state.searchTerm = '';
-  const search = document.getElementById('search');
-  search.value = '';
-  search.placeholder = cfg.search;
+
+  document.getElementById('search').value = '';
+  document.getElementById('search').placeholder = cfg.search;
 
   document.getElementById('masthead-h1').textContent = cfg.h1;
   document.getElementById('masthead-sub').textContent = cfg.sub;
   document.title = cfg.docTitle;
-  onDeptLeave();
 
   const note = document.getElementById('legend-note');
   note.textContent = cfg.legendNote;
   note.hidden = !cfg.legendNote;
 
+  onDeptLeave();
+  resetZoom();
+
+  /*
+    Lorsque l'on passe d'une carte départementale à une carte régionale,
+    ou inversement, les calques sont gérés par render().
+  */
+  if(wasRegional !== nowRegional){
+    renderBoundaries();
+  }
+
   buildColorCache();
   buildOverseasList();
+  renderBoundaries();
   render();
 }
 
+
+/* ============================================================
+   Calques de carte
+   ============================================================ */
+
 function buildLabels(){
-  zoomLayer.select('.label-layer').selectAll('text')
+
+  zoomLayer
+    .select('.label-layer')
+    .selectAll('.dept-label')
     .data(geoDepts.features)
     .enter()
     .append('text')
     .attr('class', 'dept-label')
-    .attr('transform', d => {
-      const c = centroidsCache[d.properties.code] || [0, 0];
-      return `translate(${c[0]},${c[1]})`;
-    })
-    .text(d => d.properties.code);
+    .attr('transform', feature => {
+      const centroid =
+        centroidsCache[feature.properties.code] || [0, 0];
 
-  // Noms des régions (visibles uniquement pour les entités régionales)
-  zoomLayer.select('.label-layer').selectAll('.region-label')
+      return `translate(${centroid[0]},${centroid[1]})`;
+    })
+    .text(feature => feature.properties.code);
+
+  zoomLayer
+    .select('.label-layer')
+    .selectAll('.region-label')
     .data(geoRegions.features)
     .enter()
     .append('text')
     .attr('class', 'region-label')
     .style('display', 'none')
-    .attr('transform', d => {
-      const c = regionCentroidsCache[d.properties.code] || [0, 0];
-      return `translate(${c[0]},${c[1]})`;
+    .attr('transform', feature => {
+      const centroid =
+        regionCentroidsCache[feature.properties.code] || [0, 0];
+
+      return `translate(${centroid[0]},${centroid[1]})`;
     })
-    .text(d => d.properties.nom);
-}
-
-function renderRegions(){
-  const sel = zoomLayer.select('.region-layer')
-    .selectAll('path')
-    .data(geoRegions.features);
-
-  sel.exit().remove();
-
-  sel.enter()
-    .append('path')
-    .merge(sel)
-    .attr('class', 'region-fill')
-    .attr('d', path)
-    .on('mousemove', onDeptHover)      // prefetsMap est indexé par code région dans ce mode
-    .on('mouseleave', onDeptLeave)
-    .on('click', onRegionClick);
+    .text(feature => feature.properties.nom);
 }
 
 function renderDepartments(){
 
-  const sel = zoomLayer.select('.dept-layer')
+  const selection = zoomLayer
+    .select('.dept-layer')
     .selectAll('path')
     .data(geoDepts.features);
 
-  sel.exit().remove();
+  selection.exit().remove();
 
-  sel.enter()
+  selection
+    .enter()
     .append('path')
-    .merge(sel)
+    .merge(selection)
     .attr('class', 'department')
     .attr('d', path)
     .on('mousemove', onDeptHover)
@@ -1202,187 +1575,394 @@ function renderDepartments(){
     .on('click', onDeptClick);
 }
 
-function boundaryIsSelected(d){
+function renderRegions(){
+
+  const selection = zoomLayer
+    .select('.region-layer')
+    .selectAll('path')
+    .data(geoRegions.features);
+
+  selection.exit().remove();
+
+  selection
+    .enter()
+    .append('path')
+    .merge(selection)
+    .attr('class', 'region-fill')
+    .attr('d', path)
+    .on('mousemove', onDeptHover)
+    .on('mouseleave', onDeptLeave)
+    .on('click', onRegionClick);
+}
+
+function boundaryIsSelected(feature){
   if(!state.selectedScopeId) return false;
-  const id = state.mode === 'regions' ? d.properties.code : d.properties.CdBH;
+
+  const id = state.mode === 'regions'
+    ? feature.properties.code
+    : feature.properties.CdBH;
+
   return id === state.selectedScopeId;
 }
 
 function renderBoundaries(){
-  const data = state.mode === 'regions' ? geoRegions.features : geoBassins.features;
 
-  // ✅ Bordures normales (non sélectionnées)
-  const sel = zoomLayer.select('.boundary-layer').selectAll('path').data(data);
-  sel.exit().remove();
-  sel.enter()
+  const data = state.mode === 'regions'
+    ? geoRegions.features
+    : geoBassins.features;
+
+  const normalBoundaries = zoomLayer
+    .select('.boundary-layer')
+    .selectAll('path')
+    .data(data);
+
+  normalBoundaries.exit().remove();
+
+  normalBoundaries
+    .enter()
     .append('path')
-    .merge(sel)
+    .merge(normalBoundaries)
     .attr('class', 'boundary')
-    .classed('selected', false) // ✅ Jamais sélectionné dans ce calque
+    .classed('selected', false)
     .attr('d', path)
-    .style('display', d => boundaryIsSelected(d) ? 'none' : null); // ✅ Cache si sélectionné
+    .style('display', feature =>
+      boundaryIsSelected(feature) ? 'none' : null
+    );
 
-  // ✅ Bordure sélectionnée (dans le calque au-dessus)
-  const selectedData = data.filter(d => boundaryIsSelected(d));
-  const selBoundary = zoomLayer.select('.selected-boundary-layer').selectAll('path').data(selectedData);
-  selBoundary.exit().remove();
-  selBoundary.enter()
+  const selectedData = data.filter(boundaryIsSelected);
+
+  const selectedBoundary = zoomLayer
+    .select('.selected-boundary-layer')
+    .selectAll('path')
+    .data(selectedData);
+
+  selectedBoundary.exit().remove();
+
+  selectedBoundary
+    .enter()
     .append('path')
-    .merge(selBoundary)
+    .merge(selectedBoundary)
     .attr('class', 'boundary selected')
     .attr('d', path);
+
+  renderBasinHitAreas();
 }
 
-// ---------- Interaction ----------
 
-function onDeptHover(event, d){
-  const code = d.properties.code;
-  const p = prefetsMap[code];
-  if(!p) return;
+/*
+  Sur la carte régionale, les régions ne permettent pas de représenter
+  fidèlement l'emprise géographique d'un bassin transrégional.
+
+  Ce calque transparent reprend donc directement les géométries des
+  bassins, afin de pouvoir les cliquer.
+*/
+function renderBasinHitAreas(){
+
+  const active = isRegional() && state.mode === 'bassins';
+
+  const selection = zoomLayer
+    .select('.basin-hit-layer')
+    .selectAll('path')
+    .data(geoBassins.features);
+
+  selection.exit().remove();
+
+  selection
+    .enter()
+    .append('path')
+    .merge(selection)
+    .attr('class', 'basin-hit')
+    .attr('d', path)
+    .style('display', active ? null : 'none')
+    .on('click', onBassinClick);
+}
+
+
+/* ============================================================
+   Interactions
+   ============================================================ */
+
+function onDeptHover(event, feature){
+
+  const code = feature.properties.code;
+  const personne = prefetsMap[code];
+
+  if(!personne) return;
 
   let html;
-  if(p.vide){
-    html = `<h4>${p.territoire}</h4><div class="t-meta">${p.message}</div>`;
-  } else {
-    html = postesOf(p).map(q => {
-      const titres = q.titre.split('|').map(t => `<div>${t.trim()}</div>`).join('');
-      return `
-        <div class="t-poste">
-          <h4>${q.nom}</h4>
-          <div class="t-territoire">${p.territoire}</div>
-          ${titres}
-          <div class="t-meta">Depuis le ${q.date} · ${q.jours} j</div>
-          ${q.designe ? `<div class="t-meta">${designeText(q)}</div>` : ''}
-        </div>`;
-    }).join('');
+
+  if(personne.vide){
+    html = `
+      <h4>${personne.territoire}</h4>
+      <div class="t-meta">${personne.message}</div>
+    `;
+  }else{
+    html = postesOf(personne)
+      .map(poste => {
+        const titres = poste.titre
+          .split('|')
+          .map(titre => `<div>${titre.trim()}</div>`)
+          .join('');
+
+        return `
+          <div class="t-poste">
+            <h4>${poste.nom}</h4>
+            <div class="t-territoire">${personne.territoire}</div>
+            ${titres}
+            <div class="t-meta">
+              Depuis le ${poste.date} · ${poste.jours} j
+            </div>
+            ${
+              poste.designe
+                ? `<div class="t-meta">${designeText(poste)}</div>`
+                : ''
+            }
+          </div>
+        `;
+      })
+      .join('');
   }
 
   d3.select('#tooltip')
     .classed('visible', true)
     .html(html)
-    .style('left', (event.clientX + 18) + 'px')
-    .style('top', (event.clientY + 18) + 'px');
+    .style('left', `${event.clientX + 18}px`)
+    .style('top', `${event.clientY + 18}px`);
 }
 
 function onDeptLeave(){
   d3.select('#tooltip').classed('visible', false);
 }
 
-function onDeptClick(event, d){
+function onDeptClick(event, feature){
 
-  const code = d.properties.code;
+  if(isRegional()) return;
+
+  const code = feature.properties.code;
 
   const parent = state.mode === 'regions'
     ? regionOf[code]
     : bassinOf[code];
 
   state.selectedDept = code;
-
   state.searchTerm = '';
 
   document.getElementById('search').value = '';
 
   if(parent){
-
-    const id = state.mode === 'regions'
+    state.selectedScopeId = state.mode === 'regions'
       ? parent.properties.code
       : parent.properties.CdBH;
-
-    state.selectedScopeId = id;
 
     zoomToFeature(parent);
   }
 
   renderBoundaries();
-
   render();
 }
 
-function onRegionClick(event, d){
-  const code = d.properties.code;
+function onRegionClick(event, feature){
+
+  /*
+    En mode Bassins, le calque basin-hit-layer gère les clics :
+    il passe au-dessus des régions.
+  */
+  if(state.mode === 'bassins') return;
+
+  const code = feature.properties.code;
+
   state.selectedDept = code;
   state.selectedScopeId = code;
   state.searchTerm = '';
+
   document.getElementById('search').value = '';
-  zoomToFeature(d);
+
+  zoomToFeature(feature);
   renderBoundaries();
   render();
 }
 
+function onBassinClick(event, feature){
+
+  event.stopPropagation();
+
+  const bassinId = feature.properties.CdBH;
+
+  state.selectedScopeId = bassinId;
+  state.selectedDept = null;
+  state.searchTerm = '';
+
+  document.getElementById('search').value = '';
+
+  zoomToFeature(feature);
+  renderBoundaries();
+  render();
+}
+
+
+/* ============================================================
+   Recherche et zoom
+   ============================================================ */
+
 function regionMatchesSearch(code){
+
   if(!state.searchTerm) return true;
-  const p = prefetsMap[code];
-  if(!p) return false;
-  const couverts = (regionDeptsByCode[code] || []).join(' ').toLowerCase();
-  return p.nom_prefet.toLowerCase().includes(state.searchTerm)
-      || p.territoire.toLowerCase().includes(state.searchTerm)
-      || code.includes(state.searchTerm)
-      || couverts.split(' ').includes(state.searchTerm);
-}
 
-function zoomToFeature(feature){
-  const [[x0, y0], [x1, y1]] = path.bounds(feature);
-  const dx = x1 - x0, dy = y1 - y0;
-  const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
-  const scale = Math.max(1, Math.min(9, 0.86 / Math.max(dx / width, dy / height)));
-  const translate = [width / 2 - scale * cx, height / 2 - scale * cy];
+  const personne = prefetsMap[code];
 
-  svg.transition().duration(700).ease(d3.easeCubicInOut)
-    .call(zoomBehavior.transform, d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale));
-}
+  if(!personne) return false;
 
-function resetZoom(){
-  svg.transition().duration(600).ease(d3.easeCubicInOut)
-    .call(zoomBehavior.transform, d3.zoomIdentity);
+  const departementsCouverts = (
+    regionDeptsByCode[code] || []
+  ).join(' ').toLowerCase();
+
+  return (
+    personne.nom_prefet.toLowerCase().includes(state.searchTerm) ||
+    personne.territoire.toLowerCase().includes(state.searchTerm) ||
+    code.toLowerCase().includes(state.searchTerm) ||
+    departementsCouverts.split(' ').includes(state.searchTerm)
+  );
 }
 
 function deptMatchesSearch(code){
+
   if(!state.searchTerm) return true;
-  const p = prefetsMap[code];
-  if(!p) return false;
-  return p.nom_prefet.toLowerCase().includes(state.searchTerm)
-      || p.territoire.toLowerCase().includes(state.searchTerm)
-      || code.includes(state.searchTerm);
+
+  const personne = prefetsMap[code];
+
+  if(!personne) return false;
+
+  return (
+    personne.nom_prefet.toLowerCase().includes(state.searchTerm) ||
+    personne.territoire.toLowerCase().includes(state.searchTerm) ||
+    code.toLowerCase().includes(state.searchTerm)
+  );
 }
 
 function deptInScope(code){
+
   if(!state.selectedScopeId) return true;
+
   const parent = state.mode === 'regions'
     ? regionOf[code]
     : bassinOf[code];
+
   if(!parent) return false;
-  const id = state.mode === 'regions'
+
+  const parentId = state.mode === 'regions'
     ? parent.properties.code
     : parent.properties.CdBH;
-  return id === state.selectedScopeId;
+
+  return parentId === state.selectedScopeId;
+}
+
+function regionInCurrentScope(code){
+
+  if(!state.selectedScopeId) return true;
+
+  /*
+    Sélection traditionnelle d'une région.
+  */
+  if(state.mode === 'regions'){
+    return state.selectedScopeId === code;
+  }
+
+  /*
+    Sélection d'un bassin, éventuellement transrégional.
+    Plusieurs régions peuvent donc être visibles simultanément.
+  */
+  return bassinRegions[state.selectedScopeId]?.has(code) ?? false;
+}
+
+function zoomToFeature(feature){
+
+  const [[x0, y0], [x1, y1]] = path.bounds(feature);
+
+  const dx = x1 - x0;
+  const dy = y1 - y0;
+
+  const cx = (x0 + x1) / 2;
+  const cy = (y0 + y1) / 2;
+
+  const scale = Math.max(
+    1,
+    Math.min(9, 0.86 / Math.max(dx / width, dy / height))
+  );
+
+  const translate = [
+    width / 2 - scale * cx,
+    height / 2 - scale * cy
+  ];
+
+  svg
+    .transition()
+    .duration(700)
+    .ease(d3.easeCubicInOut)
+    .call(
+      zoomBehavior.transform,
+      d3.zoomIdentity
+        .translate(translate[0], translate[1])
+        .scale(scale)
+    );
+}
+
+function resetZoom(){
+  svg
+    .transition()
+    .duration(600)
+    .ease(d3.easeCubicInOut)
+    .call(zoomBehavior.transform, d3.zoomIdentity);
 }
 
 
-
+/* ============================================================
+   Rendu général
+   ============================================================ */
 
 function render(){
 
-  const reg = isRegional();
+  const regional = isRegional();
 
-  // Bascule départements <-> régions pour le remplissage de la carte
-  zoomLayer.select('.dept-layer').style('display', reg ? 'none' : null);
-  zoomLayer.select('.region-layer').style('display', reg ? null : 'none');
-  zoomLayer.selectAll('.dept-label').style('display', reg ? 'none' : null);
-  zoomLayer.selectAll('.region-label').style('display', reg ? null : 'none');
+  /*
+    Carte par départements pour Préfets / DDT / DDETS.
+    Carte par régions pour DREAL / DEAL / DRIEAT / DRIHL.
+  */
+  zoomLayer
+    .select('.dept-layer')
+    .style('display', regional ? 'none' : null);
 
-  if(reg){
-    const visible = code => regionMatchesSearch(code)
-      && (!state.selectedScopeId || state.selectedScopeId === code);
+  zoomLayer
+    .select('.region-layer')
+    .style('display', regional ? null : 'none');
 
-    zoomLayer.selectAll('.region-fill')
-      .attr('fill', d => regionColorCache[d.properties.code])
-      .style('opacity', d => visible(d.properties.code) ? 1 : 0.15);
+  zoomLayer
+    .selectAll('.dept-label')
+    .style('display', regional ? 'none' : null);
 
-    zoomLayer.selectAll('.region-label')
-      .style('opacity', d => visible(d.properties.code) ? 0.9 : 0.1);
+  zoomLayer
+    .selectAll('.region-label')
+    .style('display', regional ? null : 'none');
 
-    zoomLayer.selectAll('.boundary')
-      .classed('selected', d => boundaryIsSelected(d));
+  if(regional){
+
+    const visible = code =>
+      regionMatchesSearch(code) &&
+      regionInCurrentScope(code);
+
+    zoomLayer
+      .selectAll('.region-fill')
+      .attr('fill', feature => {
+        return regionColorCache[feature.properties.code];
+      })
+      .style('opacity', feature => {
+        return visible(feature.properties.code) ? 1 : 0.15;
+      });
+
+    zoomLayer
+      .selectAll('.region-label')
+      .style('opacity', feature => {
+        return visible(feature.properties.code) ? 0.9 : 0.1;
+      });
 
     renderBreadcrumb();
     renderDossier();
@@ -1391,50 +1971,83 @@ function render(){
 
   updateVisibilityCache();
 
-  zoomLayer.selectAll('.department')
-    .attr('fill', d => deptColorCache[d.properties.code])
-    .style('opacity', d => deptVisibilityCache[d.properties.code] ? 1 : 0.15);
+  zoomLayer
+    .selectAll('.department')
+    .attr('fill', feature => {
+      return deptColorCache[feature.properties.code];
+    })
+    .style('opacity', feature => {
+      return deptVisibilityCache[feature.properties.code] ? 1 : 0.15;
+    });
 
-  zoomLayer.selectAll('.dept-label')
-    .style('opacity', d => deptVisibilityCache[d.properties.code] ? 0.85 : 0.1);
-
-  zoomLayer.selectAll('.boundary')
-    .classed('selected', d => boundaryIsSelected(d));
+  zoomLayer
+    .selectAll('.dept-label')
+    .style('opacity', feature => {
+      return deptVisibilityCache[feature.properties.code] ? 0.85 : 0.1;
+    });
 
   renderBreadcrumb();
   renderDossier();
 }
 
+
+/* ============================================================
+   Fil d'Ariane et dossier
+   ============================================================ */
+
 function renderBreadcrumb(){
-  const bc = document.getElementById('breadcrumb');
+
+  const breadcrumb = document.getElementById('breadcrumb');
+
   if(!state.selectedScopeId){
-    bc.hidden = true;
+    breadcrumb.hidden = true;
     return;
   }
-  const feature = state.mode === 'regions' ? regionsById[state.selectedScopeId] : bassinsById[state.selectedScopeId];
-  const name = state.mode === 'regions' ? feature.properties.nom : feature.properties.LbBH;
+
+  const feature = state.mode === 'regions'
+    ? regionsById[state.selectedScopeId]
+    : bassinsById[state.selectedScopeId];
+
+  if(!feature){
+    breadcrumb.hidden = true;
+    return;
+  }
+
+  const name = state.mode === 'regions'
+    ? feature.properties.nom
+    : feature.properties.LbBH;
+
   document.getElementById('scope-name').textContent = name;
-  bc.hidden = false;
+  breadcrumb.hidden = false;
 }
 
 function renderDossier(){
-  const el = document.getElementById('dossier');
-  const p = state.selectedDept ? prefetsMap[state.selectedDept] : null;
+
+  const container = document.getElementById('dossier');
+
+  const personne = state.selectedDept
+    ? prefetsMap[state.selectedDept]
+    : null;
 
   const cfg = ENTITIES[state.entity];
 
-  if(!p){
-    el.innerHTML = `<p class="dossier-placeholder">${cfg.placeholder}</p>`;
+  if(!personne){
+    container.innerHTML = `
+      <p class="dossier-placeholder">
+        ${cfg.placeholder}
+      </p>
+    `;
     return;
   }
 
-  const tab = unitColors()[state.selectedDept] || 'var(--ink-faint)';
+  const tabColor =
+    unitColors()[state.selectedDept] || 'var(--ink-faint)';
 
-  if(p.vide){
-    el.innerHTML = `
-      <div class="dossier-card" style="--tab-color:${tab}">
-        <h3>${p.territoire}</h3>
-        <div class="dossier-territoire">${p.message}</div>
+  if(personne.vide){
+    container.innerHTML = `
+      <div class="dossier-card" style="--tab-color:${tabColor}">
+        <h3>${personne.territoire}</h3>
+        <div class="dossier-territoire">${personne.message}</div>
       </div>
     `;
     return;
@@ -1442,44 +2055,97 @@ function renderDossier(){
 
   const colors = ancColorHex();
 
-  el.innerHTML = postesOf(p).map(q => {
-    // Plusieurs postes : chaque carte prend la couleur de sa propre ancienneté
-    const c = p.postes ? (colors[couleurFromJours(q.jours)] || tab) : tab;
-    const titres = q.titre.split('|').map(t => `<div>${t.trim()}</div>`).join('');
-    return `
-      <div class="dossier-card" style="--tab-color:${c}">
-        <h3>${q.nom}</h3>
-        <div class="dossier-territoire">${cfg.role(q)} · ${p.territoire}</div>
-        <div class="dossier-titres">${titres}</div>
-        ${q.designe ? `<div class="dossier-designe">${designeText(q)}</div>` : ''}
-        <div class="dossier-meta">
-          <span>Depuis le ${q.date}</span>
-          <span>${q.jours} j</span>
+  container.innerHTML = postesOf(personne)
+    .map(poste => {
+      /*
+        Si plusieurs postes existent (DDETS + DDPP ou
+        DRIEAT + DRIHL), chaque carte possède sa propre couleur.
+      */
+      const color = personne.postes
+        ? (colors[couleurFromJours(poste.jours)] || tabColor)
+        : tabColor;
+
+      const titres = poste.titre
+        .split('|')
+        .map(titre => `<div>${titre.trim()}</div>`)
+        .join('');
+
+      return `
+        <div class="dossier-card" style="--tab-color:${color}">
+          <h3>${poste.nom}</h3>
+
+          <div class="dossier-territoire">
+            ${cfg.role(poste)} · ${personne.territoire}
+          </div>
+
+          <div class="dossier-titres">
+            ${titres}
+          </div>
+
+          ${
+            poste.designe
+              ? `<div class="dossier-designe">${designeText(poste)}</div>`
+              : ''
+          }
+
+          <div class="dossier-meta">
+            <span>Depuis le ${poste.date}</span>
+            <span>${poste.jours} j</span>
+          </div>
         </div>
-      </div>`;
-  }).join('');
+      `;
+    })
+    .join('');
 }
 
-function buildOverseasList(){
-  const mapped = new Set((isRegional() ? geoRegions : geoDepts).features.map(f => f.properties.code));
-  const overseas = prefetsRows.filter(r => !mapped.has(r.departement));
-  const colors = ancColorHex();
 
-  const ul = document.getElementById('overseas-list');
-  ul.innerHTML = '';
-  overseas.forEach(r => {
-    const li = document.createElement('li');
-    const btn = document.createElement('button');
-    btn.innerHTML = `<span>${r.territoire}</span><span class="overseas-dot" style="background:${colors[r.couleur_carte] || 'var(--none)'}"></span>`;
-    btn.addEventListener('click', () => {
-      state.selectedDept = r.departement;
+/* ============================================================
+   Outre-mer
+   ============================================================ */
+
+function buildOverseasList(){
+
+  const mapped = new Set(
+    (isRegional() ? geoRegions : geoDepts)
+      .features
+      .map(feature => feature.properties.code)
+  );
+
+  const overseas = prefetsRows.filter(row => {
+    return !mapped.has(row.departement);
+  });
+
+  const colors = ancColorHex();
+  const list = document.getElementById('overseas-list');
+
+  list.innerHTML = '';
+
+  overseas.forEach(row => {
+    const item = document.createElement('li');
+    const button = document.createElement('button');
+
+    button.innerHTML = `
+      <span>${row.territoire}</span>
+      <span
+        class="overseas-dot"
+        style="background:${colors[row.couleur_carte] || 'var(--none)'}"
+      ></span>
+    `;
+
+    button.addEventListener('click', () => {
+      state.selectedDept = row.departement;
       state.selectedScopeId = null;
+      state.searchTerm = '';
+
+      document.getElementById('search').value = '';
+
       resetZoom();
       renderBoundaries();
       render();
     });
-    li.appendChild(btn);
-    ul.appendChild(li);
+
+    item.appendChild(button);
+    list.appendChild(item);
   });
 }
 

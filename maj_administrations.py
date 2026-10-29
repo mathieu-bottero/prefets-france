@@ -2,14 +2,28 @@
 # -*- coding: utf-8 -*-
 
 """
-Met à jour les bases Préfets, DDT/DDTM et DDETS/DDPP/DDETSPP,
-puis produit une base commune.
+Met à jour les bases :
+
+- Préfets ;
+- DDT / DDTM ;
+- DDETS / DDPP / DDETSPP ;
+- DREAL / DEAL / DRIEAT / DRIHL / DTAM / DGTM.
+
+Puis produit deux fichiers communs :
+
+- commun/data/base_administrations.csv
+  Base des administrations départementales ;
+
+- commun/data/base_administrations_regionales.csv
+  Base des administrations régionales et assimilées.
 
 Exemples :
     python maj_administrations.py
     python maj_administrations.py --mois 2
     python maj_administrations.py --sans-maj
     python maj_administrations.py --mois 48 --init-ddt --init-ddetspp
+    python maj_administrations.py --mois 120 --init-dreal
+    python maj_administrations.py --mois 120 --init-ddt --init-ddetspp --init-dreal
 """
 
 import argparse
@@ -28,17 +42,24 @@ RACINE = Path(__file__).resolve().parent
 DOSSIER_PREFETS = RACINE / "prefets"
 DOSSIER_DDT = RACINE / "ddt"
 DOSSIER_DDETSPP = RACINE / "ddetspp"
+DOSSIER_DREAL = RACINE / "dreal"
 DOSSIER_COMMUN = RACINE / "commun" / "data"
 
 SCRIPT_PREFETS = DOSSIER_PREFETS / "maj_base_prefets.py"
 SCRIPT_DDT = DOSSIER_DDT / "maj_base_ddt.py"
 SCRIPT_DDETSPP = DOSSIER_DDETSPP / "maj_base_ddets_ddpp.py"
+SCRIPT_DREAL = DOSSIER_DREAL / "maj_base_dreal.py"
 
 FICHIER_PREFETS = DOSSIER_PREFETS / "data" / "base_prefets.csv"
 FICHIER_DDT = DOSSIER_DDT / "data" / "base_ddt.csv"
 FICHIER_DDETSPP = DOSSIER_DDETSPP / "data" / "base_ddets_ddpp.csv"
+FICHIER_DREAL = DOSSIER_DREAL / "data" / "base_dreal.csv"
 
 FICHIER_SORTIE = DOSSIER_COMMUN / "base_administrations.csv"
+
+FICHIER_SORTIE_REGIONALES = (
+    DOSSIER_COMMUN / "base_administrations_regionales.csv"
+)
 
 
 # ---------------------------------------------------------------------------
@@ -55,7 +76,7 @@ def lire_csv(chemin):
 
 
 def nettoyer(valeur):
-    """Évite les None dans le CSV de sortie."""
+    """Évite les None et les espaces superflus dans le CSV de sortie."""
     return (valeur or "").strip()
 
 
@@ -97,7 +118,7 @@ def cle_tri_departement(code):
 
 
 # ---------------------------------------------------------------------------
-# Indexation des bases
+# Indexation des bases départementales
 # ---------------------------------------------------------------------------
 
 def indexer_prefets(lignes):
@@ -142,7 +163,8 @@ def indexer_ddt(lignes):
     """
     Retourne un dictionnaire {code_departement: ligne_ddt}.
 
-    Les lignes informatives sans DDT/DDTM (Paris, outre-mer...) sont conservées.
+    Les lignes informatives sans DDT/DDTM
+    (Paris, outre-mer, organisation spécifique...) sont conservées.
     """
     ddts = {}
 
@@ -178,7 +200,7 @@ def indexer_ddetspp(lignes):
 
 
 # ---------------------------------------------------------------------------
-# Fusion des trois bases
+# Fusion des bases départementales
 # ---------------------------------------------------------------------------
 
 def creer_base_commune():
@@ -469,8 +491,226 @@ def creer_base_commune():
         writer.writeheader()
         writer.writerows(lignes_sortie)
 
-    print(f"✅ {len(lignes_sortie)} administrations fusionnées.")
+    print(f"✅ {len(lignes_sortie)} administrations départementales fusionnées.")
     print(f"💾 Fichier créé : {FICHIER_SORTIE}")
+
+
+# ---------------------------------------------------------------------------
+# Export de la base des administrations régionales
+# ---------------------------------------------------------------------------
+
+COLONNES_REGIONALES_BASE = [
+    "code_region",
+    "region",
+    "type_poste",
+    "departements_couverts",
+    "titulaire_actuel_nom_complet",
+    "titulaire_actuel_sexe",
+    "grade",
+    "date_decision",
+    "date_prise_fonction",
+    "anciennete_jours",
+    "titulaire_designe_nom_complet",
+    "titulaire_designe_date_prise_fonction",
+    "texte_source",
+    "statut",
+]
+
+# Ces colonnes sont utilisées uniquement pour la DRIHL.
+# Sur la ligne Île-de-France, les colonnes standards correspondent à la DRIEAT.
+COLONNES_DRIHL = [
+    "drihl_type_poste",
+    "drihl_titulaire_actuel_nom_complet",
+    "drihl_titulaire_actuel_sexe",
+    "drihl_grade",
+    "drihl_date_decision",
+    "drihl_date_prise_fonction",
+    "drihl_anciennete_jours",
+    "drihl_titulaire_designe_nom_complet",
+    "drihl_titulaire_designe_date_prise_fonction",
+    "drihl_texte_source",
+    "drihl_statut",
+]
+
+COLONNES_REGIONALES = COLONNES_REGIONALES_BASE + COLONNES_DRIHL
+
+
+def cle_tri_regionale(ligne):
+    """Tri par code région puis intitulé de direction."""
+    code_region = nettoyer(ligne.get("code_region"))
+
+    try:
+        ordre_code = int(code_region)
+    except ValueError:
+        ordre_code = 9999
+
+    return (
+        ordre_code,
+        nettoyer(ligne.get("region")),
+        nettoyer(ligne.get("type_poste")),
+    )
+
+
+def ligne_drihl(drihl):
+    """
+    Transforme une ligne DRIHL technique en colonnes DRIHL destinées
+    à être ajoutées à la ligne DRIEAT Île-de-France.
+    """
+    if not drihl:
+        return {
+            colonne: ""
+            for colonne in COLONNES_DRIHL
+        }
+
+    return {
+        "drihl_type_poste": nettoyer(drihl.get("type_poste")),
+        "drihl_titulaire_actuel_nom_complet": nettoyer(
+            drihl.get("titulaire_actuel_nom_complet")
+        ),
+        "drihl_titulaire_actuel_sexe": nettoyer(
+            drihl.get("titulaire_actuel_sexe")
+        ),
+        "drihl_grade": nettoyer(drihl.get("grade")),
+        "drihl_date_decision": nettoyer(
+            drihl.get("date_decision")
+        ),
+        "drihl_date_prise_fonction": nettoyer(
+            drihl.get("date_prise_fonction")
+        ),
+        "drihl_anciennete_jours": nettoyer(
+            drihl.get("anciennete_jours")
+        ),
+        "drihl_titulaire_designe_nom_complet": nettoyer(
+            drihl.get("titulaire_designe_nom_complet")
+        ),
+        "drihl_titulaire_designe_date_prise_fonction": nettoyer(
+            drihl.get("titulaire_designe_date_prise_fonction")
+        ),
+        "drihl_texte_source": nettoyer(
+            drihl.get("texte_source")
+        ),
+        "drihl_statut": nettoyer(drihl.get("statut")),
+    }
+
+
+def creer_base_administrations_regionales():
+    """
+    Crée commun/data/base_administrations_regionales.csv à partir de
+    dreal/data/base_dreal.csv.
+
+    Règles particulières :
+      - l'ancienne DEAL Guyane est exclue ;
+      - DRIEAT et DRIHL sont regroupées sur une même ligne Île-de-France ;
+      - les colonnes classiques de cette ligne correspondent à la DRIEAT ;
+      - la DRIHL est renseignée dans les colonnes drihl_*.
+    """
+    print("\n🔗 Création de la base des administrations régionales...")
+
+    lignes_dreal = lire_csv(FICHIER_DREAL)
+
+    lignes_sortie = []
+    drihl_ile_de_france = None
+    drieat_ile_de_france = None
+
+    for ligne in lignes_dreal:
+        region = nettoyer(ligne.get("region"))
+        type_poste = nettoyer(ligne.get("type_poste"))
+
+        if not region or not type_poste:
+            continue
+
+        type_poste_minuscule = type_poste.lower()
+
+        # Sécurité supplémentaire : même si une ancienne DEAL Guyane
+        # demeure dans le fichier source, elle ne sort jamais dans
+        # la base régionale consolidée.
+        if (
+            region == "Guyane"
+            and "environnement" in type_poste_minuscule
+            and "logement" in type_poste_minuscule
+        ):
+            continue
+
+        est_drihl = (
+            region == "Île-de-France"
+            and "hébergement et du logement" in type_poste_minuscule
+        )
+
+        est_drieat = (
+            region == "Île-de-France"
+            and "environnement" in type_poste_minuscule
+            and "transports" in type_poste_minuscule
+        )
+
+        if est_drihl:
+            drihl_ile_de_france = ligne
+            continue
+
+        if est_drieat:
+            drieat_ile_de_france = ligne
+            continue
+
+        ligne_sortie = {
+            colonne: nettoyer(ligne.get(colonne))
+            for colonne in COLONNES_REGIONALES_BASE
+        }
+
+        ligne_sortie.update(ligne_drihl(None))
+        lignes_sortie.append(ligne_sortie)
+
+    # Cas normal : création d'une ligne unique DRIEAT + DRIHL.
+    if drieat_ile_de_france:
+        ligne_idf = {
+            colonne: nettoyer(drieat_ile_de_france.get(colonne))
+            for colonne in COLONNES_REGIONALES_BASE
+        }
+
+        ligne_idf.update(ligne_drihl(drihl_ile_de_france))
+        lignes_sortie.append(ligne_idf)
+
+    # Cas de sécurité : si la DRIHL existe mais que la DRIEAT est absente,
+    # on ne perd pas l'information. Elle sort alors seule.
+    elif drihl_ile_de_france:
+        ligne_idf = {
+            colonne: ""
+            for colonne in COLONNES_REGIONALES_BASE
+        }
+
+        ligne_idf["code_region"] = nettoyer(
+            drihl_ile_de_france.get("code_region")
+        )
+        ligne_idf["region"] = nettoyer(
+            drihl_ile_de_france.get("region")
+        )
+        ligne_idf["departements_couverts"] = nettoyer(
+            drihl_ile_de_france.get("departements_couverts")
+        )
+
+        ligne_idf.update(ligne_drihl(drihl_ile_de_france))
+        lignes_sortie.append(ligne_idf)
+
+    lignes_sortie.sort(key=cle_tri_regionale)
+
+    DOSSIER_COMMUN.mkdir(parents=True, exist_ok=True)
+
+    with open(
+        FICHIER_SORTIE_REGIONALES,
+        "w",
+        encoding="utf-8-sig",
+        newline=""
+    ) as fichier:
+        writer = csv.DictWriter(
+            fichier,
+            fieldnames=COLONNES_REGIONALES,
+            delimiter=";"
+        )
+        writer.writeheader()
+        writer.writerows(lignes_sortie)
+
+    print(
+        f"✅ {len(lignes_sortie)} administrations régionales exportées."
+    )
+    print(f"💾 Fichier créé : {FICHIER_SORTIE_REGIONALES}")
 
 
 # ---------------------------------------------------------------------------
@@ -504,9 +744,10 @@ def lancer_script(nom, script, dossier, arguments):
 def main():
     parser = argparse.ArgumentParser(
         description=(
-            "Met à jour les bases Préfets, DDT/DDTM et "
-            "DDETS/DDPP/DDETSPP, puis génère la base commune "
-            "des administrations."
+            "Met à jour les bases Préfets, DDT/DDTM, "
+            "DDETS/DDPP/DDETSPP et "
+            "DREAL/DEAL/DRIEAT/DRIHL/DTAM/DGTM, "
+            "puis génère les bases communes départementale et régionale."
         )
     )
 
@@ -521,8 +762,8 @@ def main():
         "--sans-maj",
         action="store_true",
         help=(
-            "Ne relance pas les scripts sources : fusionne seulement "
-            "les CSV déjà existants."
+            "Ne relance pas les scripts sources : régénère seulement "
+            "les CSV communs à partir des bases existantes."
         )
     )
 
@@ -540,6 +781,16 @@ def main():
         action="store_true",
         help=(
             "Transmet --init au script DDETS/DDPP/DDETSPP. "
+            "À utiliser uniquement lors d'une reconstruction complète."
+        )
+    )
+
+    parser.add_argument(
+        "--init-dreal",
+        action="store_true",
+        help=(
+            "Transmet --init au script "
+            "DREAL/DEAL/DRIEAT/DRIHL/DTAM/DGTM. "
             "À utiliser uniquement lors d'une reconstruction complète."
         )
     )
@@ -565,6 +816,16 @@ def main():
         help="Chemin du script de mise à jour des DDETS/DDPP/DDETSPP."
     )
 
+    parser.add_argument(
+        "--script-dreal",
+        type=Path,
+        default=SCRIPT_DREAL,
+        help=(
+            "Chemin du script de mise à jour des "
+            "DREAL/DEAL/DRIEAT/DRIHL/DTAM/DGTM."
+        )
+    )
+
     args = parser.parse_args()
 
     try:
@@ -572,6 +833,7 @@ def main():
             script_prefets = args.script_prefets.resolve()
             script_ddt = args.script_ddt.resolve()
             script_ddetspp = args.script_ddetspp.resolve()
+            script_dreal = args.script_dreal.resolve()
 
             # 1. Préfets
             lancer_script(
@@ -607,8 +869,26 @@ def main():
                 arguments_ddetspp
             )
 
-        # 4. Fusion des CSV produits
+            # 4. DREAL / DEAL / DRIEAT / DRIHL / DTAM / DGTM
+            arguments_dreal = ["--mois", str(args.mois)]
+
+            if args.init_dreal:
+                arguments_dreal.append("--init")
+
+            lancer_script(
+                "Base des DREAL/DEAL/DRIEAT/DRIHL/DTAM/DGTM",
+                script_dreal,
+                script_dreal.parent,
+                arguments_dreal
+            )
+
+        # 5. Création de la base départementale commune.
+        # Cette étape est aussi réalisée avec --sans-maj.
         creer_base_commune()
+
+        # 6. Création de la base régionale commune.
+        # Cette étape est aussi réalisée avec --sans-maj.
+        creer_base_administrations_regionales()
 
     except subprocess.CalledProcessError as erreur:
         print(
