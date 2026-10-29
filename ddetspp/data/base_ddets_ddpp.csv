@@ -21,11 +21,11 @@
 21;Côte-d'Or;ddets_ddpp_separees;534000;Armelle LEON;F;;08/10/2024;08/10/2024;750;;;Didier ROOSE;M;;16/09/2023;18/09/2023;1136;;;;;;;;;;;postes DDETS et DDPP recensés;
 22;Côtes-d'Armor;ddets_ddpp_separees;598000;Annie GUYADER;F;;18/03/2025;01/04/2025;575;;;Claude LE QUERE;M;;08/10/2024;08/10/2024;750;;;;;;;;;;;postes DDETS et DDPP recensés;
 23;Creuse;ddetspp_fusionnee;116000;;;;;;;;;;;;;;;;;Emmanuelle THILL;F;;06/06/2026;04/07/2026;116;;;poste DDETSPP recensé;
-24;Dordogne;ddets_ddpp_separees;413000;;;;;;;;;;;;;;;;;Eric PRIGENT DECHERF;M;;03/07/2024;03/07/2024;847;;;postes vacants ou inconnus;
-25;Doubs;ddets_ddpp_separees;543000;;;;;;;;;;;;;;;;;Bruno VINCENT;M;;28/08/2024;23/09/2024;765;;;postes vacants ou inconnus;
+24;Dordogne;ddetspp_fusionnee;398000;;;;;;;;;;;;;;;;;Eric PRIGENT DECHERF;M;;03/07/2024;03/07/2024;847;;;poste DDETSPP recensé;
+25;Doubs;ddetspp_fusionnee;398000;;;;;;;;;;;;;;;;;Bruno VINCENT;M;;28/08/2024;23/09/2024;765;;;poste DDETSPP recensé;
 26;Drôme;ddets_ddpp_separees;517000;Agnès COL;F;;13/08/2026;13/08/2026;76;;;Jean-François GRAVIER;M;;28/04/2023;15/05/2023;1262;;;;;;;;;;;postes DDETS et DDPP recensés;
 27;Eure;ddets_ddpp_separees;601000;Benoît DESHOGUES;M;;24/02/2023;13/03/2023;1325;;;Arnaud VINCENT;M;;11/04/2025;11/04/2025;565;;;;;;;;;;;postes DDETS et DDPP recensés;
-28;Eure-et-Loir;ddets_ddpp_separees;431000;;;;;;;;;;;;;;;;;Matthieu GREMAUD;M;;06/12/2025;05/01/2026;296;;;postes vacants ou inconnus;
+28;Eure-et-Loir;ddetspp_fusionnee;390000;;;;;;;;;;;;;;;;;Matthieu GREMAUD;M;;06/12/2025;05/01/2026;296;;;poste DDETSPP recensé;
 29;Finistère;ddets_ddpp_separees;915000;Olivier NAYS;M;;06/06/2026;18/07/2026;102;;;Estelle NEAU;F;;16/01/2026;26/01/2026;275;;;;;;;;;;;postes DDETS et DDPP recensés;
 2A;Corse-du-Sud;ddetspp_fusionnee;158000;;;;;;;;;;;;;;;;;Myriam SAVIO;F;;19/02/2025;01/03/2025;606;;;poste DDETSPP recensé;
 2B;Haute-Corse;ddetspp_fusionnee;182000;;;;;;;;;;;;;;;;;Nelly BLOUET;F;;08/03/2026;08/03/2026;234;;;poste DDETSPP recensé;
@@ -39,7 +39,7 @@
 37;Indre-et-Loire;ddets_ddpp_separees;610000;Guillemette RABIN;F;;11/06/2023;03/07/2023;1213;;;Fabienne BIBET;F;;28/10/2026;28/10/2026;0;;;;;;;;;;;postes DDETS et DDPP recensés;
 38;Isère;ddets_ddpp_separees;1272000;Lise RUEFLIN;F;;17/05/2026;17/05/2026;164;;;Jean-Luc DELRIEUX;M;;27/10/2023;02/11/2023;1091;;;;;;;;;;;postes DDETS et DDPP recensés;
 39;Jura;ddetspp_fusionnee;259000;;;;;;;;;;;;;;;;;Anne-Cécile COTILLON;F;;03/07/2024;03/07/2024;847;;;poste DDETSPP recensé;
-40;Landes;ddets_ddpp_separees;413000;;;;;;;;;;;;;;;;;Philippe NOLLEN;M;;17/12/2022;23/12/2022;1405;;;postes vacants ou inconnus;
+40;Landes;ddetspp_fusionnee;398000;;;;;;;;;;;;;;;;;Philippe NOLLEN;M;;17/12/2022;23/12/2022;1405;;;poste DDETSPP recensé;
 41;Loir-et-Cher;ddetspp_fusionnee;329000;;;;;;;;;;;;;;;;;Serge MILON;M;;06/10/2026;19/10/2026;9;;;poste DDETSPP recensé;
 42;Loire;ddets_ddpp_separees;765000;Agnès COL;F;;24/12/2022;01/01/2023;1396;;;Pierre CABRIDENC;M;;28/02/2024;28/02/2024;973;;;;;;;;;;;postes DDETS et DDPP recensés;
 43;Haute-Loire;ddetspp_fusionnee;227000;;;;;;;;;;;;;;;;;Carole SOUVIGNET;F;;05/01/2024;15/01/2024;1017;;;poste DDETSPP recensé;
@@ -50,7 +50,7 @@
 48;Lozère;ddetspp_fusionnee;76000;;;;;;;;;;;;;;;;;Audrey LAYMAND;F;;11/04/2024;11/04/2024;930;;;poste DDETSPP recensé;
 49;Maine-et-Loire;ddets_ddpp_separees;818000;Wilfrid PELISSIER;M;;03/09/2025;03/09/2025;420;;;Eric DAVID;M;;10/09/2026;07/10/2026;21;;;;;;;;;;;postes DDETS et DDPP recensés;
 50;Manche;ddets_ddpp_separees;495000;Christophe LECOMTE;M;;10/09/2026;10/09/2026;48;;;Pol KERMORGANT;M;;29/03/2024;01/04/2024;940;;;;;;;;;;;postes DDETS et DDPP recensés;
-51;Marne;ddets_ddpp_separees;566000;;;;;;;;;;;;;;;;;Nadège CALENDINI;F;;07/03/2026;07/03/2026;235;;;postes vacants ou inconnus;
+51;Marne;ddetspp_fusionnee;398000;;;;;;;;;;;;;;;;;Nadège CALENDINI;F;;07/03/2026;07/03/2026;235;;;poste DDETSPP recensé;
 52;Haute-Marne;ddetspp_fusionnee;172000;;;;;;;;;;;;;;;;;Fabienne LOGEROT;F;;16/07/2026;04/08/2026;85;;;poste DDETSPP recensé;
 53;Mayenne;ddetspp_fusionnee;307000;;;;;;;;;;;;;;;;;Serge MILON;M;;11/03/2026;11/03/2026;231;;;poste DDETSPP recensé;
 54;Meurthe-et-Moselle;ddets_ddpp_separees;733000;Annie TOUROLLE;F;;23/06/2024;23/06/2024;857;;;Belkacem ROUINA;M;;28/10/2026;28/10/2026;0;;;;;;;;;;;postes DDETS et DDPP recensés;
@@ -67,12 +67,12 @@
 65;Hautes-Pyrénées;ddetspp_fusionnee;229000;;;;;;;;;;;;;;;;;Grégory FERRA;M;;11/10/2026;11/10/2026;17;;;poste DDETSPP recensé;
 66;Pyrénées-Orientales;ddets_ddpp_separees;479000;Chrystèle MARTINEZ;F;;24/05/2026;15/06/2026;135;;;Frédéric GUILLOT;M;;10/07/2026;08/08/2026;81;;;;;;;;;;;postes DDETS et DDPP recensés;
 67;Bas-Rhin;ddets_ddpp_separees;1142000;Anoutchka CHABEAU;F;;03/03/2024;03/03/2024;969;;;Jean-Paul WUCHER;M;;09/10/2024;09/10/2024;749;;;;;;;;;;;postes DDETS et DDPP recensés;
-68;Haut-Rhin;ddets_ddpp_separees;767000;;;;;;;;;;;;;;;;;Aline SCHNEIDER;F;;17/04/2026;17/04/2026;194;;;postes vacants ou inconnus;
+68;Haut-Rhin;ddetspp_fusionnee;398000;;;;;;;;;;;;;;;;;Aline SCHNEIDER;F;;17/04/2026;17/04/2026;194;;;poste DDETSPP recensé;
 69;Rhône;ddets_ddpp_separees;1885000;Laurent WILLEMAN;M;;06/08/2023;06/08/2023;1179;;;Bertrand TOULOUSE;M;;19/03/2025;19/03/2025;588;;;;;;;;;;;postes DDETS et DDPP recensés;
 70;Haute-Saône;ddetspp_fusionnee;235000;;;;;;;;;;;;;;;;;Yves LAMBERT;M;;15/01/2026;15/01/2026;286;;;poste DDETSPP recensé;
 71;Saône-et-Loire;ddets_ddpp_separees;551000;Daniel BOUSSIT;M;;24/01/2025;01/02/2025;634;;;Anne COSTAZ;F;;07/03/2026;07/03/2026;235;;;;;;;;;;;postes DDETS et DDPP recensés;
 72;Sarthe;ddets_ddpp_separees;566000;Jean-Michel LOUYER;M;;23/08/2023;23/08/2023;1162;;;Karine PROUX;F;;23/08/2023;23/08/2023;1162;;;;;;;;;;;postes DDETS et DDPP recensés;
-73;Savoie;ddets_ddpp_separees;436000;;;;;;;;;;;;;;;;;Emmanuel GIROD;M;;18/01/2026;16/02/2026;254;;;postes vacants ou inconnus;
+73;Savoie;ddetspp_fusionnee;398000;;;;;;;;;;;;;;;;;Emmanuel GIROD;M;;18/01/2026;16/02/2026;254;;;poste DDETSPP recensé;
 74;Haute-Savoie;ddets_ddpp_separees;829000;Delphine THERMOZ;F;;12/08/2026;12/08/2026;77;;;Sébastien RIU;M;;07/07/2024;07/07/2024;843;;;Chrystèle MARTINEZ;F;;09/03/2025;09/03/2025;598;;;postes DDETS et DDPP recensés;
 75;Paris;organisation_locale_specifique;2165000;;;;;;;;;Marie-Hélène TREBILLON;F;;31/10/2025;15/11/2025;347;Marie-Hélène TREBILLON;15/11/2026;;;;;;;;;DDPP recensée — pas de DDETS;Organisation locale spécifique : compétences emploi, travail et solidarités exercées dans le cadre de la DRIEETS Île-de-France.
 76;Seine-Maritime;ddets_ddpp_separees;1255000;Vincent LEPREVOST;M;;22/10/2023;06/11/2023;1087;;;Isabelle JEUDY;F;;28/10/2026;28/10/2026;0;;;;;;;;;;;postes DDETS et DDPP recensés;
