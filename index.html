@@ -1170,7 +1170,80 @@ let deptVisibilityCache = {};
 const unitColors = () =>
   isRegional() ? regionColorCache : deptColorCache;
 
-</script>
+
+/* ============================================================
+   Caches de couleurs, centroïdes et visibilité
+   ============================================================ */
+
+function buildColorCache(){
+
+  const colors = ancColorHex();
+  const styles = getComputedStyle(document.documentElement);
+  const noneColor = styles.getPropertyValue('--none').trim();
+
+  deptColorCache = {};
+  regionColorCache = {};
+
+  if(isRegional()){
+
+    geoRegions.features.forEach(feature => {
+      const code = feature.properties.code;
+      const personne = prefetsMap[code];
+
+      regionColorCache[code] =
+        (personne && colors[personne.couleur_carte]) ||
+        noneColor;
+    });
+
+    return;
+  }
+
+  geoDepts.features.forEach(feature => {
+    const code = feature.properties.code;
+    const personne = prefetsMap[code];
+
+    deptColorCache[code] =
+      (personne && colors[personne.couleur_carte]) ||
+      noneColor;
+  });
+}
+
+function buildCentroidsCache(){
+
+  centroidsCache = {};
+  regionCentroidsCache = {};
+
+  geoDepts.features.forEach(feature => {
+    centroidsCache[feature.properties.code] = path.centroid(feature);
+  });
+
+  geoRegions.features.forEach(feature => {
+    regionCentroidsCache[feature.properties.code] = path.centroid(feature);
+  });
+}
+
+function shouldShowDept(code){
+
+  if(!deptMatchesSearch(code)) return false;
+  if(!state.selectedScopeId) return true;
+
+  if(state.mode === 'regions'){
+    return deptInScope(code);
+  }
+
+  return bassinTouches[state.selectedScopeId]?.has(code) ?? false;
+}
+
+function updateVisibilityCache(){
+
+  deptVisibilityCache = {};
+
+  geoDepts.features.forEach(feature => {
+    const code = feature.properties.code;
+    deptVisibilityCache[code] = shouldShowDept(code);
+  });
+}
+
 
 /* ============================================================
    Chargement des données
