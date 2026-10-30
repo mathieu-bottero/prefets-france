@@ -763,6 +763,7 @@ const ENTITIES = {
     placeholder: 'Cliquez sur une région pour afficher le ou les directeurs en poste. En mode « Bassins hydrographiques », cliquez sur un bassin.',
     role: p => p.sexe === 'F' ? 'Directrice' : 'Directeur',
     legendNote: 'En Île-de-France, le dossier présente séparément la DRIEAT et la DRIHL. La couleur correspond au titulaire arrivé le plus récemment.',
+    requiredColumn: 'titulaire_actuel_nom_complet',
     normalize: normalizeRegion
   },
 
@@ -775,6 +776,7 @@ const ENTITIES = {
     placeholder: 'Cliquez sur une région pour afficher le directeur en poste. En mode « Bassins hydrographiques », cliquez sur un bassin.',
     role: p => p.sexe === 'F' ? 'Directrice' : 'Directeur',
     legendNote: '',
+    requiredColumn: 'dreets_titulaire_actuel_nom_complet',
     normalize: normalizeRegionDreets
   }
 };
@@ -796,6 +798,9 @@ const deptOf = row =>
   Les codes du fichier ne sont pas ceux de la base : « 1 » -> « 01 », « 20A » -> « 2A », « 20B » -> « 2B ».
 */
 let adressesPrefectures = {};
+
+// Messages affichés quand un fichier de données ne contient pas les colonnes attendues
+const dataWarnings = {};
 
 const normalizeDeptCode = value => {
   const code = clean(value).toUpperCase();
@@ -1344,15 +1349,21 @@ function updateVisibilityCache(){
    Chargement des données
    ============================================================ */
 
+/*
+  Les fichiers CSV sont régulièrement mis à jour : on évite que le navigateur
+  serve une ancienne version en cache.
+*/
+const noCache = url => `${url}?v=${Date.now()}`;
+
 Promise.all([
   d3.json('commun/data/departements.geojson'),
   d3.json('commun/data/regions.geojson'),
   d3.json('commun/data/bassins.geojson'),
-  d3.dsv(';', 'commun/data/base_administrations.csv'),
+  d3.dsv(';', noCache('commun/data/base_administrations.csv')),
   d3.json('commun/data/bassin_departements.json'),
   d3.json('commun/data/region_departements.json'),
-  d3.dsv(';', 'commun/data/base_administrations_regionales.csv'),
-  d3.dsv(';', 'commun/data/adresses.txt')
+  d3.dsv(';', noCache('commun/data/base_administrations_regionales.csv')),
+  d3.dsv(';', noCache('commun/data/adresses.txt'))
 ])
 .then(([
   depts,
@@ -1368,6 +1379,18 @@ Promise.all([
   geoDepts = depts;
   geoRegions = regions;
   geoBassins = bassins;
+
+  // Le CSV régional chargé contient-il bien les colonnes de chaque entité régionale ?
+  const regionalColumns = regionalRows.columns || [];
+
+  Object.entries(ENTITIES).forEach(([key, cfg]) => {
+    if(cfg.level === 'regions' && cfg.requiredColumn && !regionalColumns.includes(cfg.requiredColumn)){
+      dataWarnings[key] =
+        `Colonne « ${cfg.requiredColumn} » introuvable dans base_administrations_regionales.csv : ` +
+        `le fichier chargé n’est pas à jour. Vérifiez le fichier dans commun/data, puis rechargez la page sans cache (Ctrl+F5).`;
+      console.warn(dataWarnings[key]);
+    }
+  });
 
   // Doit être prêt avant la normalisation des préfets
   adresseRows.forEach(row => {
@@ -1674,8 +1697,8 @@ function setEntity(key){
   document.title = cfg.docTitle;
 
   const note = document.getElementById('legend-note');
-  note.textContent = cfg.legendNote;
-  note.hidden = !cfg.legendNote;
+  note.textContent = dataWarnings[key] || cfg.legendNote;
+  note.hidden = !note.textContent;
 
   onDeptLeave();
   resetZoom();
@@ -1852,7 +1875,9 @@ function renderBasinHitAreas(){
     .attr('class', 'basin-hit')
     .attr('d', path)
     .style('display', active ? null : 'none')
-    .on('click', onBassinClick);
+    .on('click', onBassinClick)
+    .on('mousemove', onBasinHitHover)
+    .on('mouseleave', onDeptLeave);
 }
 
 
@@ -1906,6 +1931,26 @@ function onDeptHover(event, feature){
     .html(html)
     .style('left', `${event.clientX + 18}px`)
     .style('top', `${event.clientY + 18}px`);
+}
+
+/*
+  En mode Bassins sur une carte régionale, le calque transparent des bassins
+  recouvre les régions et capte la souris : l'infobulle de la région située
+  sous le curseur ne s'affichait donc plus. On retrouve ici la région sous le
+  pointeur pour afficher la même infobulle qu'en mode Régions.
+*/
+function onBasinHitHover(event){
+
+  const regionElement = document
+    .elementsFromPoint(event.clientX, event.clientY)
+    .find(element => element.classList.contains('region-fill'));
+
+  if(!regionElement){
+    onDeptLeave();
+    return;
+  }
+
+  onDeptHover(event, d3.select(regionElement).datum());
 }
 
 function onDeptLeave(){
@@ -2212,6 +2257,9 @@ function renderDossier(){
   if(!personne){
     container.innerHTML = `
       <p class="dossier-placeholder">
+        ${dataWarnings[state.entity]
+          ? `<strong>${dataWarnings[state.entity]}</strong><br><br>`
+          : ''}
         ${cfg.placeholder}
       </p>
     `;
