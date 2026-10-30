@@ -1,0 +1,103 @@
+departement;adresse_prefecture
+1;45 avenue Alsace-Lorraine 01000 Bourg-en-Bresse France
+2;2 Rue Paul Doumer, 02000 Laon
+3;2 Rue Michel de l'Hospital, 03000 Moulins
+4;Place André Thisy, 04000 Digne-les-Bains
+5;28 Rue Saint-Arey, 05000 Gap
+6;147 Boulevard du Mercantour, 06200 Nice
+7;Rue Teyssonnier-Descros, 07000 Privas
+8;1 Place de la Préfecture, 08000 Charleville-Mézières
+9;2 Rue de la Préfecture, 09000 Foix
+10;2 Rue Pierre Labonde, 10000 Troyes
+11;52 Rue Jean Bringer, 11000 Carcassonne
+12;7 Place Charles de Gaulle, 12000 Rodez
+13;66B Rue Saint-Sébastien, 13006 Marseille
+14;1 Rue Daniel Huet, 14000 Caen
+15;2 Cours de Monthyon, 15000 Aurillac
+16;9 Rue de la Préfecture, 16000 Angoulême
+17;38 Rue Réaumur, 17000 La Rochelle
+18;Place Marcel Plaisant, 18000 Bourges
+19;1 Rue Souham, 19000 Tulle
+20A;1 Cours Napoléon, 20000 Ajaccio
+20B;Rond-Point Maréchal Leclerc de Hauteclocque, 20200 Bastia
+21;53 Rue de la Préfecture, 21000 Dijon
+22;3 Place du Général de Gaulle, 22000 Saint-Brieuc
+23;Place Louis Lacrocq, 23000 Guéret
+24;2 Rue Paul-Louis Courier, 24000 Périgueux
+25;3 Avenue de la Gare d'Eau, 25000 Besançon
+26;3 Boulevard Vauban, 26000 Valence
+27;Boulevard Georges Chauvin, 27000 Évreux
+28;1 Place de la République, 28000 Chartres
+29;42 Boulevard Dupleix, 29000 Quimper
+30;3 Rue Guillemette, 30000 Nîmes
+31;1 Rue Sainte-Anne, 31000 Toulouse
+32;3 Place du Préfet Claude Érignac, 32000 Auch
+33;2 Esplanade Charles de Gaulle, 33000 Bordeaux
+34;Place des Martyrs de la Résistance, 34000 Montpellier
+35;81 Boulevard d'armorique, 35700 Rennes
+36;Place de la Victoire et des Alliés, 36000 Châteauroux
+37;19 Rue Bernard Palissy, 37000 Tours
+38;12 Place de Verdun, 38000 Grenoble
+39;8 Rue de la Préfecture, 39000 Lons-le-Saunier
+40;24 Rue Victor Hugo, 40000 Mont-de-Marsan
+41;Place de la République, 41000 Blois
+42;2 Rue Charles de Gaulle, 42000 Saint-Étienne
+43;6 Avenue du Général de Gaulle, 43000 Le Puy-en-Velay
+44;6 Quai Ceineray, 44000 Nantes
+45;181 Rue de Bourgogne, 45000 Orléans
+46;67 Rue de la Légion d'Honneur 46000 Cahors France
+47;5 Allée Pomarède, 47000 Agen
+48;2 Rue de la Rovère, 48000 Mende
+49;Place Michel Debré, 49100 Angers
+50;Place de la Préfecture, 50000 Saint-Lô
+51;1 Rue de Jessaint, 51000 Châlons-en-Champagne
+52;89 Rue de la Victoire de la Marne, 52000 Chaumont
+53;46 Rue Mazagran, 53000 Laval
+54;6 Rue Sainte-Catherine, 54000 Nancy
+55;40 Rue du Bourg, 55000 Bar-le-Duc
+56;10 Place du Général de Gaulle, 56000 Vannes
+57;9 Place Jean Spinga, 57000 Metz
+58;40 Rue de la Préfecture, 58000 Nevers
+59;12 Rue Jean Sans Peur, 59800 Lille
+60;2 Avenue de l'europe, 60000 Beauvais
+61;39 Rue Saint-Blaise, 61000 Alençon
+62;Rue Ferdinand Buisson, 62000 Arras
+63;18 Boulevard Desaix, 63000 Clermont-Ferrand
+64;2 Rue du Maréchal Joffre, 64000 Pau
+65;Place du Général de Gaulle, 65000 Tarbes
+66;29 Quai Sadi Carnot, 66000 Perpignan
+67;5 Place de la République, 67000 Strasbourg
+68;3 Rue Fleischhauer, 68000 Colmar
+69;31 Cours de la Liberté, 69003 Lyon
+70;1 Rue de la Préfecture, 70000 Vesoul
+71;196 Rue de Strasbourg, 71000 Mâcon
+72;Place Aristide Briand, 72100 Le Mans
+73;Château des Ducs de Savoie rue de Savoie 73018 Chambéry
+74;12 Rue du 30ème Régiment d'Infanterie, 74000 Annecy
+75;5, rue Leblanc 75015 Paris
+76;7 Place de la Madeleine, 76000 Rouen
+77;12 Rue des Saints Pères, 77000 Melun 
+78;18 Rue de Lorraine, 78200 Mantes-la-Jolie
+79;4 Rue du Guesclin, 79000 Niort
+80;51 Rue de la République, 80000 Amiens
+81;Rue Augustin Malroux, 81000 Albi
+82;2 Allée de l'empereur, 82000 Montauban
+83;Boulevard du 112ème Régiment d'Infanterie, 83000 Toulon
+84;2 Avenue de la Folie, 84000 Avignon
+85;29 Rue Delille, 85000 La Roche-sur-Yon
+86;7 Place Aristide Briand, 86000 Poitiers
+87;1 Rue de la Préfecture, 87000 Limoges
+88;Place Foch, 88000 Épinal
+89;1 Place de la Préfecture, 89000 Auxerre
+90;1 Rue Frédéric Auguste Bartholdi, 90000 Belfort
+91;1 Boulevard de France, 91000 Évry-Courcouronnes 
+92;177 Avenue Frédéric et Irène Joliot-Curie, 92000 Nanterre
+93;1 Esplanade jean Moulin, 93000 Bobigny 
+94;29 Avenue du Général de Gaulle, 94000 Créteil
+95;5 Avenue Bernard Hirsch, 95000 Cergy 
+971;Rue Lardenoy, Basse-Terre, Basse-Terre 97100
+972;Rue Louis Blanc, Fort-de-France, Fort-de-France 97200
+973;3 Rue Louis-Thomas Fiedmont, Cayenne, Cayenne
+974;4 Avenue de la Victoire, Saint-Denis, Saint-Denis 97400
+975;Place Lieutenant-Colonel Pigeaud 97500 Saint-Pierre France
+976;Avenue de la Préfecture, Mamoudzou, Mamoudzou 97600

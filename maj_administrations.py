@@ -7,7 +7,8 @@ Met à jour les bases :
 - Préfets ;
 - DDT / DDTM ;
 - DDETS / DDPP / DDETSPP ;
-- DREAL / DEAL / DRIEAT / DRIHL / DTAM / DGTM.
+- DREAL / DEAL / DRIEAT / DRIHL / DTAM / DGTM ;
+- DREETS.
 
 Puis produit deux fichiers communs :
 
@@ -22,8 +23,8 @@ Exemples :
     python maj_administrations.py --mois 2
     python maj_administrations.py --sans-maj
     python maj_administrations.py --mois 48 --init-ddt --init-ddetspp
-    python maj_administrations.py --mois 120 --init-dreal
-    python maj_administrations.py --mois 120 --init-ddt --init-ddetspp --init-dreal
+    python maj_administrations.py --mois 120 --init-dreal --init-dreets
+    python maj_administrations.py --mois 120 --init-ddt --init-ddetspp --init-dreal --init-dreets
 """
 
 import argparse
@@ -43,17 +44,20 @@ DOSSIER_PREFETS = RACINE / "prefets"
 DOSSIER_DDT = RACINE / "ddt"
 DOSSIER_DDETSPP = RACINE / "ddetspp"
 DOSSIER_DREAL = RACINE / "dreal"
+DOSSIER_DREETS = RACINE / "dreets"
 DOSSIER_COMMUN = RACINE / "commun" / "data"
 
 SCRIPT_PREFETS = DOSSIER_PREFETS / "maj_base_prefets.py"
 SCRIPT_DDT = DOSSIER_DDT / "maj_base_ddt.py"
 SCRIPT_DDETSPP = DOSSIER_DDETSPP / "maj_base_ddets_ddpp.py"
 SCRIPT_DREAL = DOSSIER_DREAL / "maj_base_dreal.py"
+SCRIPT_DREETS = DOSSIER_DREETS / "maj_base_dreets.py"
 
 FICHIER_PREFETS = DOSSIER_PREFETS / "data" / "base_prefets.csv"
 FICHIER_DDT = DOSSIER_DDT / "data" / "base_ddt.csv"
 FICHIER_DDETSPP = DOSSIER_DDETSPP / "data" / "base_ddets_ddpp.csv"
 FICHIER_DREAL = DOSSIER_DREAL / "data" / "base_dreal.csv"
+FICHIER_DREETS = DOSSIER_DREETS / "data" / "base_dreets.csv"
 
 FICHIER_SORTIE = DOSSIER_COMMUN / "base_administrations.csv"
 
@@ -532,7 +536,22 @@ COLONNES_DRIHL = [
     "drihl_statut",
 ]
 
-COLONNES_REGIONALES = COLONNES_REGIONALES_BASE + COLONNES_DRIHL
+# Ces colonnes sont utilisées pour la DREETS.
+COLONNES_DREETS = [
+    "dreets_type_poste",
+    "dreets_titulaire_actuel_nom_complet",
+    "dreets_titulaire_actuel_sexe",
+    "dreets_grade",
+    "dreets_date_decision",
+    "dreets_date_prise_fonction",
+    "dreets_anciennete_jours",
+    "dreets_titulaire_designe_nom_complet",
+    "dreets_titulaire_designe_date_prise_fonction",
+    "dreets_texte_source",
+    "dreets_statut",
+]
+
+COLONNES_REGIONALES = COLONNES_REGIONALES_BASE + COLONNES_DRIHL + COLONNES_DREETS
 
 
 def cle_tri_regionale(ligne):
@@ -593,20 +612,40 @@ def ligne_drihl(drihl):
     }
 
 
+def ligne_dreets_vide():
+    """Retourne un dictionnaire avec toutes les colonnes DREETS vides."""
+    return {
+        colonne: ""
+        for colonne in COLONNES_DREETS
+    }
+
+
 def creer_base_administrations_regionales():
     """
     Crée commun/data/base_administrations_regionales.csv à partir de
-    dreal/data/base_dreal.csv.
+    dreal/data/base_dreal.csv et dreets/data/base_dreets.csv.
 
     Règles particulières :
       - l'ancienne DEAL Guyane est exclue ;
       - DRIEAT et DRIHL sont regroupées sur une même ligne Île-de-France ;
       - les colonnes classiques de cette ligne correspondent à la DRIEAT ;
-      - la DRIHL est renseignée dans les colonnes drihl_*.
+      - la DRIHL est renseignée dans les colonnes drihl_* ;
+      - les DREETS sont fusionnées par code région avec les DREAL ;
+      - les colonnes principales (type_poste, titulaire, etc.) correspondent
+        à la DREAL/DRIEAT/DEAL/etc. ;
+      - les informations DREETS sont dans les colonnes dreets_*.
     """
     print("\n🔗 Création de la base des administrations régionales...")
 
     lignes_dreal = lire_csv(FICHIER_DREAL)
+    lignes_dreets = lire_csv(FICHIER_DREETS)
+
+    # Indexer les DREETS par code région
+    dreets_par_region = {}
+    for ligne in lignes_dreets:
+        code_region = nettoyer(ligne.get("code_region"))
+        if code_region:
+            dreets_par_region[code_region] = ligne
 
     lignes_sortie = []
     drihl_ile_de_france = None
@@ -615,6 +654,7 @@ def creer_base_administrations_regionales():
     for ligne in lignes_dreal:
         region = nettoyer(ligne.get("region"))
         type_poste = nettoyer(ligne.get("type_poste"))
+        code_region = nettoyer(ligne.get("code_region"))
 
         if not region or not type_poste:
             continue
@@ -656,6 +696,42 @@ def creer_base_administrations_regionales():
         }
 
         ligne_sortie.update(ligne_drihl(None))
+
+        # Ajouter les informations DREETS si disponibles
+        dreets = dreets_par_region.get(code_region)
+        if dreets:
+            ligne_sortie.update({
+                "dreets_type_poste": nettoyer(dreets.get("type_poste")),
+                "dreets_titulaire_actuel_nom_complet": nettoyer(
+                    dreets.get("titulaire_actuel_nom_complet")
+                ),
+                "dreets_titulaire_actuel_sexe": nettoyer(
+                    dreets.get("titulaire_actuel_sexe")
+                ),
+                "dreets_grade": nettoyer(dreets.get("grade")),
+                "dreets_date_decision": nettoyer(
+                    dreets.get("date_decision")
+                ),
+                "dreets_date_prise_fonction": nettoyer(
+                    dreets.get("date_prise_fonction")
+                ),
+                "dreets_anciennete_jours": nettoyer(
+                    dreets.get("anciennete_jours")
+                ),
+                "dreets_titulaire_designe_nom_complet": nettoyer(
+                    dreets.get("titulaire_designe_nom_complet")
+                ),
+                "dreets_titulaire_designe_date_prise_fonction": nettoyer(
+                    dreets.get("titulaire_designe_date_prise_fonction")
+                ),
+                "dreets_texte_source": nettoyer(
+                    dreets.get("texte_source")
+                ),
+                "dreets_statut": nettoyer(dreets.get("statut")),
+            })
+        else:
+            ligne_sortie.update(ligne_dreets_vide())
+
         lignes_sortie.append(ligne_sortie)
 
     # Cas normal : création d'une ligne unique DRIEAT + DRIHL.
@@ -666,6 +742,43 @@ def creer_base_administrations_regionales():
         }
 
         ligne_idf.update(ligne_drihl(drihl_ile_de_france))
+        
+        # Ajouter DREETS Île-de-France
+        code_region_idf = nettoyer(drieat_ile_de_france.get("code_region"))
+        dreets_idf = dreets_par_region.get(code_region_idf)
+        if dreets_idf:
+            ligne_idf.update({
+                "dreets_type_poste": nettoyer(dreets_idf.get("type_poste")),
+                "dreets_titulaire_actuel_nom_complet": nettoyer(
+                    dreets_idf.get("titulaire_actuel_nom_complet")
+                ),
+                "dreets_titulaire_actuel_sexe": nettoyer(
+                    dreets_idf.get("titulaire_actuel_sexe")
+                ),
+                "dreets_grade": nettoyer(dreets_idf.get("grade")),
+                "dreets_date_decision": nettoyer(
+                    dreets_idf.get("date_decision")
+                ),
+                "dreets_date_prise_fonction": nettoyer(
+                    dreets_idf.get("date_prise_fonction")
+                ),
+                "dreets_anciennete_jours": nettoyer(
+                    dreets_idf.get("anciennete_jours")
+                ),
+                "dreets_titulaire_designe_nom_complet": nettoyer(
+                    dreets_idf.get("titulaire_designe_nom_complet")
+                ),
+                "dreets_titulaire_designe_date_prise_fonction": nettoyer(
+                    dreets_idf.get("titulaire_designe_date_prise_fonction")
+                ),
+                "dreets_texte_source": nettoyer(
+                    dreets_idf.get("texte_source")
+                ),
+                "dreets_statut": nettoyer(dreets_idf.get("statut")),
+            })
+        else:
+            ligne_idf.update(ligne_dreets_vide())
+
         lignes_sortie.append(ligne_idf)
 
     # Cas de sécurité : si la DRIHL existe mais que la DRIEAT est absente,
@@ -687,6 +800,43 @@ def creer_base_administrations_regionales():
         )
 
         ligne_idf.update(ligne_drihl(drihl_ile_de_france))
+        
+        # Ajouter DREETS Île-de-France même dans ce cas
+        code_region_idf = nettoyer(drihl_ile_de_france.get("code_region"))
+        dreets_idf = dreets_par_region.get(code_region_idf)
+        if dreets_idf:
+            ligne_idf.update({
+                "dreets_type_poste": nettoyer(dreets_idf.get("type_poste")),
+                "dreets_titulaire_actuel_nom_complet": nettoyer(
+                    dreets_idf.get("titulaire_actuel_nom_complet")
+                ),
+                "dreets_titulaire_actuel_sexe": nettoyer(
+                    dreets_idf.get("titulaire_actuel_sexe")
+                ),
+                "dreets_grade": nettoyer(dreets_idf.get("grade")),
+                "dreets_date_decision": nettoyer(
+                    dreets_idf.get("date_decision")
+                ),
+                "dreets_date_prise_fonction": nettoyer(
+                    dreets_idf.get("date_prise_fonction")
+                ),
+                "dreets_anciennete_jours": nettoyer(
+                    dreets_idf.get("anciennete_jours")
+                ),
+                "dreets_titulaire_designe_nom_complet": nettoyer(
+                    dreets_idf.get("titulaire_designe_nom_complet")
+                ),
+                "dreets_titulaire_designe_date_prise_fonction": nettoyer(
+                    dreets_idf.get("titulaire_designe_date_prise_fonction")
+                ),
+                "dreets_texte_source": nettoyer(
+                    dreets_idf.get("texte_source")
+                ),
+                "dreets_statut": nettoyer(dreets_idf.get("statut")),
+            })
+        else:
+            ligne_idf.update(ligne_dreets_vide())
+
         lignes_sortie.append(ligne_idf)
 
     lignes_sortie.sort(key=cle_tri_regionale)
@@ -745,8 +895,8 @@ def main():
     parser = argparse.ArgumentParser(
         description=(
             "Met à jour les bases Préfets, DDT/DDTM, "
-            "DDETS/DDPP/DDETSPP et "
-            "DREAL/DEAL/DRIEAT/DRIHL/DTAM/DGTM, "
+            "DDETS/DDPP/DDETSPP, "
+            "DREAL/DEAL/DRIEAT/DRIHL/DTAM/DGTM et DREETS, "
             "puis génère les bases communes départementale et régionale."
         )
     )
@@ -796,6 +946,15 @@ def main():
     )
 
     parser.add_argument(
+        "--init-dreets",
+        action="store_true",
+        help=(
+            "Transmet --init au script DREETS. "
+            "À utiliser uniquement lors d'une reconstruction complète."
+        )
+    )
+
+    parser.add_argument(
         "--script-prefets",
         type=Path,
         default=SCRIPT_PREFETS,
@@ -826,6 +985,13 @@ def main():
         )
     )
 
+    parser.add_argument(
+        "--script-dreets",
+        type=Path,
+        default=SCRIPT_DREETS,
+        help="Chemin du script de mise à jour des DREETS."
+    )
+
     args = parser.parse_args()
 
     try:
@@ -834,6 +1000,7 @@ def main():
             script_ddt = args.script_ddt.resolve()
             script_ddetspp = args.script_ddetspp.resolve()
             script_dreal = args.script_dreal.resolve()
+            script_dreets = args.script_dreets.resolve()
 
             # 1. Préfets
             lancer_script(
@@ -882,11 +1049,24 @@ def main():
                 arguments_dreal
             )
 
-        # 5. Création de la base départementale commune.
+            # 5. DREETS
+            arguments_dreets = ["--mois", str(args.mois)]
+
+            if args.init_dreets:
+                arguments_dreets.append("--init")
+
+            lancer_script(
+                "Base des DREETS",
+                script_dreets,
+                script_dreets.parent,
+                arguments_dreets
+            )
+
+        # 6. Création de la base départementale commune.
         # Cette étape est aussi réalisée avec --sans-maj.
         creer_base_commune()
 
-        # 6. Création de la base régionale commune.
+        # 7. Création de la base régionale commune (avec DREETS).
         # Cette étape est aussi réalisée avec --sans-maj.
         creer_base_administrations_regionales()
 

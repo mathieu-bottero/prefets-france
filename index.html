@@ -370,6 +370,22 @@
     margin-top:12px;
   }
 
+  .dossier-adresse{
+    font-size:.82rem;
+    line-height:1.45;
+    color:var(--ink-soft);
+    margin:10px 0 4px;
+  }
+
+  .dossier-adresse span{
+    font-family:var(--font-mono);
+    font-size:.72rem;
+    letter-spacing:.4px;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin-right:6px;
+  }
+
   .t-poste + .t-poste{
     margin-top:10px;
     padding-top:10px;
@@ -557,6 +573,9 @@
         <option value="dreal" data-short="DREAL / DEAL / DRIEAT / DRIHL / …">
 		  DREAL / DEAL / DRIEAT / DRIHL / DGTM / DTAM
 		</option>
+        <option value="dreets" data-short="DREETS / DEETS / DRIEETS / …">
+          DREETS / DEETS / DRIEETS / DGCOPOP / DCSTEP
+        </option>
       </select>
     </div>
 
@@ -745,6 +764,18 @@ const ENTITIES = {
     role: p => p.sexe === 'F' ? 'Directrice' : 'Directeur',
     legendNote: 'En Île-de-France, le dossier présente séparément la DRIEAT et la DRIHL. La couleur correspond au titulaire arrivé le plus récemment.',
     normalize: normalizeRegion
+  },
+
+  dreets: {
+    level: 'regions',
+    h1: 'DREETS / DEETS / DRIEETS / DGCOPOP / DCSTEP de France',
+    sub: 'Directions régionales et territoriales de l’économie, de l’emploi, du travail et des solidarités',
+    docTitle: 'DREETS / DEETS / DRIEETS de France — carte régionale',
+    search: 'Nom, région, département…',
+    placeholder: 'Cliquez sur une région pour afficher le directeur en poste. En mode « Bassins hydrographiques », cliquez sur un bassin.',
+    role: p => p.sexe === 'F' ? 'Directrice' : 'Directeur',
+    legendNote: '',
+    normalize: normalizeRegionDreets
   }
 };
 
@@ -759,6 +790,22 @@ const clean = value => (value ?? '').toString().trim();
 
 const deptOf = row =>
   clean(row.departement ?? row['\ufeffdepartement']);
+
+/*
+  Adresses des préfectures (commun/data/adresses.txt).
+  Les codes du fichier ne sont pas ceux de la base : « 1 » -> « 01 », « 20A » -> « 2A », « 20B » -> « 2B ».
+*/
+let adressesPrefectures = {};
+
+const normalizeDeptCode = value => {
+  const code = clean(value).toUpperCase();
+
+  if(code === '20A') return '2A';
+  if(code === '20B') return '2B';
+  if(/^\d{1,2}$/.test(code)) return code.padStart(2, '0');
+
+  return code;
+};
 
 const toDays = value => {
   const result = parseFloat(clean(value).replace(',', '.'));
@@ -812,6 +859,7 @@ function normalizePrefet(row){
     sexe: clean(row.prefet_sexe),
     titre_global: clean(row.prefet_titre_global),
     date_prise_fonction: clean(row.prefet_date_prise_fonction),
+    adresse: adressesPrefectures[deptOf(row)] || '',
 
     anciennete_jours: jours ?? '—',
     couleur_carte: couleurFromJours(jours)
@@ -986,6 +1034,13 @@ function normalizeDdets(row){
 function regionSigle(type){
   const titre = clean(type).toLowerCase();
 
+  // Économie, emploi, travail, solidarités (DREETS et assimilées)
+  if(/cohésion sociale/.test(titre)) return 'DCSTEP';
+  if(/général.*cohésion.*populations/.test(titre)) return 'DGCOPOP';
+  if(/interd[ée]partemental.*[ée]conomie/.test(titre)) return 'DRIEETS';
+  if(/^directeur\(rice\) régional.*[ée]conomie/.test(titre)) return 'DREETS';
+  if(/^directeur\(rice\) de l.[ée]conomie/.test(titre)) return 'DEETS';
+
   if(/hébergement.*logement/.test(titre)) return 'DRIHL';
   if(/interd[ée]partemental/.test(titre)) return 'DRIEAT';
   if(/général.*territoires.*mer/.test(titre)) return 'DGTM';
@@ -996,74 +1051,41 @@ function regionSigle(type){
   return '';
 }
 
-function normalizeRegion(row){
+function createRegionPoste({
+  type,
+  nom,
+  sexe,
+  date,
+  jours,
+  designeNom,
+  designeDate
+}){
+  const titulaire = clean(nom);
 
-  const code = clean(row.code_region ?? row['\ufeffcode_region']);
-  const territoire = clean(row.region);
+  if(!titulaire) return null;
 
-  const createPoste = ({
-    type,
-    nom,
-    sexe,
-    date,
-    jours,
-    designeNom,
-    designeDate
-  }) => {
-    const titulaire = clean(nom);
+  const titre = clean(type);
+  const sigle = regionSigle(titre);
+  const anciennete = toDays(jours);
+  const successeur = clean(designeNom);
 
-    if(!titulaire) return null;
+  return {
+    titre: sigle ? `${titre} (${sigle})` : titre,
+    nom: titulaire,
+    sexe: clean(sexe),
+    date: clean(date),
+    jours: anciennete ?? '—',
 
-    const titre = clean(type);
-    const sigle = regionSigle(titre);
-    const anciennete = toDays(jours);
-    const successeur = clean(designeNom);
-
-    return {
-      titre: sigle ? `${titre} (${sigle})` : titre,
-      nom: titulaire,
-      sexe: clean(sexe),
-      date: clean(date),
-      jours: anciennete ?? '—',
-
-      designe: successeur
-        ? {
-            nom: successeur,
-            date: clean(designeDate)
-          }
-        : null
-    };
+    designe: successeur
+      ? {
+          nom: successeur,
+          date: clean(designeDate)
+        }
+      : null
   };
+}
 
-  /*
-    Premier poste régional :
-    DREAL, DEAL, DRIEAT, DGTM ou DTAM selon le territoire.
-  */
-  const postePrincipal = createPoste({
-    type: row.type_poste,
-    nom: row.titulaire_actuel_nom_complet,
-    sexe: row.titulaire_actuel_sexe,
-    date: row.date_prise_fonction,
-    jours: row.anciennete_jours,
-    designeNom: row.titulaire_designe_nom_complet,
-    designeDate: row.titulaire_designe_date_prise_fonction
-  });
-
-  /*
-    Second poste éventuel :
-    DRIHL, actuellement renseignée pour l’Île-de-France.
-  */
-  const posteDrihl = createPoste({
-    type: row.drihl_type_poste,
-    nom: row.drihl_titulaire_actuel_nom_complet,
-    sexe: row.drihl_titulaire_actuel_sexe,
-    date: row.drihl_date_prise_fonction,
-    jours: row.drihl_anciennete_jours,
-    designeNom: row.drihl_titulaire_designe_nom_complet,
-    designeDate: row.drihl_titulaire_designe_date_prise_fonction
-  });
-
-  const postes = [postePrincipal, posteDrihl].filter(Boolean);
+function buildRegionRow(code, territoire, postes){
 
   if(!postes.length){
     return emptyRow(
@@ -1098,6 +1120,73 @@ function normalizeRegion(row){
     anciennete_jours: joursMin ?? '—',
     couleur_carte: couleurFromJours(joursMin)
   };
+}
+
+function normalizeRegion(row){
+
+  const code = clean(row.code_region ?? row['\ufeffcode_region']);
+  const territoire = clean(row.region);
+
+  /*
+    Premier poste régional :
+    DREAL, DEAL, DRIEAT, DGTM ou DTAM selon le territoire.
+  */
+  const postePrincipal = createRegionPoste({
+    type: row.type_poste,
+    nom: row.titulaire_actuel_nom_complet,
+    sexe: row.titulaire_actuel_sexe,
+    date: row.date_prise_fonction,
+    jours: row.anciennete_jours,
+    designeNom: row.titulaire_designe_nom_complet,
+    designeDate: row.titulaire_designe_date_prise_fonction
+  });
+
+  /*
+    Second poste éventuel :
+    DRIHL, actuellement renseignée pour l’Île-de-France.
+  */
+  const posteDrihl = createRegionPoste({
+    type: row.drihl_type_poste,
+    nom: row.drihl_titulaire_actuel_nom_complet,
+    sexe: row.drihl_titulaire_actuel_sexe,
+    date: row.drihl_date_prise_fonction,
+    jours: row.drihl_anciennete_jours,
+    designeNom: row.drihl_titulaire_designe_nom_complet,
+    designeDate: row.drihl_titulaire_designe_date_prise_fonction
+  });
+
+  return buildRegionRow(
+    code,
+    territoire,
+    [postePrincipal, posteDrihl].filter(Boolean)
+  );
+}
+
+
+/* ============================================================
+   Normalisation : DREETS / DEETS / DRIEETS / DGCOPOP / DCSTEP
+   ============================================================ */
+
+function normalizeRegionDreets(row){
+
+  const code = clean(row.code_region ?? row['\ufeffcode_region']);
+  const territoire = clean(row.region);
+
+  const posteDreets = createRegionPoste({
+    type: row.dreets_type_poste,
+    nom: row.dreets_titulaire_actuel_nom_complet,
+    sexe: row.dreets_titulaire_actuel_sexe,
+    date: row.dreets_date_prise_fonction,
+    jours: row.dreets_anciennete_jours,
+    designeNom: row.dreets_titulaire_designe_nom_complet,
+    designeDate: row.dreets_titulaire_designe_date_prise_fonction
+  });
+
+  return buildRegionRow(
+    code,
+    territoire,
+    [posteDreets].filter(Boolean)
+  );
 }
 
 
@@ -1262,7 +1351,8 @@ Promise.all([
   d3.dsv(';', 'commun/data/base_administrations.csv'),
   d3.json('commun/data/bassin_departements.json'),
   d3.json('commun/data/region_departements.json'),
-  d3.dsv(';', 'commun/data/base_administrations_regionales.csv')
+  d3.dsv(';', 'commun/data/base_administrations_regionales.csv'),
+  d3.dsv(';', 'commun/data/adresses.txt')
 ])
 .then(([
   depts,
@@ -1271,17 +1361,26 @@ Promise.all([
   rows,
   bassinDeptsData,
   regionDeptsData,
-  regionalRows
+  regionalRows,
+  adresseRows
 ]) => {
 
   geoDepts = depts;
   geoRegions = regions;
   geoBassins = bassins;
 
+  // Doit être prêt avant la normalisation des préfets
+  adresseRows.forEach(row => {
+    const code = normalizeDeptCode(row.departement ?? row['\ufeffdepartement']);
+    const adresse = clean(row.adresse_prefecture).replace(/\s+France$/i, '');
+
+    if(code && adresse) adressesPrefectures[code] = adresse;
+  });
+
   /*
     Chaque entité est normalisée depuis son CSV correspondant :
     - les trois premières utilisent le fichier administratif général ;
-    - DREAL / DEAL / DRIEAT / DRIHL utilise le fichier régional.
+    - les entités régionales (DREAL…, DREETS…) utilisent le fichier régional.
   */
   Object.entries(ENTITIES).forEach(([key, cfg]) => {
     const source = cfg.level === 'regions' ? regionalRows : rows;
@@ -2160,6 +2259,12 @@ function renderDossier(){
           <div class="dossier-titres">
             ${titres}
           </div>
+
+          ${
+            personne.adresse
+              ? `<div class="dossier-adresse"><span>Préfecture</span>${personne.adresse}</div>`
+              : ''
+          }
 
           ${
             poste.designe
