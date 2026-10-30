@@ -552,6 +552,149 @@
       border-top:1px solid var(--line);
     }
   }
+  
+  /* ============ Modal tableur ============ */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.visible {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--surface);
+  border-radius: var(--radius);
+  max-width: 1400px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.modal-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-close,
+.modal-export {
+  border: none;
+  background: var(--surface-soft);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.modal-export {
+  background: var(--accent);
+  color: #fff;
+}
+
+.modal-close:hover,
+.modal-export:hover {
+  filter: brightness(0.95);
+}
+
+.modal-body {
+  overflow: auto;
+  padding: 24px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.data-table thead {
+  position: sticky;
+  top: 0;
+  background: var(--surface-soft);
+  z-index: 1;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--line);
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.data-table tbody tr:hover {
+  background: var(--paper);
+}
+
+.table-color-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.table-empty {
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+.btn-tableur {
+  border: none;
+  background: var(--surface-soft);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 9px 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-tableur:hover {
+  background: var(--accent);
+  color: #fff;
+}
 
 </style>
 </head>
@@ -564,29 +707,47 @@
     <p id="masthead-sub">Territoires en poste, ancienneté et bassins hydrographiques</p>
   </div>
 
-  <div class="masthead-controls">
-    <div class="entity-select">
-      <select id="entity-select" aria-label="Choisir la carte à afficher">
-        <option value="prefets">Préfets</option>
-        <option value="ddt">DDT / DDTM</option>
-        <option value="ddets">DDETS / DDPP / DDETSPP</option>
-        <option value="dreal" data-short="DREAL / DEAL / DRIEAT / DRIHL / …">
-		  DREAL / DEAL / DRIEAT / DRIHL / DGTM / DTAM
-		</option>
-        <option value="dreets" data-short="DREETS / DEETS / DRIEETS / …">
-          DREETS / DEETS / DRIEETS / DGCOPOP / DCSTEP
-        </option>
-      </select>
-    </div>
+<div class="masthead-controls">
+  <div class="entity-select">
+    <select id="entity-select" aria-label="Choisir la carte à afficher">
+      <option value="prefets">Préfets</option>
+      <option value="ddt">DDT / DDTM</option>
+      <option value="ddets">DDETS / DDPP / DDETSPP</option>
+      <option value="dreal" data-short="DREAL / DEAL / DRIEAT / DRIHL / …">
+        DREAL / DEAL / DRIEAT / DRIHL / DGTM / DTAM
+      </option>
+      <option value="dreets" data-short="DREETS / DEETS / DRIEETS / …">
+        DREETS / DEETS / DRIEETS / DGCOPOP / DCSTEP
+      </option>
+    </select>
+  </div>
 
-    <div class="mode-switch" role="tablist" aria-label="Découpage territorial">
-      <button class="mode-btn active" data-mode="regions" role="tab" aria-selected="true">
-        Régions
-      </button>
-      <button class="mode-btn" data-mode="bassins" role="tab" aria-selected="false">
-        Bassins hydrographiques
-      </button>
-    </div>
+  <button class="btn-tableur" id="btn-tableur" title="Voir les données en tableau">
+    📊 Tableur
+  </button>
+
+  <div class="mode-switch" role="tablist" aria-label="Découpage territorial">
+    <button class="mode-btn active" data-mode="regions" role="tab" aria-selected="true">
+      Régions
+    </button>
+    <button class="mode-btn" data-mode="bassins" role="tab" aria-selected="false">
+      Bassins hydrographiques
+    </button>
+  </div>
+
+  <div class="search-box">
+    <input
+      type="search"
+      id="search"
+      placeholder="Nom, département, région…"
+      aria-label="Rechercher un titulaire ou un territoire"
+    >
+  </div>
+
+  <button class="theme-toggle" id="theme-toggle" title="Basculer le thème" aria-label="Basculer le thème">
+    🌓
+  </button>
+</div>
 
     <div class="search-box">
       <input
@@ -2381,7 +2542,290 @@ function buildOverseasList(){
   });
 }
 
+
+/* ============================================================
+   Tableur / Export
+   ============================================================ */
+
+function buildTableHTML() {
+  const cfg = ENTITIES[state.entity];
+  const colors = ancColorHex();
+  const rows = prefetsRows.filter(row => {
+    // Exclure les territoires sans données cartographiques (déjà dans la liste Outre-mer)
+    const mapped = new Set(
+      (isRegional() ? geoRegions : geoDepts)
+        .features
+        .map(feature => feature.properties.code)
+    );
+    return mapped.has(row.departement);
+  });
+
+  let headers = [];
+  let buildRow;
+
+  if (state.entity === 'prefets') {
+    headers = ['Couleur', 'Département', 'Territoire', 'Nom', 'Sexe', 'Titre', 'Date de prise de fonction', 'Ancienneté (jours)', 'Adresse'];
+    buildRow = (row) => {
+      if (row.vide) {
+        return `
+          <tr>
+            <td><span class="table-color-dot" style="background:${colors[row.couleur_carte] || 'var(--none)'}"></span></td>
+            <td>${row.departement}</td>
+            <td>${row.territoire}</td>
+            <td colspan="6" class="table-empty">${row.message}</td>
+          </tr>
+        `;
+      }
+      return `
+        <tr>
+          <td><span class="table-color-dot" style="background:${colors[row.couleur_carte]}"></span></td>
+          <td>${row.departement}</td>
+          <td>${row.territoire}</td>
+          <td>${row.nom_prefet}</td>
+          <td>${row.sexe}</td>
+          <td>${row.titre_global}</td>
+          <td>${row.date_prise_fonction}</td>
+          <td>${row.anciennete_jours}</td>
+          <td>${row.adresse || ''}</td>
+        </tr>
+      `;
+    };
+  } else if (state.entity === 'ddt') {
+    headers = ['Couleur', 'Département', 'Territoire', 'Nom', 'Sexe', 'Type de poste', 'Date de prise de fonction', 'Ancienneté (jours)', 'Successeur désigné'];
+    buildRow = (row) => {
+      if (row.vide) {
+        return `
+          <tr>
+            <td><span class="table-color-dot" style="background:${colors[row.couleur_carte] || 'var(--none)'}"></span></td>
+            <td>${row.departement}</td>
+            <td>${row.territoire}</td>
+            <td colspan="6" class="table-empty">${row.message}</td>
+          </tr>
+        `;
+      }
+      return `
+        <tr>
+          <td><span class="table-color-dot" style="background:${colors[row.couleur_carte]}"></span></td>
+          <td>${row.departement}</td>
+          <td>${row.territoire}</td>
+          <td>${row.nom_prefet}</td>
+          <td>${row.sexe}</td>
+          <td>${row.titre_global}</td>
+          <td>${row.date_prise_fonction}</td>
+          <td>${row.anciennete_jours}</td>
+          <td>${row.designe ? `${row.designe.nom} (${row.designe.date})` : ''}</td>
+        </tr>
+      `;
+    };
+  } else if (state.entity === 'ddets') {
+    headers = ['Couleur', 'Département', 'Territoire', 'Postes', 'Noms', 'Date(s)', 'Ancienneté min. (jours)'];
+    buildRow = (row) => {
+      if (row.vide) {
+        return `
+          <tr>
+            <td><span class="table-color-dot" style="background:${colors[row.couleur_carte] || 'var(--none)'}"></span></td>
+            <td>${row.departement}</td>
+            <td>${row.territoire}</td>
+            <td colspan="4" class="table-empty">${row.message}</td>
+          </tr>
+        `;
+      }
+      const postes = postesOf(row);
+      const titres = postes.map(p => p.titre.split('|')[0].trim()).join('<br>');
+      const noms = postes.map(p => p.nom).join('<br>');
+      const dates = postes.map(p => p.date).join('<br>');
+      return `
+        <tr>
+          <td><span class="table-color-dot" style="background:${colors[row.couleur_carte]}"></span></td>
+          <td>${row.departement}</td>
+          <td>${row.territoire}</td>
+          <td>${titres}</td>
+          <td>${noms}</td>
+          <td>${dates}</td>
+          <td>${row.anciennete_jours}</td>
+        </tr>
+      `;
+    };
+  } else if (state.entity === 'dreal' || state.entity === 'dreets') {
+    headers = ['Couleur', 'Code région', 'Région', 'Postes', 'Noms', 'Date(s)', 'Ancienneté min. (jours)'];
+    buildRow = (row) => {
+      if (row.vide) {
+        return `
+          <tr>
+            <td><span class="table-color-dot" style="background:${colors[row.couleur_carte] || 'var(--none)'}"></span></td>
+            <td>${row.departement}</td>
+            <td>${row.territoire}</td>
+            <td colspan="4" class="table-empty">${row.message}</td>
+          </tr>
+        `;
+      }
+      const postes = postesOf(row);
+      const titres = postes.map(p => p.titre.split('|')[0].trim()).join('<br>');
+      const noms = postes.map(p => p.nom).join('<br>');
+      const dates = postes.map(p => p.date).join('<br>');
+      return `
+        <tr>
+          <td><span class="table-color-dot" style="background:${colors[row.couleur_carte]}"></span></td>
+          <td>${row.departement}</td>
+          <td>${row.territoire}</td>
+          <td>${titres}</td>
+          <td>${noms}</td>
+          <td>${dates}</td>
+          <td>${row.anciennete_jours}</td>
+        </tr>
+      `;
+    };
+  }
+
+  const headerHTML = headers.map(h => `<th>${h}</th>`).join('');
+  const rowsHTML = rows.map(buildRow).join('');
+
+  return `
+    <table class="data-table">
+      <thead>
+        <tr>${headerHTML}</tr>
+      </thead>
+      <tbody>
+        ${rowsHTML}
+      </tbody>
+    </table>
+  `;
+}
+
+function openTableurModal() {
+  const cfg = ENTITIES[state.entity];
+  document.getElementById('modal-title').textContent = `${cfg.h1} — Données en tableau`;
+  document.getElementById('table-container').innerHTML = buildTableHTML();
+  document.getElementById('modal-tableur').classList.add('visible');
+}
+
+function closeTableurModal() {
+  document.getElementById('modal-tableur').classList.remove('visible');
+}
+
+function exportToCSV() {
+  const cfg = ENTITIES[state.entity];
+  const rows = prefetsRows.filter(row => {
+    const mapped = new Set(
+      (isRegional() ? geoRegions : geoDepts)
+        .features
+        .map(feature => feature.properties.code)
+    );
+    return mapped.has(row.departement);
+  });
+
+  let headers = [];
+  let rowMapper;
+
+  if (state.entity === 'prefets') {
+    headers = ['Département', 'Territoire', 'Nom', 'Sexe', 'Titre', 'Date de prise de fonction', 'Ancienneté (jours)', 'Adresse'];
+    rowMapper = (row) => {
+      if (row.vide) return [row.departement, row.territoire, '', '', '', '', '', ''].map(escapeCSV);
+      return [
+        row.departement,
+        row.territoire,
+        row.nom_prefet,
+        row.sexe,
+        row.titre_global,
+        row.date_prise_fonction,
+        row.anciennete_jours,
+        row.adresse || ''
+      ].map(escapeCSV);
+    };
+  } else if (state.entity === 'ddt') {
+    headers = ['Département', 'Territoire', 'Nom', 'Sexe', 'Type de poste', 'Date de prise de fonction', 'Ancienneté (jours)', 'Successeur désigné'];
+    rowMapper = (row) => {
+      if (row.vide) return [row.departement, row.territoire, '', '', '', '', '', ''].map(escapeCSV);
+      return [
+        row.departement,
+        row.territoire,
+        row.nom_prefet,
+        row.sexe,
+        row.titre_global,
+        row.date_prise_fonction,
+        row.anciennete_jours,
+        row.designe ? `${row.designe.nom} (${row.designe.date})` : ''
+      ].map(escapeCSV);
+    };
+  } else if (state.entity === 'ddets') {
+    headers = ['Département', 'Territoire', 'Postes', 'Noms', 'Dates', 'Ancienneté min. (jours)'];
+    rowMapper = (row) => {
+      if (row.vide) return [row.departement, row.territoire, '', '', '', ''].map(escapeCSV);
+      const postes = postesOf(row);
+      return [
+        row.departement,
+        row.territoire,
+        postes.map(p => p.titre.split('|')[0].trim()).join(' | '),
+        postes.map(p => p.nom).join(' | '),
+        postes.map(p => p.date).join(' | '),
+        row.anciennete_jours
+      ].map(escapeCSV);
+    };
+  } else if (state.entity === 'dreal' || state.entity === 'dreets') {
+    headers = ['Code région', 'Région', 'Postes', 'Noms', 'Dates', 'Ancienneté min. (jours)'];
+    rowMapper = (row) => {
+      if (row.vide) return [row.departement, row.territoire, '', '', '', ''].map(escapeCSV);
+      const postes = postesOf(row);
+      return [
+        row.departement,
+        row.territoire,
+        postes.map(p => p.titre.split('|')[0].trim()).join(' | '),
+        postes.map(p => p.nom).join(' | '),
+        postes.map(p => p.date).join(' | '),
+        row.anciennete_jours
+      ].map(escapeCSV);
+    };
+  }
+
+  const csvContent = [
+    headers.join(';'),
+    ...rows.map(row => rowMapper(row).join(';'))
+  ].join('\n');
+
+  const blob = new Blob(['\ufeff' + csvContent], { type: 'text/csv;charset=utf-8;' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = `${state.entity}_${new Date().toISOString().slice(0, 10)}.csv`;
+  link.click();
+}
+
+function escapeCSV(value) {
+  const str = String(value || '');
+  if (str.includes(';') || str.includes('"') || str.includes('\n')) {
+    return `"${str.replace(/"/g, '""')}"`;
+  }
+  return str;
+}
+
+// Event listeners
+document.getElementById('btn-tableur').addEventListener('click', openTableurModal);
+document.getElementById('modal-close').addEventListener('click', closeTableurModal);
+document.getElementById('btn-export-csv').addEventListener('click', exportToCSV);
+
+document.getElementById('modal-tableur').addEventListener('click', (event) => {
+  if (event.target.id === 'modal-tableur') {
+    closeTableurModal();
+  }
+});
+
 </script>
+
+<div id="modal-tableur" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="modal-title">Données en tableau</h2>
+      <div class="modal-actions">
+        <button class="modal-export" id="btn-export-csv">Exporter CSV</button>
+        <button class="modal-close" id="modal-close">Fermer</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div id="table-container"></div>
+    </div>
+  </div>
+</div>
+
+<div id="tooltip" class="tooltip"></div>
 
 </body>
 </html>
