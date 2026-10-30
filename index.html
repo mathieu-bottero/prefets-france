@@ -2555,14 +2555,8 @@ function buildOverseasList(){
 function buildTableHTML() {
   const cfg = ENTITIES[state.entity];
   const colors = ancColorHex();
-  const rows = prefetsRows.filter(row => {
-    const mapped = new Set(
-      (isRegional() ? geoRegions : geoDepts)
-        .features
-        .map(feature => feature.properties.code)
-    );
-    return mapped.has(row.departement);
-  });
+  
+  const rows = prefetsRows; // Au lieu de filtrer avec mapped.has()
 
   let headers = [];
   let buildRow;
@@ -2709,14 +2703,9 @@ function closeTableurModal() {
 
 function exportToCSV() {
   const cfg = ENTITIES[state.entity];
-  const rows = prefetsRows.filter(row => {
-    const mapped = new Set(
-      (isRegional() ? geoRegions : geoDepts)
-        .features
-        .map(feature => feature.properties.code)
-    );
-    return mapped.has(row.departement);
-  });
+  
+  // MODIFICATION ICI aussi
+  const rows = prefetsRows; // Au lieu de filtrer
 
   let headers = [];
   let rowMapper;
