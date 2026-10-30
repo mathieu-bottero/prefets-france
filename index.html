@@ -707,47 +707,33 @@
     <p id="masthead-sub">Territoires en poste, ancienneté et bassins hydrographiques</p>
   </div>
 
-<div class="masthead-controls">
-  <div class="entity-select">
-    <select id="entity-select" aria-label="Choisir la carte à afficher">
-      <option value="prefets">Préfets</option>
-      <option value="ddt">DDT / DDTM</option>
-      <option value="ddets">DDETS / DDPP / DDETSPP</option>
-      <option value="dreal" data-short="DREAL / DEAL / DRIEAT / DRIHL / …">
-        DREAL / DEAL / DRIEAT / DRIHL / DGTM / DTAM
-      </option>
-      <option value="dreets" data-short="DREETS / DEETS / DRIEETS / …">
-        DREETS / DEETS / DRIEETS / DGCOPOP / DCSTEP
-      </option>
-    </select>
-  </div>
+  <div class="masthead-controls">
+    <div class="entity-select">
+      <select id="entity-select" aria-label="Choisir la carte à afficher">
+        <option value="prefets">Préfets</option>
+        <option value="ddt">DDT / DDTM</option>
+        <option value="ddets">DDETS / DDPP / DDETSPP</option>
+        <option value="dreal" data-short="DREAL / DEAL / DRIEAT / DRIHL / …">
+          DREAL / DEAL / DRIEAT / DRIHL / DGTM / DTAM
+        </option>
+        <option value="dreets" data-short="DREETS / DEETS / DRIEETS / …">
+          DREETS / DEETS / DRIEETS / DGCOPOP / DCSTEP
+        </option>
+      </select>
+    </div>
 
-  <button class="btn-tableur" id="btn-tableur" title="Voir les données en tableau">
-    📊 Tableur
-  </button>
-
-  <div class="mode-switch" role="tablist" aria-label="Découpage territorial">
-    <button class="mode-btn active" data-mode="regions" role="tab" aria-selected="true">
-      Régions
+    <button class="btn-tableur" id="btn-tableur" title="Voir les données en tableau">
+      📊 Tableur
     </button>
-    <button class="mode-btn" data-mode="bassins" role="tab" aria-selected="false">
-      Bassins hydrographiques
-    </button>
-  </div>
 
-  <div class="search-box">
-    <input
-      type="search"
-      id="search"
-      placeholder="Nom, département, région…"
-      aria-label="Rechercher un titulaire ou un territoire"
-    >
-  </div>
-
-  <button class="theme-toggle" id="theme-toggle" title="Basculer le thème" aria-label="Basculer le thème">
-    🌓
-  </button>
-</div>
+    <div class="mode-switch" role="tablist" aria-label="Découpage territorial">
+      <button class="mode-btn active" data-mode="regions" role="tab" aria-selected="true">
+        Régions
+      </button>
+      <button class="mode-btn" data-mode="bassins" role="tab" aria-selected="false">
+        Bassins hydrographiques
+      </button>
+    </div>
 
     <div class="search-box">
       <input
@@ -821,6 +807,22 @@
   </aside>
 
 </main>
+
+<div id="modal-tableur" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="modal-title">Données en tableau</h2>
+      <div class="modal-actions">
+        <button class="modal-export" id="btn-export-csv">Exporter CSV</button>
+        <button class="modal-close" id="modal-close">Fermer</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div id="table-container"></div>
+    </div>
+  </div>
+</div>
+
 
 <div id="tooltip" class="tooltip"></div>
 
@@ -1649,6 +1651,9 @@ Promise.all([
   buildLabels();
   buildOverseasList();
   render();
+  
+  // AJOUTEZ CETTE LIGNE :
+  initTableurListeners();
 
   document
     .getElementById('entity-select')
@@ -2551,7 +2556,6 @@ function buildTableHTML() {
   const cfg = ENTITIES[state.entity];
   const colors = ancColorHex();
   const rows = prefetsRows.filter(row => {
-    // Exclure les territoires sans données cartographiques (déjà dans la liste Outre-mer)
     const mapped = new Set(
       (isRegional() ? geoRegions : geoDepts)
         .features
@@ -2787,6 +2791,7 @@ function exportToCSV() {
   link.href = URL.createObjectURL(blob);
   link.download = `${state.entity}_${new Date().toISOString().slice(0, 10)}.csv`;
   link.click();
+  URL.revokeObjectURL(link.href);
 }
 
 function escapeCSV(value) {
@@ -2797,35 +2802,35 @@ function escapeCSV(value) {
   return str;
 }
 
-// Event listeners
-document.getElementById('btn-tableur').addEventListener('click', openTableurModal);
-document.getElementById('modal-close').addEventListener('click', closeTableurModal);
-document.getElementById('btn-export-csv').addEventListener('click', exportToCSV);
+// Initialisation des event listeners du tableur
+function initTableurListeners() {
+  const btnTableur = document.getElementById('btn-tableur');
+  const modalClose = document.getElementById('modal-close');
+  const btnExportCsv = document.getElementById('btn-export-csv');
+  const modalOverlay = document.getElementById('modal-tableur');
 
-document.getElementById('modal-tableur').addEventListener('click', (event) => {
-  if (event.target.id === 'modal-tableur') {
-    closeTableurModal();
+  if (btnTableur) {
+    btnTableur.addEventListener('click', openTableurModal);
   }
-});
+
+  if (modalClose) {
+    modalClose.addEventListener('click', closeTableurModal);
+  }
+
+  if (btnExportCsv) {
+    btnExportCsv.addEventListener('click', exportToCSV);
+  }
+
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', (event) => {
+      if (event.target === modalOverlay) {
+        closeTableurModal();
+      }
+    });
+  }
+}
 
 </script>
-
-<div id="modal-tableur" class="modal-overlay">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2 id="modal-title">Données en tableau</h2>
-      <div class="modal-actions">
-        <button class="modal-export" id="btn-export-csv">Exporter CSV</button>
-        <button class="modal-close" id="modal-close">Fermer</button>
-      </div>
-    </div>
-    <div class="modal-body">
-      <div id="table-container"></div>
-    </div>
-  </div>
-</div>
-
-<div id="tooltip" class="tooltip"></div>
 
 </body>
 </html>
