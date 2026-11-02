@@ -2,7 +2,7 @@ name: Test cron GitHub
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '55 15 * * *'
   workflow_dispatch:
   
 jobs:
