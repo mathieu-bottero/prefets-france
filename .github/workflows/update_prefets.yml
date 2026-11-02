@@ -3,10 +3,13 @@ name: 🤖 MAJ Administrations Automatique
 on:
   schedule:
     # Tous les lundis à 7h00 UTC (= 8h Paris en hiver, 9h en été)
-    - cron: '0 10 * * 1'
+    - cron: '15 10 * * 1'
   
   # Permet de lancer manuellement depuis GitHub
   workflow_dispatch:
+  
+permissions:
+  contents: write
 
 jobs:
   update-prefets:
